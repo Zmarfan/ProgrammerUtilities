@@ -8,18 +8,32 @@ namespace ProgrammerUtils
 {
     public class Sort
     {
-        static string[] SPLITTERS = new string[]
+        public enum SortDisplayMode
+        {
+            COMMA,
+            NEW_LINE
+        }
+
+        readonly static string[] SPLITTERS = new string[]
         {
             ", ",
             ",",
             "\n"
         };
 
-        private bool _autoSort;
-
-        public Sort(bool autoSort)
+        readonly static Dictionary<SortDisplayMode, string> SEPERATORS = new Dictionary<SortDisplayMode, string>()
         {
-            this._autoSort = autoSort;
+            { SortDisplayMode.COMMA, ", " },
+            { SortDisplayMode.NEW_LINE, "\n" }
+        };
+
+        private bool _autoSort;
+        private SortDisplayMode _displayMode;
+
+        public Sort(bool autoSort, SortDisplayMode displayMode)
+        {
+            _autoSort = autoSort;
+            _displayMode = displayMode;
         }
 
         public string SortString(string input)
@@ -27,8 +41,13 @@ namespace ProgrammerUtils
             List<string> splits = input.Split(SPLITTERS, StringSplitOptions.RemoveEmptyEntries).ToList();
             splits.Sort();
             string returnString = string.Empty;
-            splits.ForEach(entry => returnString += entry + "\n");
+            splits.ForEach(entry => returnString += entry + SEPERATORS[_displayMode]);
             return returnString;
+        }
+
+        public void SetDisplayMode(SortDisplayMode displayMode)
+        {
+            _displayMode = displayMode;
         }
     }
 }

@@ -44,8 +44,8 @@
             this.sortAlphabeticlyRadio = new System.Windows.Forms.RadioButton();
             this.notSortAlphabeticlyRadio = new System.Windows.Forms.RadioButton();
             this.sortStyleTableLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.sortSeperatorCommaRadio = new System.Windows.Forms.RadioButton();
+            this.sortSeperatorNewLineRadio = new System.Windows.Forms.RadioButton();
             this.MatchTab = new System.Windows.Forms.TabPage();
             this.CountTab = new System.Windows.Forms.TabPage();
             this.htmlTab = new System.Windows.Forms.TabPage();
@@ -78,7 +78,7 @@
             this.MainTableLayout.RowCount = 2;
             this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.MainTableLayout.Size = new System.Drawing.Size(904, 534);
+            this.MainTableLayout.Size = new System.Drawing.Size(897, 516);
             this.MainTableLayout.TabIndex = 0;
             // 
             // MainTabControl
@@ -92,7 +92,7 @@
             this.MainTabControl.Location = new System.Drawing.Point(3, 33);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(898, 498);
+            this.MainTabControl.Size = new System.Drawing.Size(891, 480);
             this.MainTabControl.TabIndex = 0;
             // 
             // SortTab
@@ -101,7 +101,7 @@
             this.SortTab.Location = new System.Drawing.Point(4, 25);
             this.SortTab.Name = "SortTab";
             this.SortTab.Padding = new System.Windows.Forms.Padding(3);
-            this.SortTab.Size = new System.Drawing.Size(890, 469);
+            this.SortTab.Size = new System.Drawing.Size(883, 451);
             this.SortTab.TabIndex = 0;
             this.SortTab.Text = "Sort";
             this.SortTab.UseVisualStyleBackColor = true;
@@ -123,7 +123,7 @@
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.SortTableLayout.Size = new System.Drawing.Size(884, 463);
+            this.SortTableLayout.Size = new System.Drawing.Size(877, 445);
             this.SortTableLayout.TabIndex = 0;
             // 
             // sortLabel2
@@ -132,9 +132,9 @@
             this.sortLabel2.BackColor = System.Drawing.Color.Lavender;
             this.sortLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sortLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortLabel2.Location = new System.Drawing.Point(445, 424);
+            this.sortLabel2.Location = new System.Drawing.Point(441, 406);
             this.sortLabel2.Name = "sortLabel2";
-            this.sortLabel2.Size = new System.Drawing.Size(436, 39);
+            this.sortLabel2.Size = new System.Drawing.Size(433, 39);
             this.sortLabel2.TabIndex = 3;
             this.sortLabel2.Text = "Sorted items.";
             this.sortLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -144,17 +144,18 @@
             this.sortTextBoxLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sortTextBoxLeft.Location = new System.Drawing.Point(3, 55);
             this.sortTextBoxLeft.Name = "sortTextBoxLeft";
-            this.sortTextBoxLeft.Size = new System.Drawing.Size(436, 366);
+            this.sortTextBoxLeft.Size = new System.Drawing.Size(432, 348);
             this.sortTextBoxLeft.TabIndex = 0;
-            this.sortTextBoxLeft.Text = "";
+            this.sortTextBoxLeft.Text = "Sverige, Danmark, Finland, Ryssland, Spanien, Tyskland, Polen, Egypten\nEstland\nIs" +
+    "land\nJapan";
             // 
             // sortTextBoxRight
             // 
             this.sortTextBoxRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortTextBoxRight.Location = new System.Drawing.Point(445, 55);
+            this.sortTextBoxRight.Location = new System.Drawing.Point(441, 55);
             this.sortTextBoxRight.Name = "sortTextBoxRight";
             this.sortTextBoxRight.ReadOnly = true;
-            this.sortTextBoxRight.Size = new System.Drawing.Size(436, 366);
+            this.sortTextBoxRight.Size = new System.Drawing.Size(433, 348);
             this.sortTextBoxRight.TabIndex = 1;
             this.sortTextBoxRight.Text = "";
             // 
@@ -164,21 +165,22 @@
             this.sortLabel1.BackColor = System.Drawing.Color.Lavender;
             this.sortLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sortLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortLabel1.Location = new System.Drawing.Point(3, 424);
+            this.sortLabel1.Location = new System.Drawing.Point(3, 406);
             this.sortLabel1.Name = "sortLabel1";
             this.sortLabel1.Padding = new System.Windows.Forms.Padding(10);
-            this.sortLabel1.Size = new System.Drawing.Size(436, 39);
+            this.sortLabel1.Size = new System.Drawing.Size(432, 39);
             this.sortLabel1.TabIndex = 2;
             this.sortLabel1.Text = "Items to sort. Seperate words by commas!";
             this.sortLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // sortHeader
             // 
-            this.sortHeader.ColumnCount = 3;
+            this.sortHeader.ColumnCount = 4;
             this.SortTableLayout.SetColumnSpan(this.sortHeader, 2);
             this.sortHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.sortHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.sortHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.sortHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.sortHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 350F));
+            this.sortHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 232F));
             this.sortHeader.Controls.Add(this.SortButton, 0, 0);
             this.sortHeader.Controls.Add(this.AutoSortCheckbox, 1, 0);
             this.sortHeader.Controls.Add(this.sortModeTableLayout, 2, 0);
@@ -190,7 +192,7 @@
             this.sortHeader.RowCount = 2;
             this.sortHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.sortHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.sortHeader.Size = new System.Drawing.Size(884, 52);
+            this.sortHeader.Size = new System.Drawing.Size(877, 52);
             this.sortHeader.TabIndex = 4;
             // 
             // SortButton
@@ -211,14 +213,16 @@
             // AutoSortCheckbox
             // 
             this.AutoSortCheckbox.AutoSize = true;
+            this.AutoSortCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AutoSortCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AutoSortCheckbox.Location = new System.Drawing.Point(203, 3);
             this.AutoSortCheckbox.Name = "AutoSortCheckbox";
             this.sortHeader.SetRowSpan(this.AutoSortCheckbox, 2);
-            this.AutoSortCheckbox.Size = new System.Drawing.Size(194, 46);
+            this.AutoSortCheckbox.Size = new System.Drawing.Size(89, 46);
             this.AutoSortCheckbox.TabIndex = 1;
             this.AutoSortCheckbox.Text = "Auto Sort";
             this.AutoSortCheckbox.UseVisualStyleBackColor = true;
+            this.AutoSortCheckbox.CheckedChanged += new System.EventHandler(this.AutoSortCheckbox_CheckedChanged);
             // 
             // sortModeTableLayout
             // 
@@ -228,12 +232,12 @@
             this.sortModeTableLayout.Controls.Add(this.sortAlphabeticlyRadio, 0, 0);
             this.sortModeTableLayout.Controls.Add(this.notSortAlphabeticlyRadio, 1, 0);
             this.sortModeTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortModeTableLayout.Location = new System.Drawing.Point(400, 0);
+            this.sortModeTableLayout.Location = new System.Drawing.Point(295, 0);
             this.sortModeTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.sortModeTableLayout.Name = "sortModeTableLayout";
             this.sortModeTableLayout.RowCount = 1;
             this.sortModeTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.sortModeTableLayout.Size = new System.Drawing.Size(484, 26);
+            this.sortModeTableLayout.Size = new System.Drawing.Size(350, 26);
             this.sortModeTableLayout.TabIndex = 4;
             // 
             // sortAlphabeticlyRadio
@@ -242,6 +246,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.sortAlphabeticlyRadio.AutoSize = true;
             this.sortAlphabeticlyRadio.Checked = true;
+            this.sortAlphabeticlyRadio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sortAlphabeticlyRadio.Location = new System.Drawing.Point(3, 3);
             this.sortAlphabeticlyRadio.Name = "sortAlphabeticlyRadio";
             this.sortAlphabeticlyRadio.Size = new System.Drawing.Size(116, 20);
@@ -253,10 +258,11 @@
             // notSortAlphabeticlyRadio
             // 
             this.notSortAlphabeticlyRadio.AutoSize = true;
+            this.notSortAlphabeticlyRadio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.notSortAlphabeticlyRadio.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.notSortAlphabeticlyRadio.Location = new System.Drawing.Point(245, 3);
+            this.notSortAlphabeticlyRadio.Location = new System.Drawing.Point(178, 3);
             this.notSortAlphabeticlyRadio.Name = "notSortAlphabeticlyRadio";
-            this.notSortAlphabeticlyRadio.Size = new System.Drawing.Size(236, 20);
+            this.notSortAlphabeticlyRadio.Size = new System.Drawing.Size(169, 20);
             this.notSortAlphabeticlyRadio.TabIndex = 3;
             this.notSortAlphabeticlyRadio.Text = "Reverse";
             this.notSortAlphabeticlyRadio.UseVisualStyleBackColor = true;
@@ -266,48 +272,53 @@
             this.sortStyleTableLayout.ColumnCount = 2;
             this.sortStyleTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.sortStyleTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.sortStyleTableLayout.Controls.Add(this.radioButton1, 0, 0);
-            this.sortStyleTableLayout.Controls.Add(this.radioButton2, 1, 0);
+            this.sortStyleTableLayout.Controls.Add(this.sortSeperatorCommaRadio, 0, 0);
+            this.sortStyleTableLayout.Controls.Add(this.sortSeperatorNewLineRadio, 1, 0);
             this.sortStyleTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortStyleTableLayout.Location = new System.Drawing.Point(400, 26);
+            this.sortStyleTableLayout.Location = new System.Drawing.Point(295, 26);
             this.sortStyleTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.sortStyleTableLayout.Name = "sortStyleTableLayout";
             this.sortStyleTableLayout.RowCount = 1;
             this.sortStyleTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.sortStyleTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.sortStyleTableLayout.Size = new System.Drawing.Size(484, 26);
+            this.sortStyleTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.sortStyleTableLayout.Size = new System.Drawing.Size(350, 26);
             this.sortStyleTableLayout.TabIndex = 5;
             // 
-            // radioButton1
+            // sortSeperatorCommaRadio
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton1.Location = new System.Drawing.Point(3, 3);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(236, 20);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Comma seperated";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.sortSeperatorCommaRadio.AutoSize = true;
+            this.sortSeperatorCommaRadio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sortSeperatorCommaRadio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sortSeperatorCommaRadio.Location = new System.Drawing.Point(3, 3);
+            this.sortSeperatorCommaRadio.Name = "sortSeperatorCommaRadio";
+            this.sortSeperatorCommaRadio.Size = new System.Drawing.Size(169, 20);
+            this.sortSeperatorCommaRadio.TabIndex = 0;
+            this.sortSeperatorCommaRadio.TabStop = true;
+            this.sortSeperatorCommaRadio.Text = "Comma seperated";
+            this.sortSeperatorCommaRadio.UseVisualStyleBackColor = true;
+            this.sortSeperatorCommaRadio.CheckedChanged += new System.EventHandler(this.SortDisplayModeChange);
             // 
-            // radioButton2
+            // sortSeperatorNewLineRadio
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.radioButton2.Location = new System.Drawing.Point(245, 3);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(236, 20);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "New line seperated";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.sortSeperatorNewLineRadio.AutoSize = true;
+            this.sortSeperatorNewLineRadio.Checked = true;
+            this.sortSeperatorNewLineRadio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sortSeperatorNewLineRadio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sortSeperatorNewLineRadio.Location = new System.Drawing.Point(178, 3);
+            this.sortSeperatorNewLineRadio.Name = "sortSeperatorNewLineRadio";
+            this.sortSeperatorNewLineRadio.Size = new System.Drawing.Size(169, 20);
+            this.sortSeperatorNewLineRadio.TabIndex = 1;
+            this.sortSeperatorNewLineRadio.TabStop = true;
+            this.sortSeperatorNewLineRadio.Text = "New line seperated";
+            this.sortSeperatorNewLineRadio.UseVisualStyleBackColor = true;
+            this.sortSeperatorNewLineRadio.CheckedChanged += new System.EventHandler(this.SortDisplayModeChange);
             // 
             // MatchTab
             // 
             this.MatchTab.Location = new System.Drawing.Point(4, 25);
             this.MatchTab.Name = "MatchTab";
             this.MatchTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MatchTab.Size = new System.Drawing.Size(890, 469);
+            this.MatchTab.Size = new System.Drawing.Size(883, 451);
             this.MatchTab.TabIndex = 1;
             this.MatchTab.Text = "Match";
             this.MatchTab.UseVisualStyleBackColor = true;
@@ -317,7 +328,7 @@
             this.CountTab.Location = new System.Drawing.Point(4, 25);
             this.CountTab.Name = "CountTab";
             this.CountTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CountTab.Size = new System.Drawing.Size(890, 469);
+            this.CountTab.Size = new System.Drawing.Size(883, 451);
             this.CountTab.TabIndex = 2;
             this.CountTab.Text = "Count";
             this.CountTab.UseVisualStyleBackColor = true;
@@ -327,7 +338,7 @@
             this.htmlTab.Location = new System.Drawing.Point(4, 25);
             this.htmlTab.Name = "htmlTab";
             this.htmlTab.Padding = new System.Windows.Forms.Padding(3);
-            this.htmlTab.Size = new System.Drawing.Size(890, 469);
+            this.htmlTab.Size = new System.Drawing.Size(883, 451);
             this.htmlTab.TabIndex = 3;
             this.htmlTab.Text = "HTML:ify";
             this.htmlTab.UseVisualStyleBackColor = true;
@@ -343,7 +354,7 @@
             this.HelpDropdown});
             this.Toolbar.Location = new System.Drawing.Point(0, 0);
             this.Toolbar.Name = "Toolbar";
-            this.Toolbar.Size = new System.Drawing.Size(904, 30);
+            this.Toolbar.Size = new System.Drawing.Size(897, 30);
             this.Toolbar.TabIndex = 1;
             // 
             // toolStripSeparator1
@@ -382,10 +393,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(904, 534);
+            this.ClientSize = new System.Drawing.Size(897, 516);
             this.Controls.Add(this.MainTableLayout);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.MinimumSize = new System.Drawing.Size(547, 413);
+            this.MinimumSize = new System.Drawing.Size(665, 413);
             this.Name = "Application";
             this.Text = "ProgrammingUtils";
             this.MainTableLayout.ResumeLayout(false);
@@ -431,8 +442,8 @@
         private System.Windows.Forms.RadioButton sortAlphabeticlyRadio;
         private System.Windows.Forms.RadioButton notSortAlphabeticlyRadio;
         private System.Windows.Forms.TableLayoutPanel sortStyleTableLayout;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton sortSeperatorCommaRadio;
+        private System.Windows.Forms.RadioButton sortSeperatorNewLineRadio;
     }
 }
 
