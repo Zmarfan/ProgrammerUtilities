@@ -48,7 +48,7 @@
             this.sortSeperatorNewLineRadio = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.SortClearButton = new System.Windows.Forms.Button();
-            this.SortUnderscoreButton = new System.Windows.Forms.Button();
+            this.SortTextPresentationButton = new System.Windows.Forms.Button();
             this.SortChangeTextCapsButton = new System.Windows.Forms.Button();
             this.MatchTab = new System.Windows.Forms.TabPage();
             this.CountTab = new System.Windows.Forms.TabPage();
@@ -116,7 +116,7 @@
             this.SortTableLayout.ColumnCount = 3;
             this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 61F));
+            this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
             this.SortTableLayout.Controls.Add(this.sortLabel2, 1, 2);
             this.SortTableLayout.Controls.Add(this.sortTextBoxLeft, 0, 1);
             this.SortTableLayout.Controls.Add(this.sortTextBoxRight, 1, 1);
@@ -154,7 +154,7 @@
             this.sortTextBoxLeft.Size = new System.Drawing.Size(391, 352);
             this.sortTextBoxLeft.TabIndex = 0;
             this.sortTextBoxLeft.Text = "Sverige, Danmark, Finland, Ryssland, Spanien, Tyskland, Polen, Egypten\nEstland\nIs" +
-    "land\nJapan";
+    "land\nJapan, China Hong Kong, Iran Irak";
             this.sortTextBoxLeft.TextChanged += new System.EventHandler(this.SortTextChanged);
             // 
             // sortTextBoxRight
@@ -329,7 +329,7 @@
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.SortClearButton, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.SortUnderscoreButton, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.SortTextPresentationButton, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.SortChangeTextCapsButton, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(794, 52);
@@ -359,19 +359,20 @@
             this.SortClearButton.UseVisualStyleBackColor = false;
             this.SortClearButton.Click += new System.EventHandler(this.SortClearButton_Click);
             // 
-            // SortUnderscoreButton
+            // SortTextPresentationButton
             // 
-            this.SortUnderscoreButton.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.SortUnderscoreButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SortUnderscoreButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SortUnderscoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SortUnderscoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortUnderscoreButton.Location = new System.Drawing.Point(3, 63);
-            this.SortUnderscoreButton.Name = "SortUnderscoreButton";
-            this.SortUnderscoreButton.Size = new System.Drawing.Size(56, 54);
-            this.SortUnderscoreButton.TabIndex = 1;
-            this.SortUnderscoreButton.Text = "_";
-            this.SortUnderscoreButton.UseVisualStyleBackColor = false;
+            this.SortTextPresentationButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.SortTextPresentationButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SortTextPresentationButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortTextPresentationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SortTextPresentationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortTextPresentationButton.Location = new System.Drawing.Point(3, 63);
+            this.SortTextPresentationButton.Name = "SortTextPresentationButton";
+            this.SortTextPresentationButton.Size = new System.Drawing.Size(56, 54);
+            this.SortTextPresentationButton.TabIndex = 1;
+            this.SortTextPresentationButton.Text = "_";
+            this.SortTextPresentationButton.UseVisualStyleBackColor = false;
+            this.SortTextPresentationButton.Click += new System.EventHandler(this.SortTextPresentationButton_Click);
             // 
             // SortChangeTextCapsButton
             // 
@@ -393,7 +394,7 @@
             this.MatchTab.Location = new System.Drawing.Point(4, 25);
             this.MatchTab.Name = "MatchTab";
             this.MatchTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MatchTab.Size = new System.Drawing.Size(853, 451);
+            this.MatchTab.Size = new System.Drawing.Size(862, 455);
             this.MatchTab.TabIndex = 1;
             this.MatchTab.Text = "Match";
             this.MatchTab.UseVisualStyleBackColor = true;
@@ -403,7 +404,7 @@
             this.CountTab.Location = new System.Drawing.Point(4, 25);
             this.CountTab.Name = "CountTab";
             this.CountTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CountTab.Size = new System.Drawing.Size(853, 451);
+            this.CountTab.Size = new System.Drawing.Size(862, 455);
             this.CountTab.TabIndex = 2;
             this.CountTab.Text = "Count";
             this.CountTab.UseVisualStyleBackColor = true;
@@ -413,7 +414,7 @@
             this.htmlTab.Location = new System.Drawing.Point(4, 25);
             this.htmlTab.Name = "htmlTab";
             this.htmlTab.Padding = new System.Windows.Forms.Padding(3);
-            this.htmlTab.Size = new System.Drawing.Size(853, 451);
+            this.htmlTab.Size = new System.Drawing.Size(862, 455);
             this.htmlTab.TabIndex = 3;
             this.htmlTab.Text = "HTML:ify";
             this.htmlTab.UseVisualStyleBackColor = true;
@@ -523,7 +524,7 @@
         private System.Windows.Forms.RadioButton sortSeperatorNewLineRadio;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button SortClearButton;
-        private System.Windows.Forms.Button SortUnderscoreButton;
+        private System.Windows.Forms.Button SortTextPresentationButton;
         private System.Windows.Forms.Button SortChangeTextCapsButton;
     }
 }

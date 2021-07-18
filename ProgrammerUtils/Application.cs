@@ -13,19 +13,22 @@ namespace ProgrammerUtils
 {
     public partial class Application : Form
     {
+        readonly static Color NORMAL_ACTIVE_BUTTON_COLOR = Color.LightSteelBlue;
+        readonly static Color NORMAL_NOT_ACTIVE_BUTTON_COLOR = Color.Gray;
+
         Sort _sorter;
 
         public Application()
         {
             InitializeComponent();
-            _sorter = new Sort(AutoSortCheckbox.Checked, GetSortDisplayMode(), GetSortStyle(), Sort.TextStyles.NORMAL);
+            _sorter = new Sort(AutoSortCheckbox.Checked, GetSortDisplayMode(), GetSortStyle(), Sort.TextStyles.NORMAL, Sort.TextPresentations.NORMAL);
             SetChangeTextStyleButton();
         }
 
         private void SetButtonStatus(Button button, bool status)
         {
             button.Enabled = status;
-            button.BackColor = status ? Color.LightSteelBlue : Color.Gray;
+            button.BackColor = status ? NORMAL_ACTIVE_BUTTON_COLOR : NORMAL_NOT_ACTIVE_BUTTON_COLOR;
         }
 
         #region Sort
@@ -72,6 +75,15 @@ namespace ProgrammerUtils
                 case Sort.TextStyles.ALL_SMALL: SortChangeTextCapsButton.Text = "Abc"; break;
             }
         }
+
+        private void SetChangeTextPresentationButton()
+        {
+            switch (_sorter.TextPresentation)
+            {
+                case Sort.TextPresentations.NORMAL: SortChangeTextCapsButton.Text = "A_B"; break;
+                case Sort.TextPresentations.UNDERSCORE: SortChangeTextCapsButton.Text = "A B"; break;
+            }
+        }
         #endregion
         #region Events
 
@@ -113,7 +125,14 @@ namespace ProgrammerUtils
             DoSort();
         }
 
+        private void SortTextPresentationButton_Click(object sender, EventArgs e)
+        {
+            _sorter.ChangeTextPresentationToNext();
+            SetChangeTextPresentationButton();
+            DoSort();
+        }
         #endregion
+
         #endregion
     }
 }
