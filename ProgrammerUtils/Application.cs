@@ -18,7 +18,8 @@ namespace ProgrammerUtils
         public Application()
         {
             InitializeComponent();
-            _sorter = new Sort(AutoSortCheckbox.Checked, GetSortDisplayMode(), GetSortStyle());
+            _sorter = new Sort(AutoSortCheckbox.Checked, GetSortDisplayMode(), GetSortStyle(), Sort.TextStyles.NORMAL);
+            SetChangeTextStyleButton();
         }
 
         private void SetButtonStatus(Button button, bool status)
@@ -60,6 +61,17 @@ namespace ProgrammerUtils
             if (_sorter.AutoSort)
                 DoSort();
         }
+
+        private void SetChangeTextStyleButton()
+        {
+            //Text style show for the next in the enum list and not for itself.
+            switch (_sorter.TextStyle)
+            {
+                case Sort.TextStyles.NORMAL: SortChangeTextCapsButton.Text = "ABC"; break;
+                case Sort.TextStyles.ALL_CAPS: SortChangeTextCapsButton.Text = "abc"; break;
+                case Sort.TextStyles.ALL_SMALL: SortChangeTextCapsButton.Text = "Abc"; break;
+            }
+        }
         #endregion
         #region Events
 
@@ -73,22 +85,19 @@ namespace ProgrammerUtils
             SetButtonStatus(SortButton, !AutoSortCheckbox.Checked);
             _sorter.SetAutoSort(AutoSortCheckbox.Checked);
 
-            if (AutoSortCheckbox.Checked)
-                DoSort();
+            DoSort();
         }
 
         private void SortDisplayModeChange(object sender, EventArgs e)
         {
             _sorter.SetDisplayMode(GetSortDisplayMode());
-            if (AutoSortCheckbox.Checked)
-                DoSort();
+            DoSort();
         }
 
         private void SortStyleChanged(object sender, EventArgs e)
         {
             _sorter.SetSortStyle(GetSortStyle());
-            if (AutoSortCheckbox.Checked)
-                DoSort();
+            DoSort();
         }
 
         private void SortClearButton_Click(object sender, EventArgs e)
@@ -96,8 +105,15 @@ namespace ProgrammerUtils
             sortTextBoxLeft.Text = string.Empty;
             sortTextBoxRight.Text = string.Empty;
         }
-        #endregion
 
+        private void SortChangeTextCapsButton_Click(object sender, EventArgs e)
+        {
+            _sorter.ChangeTextStyleToNext();
+            SetChangeTextStyleButton();
+            DoSort();
+        }
+
+        #endregion
         #endregion
     }
 }
