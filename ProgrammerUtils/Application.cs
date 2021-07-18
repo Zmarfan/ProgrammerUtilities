@@ -15,14 +15,18 @@ namespace ProgrammerUtils
     {
         readonly static Color NORMAL_ACTIVE_BUTTON_COLOR = Color.LightSteelBlue;
         readonly static Color NORMAL_NOT_ACTIVE_BUTTON_COLOR = Color.Gray;
+        readonly static Color COPY_BUTTON_COLOR = Color.LightGoldenrodYellow;
+        readonly static Color COPY_CLICKED_BUTTON_COLOR = Color.LimeGreen;
 
         Sort _sorter;
 
         public Application()
         {
             InitializeComponent();
+            SortExportDropdown.SelectedIndex = 0;
             _sorter = new Sort(AutoSortCheckbox.Checked, GetSortDisplayMode(), GetSortStyle(), Sort.TextStyles.NORMAL, Sort.TextPresentations.NORMAL);
             SetChangeTextStyleButton();
+            SetChangeTextPresentationButton();
         }
 
         private void SetButtonStatus(Button button, bool status)
@@ -80,8 +84,8 @@ namespace ProgrammerUtils
         {
             switch (_sorter.TextPresentation)
             {
-                case Sort.TextPresentations.NORMAL: SortChangeTextCapsButton.Text = "A_B"; break;
-                case Sort.TextPresentations.UNDERSCORE: SortChangeTextCapsButton.Text = "A B"; break;
+                case Sort.TextPresentations.NORMAL: SortTextPresentationButton.Text = "A_B"; break;
+                case Sort.TextPresentations.UNDERSCORE: SortTextPresentationButton.Text = "A B"; break;
             }
         }
         #endregion
@@ -134,9 +138,25 @@ namespace ProgrammerUtils
 
         private void sortCopyButton_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(sortTextBoxRight.Text);
+            sortCopyButton.BackColor = COPY_CLICKED_BUTTON_COLOR;
+            if (sortTextBoxRight.Text.Length > 0)
+                Clipboard.SetText(sortTextBoxRight.Text);
+        }
+
+        private void SortExportEnumButton_Click(object sender, EventArgs e)
+        {
+            SortExportEnumButton.BackColor = COPY_CLICKED_BUTTON_COLOR;
+            string enumString = ProgrammingConverter.GenerateEnumForLanguage(sortTextBoxLeft.Text, SortExportDropdown.Text, _sorter.SortStyle, _sorter.TextStyle);
+            if (enumString.Length > 0)
+                Clipboard.SetText(enumString);
+        }
+
+        private void SortCopyButtonMouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).BackColor = COPY_BUTTON_COLOR;
         }
         #endregion
+
         #endregion
     }
 }
