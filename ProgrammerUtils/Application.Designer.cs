@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Application));
             this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.MainTabControl = new System.Windows.Forms.TabControl();
@@ -55,6 +56,7 @@
             this.SortExportDropdown = new System.Windows.Forms.ComboBox();
             this.SortExportLanguageLabel = new System.Windows.Forms.Label();
             this.SortExportEnumButton = new System.Windows.Forms.Button();
+            this.SortCopyNotice = new System.Windows.Forms.Label();
             this.MatchTab = new System.Windows.Forms.TabPage();
             this.CountTab = new System.Windows.Forms.TabPage();
             this.htmlTab = new System.Windows.Forms.TabPage();
@@ -63,6 +65,7 @@
             this.HelpDropdown = new System.Windows.Forms.ToolStripDropDownButton();
             this.asdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aasdasdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyTimer = new System.Windows.Forms.Timer(this.components);
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -122,7 +125,7 @@
             this.SortTableLayout.ColumnCount = 3;
             this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
+            this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
             this.SortTableLayout.Controls.Add(this.sortLabel2, 1, 3);
             this.SortTableLayout.Controls.Add(this.sortTextBoxLeft, 0, 1);
             this.SortTableLayout.Controls.Add(this.sortTextBoxRight, 1, 1);
@@ -130,6 +133,7 @@
             this.SortTableLayout.Controls.Add(this.sortHeader, 0, 0);
             this.SortTableLayout.Controls.Add(this.tableLayoutPanel1, 2, 1);
             this.SortTableLayout.Controls.Add(this.tableLayoutPanel2, 1, 2);
+            this.SortTableLayout.Controls.Add(this.SortCopyNotice, 2, 0);
             this.SortTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SortTableLayout.Location = new System.Drawing.Point(3, 3);
             this.SortTableLayout.Name = "SortTableLayout";
@@ -481,12 +485,25 @@
             this.SortExportEnumButton.Click += new System.EventHandler(this.SortExportEnumButton_Click);
             this.SortExportEnumButton.MouseLeave += new System.EventHandler(this.SortCopyButtonMouseLeave);
             // 
+            // SortCopyNotice
+            // 
+            this.SortCopyNotice.AutoSize = true;
+            this.SortCopyNotice.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortCopyNotice.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortCopyNotice.ForeColor = System.Drawing.Color.Green;
+            this.SortCopyNotice.Location = new System.Drawing.Point(843, 0);
+            this.SortCopyNotice.Name = "SortCopyNotice";
+            this.SortCopyNotice.Size = new System.Drawing.Size(58, 52);
+            this.SortCopyNotice.TabIndex = 7;
+            this.SortCopyNotice.Text = "Copied!";
+            this.SortCopyNotice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MatchTab
             // 
             this.MatchTab.Location = new System.Drawing.Point(4, 25);
             this.MatchTab.Name = "MatchTab";
             this.MatchTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MatchTab.Size = new System.Drawing.Size(887, 431);
+            this.MatchTab.Size = new System.Drawing.Size(910, 478);
             this.MatchTab.TabIndex = 1;
             this.MatchTab.Text = "Match";
             this.MatchTab.UseVisualStyleBackColor = true;
@@ -496,7 +513,7 @@
             this.CountTab.Location = new System.Drawing.Point(4, 25);
             this.CountTab.Name = "CountTab";
             this.CountTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CountTab.Size = new System.Drawing.Size(887, 431);
+            this.CountTab.Size = new System.Drawing.Size(910, 478);
             this.CountTab.TabIndex = 2;
             this.CountTab.Text = "Count";
             this.CountTab.UseVisualStyleBackColor = true;
@@ -506,7 +523,7 @@
             this.htmlTab.Location = new System.Drawing.Point(4, 25);
             this.htmlTab.Name = "htmlTab";
             this.htmlTab.Padding = new System.Windows.Forms.Padding(3);
-            this.htmlTab.Size = new System.Drawing.Size(887, 431);
+            this.htmlTab.Size = new System.Drawing.Size(910, 478);
             this.htmlTab.TabIndex = 3;
             this.htmlTab.Text = "HTML:ify";
             this.htmlTab.UseVisualStyleBackColor = true;
@@ -554,6 +571,11 @@
             this.aasdasdasdToolStripMenuItem.Name = "aasdasdasdToolStripMenuItem";
             this.aasdasdasdToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.aasdasdasdToolStripMenuItem.Text = "aasdasdasd";
+            // 
+            // copyTimer
+            // 
+            this.copyTimer.Interval = 2500;
+            this.copyTimer.Tick += new System.EventHandler(this.copyTimer_Tick);
             // 
             // Application
             // 
@@ -625,6 +647,8 @@
         private System.Windows.Forms.ComboBox SortExportDropdown;
         private System.Windows.Forms.Label SortExportLanguageLabel;
         private System.Windows.Forms.Button SortExportEnumButton;
+        private System.Windows.Forms.Label SortCopyNotice;
+        private System.Windows.Forms.Timer copyTimer;
     }
 }
 

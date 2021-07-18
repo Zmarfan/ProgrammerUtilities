@@ -27,6 +27,7 @@ namespace ProgrammerUtils
             _sorter = new Sort(AutoSortCheckbox.Checked, GetSortDisplayMode(), GetSortStyle(), Sort.TextStyles.NORMAL, Sort.TextPresentations.NORMAL);
             SetChangeTextStyleButton();
             SetChangeTextPresentationButton();
+            SortCopyNotice.Text = "";
         }
 
         private void SetButtonStatus(Button button, bool status)
@@ -139,6 +140,8 @@ namespace ProgrammerUtils
         private void sortCopyButton_Click(object sender, EventArgs e)
         {
             sortCopyButton.BackColor = COPY_CLICKED_BUTTON_COLOR;
+            copyTimer.Start();
+            SortCopyNotice.Text = "Copied!";
             if (sortTextBoxRight.Text.Length > 0)
                 Clipboard.SetText(sortTextBoxRight.Text);
         }
@@ -146,6 +149,8 @@ namespace ProgrammerUtils
         private void SortExportEnumButton_Click(object sender, EventArgs e)
         {
             SortExportEnumButton.BackColor = COPY_CLICKED_BUTTON_COLOR;
+            copyTimer.Start();
+            SortCopyNotice.Text = "Copied!";
             string enumString = ProgrammingConverter.GenerateEnumForLanguage(sortTextBoxLeft.Text, SortExportDropdown.Text, _sorter.SortStyle, _sorter.TextStyle);
             if (enumString.Length > 0)
                 Clipboard.SetText(enumString);
@@ -158,5 +163,11 @@ namespace ProgrammerUtils
         #endregion
 
         #endregion
+
+        private void copyTimer_Tick(object sender, EventArgs e)
+        {
+            SortCopyNotice.Text = "";
+            copyTimer.Stop();
+        }
     }
 }
