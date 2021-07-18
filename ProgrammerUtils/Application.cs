@@ -13,14 +13,12 @@ namespace ProgrammerUtils
 {
     public partial class Application : Form
     {
-        string testString = "Sverige, Danmark, Finland, Ryssland, Spanien, Tyskland, Polen, Egypten\nEstland\nIsland\nJapan";
-
         Sort _sorter;
 
         public Application()
         {
             InitializeComponent();
-            _sorter = new Sort(AutoSortCheckbox.Checked, GetSortDisplayMode());
+            _sorter = new Sort(AutoSortCheckbox.Checked, GetSortDisplayMode(), GetSortStyle());
         }
 
         private void SetButtonStatus(Button button, bool status)
@@ -30,33 +28,75 @@ namespace ProgrammerUtils
         }
 
         #region Sort
-
-        private Sort.SortDisplayMode GetSortDisplayMode()
+        #region Helper Functions
+        private Sort.SortDisplayModes GetSortDisplayMode()
         {
             if (sortSeperatorCommaRadio.Checked)
-                return Sort.SortDisplayMode.COMMA;
+                return Sort.SortDisplayModes.COMMA;
             else if (sortSeperatorNewLineRadio.Checked)
-                return Sort.SortDisplayMode.NEW_LINE;
+                return Sort.SortDisplayModes.NEW_LINE;
             else
                 throw new System.Exception("There exist too many radios for this setting!");
         }
 
+        private Sort.SortStyles GetSortStyle()
+        {
+            if (sortAlphabeticlyRadio.Checked)
+                return Sort.SortStyles.ALPHABETICAL;
+            else if (notSortAlphabeticlyRadio.Checked)
+                return Sort.SortStyles.REVERSED;
+            else
+                throw new System.Exception("There exist too many radios for this setting!");
+        }
+
+        private void DoSort()
+        {
+            string outputString = _sorter.SortString(sortTextBoxLeft.Text);
+            sortTextBoxRight.Text = outputString;
+        }
+
+        private void SortTextChanged(object sender, EventArgs e)
+        {
+            if (_sorter.AutoSort)
+                DoSort();
+        }
+        #endregion
+        #region Events
+
         private void SortButton_Click(object sender, EventArgs e)
         {
-            string inputString = sortTextBoxLeft.Text;
-            string outputString = _sorter.SortString(inputString);
-            sortTextBoxRight.Text = outputString;
+            DoSort();
         }
 
         private void AutoSortCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             SetButtonStatus(SortButton, !AutoSortCheckbox.Checked);
+            _sorter.SetAutoSort(AutoSortCheckbox.Checked);
+
+            if (AutoSortCheckbox.Checked)
+                DoSort();
         }
 
         private void SortDisplayModeChange(object sender, EventArgs e)
         {
             _sorter.SetDisplayMode(GetSortDisplayMode());
+            if (AutoSortCheckbox.Checked)
+                DoSort();
         }
+
+        private void SortStyleChanged(object sender, EventArgs e)
+        {
+            _sorter.SetSortStyle(GetSortStyle());
+            if (AutoSortCheckbox.Checked)
+                DoSort();
+        }
+
+        private void SortClearButton_Click(object sender, EventArgs e)
+        {
+            sortTextBoxLeft.Text = string.Empty;
+            sortTextBoxRight.Text = string.Empty;
+        }
+        #endregion
 
         #endregion
     }

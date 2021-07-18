@@ -8,10 +8,16 @@ namespace ProgrammerUtils
 {
     public class Sort
     {
-        public enum SortDisplayMode
+        public enum SortDisplayModes
         {
             COMMA,
             NEW_LINE
+        }
+
+        public enum SortStyles
+        {
+            ALPHABETICAL,
+            REVERSED
         }
 
         readonly static string[] SPLITTERS = new string[]
@@ -21,19 +27,21 @@ namespace ProgrammerUtils
             "\n"
         };
 
-        readonly static Dictionary<SortDisplayMode, string> SEPERATORS = new Dictionary<SortDisplayMode, string>()
+        readonly static Dictionary<SortDisplayModes, string> SEPERATORS = new Dictionary<SortDisplayModes, string>()
         {
-            { SortDisplayMode.COMMA, ", " },
-            { SortDisplayMode.NEW_LINE, "\n" }
+            { SortDisplayModes.COMMA, ", " },
+            { SortDisplayModes.NEW_LINE, "\n" }
         };
 
-        private bool _autoSort;
-        private SortDisplayMode _displayMode;
+        public bool AutoSort { get; private set; }
+        public SortDisplayModes DisplayMode { get; private set; }
+        public SortStyles SortStyle { get; private set; }
 
-        public Sort(bool autoSort, SortDisplayMode displayMode)
+        public Sort(bool autoSort, SortDisplayModes displayMode, SortStyles sortStyle)
         {
-            _autoSort = autoSort;
-            _displayMode = displayMode;
+            AutoSort = autoSort;
+            DisplayMode = displayMode;
+            SortStyle = sortStyle;
         }
 
         public string SortString(string input)
@@ -41,13 +49,25 @@ namespace ProgrammerUtils
             List<string> splits = input.Split(SPLITTERS, StringSplitOptions.RemoveEmptyEntries).ToList();
             splits.Sort();
             string returnString = string.Empty;
-            splits.ForEach(entry => returnString += entry + SEPERATORS[_displayMode]);
+            if (SortStyle == SortStyles.REVERSED)
+                splits.Reverse();
+            splits.ForEach(entry => returnString += entry + SEPERATORS[DisplayMode]);
             return returnString;
         }
 
-        public void SetDisplayMode(SortDisplayMode displayMode)
+        public void SetAutoSort(bool doAutoSort)
         {
-            _displayMode = displayMode;
+            AutoSort = doAutoSort;
+        }
+
+        public void SetDisplayMode(SortDisplayModes displayMode)
+        {
+            DisplayMode = displayMode;
+        }
+
+        public void SetSortStyle(SortStyles sortStyle)
+        {
+            SortStyle = sortStyle;
         }
     }
 }
