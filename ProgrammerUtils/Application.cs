@@ -131,8 +131,12 @@ namespace ProgrammerUtils
             SetChangeTextPresentationButton();
             DoSort();
         }
-        #endregion
 
+        private void sortCopyButton_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(sortTextBoxRight.Text);
+        }
+        #endregion
         #endregion
     }
 }

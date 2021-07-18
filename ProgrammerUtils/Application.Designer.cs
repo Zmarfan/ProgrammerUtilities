@@ -47,6 +47,7 @@
             this.sortSeperatorCommaRadio = new System.Windows.Forms.RadioButton();
             this.sortSeperatorNewLineRadio = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.sortCopyButton = new System.Windows.Forms.Button();
             this.SortClearButton = new System.Windows.Forms.Button();
             this.SortTextPresentationButton = new System.Windows.Forms.Button();
             this.SortChangeTextCapsButton = new System.Windows.Forms.Button();
@@ -83,7 +84,7 @@
             this.MainTableLayout.RowCount = 2;
             this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.MainTableLayout.Size = new System.Drawing.Size(876, 520);
+            this.MainTableLayout.Size = new System.Drawing.Size(901, 496);
             this.MainTableLayout.TabIndex = 0;
             // 
             // MainTabControl
@@ -97,7 +98,7 @@
             this.MainTabControl.Location = new System.Drawing.Point(3, 33);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(870, 484);
+            this.MainTabControl.Size = new System.Drawing.Size(895, 460);
             this.MainTabControl.TabIndex = 0;
             // 
             // SortTab
@@ -106,7 +107,7 @@
             this.SortTab.Location = new System.Drawing.Point(4, 25);
             this.SortTab.Name = "SortTab";
             this.SortTab.Padding = new System.Windows.Forms.Padding(3);
-            this.SortTab.Size = new System.Drawing.Size(862, 455);
+            this.SortTab.Size = new System.Drawing.Size(887, 431);
             this.SortTab.TabIndex = 0;
             this.SortTab.Text = "Sort";
             this.SortTab.UseVisualStyleBackColor = true;
@@ -130,7 +131,7 @@
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.SortTableLayout.Size = new System.Drawing.Size(856, 449);
+            this.SortTableLayout.Size = new System.Drawing.Size(881, 425);
             this.SortTableLayout.TabIndex = 0;
             // 
             // sortLabel2
@@ -139,9 +140,9 @@
             this.sortLabel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.sortLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sortLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortLabel2.Location = new System.Drawing.Point(400, 410);
+            this.sortLabel2.Location = new System.Drawing.Point(412, 386);
             this.sortLabel2.Name = "sortLabel2";
-            this.sortLabel2.Size = new System.Drawing.Size(391, 39);
+            this.sortLabel2.Size = new System.Drawing.Size(403, 39);
             this.sortLabel2.TabIndex = 3;
             this.sortLabel2.Text = "Sorted items.";
             this.sortLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -151,7 +152,7 @@
             this.sortTextBoxLeft.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sortTextBoxLeft.Location = new System.Drawing.Point(3, 55);
             this.sortTextBoxLeft.Name = "sortTextBoxLeft";
-            this.sortTextBoxLeft.Size = new System.Drawing.Size(391, 352);
+            this.sortTextBoxLeft.Size = new System.Drawing.Size(403, 328);
             this.sortTextBoxLeft.TabIndex = 0;
             this.sortTextBoxLeft.Text = "Sverige, Danmark, Finland, Ryssland, Spanien, Tyskland, Polen, Egypten\nEstland\nIs" +
     "land\nJapan, China Hong Kong, Iran Irak";
@@ -160,10 +161,10 @@
             // sortTextBoxRight
             // 
             this.sortTextBoxRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortTextBoxRight.Location = new System.Drawing.Point(400, 55);
+            this.sortTextBoxRight.Location = new System.Drawing.Point(412, 55);
             this.sortTextBoxRight.Name = "sortTextBoxRight";
             this.sortTextBoxRight.ReadOnly = true;
-            this.sortTextBoxRight.Size = new System.Drawing.Size(391, 352);
+            this.sortTextBoxRight.Size = new System.Drawing.Size(403, 328);
             this.sortTextBoxRight.TabIndex = 1;
             this.sortTextBoxRight.Text = "";
             // 
@@ -173,10 +174,10 @@
             this.sortLabel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.sortLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.sortLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortLabel1.Location = new System.Drawing.Point(3, 410);
+            this.sortLabel1.Location = new System.Drawing.Point(3, 386);
             this.sortLabel1.Name = "sortLabel1";
             this.sortLabel1.Padding = new System.Windows.Forms.Padding(10);
-            this.sortLabel1.Size = new System.Drawing.Size(391, 39);
+            this.sortLabel1.Size = new System.Drawing.Size(403, 39);
             this.sortLabel1.TabIndex = 2;
             this.sortLabel1.Text = "Items to sort. Separate entries by commas or new lines!";
             this.sortLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -201,7 +202,7 @@
             this.sortHeader.RowCount = 2;
             this.sortHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.sortHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.sortHeader.Size = new System.Drawing.Size(794, 52);
+            this.sortHeader.Size = new System.Drawing.Size(818, 52);
             this.sortHeader.TabIndex = 4;
             // 
             // SortButton
@@ -328,20 +329,39 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.SortClearButton, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.sortCopyButton, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.SortClearButton, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.SortTextPresentationButton, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.SortChangeTextCapsButton, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(794, 52);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(818, 52);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(62, 358);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(63, 334);
             this.tableLayoutPanel1.TabIndex = 5;
+            // 
+            // sortCopyButton
+            // 
+            this.sortCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.sortCopyButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sortCopyButton.BackgroundImage")));
+            this.sortCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.sortCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sortCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sortCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sortCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortCopyButton.Location = new System.Drawing.Point(3, 123);
+            this.sortCopyButton.Name = "sortCopyButton";
+            this.sortCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.sortCopyButton.Size = new System.Drawing.Size(57, 54);
+            this.sortCopyButton.TabIndex = 8;
+            this.sortCopyButton.UseVisualStyleBackColor = false;
+            this.sortCopyButton.Click += new System.EventHandler(this.sortCopyButton_Click);
             // 
             // SortClearButton
             // 
@@ -351,9 +371,9 @@
             this.SortClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SortClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SortClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortClearButton.Location = new System.Drawing.Point(3, 123);
+            this.SortClearButton.Location = new System.Drawing.Point(3, 183);
             this.SortClearButton.Name = "SortClearButton";
-            this.SortClearButton.Size = new System.Drawing.Size(56, 54);
+            this.SortClearButton.Size = new System.Drawing.Size(57, 54);
             this.SortClearButton.TabIndex = 7;
             this.SortClearButton.Text = "Clear";
             this.SortClearButton.UseVisualStyleBackColor = false;
@@ -368,7 +388,7 @@
             this.SortTextPresentationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortTextPresentationButton.Location = new System.Drawing.Point(3, 63);
             this.SortTextPresentationButton.Name = "SortTextPresentationButton";
-            this.SortTextPresentationButton.Size = new System.Drawing.Size(56, 54);
+            this.SortTextPresentationButton.Size = new System.Drawing.Size(57, 54);
             this.SortTextPresentationButton.TabIndex = 1;
             this.SortTextPresentationButton.Text = "_";
             this.SortTextPresentationButton.UseVisualStyleBackColor = false;
@@ -383,7 +403,7 @@
             this.SortChangeTextCapsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortChangeTextCapsButton.Location = new System.Drawing.Point(3, 3);
             this.SortChangeTextCapsButton.Name = "SortChangeTextCapsButton";
-            this.SortChangeTextCapsButton.Size = new System.Drawing.Size(56, 54);
+            this.SortChangeTextCapsButton.Size = new System.Drawing.Size(57, 54);
             this.SortChangeTextCapsButton.TabIndex = 0;
             this.SortChangeTextCapsButton.Text = "ABC";
             this.SortChangeTextCapsButton.UseVisualStyleBackColor = false;
@@ -430,7 +450,7 @@
             this.HelpDropdown});
             this.Toolbar.Location = new System.Drawing.Point(0, 0);
             this.Toolbar.Name = "Toolbar";
-            this.Toolbar.Size = new System.Drawing.Size(876, 30);
+            this.Toolbar.Size = new System.Drawing.Size(901, 30);
             this.Toolbar.TabIndex = 1;
             // 
             // toolStripSeparator1
@@ -469,10 +489,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(876, 520);
+            this.ClientSize = new System.Drawing.Size(901, 496);
             this.Controls.Add(this.MainTableLayout);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
-            this.MinimumSize = new System.Drawing.Size(744, 410);
+            this.MinimumSize = new System.Drawing.Size(744, 470);
             this.Name = "Application";
             this.Text = "ProgrammingUtils";
             this.MainTableLayout.ResumeLayout(false);
@@ -526,6 +546,7 @@
         private System.Windows.Forms.Button SortClearButton;
         private System.Windows.Forms.Button SortTextPresentationButton;
         private System.Windows.Forms.Button SortChangeTextCapsButton;
+        private System.Windows.Forms.Button sortCopyButton;
     }
 }
 

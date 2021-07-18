@@ -68,15 +68,17 @@ namespace ProgrammerUtils
             string returnString = string.Empty;
             if (SortStyle == SortStyles.REVERSED)
                 splits.Reverse();
-            splits.ForEach(entry => returnString += entry + SEPERATORS[DisplayMode]);
+            splits.ForEach(entry =>
+            {
+                if (TextPresentation == TextPresentations.UNDERSCORE)
+                    entry = entry.Replace(' ', '_');
+                returnString += entry + SEPERATORS[DisplayMode];
+            });
 
             if (TextStyle == TextStyles.ALL_CAPS)
                 returnString = returnString.ToUpper();
             else if (TextStyle == TextStyles.ALL_SMALL)
                 returnString = returnString.ToLower();
-
-            if (TextPresentation == TextPresentations.UNDERSCORE)
-                returnString = returnString.Replace(' ', '_');
 
             return returnString;
         }
