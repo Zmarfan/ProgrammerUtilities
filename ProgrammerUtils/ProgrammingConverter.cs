@@ -15,6 +15,8 @@ namespace ProgrammerUtils
             Typescript,
         }
 
+        private static readonly string TAB = "       ";
+
         private static ProgrammingLanguages GetLanguageFromString(string language)
         {
             if (language == "C#")
@@ -44,6 +46,7 @@ namespace ProgrammerUtils
             builder.Append("public enum MyNewEnum {\n");
             for (int i = 0; i < entries.Length; i++)
             {
+                builder.Append(TAB);
                 builder.Append(entries[i]);
                 builder.Append($"({i + 1})");
                 if (i != entries.Length - 1)
@@ -51,10 +54,10 @@ namespace ProgrammerUtils
                 else
                     builder.Append(";\n\n");
             }
-            builder.Append("private final long mId;\n\n");
-            builder.Append("private MyNewEnum(long id) {\nmId = id;\n}\n\n");
+            builder.Append($"{TAB}private final long mId;\n\n");
+            builder.Append($"{TAB}private MyNewEnum(long id) {"{"}\n{TAB}{TAB}mId = id;\n{TAB}{"}"}\n\n");
 
-            builder.Append("public long getId() {\nreturn mId;\n}\n");
+            builder.Append($"{TAB}public long getId() {"{"}\n{TAB}{TAB}return mId;\n{TAB}{"}"}\n");
 
             builder.Append("}");
             return builder.ToString();
@@ -66,6 +69,7 @@ namespace ProgrammerUtils
             builder.Append("public enum MyNewEnum\n{\n");
             entries.ToList().ForEach(entry =>
             {
+                builder.Append(TAB);
                 builder.Append(entry);
                 builder.Append(",\n");
             });
@@ -79,6 +83,7 @@ namespace ProgrammerUtils
             builder.Append("export enum MyNewEnum {\n");
             for (int i = 0; i < entries.Length; i++)
             {
+                builder.Append(TAB);
                 builder.Append(entries[i]);
                 builder.Append($" = {i + 1},\n");
             }

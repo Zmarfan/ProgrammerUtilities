@@ -69,6 +69,17 @@ namespace ProgrammerUtils
         {
             string outputString = _sorter.SortString(sortTextBoxLeft.Text);
             sortTextBoxRight.Text = outputString;
+
+            DoEnumSort();
+        }
+
+        private void DoEnumSort()
+        {
+            if (_sorter != null)
+            {
+                string enumString = ProgrammingConverter.GenerateEnumForLanguage(sortTextBoxLeft.Text, SortExportDropdown.Text, _sorter.SortStyle, _sorter.TextStyle);
+                sortEnumTextBoxRight.Text = enumString;
+            }         
         }
 
         private void SortTextChanged(object sender, EventArgs e)
@@ -158,8 +169,12 @@ namespace ProgrammerUtils
             if (enumString.Length > 0)
                 Clipboard.SetText(enumString);
         }
-        #endregion
 
+        private void SortExportDropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DoEnumSort();
+        }
+        #endregion
         #endregion
 
         #region Copy Timer
@@ -179,7 +194,6 @@ namespace ProgrammerUtils
             SortCopyNotice.Text = "";
             CopyTimer.Stop();
         }
-
         #endregion
     }
 }
