@@ -15,6 +15,7 @@ namespace ProgrammerUtils
             Typescript,
         }
 
+        private static readonly string DEFAULT_ENUM_NAME = "MyNewEnum";
         private static readonly string TAB = "       ";
 
         private static ProgrammingLanguages GetLanguageFromString(string language)
@@ -25,25 +26,26 @@ namespace ProgrammerUtils
             return (ProgrammingLanguages)Enum.Parse(typeof(ProgrammingLanguages), language);
         }
 
-        public static string GenerateEnumForLanguage(string enteredString, string languageString, Sort.SortStyles sortStyle, Sort.TextStyles textStyle)
+        public static string GenerateEnumForLanguage(string enteredString, string languageString, Sort.SortStyles sortStyle, Sort.TextStyles textStyle, string enumName)
         {
             Sort sorter = new Sort(true, Sort.SortDisplayModes.NEW_LINE, sortStyle, textStyle, Sort.TextPresentations.UNDERSCORE);
             string[] entries = sorter.SortString(enteredString).Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
             ProgrammingLanguages language = GetLanguageFromString(languageString);
+            enumName = enumName.Length == 0 ? DEFAULT_ENUM_NAME : enumName;
 
             switch (language)
             {
-                case ProgrammingLanguages.Java: return GenerateJavaEnum(entries);
-                case ProgrammingLanguages.CSharp: return GenerateCSharpEnum(entries); 
-                case ProgrammingLanguages.Typescript: return GenerateTypescriptEnum(entries); 
+                case ProgrammingLanguages.Java: return GenerateJavaEnum(entries, enumName);
+                case ProgrammingLanguages.CSharp: return GenerateCSharpEnum(entries, enumName); 
+                case ProgrammingLanguages.Typescript: return GenerateTypescriptEnum(entries, enumName); 
             }
             return "";
         }
 
-        private static string GenerateJavaEnum(string[] entries)
+        private static string GenerateJavaEnum(string[] entries, string enumName)
         {
             StringBuilder builder = new StringBuilder();
-            builder.Append("public enum MyNewEnum {\n");
+            builder.Append($"public enum {enumName} {"{"}\n");
             for (int i = 0; i < entries.Length; i++)
             {
                 builder.Append(TAB);
@@ -55,7 +57,7 @@ namespace ProgrammerUtils
                     builder.Append(";\n\n");
             }
             builder.Append($"{TAB}private final long mId;\n\n");
-            builder.Append($"{TAB}private MyNewEnum(long id) {"{"}\n{TAB}{TAB}mId = id;\n{TAB}{"}"}\n\n");
+            builder.Append($"{TAB}private {enumName}(long id) {"{"}\n{TAB}{TAB}mId = id;\n{TAB}{"}"}\n\n");
 
             builder.Append($"{TAB}public long getId() {"{"}\n{TAB}{TAB}return mId;\n{TAB}{"}"}\n");
 
@@ -63,10 +65,10 @@ namespace ProgrammerUtils
             return builder.ToString();
         }
 
-        private static string GenerateCSharpEnum(string[] entries)
+        private static string GenerateCSharpEnum(string[] entries, string enumName)
         {
             StringBuilder builder = new StringBuilder();
-            builder.Append("public enum MyNewEnum\n{\n");
+            builder.Append($"public enum {enumName}\n{"{"}\n");
             entries.ToList().ForEach(entry =>
             {
                 builder.Append(TAB);
@@ -77,10 +79,10 @@ namespace ProgrammerUtils
             return builder.ToString();
         }
 
-        private static string GenerateTypescriptEnum(string[] entries)
+        private static string GenerateTypescriptEnum(string[] entries, string enumName)
         {
             StringBuilder builder = new StringBuilder();
-            builder.Append("export enum MyNewEnum {\n");
+            builder.Append($"export enum {enumName} {"{"}\n");
             for (int i = 0; i < entries.Length; i++)
             {
                 builder.Append(TAB);

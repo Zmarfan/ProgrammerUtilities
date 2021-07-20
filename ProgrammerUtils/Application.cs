@@ -77,7 +77,7 @@ namespace ProgrammerUtils
         {
             if (_sorter != null)
             {
-                string enumString = ProgrammingConverter.GenerateEnumForLanguage(sortTextBoxLeft.Text, SortExportDropdown.Text, _sorter.SortStyle, _sorter.TextStyle);
+                string enumString = ProgrammingConverter.GenerateEnumForLanguage(sortTextBoxLeft.Text, SortExportDropdown.Text, _sorter.SortStyle, _sorter.TextStyle, SortEnumClassName.Text);
                 sortEnumTextBoxRight.Text = enumString;
             }         
         }
@@ -165,12 +165,17 @@ namespace ProgrammerUtils
         private void SortExportEnumButton_Click(object sender, EventArgs e)
         {
             Copy(SortExportEnumButton);
-            string enumString = ProgrammingConverter.GenerateEnumForLanguage(sortTextBoxLeft.Text, SortExportDropdown.Text, _sorter.SortStyle, _sorter.TextStyle);
+            string enumString = ProgrammingConverter.GenerateEnumForLanguage(sortTextBoxLeft.Text, SortExportDropdown.Text, _sorter.SortStyle, _sorter.TextStyle, SortEnumClassName.Text);
             if (enumString.Length > 0)
                 Clipboard.SetText(enumString);
         }
 
         private void SortExportDropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DoEnumSort();
+        }
+
+        private void SortEnumClassName_TextChanged(object sender, EventArgs e)
         {
             DoEnumSort();
         }
