@@ -23,8 +23,15 @@ namespace ProgrammerUtils
         public Application()
         {
             InitializeComponent();
+            Init(); 
+        }
+
+        private void Init()
+        {
             SortExportDropdown.SelectedIndex = 0;
             _sorter = new Sort(AutoSortCheckbox.Checked, GetSortDisplayMode(), GetSortStyle(), Sort.TextStyles.NORMAL, Sort.TextPresentations.NORMAL);
+            SetButtonStatus(SortButton, !AutoSortCheckbox.Checked);
+            DoSort();
             SetChangeTextStyleButton();
             SetChangeTextPresentationButton();
             SortCopyNotice.Text = "";
@@ -139,35 +146,40 @@ namespace ProgrammerUtils
 
         private void sortCopyButton_Click(object sender, EventArgs e)
         {
-            sortCopyButton.BackColor = COPY_CLICKED_BUTTON_COLOR;
-            copyTimer.Start();
-            SortCopyNotice.Text = "Copied!";
+            Copy(sortCopyButton);
             if (sortTextBoxRight.Text.Length > 0)
                 Clipboard.SetText(sortTextBoxRight.Text);
         }
 
         private void SortExportEnumButton_Click(object sender, EventArgs e)
         {
-            SortExportEnumButton.BackColor = COPY_CLICKED_BUTTON_COLOR;
-            copyTimer.Start();
-            SortCopyNotice.Text = "Copied!";
+            Copy(SortExportEnumButton);
             string enumString = ProgrammingConverter.GenerateEnumForLanguage(sortTextBoxLeft.Text, SortExportDropdown.Text, _sorter.SortStyle, _sorter.TextStyle);
             if (enumString.Length > 0)
                 Clipboard.SetText(enumString);
         }
+        #endregion
 
-        private void SortCopyButtonMouseLeave(object sender, EventArgs e)
+        #endregion
+
+        #region Copy Timer
+
+        private void Copy(Button button)
         {
-            ((Button)sender).BackColor = COPY_BUTTON_COLOR;
+            button.BackColor = COPY_CLICKED_BUTTON_COLOR;
+            SortCopyNotice.Text = "Copied!";
+            copyTimer.Stop();
+            copyTimer.Start();
         }
-        #endregion
-
-        #endregion
 
         private void copyTimer_Tick(object sender, EventArgs e)
         {
+            sortCopyButton.BackColor = COPY_BUTTON_COLOR;
+            SortExportEnumButton.BackColor = COPY_BUTTON_COLOR;
             SortCopyNotice.Text = "";
             copyTimer.Stop();
         }
+
+        #endregion
     }
 }

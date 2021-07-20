@@ -52,7 +52,7 @@ namespace ProgrammerUtils
                     builder.Append(";\n\n");
             }
             builder.Append("private final long mId;\n\n");
-            builder.Append("private MyNewEnum(long id) {\nmId = id;\n }\n\n");
+            builder.Append("private MyNewEnum(long id) {\nmId = id;\n}\n\n");
 
             builder.Append("public long getId() {\nreturn mId;\n}\n");
 

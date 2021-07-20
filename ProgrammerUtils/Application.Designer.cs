@@ -54,7 +54,6 @@
             this.SortChangeTextCapsButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.SortExportDropdown = new System.Windows.Forms.ComboBox();
-            this.SortExportLanguageLabel = new System.Windows.Forms.Label();
             this.SortExportEnumButton = new System.Windows.Forms.Button();
             this.SortCopyNotice = new System.Windows.Forms.Label();
             this.MatchTab = new System.Windows.Forms.TabPage();
@@ -66,6 +65,9 @@
             this.asdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aasdasdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.copyTimer = new System.Windows.Forms.Timer(this.components);
+            this.SortEnumOptionTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.SortEnumClassName = new System.Windows.Forms.TextBox();
+            this.SortEnumClassNameStatus = new System.Windows.Forms.Label();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -76,6 +78,7 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.Toolbar.SuspendLayout();
+            this.SortEnumOptionTableLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTableLayout
@@ -236,6 +239,8 @@
             // AutoSortCheckbox
             // 
             this.AutoSortCheckbox.AutoSize = true;
+            this.AutoSortCheckbox.Checked = true;
+            this.AutoSortCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.AutoSortCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AutoSortCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AutoSortCheckbox.Location = new System.Drawing.Point(203, 3);
@@ -375,7 +380,6 @@
             this.sortCopyButton.TabIndex = 8;
             this.sortCopyButton.UseVisualStyleBackColor = false;
             this.sortCopyButton.Click += new System.EventHandler(this.sortCopyButton_Click);
-            this.sortCopyButton.MouseLeave += new System.EventHandler(this.SortCopyButtonMouseLeave);
             // 
             // SortClearButton
             // 
@@ -430,8 +434,8 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.Controls.Add(this.SortExportDropdown, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.SortExportLanguageLabel, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.SortExportEnumButton, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.SortEnumOptionTableLayout, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(423, 376);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -456,18 +460,6 @@
             this.SortExportDropdown.Size = new System.Drawing.Size(304, 24);
             this.SortExportDropdown.TabIndex = 0;
             // 
-            // SortExportLanguageLabel
-            // 
-            this.SortExportLanguageLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.SortExportLanguageLabel.AutoSize = true;
-            this.SortExportLanguageLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.SortExportLanguageLabel.Location = new System.Drawing.Point(3, 4);
-            this.SortExportLanguageLabel.Name = "SortExportLanguageLabel";
-            this.SortExportLanguageLabel.Size = new System.Drawing.Size(269, 19);
-            this.SortExportLanguageLabel.TabIndex = 1;
-            this.SortExportLanguageLabel.Text = "Programming language to copy as enum:\r\n";
-            this.SortExportLanguageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // SortExportEnumButton
             // 
             this.SortExportEnumButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
@@ -483,7 +475,6 @@
             this.SortExportEnumButton.Text = "Copy as Enum";
             this.SortExportEnumButton.UseVisualStyleBackColor = false;
             this.SortExportEnumButton.Click += new System.EventHandler(this.SortExportEnumButton_Click);
-            this.SortExportEnumButton.MouseLeave += new System.EventHandler(this.SortCopyButtonMouseLeave);
             // 
             // SortCopyNotice
             // 
@@ -577,6 +568,44 @@
             this.copyTimer.Interval = 2500;
             this.copyTimer.Tick += new System.EventHandler(this.copyTimer_Tick);
             // 
+            // SortEnumOptionTableLayout
+            // 
+            this.SortEnumOptionTableLayout.ColumnCount = 2;
+            this.SortEnumOptionTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.SortEnumOptionTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.SortEnumOptionTableLayout.Controls.Add(this.SortEnumClassName, 0, 0);
+            this.SortEnumOptionTableLayout.Controls.Add(this.SortEnumClassNameStatus, 1, 0);
+            this.SortEnumOptionTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortEnumOptionTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.SortEnumOptionTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.SortEnumOptionTableLayout.Name = "SortEnumOptionTableLayout";
+            this.SortEnumOptionTableLayout.RowCount = 1;
+            this.SortEnumOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.SortEnumOptionTableLayout.Size = new System.Drawing.Size(310, 27);
+            this.SortEnumOptionTableLayout.TabIndex = 3;
+            // 
+            // SortEnumClassName
+            // 
+            this.SortEnumClassName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortEnumClassName.Location = new System.Drawing.Point(3, 3);
+            this.SortEnumClassName.MaxLength = 30;
+            this.SortEnumClassName.Name = "SortEnumClassName";
+            this.SortEnumClassName.Size = new System.Drawing.Size(226, 22);
+            this.SortEnumClassName.TabIndex = 0;
+            // 
+            // SortEnumClassNameStatus
+            // 
+            this.SortEnumClassNameStatus.AutoSize = true;
+            this.SortEnumClassNameStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortEnumClassNameStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortEnumClassNameStatus.ForeColor = System.Drawing.Color.Green;
+            this.SortEnumClassNameStatus.Location = new System.Drawing.Point(235, 0);
+            this.SortEnumClassNameStatus.Name = "SortEnumClassNameStatus";
+            this.SortEnumClassNameStatus.Size = new System.Drawing.Size(72, 27);
+            this.SortEnumClassNameStatus.TabIndex = 1;
+            this.SortEnumClassNameStatus.Text = "Valid!";
+            this.SortEnumClassNameStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -604,9 +633,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
             this.Toolbar.ResumeLayout(false);
             this.Toolbar.PerformLayout();
+            this.SortEnumOptionTableLayout.ResumeLayout(false);
+            this.SortEnumOptionTableLayout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -645,10 +675,12 @@
         private System.Windows.Forms.Button sortCopyButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.ComboBox SortExportDropdown;
-        private System.Windows.Forms.Label SortExportLanguageLabel;
         private System.Windows.Forms.Button SortExportEnumButton;
         private System.Windows.Forms.Label SortCopyNotice;
         private System.Windows.Forms.Timer copyTimer;
+        private System.Windows.Forms.TableLayoutPanel SortEnumOptionTableLayout;
+        private System.Windows.Forms.TextBox SortEnumClassName;
+        private System.Windows.Forms.Label SortEnumClassNameStatus;
     }
 }
 
