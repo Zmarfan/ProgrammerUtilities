@@ -603,7 +603,7 @@
             // 
             // CopyTimer
             // 
-            this.CopyTimer.Interval = 2500;
+            this.CopyTimer.Interval = 1500;
             this.CopyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
             // 
             // Application
