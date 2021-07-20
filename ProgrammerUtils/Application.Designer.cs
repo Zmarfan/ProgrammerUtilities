@@ -48,13 +48,16 @@
             this.sortSeperatorCommaRadio = new System.Windows.Forms.RadioButton();
             this.sortSeperatorNewLineRadio = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.sortCopyButton = new System.Windows.Forms.Button();
+            this.SortCopyButton = new System.Windows.Forms.Button();
             this.SortClearButton = new System.Windows.Forms.Button();
             this.SortTextPresentationButton = new System.Windows.Forms.Button();
             this.SortChangeTextCapsButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.SortExportDropdown = new System.Windows.Forms.ComboBox();
             this.SortExportEnumButton = new System.Windows.Forms.Button();
+            this.SortEnumOptionTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.SortEnumClassName = new System.Windows.Forms.TextBox();
+            this.SortEnumClassNameStatus = new System.Windows.Forms.Label();
             this.SortCopyNotice = new System.Windows.Forms.Label();
             this.MatchTab = new System.Windows.Forms.TabPage();
             this.CountTab = new System.Windows.Forms.TabPage();
@@ -64,10 +67,7 @@
             this.HelpDropdown = new System.Windows.Forms.ToolStripDropDownButton();
             this.asdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aasdasdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyTimer = new System.Windows.Forms.Timer(this.components);
-            this.SortEnumOptionTableLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.SortEnumClassName = new System.Windows.Forms.TextBox();
-            this.SortEnumClassNameStatus = new System.Windows.Forms.Label();
+            this.CopyTimer = new System.Windows.Forms.Timer(this.components);
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -77,8 +77,8 @@
             this.sortStyleTableLayout.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.Toolbar.SuspendLayout();
             this.SortEnumOptionTableLayout.SuspendLayout();
+            this.Toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTableLayout
@@ -347,7 +347,7 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Controls.Add(this.sortCopyButton, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.SortCopyButton, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.SortClearButton, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.SortTextPresentationButton, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.SortChangeTextCapsButton, 0, 0);
@@ -364,22 +364,22 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(64, 321);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
-            // sortCopyButton
+            // SortCopyButton
             // 
-            this.sortCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.sortCopyButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("sortCopyButton.BackgroundImage")));
-            this.sortCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.sortCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sortCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.sortCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sortCopyButton.Location = new System.Drawing.Point(3, 123);
-            this.sortCopyButton.Name = "sortCopyButton";
-            this.sortCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.sortCopyButton.Size = new System.Drawing.Size(58, 54);
-            this.sortCopyButton.TabIndex = 8;
-            this.sortCopyButton.UseVisualStyleBackColor = false;
-            this.sortCopyButton.Click += new System.EventHandler(this.sortCopyButton_Click);
+            this.SortCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.SortCopyButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SortCopyButton.BackgroundImage")));
+            this.SortCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SortCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SortCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SortCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortCopyButton.Location = new System.Drawing.Point(3, 123);
+            this.SortCopyButton.Name = "SortCopyButton";
+            this.SortCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.SortCopyButton.Size = new System.Drawing.Size(58, 54);
+            this.SortCopyButton.TabIndex = 8;
+            this.SortCopyButton.UseVisualStyleBackColor = false;
+            this.SortCopyButton.Click += new System.EventHandler(this.SortCopyButton_Click);
             // 
             // SortClearButton
             // 
@@ -476,6 +476,44 @@
             this.SortExportEnumButton.UseVisualStyleBackColor = false;
             this.SortExportEnumButton.Click += new System.EventHandler(this.SortExportEnumButton_Click);
             // 
+            // SortEnumOptionTableLayout
+            // 
+            this.SortEnumOptionTableLayout.ColumnCount = 2;
+            this.SortEnumOptionTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+            this.SortEnumOptionTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.SortEnumOptionTableLayout.Controls.Add(this.SortEnumClassName, 0, 0);
+            this.SortEnumOptionTableLayout.Controls.Add(this.SortEnumClassNameStatus, 1, 0);
+            this.SortEnumOptionTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortEnumOptionTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.SortEnumOptionTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.SortEnumOptionTableLayout.Name = "SortEnumOptionTableLayout";
+            this.SortEnumOptionTableLayout.RowCount = 1;
+            this.SortEnumOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.SortEnumOptionTableLayout.Size = new System.Drawing.Size(310, 27);
+            this.SortEnumOptionTableLayout.TabIndex = 3;
+            // 
+            // SortEnumClassName
+            // 
+            this.SortEnumClassName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortEnumClassName.Location = new System.Drawing.Point(3, 3);
+            this.SortEnumClassName.MaxLength = 30;
+            this.SortEnumClassName.Name = "SortEnumClassName";
+            this.SortEnumClassName.Size = new System.Drawing.Size(226, 22);
+            this.SortEnumClassName.TabIndex = 0;
+            // 
+            // SortEnumClassNameStatus
+            // 
+            this.SortEnumClassNameStatus.AutoSize = true;
+            this.SortEnumClassNameStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortEnumClassNameStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortEnumClassNameStatus.ForeColor = System.Drawing.Color.Green;
+            this.SortEnumClassNameStatus.Location = new System.Drawing.Point(235, 0);
+            this.SortEnumClassNameStatus.Name = "SortEnumClassNameStatus";
+            this.SortEnumClassNameStatus.Size = new System.Drawing.Size(72, 27);
+            this.SortEnumClassNameStatus.TabIndex = 1;
+            this.SortEnumClassNameStatus.Text = "Valid!";
+            this.SortEnumClassNameStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // SortCopyNotice
             // 
             this.SortCopyNotice.AutoSize = true;
@@ -563,48 +601,10 @@
             this.aasdasdasdToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.aasdasdasdToolStripMenuItem.Text = "aasdasdasd";
             // 
-            // copyTimer
+            // CopyTimer
             // 
-            this.copyTimer.Interval = 2500;
-            this.copyTimer.Tick += new System.EventHandler(this.copyTimer_Tick);
-            // 
-            // SortEnumOptionTableLayout
-            // 
-            this.SortEnumOptionTableLayout.ColumnCount = 2;
-            this.SortEnumOptionTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.SortEnumOptionTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.SortEnumOptionTableLayout.Controls.Add(this.SortEnumClassName, 0, 0);
-            this.SortEnumOptionTableLayout.Controls.Add(this.SortEnumClassNameStatus, 1, 0);
-            this.SortEnumOptionTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SortEnumOptionTableLayout.Location = new System.Drawing.Point(0, 0);
-            this.SortEnumOptionTableLayout.Margin = new System.Windows.Forms.Padding(0);
-            this.SortEnumOptionTableLayout.Name = "SortEnumOptionTableLayout";
-            this.SortEnumOptionTableLayout.RowCount = 1;
-            this.SortEnumOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.SortEnumOptionTableLayout.Size = new System.Drawing.Size(310, 27);
-            this.SortEnumOptionTableLayout.TabIndex = 3;
-            // 
-            // SortEnumClassName
-            // 
-            this.SortEnumClassName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SortEnumClassName.Location = new System.Drawing.Point(3, 3);
-            this.SortEnumClassName.MaxLength = 30;
-            this.SortEnumClassName.Name = "SortEnumClassName";
-            this.SortEnumClassName.Size = new System.Drawing.Size(226, 22);
-            this.SortEnumClassName.TabIndex = 0;
-            // 
-            // SortEnumClassNameStatus
-            // 
-            this.SortEnumClassNameStatus.AutoSize = true;
-            this.SortEnumClassNameStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SortEnumClassNameStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortEnumClassNameStatus.ForeColor = System.Drawing.Color.Green;
-            this.SortEnumClassNameStatus.Location = new System.Drawing.Point(235, 0);
-            this.SortEnumClassNameStatus.Name = "SortEnumClassNameStatus";
-            this.SortEnumClassNameStatus.Size = new System.Drawing.Size(72, 27);
-            this.SortEnumClassNameStatus.TabIndex = 1;
-            this.SortEnumClassNameStatus.Text = "Valid!";
-            this.SortEnumClassNameStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CopyTimer.Interval = 2500;
+            this.CopyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
             // 
             // Application
             // 
@@ -633,10 +633,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.Toolbar.ResumeLayout(false);
-            this.Toolbar.PerformLayout();
             this.SortEnumOptionTableLayout.ResumeLayout(false);
             this.SortEnumOptionTableLayout.PerformLayout();
+            this.Toolbar.ResumeLayout(false);
+            this.Toolbar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -672,12 +672,12 @@
         private System.Windows.Forms.Button SortClearButton;
         private System.Windows.Forms.Button SortTextPresentationButton;
         private System.Windows.Forms.Button SortChangeTextCapsButton;
-        private System.Windows.Forms.Button sortCopyButton;
+        private System.Windows.Forms.Button SortCopyButton;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.ComboBox SortExportDropdown;
         private System.Windows.Forms.Button SortExportEnumButton;
         private System.Windows.Forms.Label SortCopyNotice;
-        private System.Windows.Forms.Timer copyTimer;
+        private System.Windows.Forms.Timer CopyTimer;
         private System.Windows.Forms.TableLayoutPanel SortEnumOptionTableLayout;
         private System.Windows.Forms.TextBox SortEnumClassName;
         private System.Windows.Forms.Label SortEnumClassNameStatus;

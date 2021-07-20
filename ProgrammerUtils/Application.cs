@@ -144,9 +144,9 @@ namespace ProgrammerUtils
             DoSort();
         }
 
-        private void sortCopyButton_Click(object sender, EventArgs e)
+        private void SortCopyButton_Click(object sender, EventArgs e)
         {
-            Copy(sortCopyButton);
+            Copy(SortCopyButton);
             if (sortTextBoxRight.Text.Length > 0)
                 Clipboard.SetText(sortTextBoxRight.Text);
         }
@@ -168,16 +168,16 @@ namespace ProgrammerUtils
         {
             button.BackColor = COPY_CLICKED_BUTTON_COLOR;
             SortCopyNotice.Text = "Copied!";
-            copyTimer.Stop();
-            copyTimer.Start();
+            CopyTimer.Stop();
+            CopyTimer.Start();
         }
 
-        private void copyTimer_Tick(object sender, EventArgs e)
+        private void CopyTimer_Tick(object sender, EventArgs e)
         {
-            sortCopyButton.BackColor = COPY_BUTTON_COLOR;
+            SortCopyButton.BackColor = COPY_BUTTON_COLOR;
             SortExportEnumButton.BackColor = COPY_BUTTON_COLOR;
             SortCopyNotice.Text = "";
-            copyTimer.Stop();
+            CopyTimer.Stop();
         }
 
         #endregion
