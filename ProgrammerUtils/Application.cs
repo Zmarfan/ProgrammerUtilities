@@ -218,6 +218,14 @@ namespace ProgrammerUtils
                 DoMatch();
         }
 
+        private void matchClearButton_Click(object sender, EventArgs e)
+        {
+            MatchLeftText1.Text = string.Empty;
+            MatchLeftText2.Text = string.Empty;
+
+            DoMatch();
+        }
+
         #endregion
         #endregion
 

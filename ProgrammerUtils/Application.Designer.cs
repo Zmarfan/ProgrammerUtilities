@@ -78,6 +78,7 @@
             this.matchAutoCompare = new System.Windows.Forms.CheckBox();
             this.matchCaseSensitive = new System.Windows.Forms.CheckBox();
             this.MatchRemoveExtraWhiteSpace = new System.Windows.Forms.CheckBox();
+            this.matchClearButton = new System.Windows.Forms.Button();
             this.CountTab = new System.Windows.Forms.TabPage();
             this.htmlTab = new System.Windows.Forms.TabPage();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
@@ -602,7 +603,7 @@
             this.MatchTab.Padding = new System.Windows.Forms.Padding(3);
             this.MatchTab.Size = new System.Drawing.Size(910, 478);
             this.MatchTab.TabIndex = 1;
-            this.MatchTab.Text = "Match";
+            this.MatchTab.Text = "Compare";
             this.MatchTab.UseVisualStyleBackColor = true;
             // 
             // matchTableLayout
@@ -724,17 +725,19 @@
             // 
             // matchSettingsTableLayout
             // 
-            this.matchSettingsTableLayout.ColumnCount = 5;
+            this.matchSettingsTableLayout.ColumnCount = 6;
             this.matchTableLayout.SetColumnSpan(this.matchSettingsTableLayout, 2);
             this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 240F));
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.matchSettingsTableLayout.Controls.Add(this.matchMatchButton, 0, 0);
             this.matchSettingsTableLayout.Controls.Add(this.matchAutoCompare, 1, 0);
             this.matchSettingsTableLayout.Controls.Add(this.matchCaseSensitive, 2, 0);
-            this.matchSettingsTableLayout.Controls.Add(this.MatchRemoveExtraWhiteSpace, 3, 0);
+            this.matchSettingsTableLayout.Controls.Add(this.MatchRemoveExtraWhiteSpace, 2, 1);
+            this.matchSettingsTableLayout.Controls.Add(this.matchClearButton, 3, 0);
             this.matchSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchSettingsTableLayout.Location = new System.Drawing.Point(0, 0);
             this.matchSettingsTableLayout.Margin = new System.Windows.Forms.Padding(0);
@@ -771,19 +774,20 @@
             this.matchAutoCompare.Location = new System.Drawing.Point(203, 3);
             this.matchAutoCompare.Name = "matchAutoCompare";
             this.matchSettingsTableLayout.SetRowSpan(this.matchAutoCompare, 2);
-            this.matchAutoCompare.Size = new System.Drawing.Size(120, 46);
+            this.matchAutoCompare.Size = new System.Drawing.Size(144, 46);
             this.matchAutoCompare.TabIndex = 1;
             this.matchAutoCompare.Text = "Auto Compare";
             this.matchAutoCompare.UseVisualStyleBackColor = true;
+            this.matchAutoCompare.CheckedChanged += new System.EventHandler(this.matchAutoCompare_CheckedChanged);
             // 
             // matchCaseSensitive
             // 
             this.matchCaseSensitive.AutoSize = true;
+            this.matchCaseSensitive.Cursor = System.Windows.Forms.Cursors.Hand;
             this.matchCaseSensitive.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchCaseSensitive.Location = new System.Drawing.Point(329, 3);
+            this.matchCaseSensitive.Location = new System.Drawing.Point(353, 3);
             this.matchCaseSensitive.Name = "matchCaseSensitive";
-            this.matchSettingsTableLayout.SetRowSpan(this.matchCaseSensitive, 2);
-            this.matchCaseSensitive.Size = new System.Drawing.Size(123, 46);
+            this.matchCaseSensitive.Size = new System.Drawing.Size(204, 20);
             this.matchCaseSensitive.TabIndex = 2;
             this.matchCaseSensitive.Text = "Case Sensitive";
             this.matchCaseSensitive.UseVisualStyleBackColor = true;
@@ -792,15 +796,31 @@
             // MatchRemoveExtraWhiteSpace
             // 
             this.MatchRemoveExtraWhiteSpace.AutoSize = true;
+            this.MatchRemoveExtraWhiteSpace.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MatchRemoveExtraWhiteSpace.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MatchRemoveExtraWhiteSpace.Location = new System.Drawing.Point(458, 3);
+            this.MatchRemoveExtraWhiteSpace.Location = new System.Drawing.Point(353, 29);
             this.MatchRemoveExtraWhiteSpace.Name = "MatchRemoveExtraWhiteSpace";
-            this.matchSettingsTableLayout.SetRowSpan(this.MatchRemoveExtraWhiteSpace, 2);
-            this.MatchRemoveExtraWhiteSpace.Size = new System.Drawing.Size(203, 46);
+            this.MatchRemoveExtraWhiteSpace.Size = new System.Drawing.Size(204, 20);
             this.MatchRemoveExtraWhiteSpace.TabIndex = 3;
             this.MatchRemoveExtraWhiteSpace.Text = "Remove Extra Whitespaces";
             this.MatchRemoveExtraWhiteSpace.UseVisualStyleBackColor = true;
             this.MatchRemoveExtraWhiteSpace.CheckedChanged += new System.EventHandler(this.MatchCheckboxChecked);
+            // 
+            // matchClearButton
+            // 
+            this.matchClearButton.BackColor = System.Drawing.Color.LightPink;
+            this.matchClearButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.matchClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.matchClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matchClearButton.Location = new System.Drawing.Point(563, 3);
+            this.matchClearButton.Name = "matchClearButton";
+            this.matchSettingsTableLayout.SetRowSpan(this.matchClearButton, 2);
+            this.matchClearButton.Size = new System.Drawing.Size(119, 46);
+            this.matchClearButton.TabIndex = 4;
+            this.matchClearButton.Text = "Clear";
+            this.matchClearButton.UseVisualStyleBackColor = false;
+            this.matchClearButton.Click += new System.EventHandler(this.matchClearButton_Click);
             // 
             // CountTab
             // 
@@ -972,6 +992,7 @@
         private System.Windows.Forms.CheckBox matchAutoCompare;
         private System.Windows.Forms.CheckBox matchCaseSensitive;
         private System.Windows.Forms.CheckBox MatchRemoveExtraWhiteSpace;
+        private System.Windows.Forms.Button matchClearButton;
     }
 }
 

@@ -80,7 +80,7 @@ namespace ProgrammerUtils
             textBox.Text = string.Empty;
 
             label.ForeColor = System.Drawing.Color.Blue;
-            label.Text = "There is currently no text to match with";
+            label.Text = "There is currently no text to compare with...";
         }
 
         private void TextsMatch(Label label, RichTextBox textBox)
