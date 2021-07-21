@@ -64,6 +64,20 @@
             this.sortEnum = new System.Windows.Forms.TabPage();
             this.sortEnumTextBoxRight = new System.Windows.Forms.RichTextBox();
             this.MatchTab = new System.Windows.Forms.TabPage();
+            this.matchTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.matchRightText2Label = new System.Windows.Forms.Label();
+            this.matchRightText1Label = new System.Windows.Forms.Label();
+            this.matchRightText2 = new System.Windows.Forms.RichTextBox();
+            this.matchRightText1 = new System.Windows.Forms.RichTextBox();
+            this.matchLeftText2Label = new System.Windows.Forms.Label();
+            this.MatchLeftText2 = new System.Windows.Forms.RichTextBox();
+            this.MatchLeftText1 = new System.Windows.Forms.RichTextBox();
+            this.matchLeftText1Label = new System.Windows.Forms.Label();
+            this.matchSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.matchMatchButton = new System.Windows.Forms.Button();
+            this.matchAutoCompare = new System.Windows.Forms.CheckBox();
+            this.matchCaseSensitive = new System.Windows.Forms.CheckBox();
+            this.MatchRemoveExtraWhiteSpace = new System.Windows.Forms.CheckBox();
             this.CountTab = new System.Windows.Forms.TabPage();
             this.htmlTab = new System.Windows.Forms.TabPage();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
@@ -85,6 +99,9 @@
             this.sortSortedTabs.SuspendLayout();
             this.sortList.SuspendLayout();
             this.sortEnum.SuspendLayout();
+            this.MatchTab.SuspendLayout();
+            this.matchTableLayout.SuspendLayout();
+            this.matchSettingsTableLayout.SuspendLayout();
             this.Toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -579,6 +596,7 @@
             // 
             // MatchTab
             // 
+            this.MatchTab.Controls.Add(this.matchTableLayout);
             this.MatchTab.Location = new System.Drawing.Point(4, 25);
             this.MatchTab.Name = "MatchTab";
             this.MatchTab.Padding = new System.Windows.Forms.Padding(3);
@@ -586,6 +604,203 @@
             this.MatchTab.TabIndex = 1;
             this.MatchTab.Text = "Match";
             this.MatchTab.UseVisualStyleBackColor = true;
+            // 
+            // matchTableLayout
+            // 
+            this.matchTableLayout.ColumnCount = 2;
+            this.matchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.matchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.matchTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.matchTableLayout.Controls.Add(this.matchRightText2Label, 1, 3);
+            this.matchTableLayout.Controls.Add(this.matchRightText1Label, 1, 1);
+            this.matchTableLayout.Controls.Add(this.matchRightText2, 1, 4);
+            this.matchTableLayout.Controls.Add(this.matchRightText1, 1, 2);
+            this.matchTableLayout.Controls.Add(this.matchLeftText2Label, 0, 3);
+            this.matchTableLayout.Controls.Add(this.MatchLeftText2, 0, 4);
+            this.matchTableLayout.Controls.Add(this.MatchLeftText1, 0, 2);
+            this.matchTableLayout.Controls.Add(this.matchLeftText1Label, 0, 1);
+            this.matchTableLayout.Controls.Add(this.matchSettingsTableLayout, 0, 0);
+            this.matchTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchTableLayout.Location = new System.Drawing.Point(3, 3);
+            this.matchTableLayout.Name = "matchTableLayout";
+            this.matchTableLayout.RowCount = 5;
+            this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.matchTableLayout.Size = new System.Drawing.Size(904, 472);
+            this.matchTableLayout.TabIndex = 0;
+            // 
+            // matchRightText2Label
+            // 
+            this.matchRightText2Label.AutoSize = true;
+            this.matchRightText2Label.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.matchRightText2Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.matchRightText2Label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchRightText2Label.Location = new System.Drawing.Point(455, 262);
+            this.matchRightText2Label.Name = "matchRightText2Label";
+            this.matchRightText2Label.Size = new System.Drawing.Size(446, 35);
+            this.matchRightText2Label.TabIndex = 8;
+            this.matchRightText2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchRightText1Label
+            // 
+            this.matchRightText1Label.AutoSize = true;
+            this.matchRightText1Label.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.matchRightText1Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.matchRightText1Label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchRightText1Label.Location = new System.Drawing.Point(455, 52);
+            this.matchRightText1Label.Name = "matchRightText1Label";
+            this.matchRightText1Label.Size = new System.Drawing.Size(446, 35);
+            this.matchRightText1Label.TabIndex = 7;
+            this.matchRightText1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchRightText2
+            // 
+            this.matchRightText2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchRightText2.Location = new System.Drawing.Point(455, 300);
+            this.matchRightText2.Name = "matchRightText2";
+            this.matchRightText2.ReadOnly = true;
+            this.matchRightText2.Size = new System.Drawing.Size(446, 169);
+            this.matchRightText2.TabIndex = 5;
+            this.matchRightText2.Text = "";
+            // 
+            // matchRightText1
+            // 
+            this.matchRightText1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchRightText1.Location = new System.Drawing.Point(455, 90);
+            this.matchRightText1.Name = "matchRightText1";
+            this.matchRightText1.ReadOnly = true;
+            this.matchRightText1.Size = new System.Drawing.Size(446, 169);
+            this.matchRightText1.TabIndex = 4;
+            this.matchRightText1.Text = "";
+            // 
+            // matchLeftText2Label
+            // 
+            this.matchLeftText2Label.AutoSize = true;
+            this.matchLeftText2Label.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.matchLeftText2Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.matchLeftText2Label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchLeftText2Label.Location = new System.Drawing.Point(3, 262);
+            this.matchLeftText2Label.Name = "matchLeftText2Label";
+            this.matchLeftText2Label.Size = new System.Drawing.Size(446, 35);
+            this.matchLeftText2Label.TabIndex = 3;
+            this.matchLeftText2Label.Text = "Text two";
+            this.matchLeftText2Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // MatchLeftText2
+            // 
+            this.MatchLeftText2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MatchLeftText2.Location = new System.Drawing.Point(3, 300);
+            this.MatchLeftText2.Name = "MatchLeftText2";
+            this.MatchLeftText2.Size = new System.Drawing.Size(446, 169);
+            this.MatchLeftText2.TabIndex = 1;
+            this.MatchLeftText2.Text = "";
+            this.MatchLeftText2.TextChanged += new System.EventHandler(this.matchTextChanged);
+            // 
+            // MatchLeftText1
+            // 
+            this.MatchLeftText1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MatchLeftText1.Location = new System.Drawing.Point(3, 90);
+            this.MatchLeftText1.Name = "MatchLeftText1";
+            this.MatchLeftText1.Size = new System.Drawing.Size(446, 169);
+            this.MatchLeftText1.TabIndex = 0;
+            this.MatchLeftText1.Text = "";
+            this.MatchLeftText1.TextChanged += new System.EventHandler(this.matchTextChanged);
+            // 
+            // matchLeftText1Label
+            // 
+            this.matchLeftText1Label.AutoSize = true;
+            this.matchLeftText1Label.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.matchLeftText1Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.matchLeftText1Label.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchLeftText1Label.Location = new System.Drawing.Point(3, 52);
+            this.matchLeftText1Label.Name = "matchLeftText1Label";
+            this.matchLeftText1Label.Size = new System.Drawing.Size(446, 35);
+            this.matchLeftText1Label.TabIndex = 2;
+            this.matchLeftText1Label.Text = "Text one";
+            this.matchLeftText1Label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // matchSettingsTableLayout
+            // 
+            this.matchSettingsTableLayout.ColumnCount = 5;
+            this.matchTableLayout.SetColumnSpan(this.matchSettingsTableLayout, 2);
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 240F));
+            this.matchSettingsTableLayout.Controls.Add(this.matchMatchButton, 0, 0);
+            this.matchSettingsTableLayout.Controls.Add(this.matchAutoCompare, 1, 0);
+            this.matchSettingsTableLayout.Controls.Add(this.matchCaseSensitive, 2, 0);
+            this.matchSettingsTableLayout.Controls.Add(this.MatchRemoveExtraWhiteSpace, 3, 0);
+            this.matchSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchSettingsTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.matchSettingsTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.matchSettingsTableLayout.Name = "matchSettingsTableLayout";
+            this.matchSettingsTableLayout.RowCount = 2;
+            this.matchSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.matchSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.matchSettingsTableLayout.Size = new System.Drawing.Size(904, 52);
+            this.matchSettingsTableLayout.TabIndex = 6;
+            // 
+            // matchMatchButton
+            // 
+            this.matchMatchButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.matchMatchButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.matchMatchButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchMatchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.matchMatchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matchMatchButton.Location = new System.Drawing.Point(3, 3);
+            this.matchMatchButton.Name = "matchMatchButton";
+            this.matchSettingsTableLayout.SetRowSpan(this.matchMatchButton, 2);
+            this.matchMatchButton.Size = new System.Drawing.Size(194, 46);
+            this.matchMatchButton.TabIndex = 0;
+            this.matchMatchButton.Text = "Compare";
+            this.matchMatchButton.UseVisualStyleBackColor = false;
+            this.matchMatchButton.Click += new System.EventHandler(this.matchMatchButton_Click);
+            // 
+            // matchAutoCompare
+            // 
+            this.matchAutoCompare.AutoSize = true;
+            this.matchAutoCompare.Checked = true;
+            this.matchAutoCompare.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.matchAutoCompare.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.matchAutoCompare.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchAutoCompare.Location = new System.Drawing.Point(203, 3);
+            this.matchAutoCompare.Name = "matchAutoCompare";
+            this.matchSettingsTableLayout.SetRowSpan(this.matchAutoCompare, 2);
+            this.matchAutoCompare.Size = new System.Drawing.Size(120, 46);
+            this.matchAutoCompare.TabIndex = 1;
+            this.matchAutoCompare.Text = "Auto Compare";
+            this.matchAutoCompare.UseVisualStyleBackColor = true;
+            // 
+            // matchCaseSensitive
+            // 
+            this.matchCaseSensitive.AutoSize = true;
+            this.matchCaseSensitive.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchCaseSensitive.Location = new System.Drawing.Point(329, 3);
+            this.matchCaseSensitive.Name = "matchCaseSensitive";
+            this.matchSettingsTableLayout.SetRowSpan(this.matchCaseSensitive, 2);
+            this.matchCaseSensitive.Size = new System.Drawing.Size(123, 46);
+            this.matchCaseSensitive.TabIndex = 2;
+            this.matchCaseSensitive.Text = "Case Sensitive";
+            this.matchCaseSensitive.UseVisualStyleBackColor = true;
+            this.matchCaseSensitive.CheckedChanged += new System.EventHandler(this.MatchCheckboxChecked);
+            // 
+            // MatchRemoveExtraWhiteSpace
+            // 
+            this.MatchRemoveExtraWhiteSpace.AutoSize = true;
+            this.MatchRemoveExtraWhiteSpace.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MatchRemoveExtraWhiteSpace.Location = new System.Drawing.Point(458, 3);
+            this.MatchRemoveExtraWhiteSpace.Name = "MatchRemoveExtraWhiteSpace";
+            this.matchSettingsTableLayout.SetRowSpan(this.MatchRemoveExtraWhiteSpace, 2);
+            this.MatchRemoveExtraWhiteSpace.Size = new System.Drawing.Size(203, 46);
+            this.MatchRemoveExtraWhiteSpace.TabIndex = 3;
+            this.MatchRemoveExtraWhiteSpace.Text = "Remove Extra Whitespaces";
+            this.MatchRemoveExtraWhiteSpace.UseVisualStyleBackColor = true;
+            this.MatchRemoveExtraWhiteSpace.CheckedChanged += new System.EventHandler(this.MatchCheckboxChecked);
             // 
             // CountTab
             // 
@@ -688,6 +903,11 @@
             this.sortSortedTabs.ResumeLayout(false);
             this.sortList.ResumeLayout(false);
             this.sortEnum.ResumeLayout(false);
+            this.MatchTab.ResumeLayout(false);
+            this.matchTableLayout.ResumeLayout(false);
+            this.matchTableLayout.PerformLayout();
+            this.matchSettingsTableLayout.ResumeLayout(false);
+            this.matchSettingsTableLayout.PerformLayout();
             this.Toolbar.ResumeLayout(false);
             this.Toolbar.PerformLayout();
             this.ResumeLayout(false);
@@ -738,6 +958,20 @@
         private System.Windows.Forms.RichTextBox sortTextBoxRight;
         private System.Windows.Forms.RichTextBox sortEnumTextBoxRight;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel matchTableLayout;
+        private System.Windows.Forms.RichTextBox MatchLeftText1;
+        private System.Windows.Forms.RichTextBox MatchLeftText2;
+        private System.Windows.Forms.Label matchLeftText1Label;
+        private System.Windows.Forms.RichTextBox matchRightText2;
+        private System.Windows.Forms.RichTextBox matchRightText1;
+        private System.Windows.Forms.Label matchLeftText2Label;
+        private System.Windows.Forms.Label matchRightText2Label;
+        private System.Windows.Forms.Label matchRightText1Label;
+        private System.Windows.Forms.TableLayoutPanel matchSettingsTableLayout;
+        private System.Windows.Forms.Button matchMatchButton;
+        private System.Windows.Forms.CheckBox matchAutoCompare;
+        private System.Windows.Forms.CheckBox matchCaseSensitive;
+        private System.Windows.Forms.CheckBox MatchRemoveExtraWhiteSpace;
     }
 }
 

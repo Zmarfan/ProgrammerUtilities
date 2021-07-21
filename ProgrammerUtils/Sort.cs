@@ -46,15 +46,13 @@ namespace ProgrammerUtils
             { SortDisplayModes.NEW_LINE, "\n" }
         };
 
-        public bool AutoSort { get; private set; }
         public SortDisplayModes DisplayMode { get; private set; }
         public SortStyles SortStyle { get; private set; }
         public TextStyles TextStyle { get; private set; }
         public TextPresentations TextPresentation { get; private set; }
 
-        public Sort(bool autoSort, SortDisplayModes displayMode, SortStyles sortStyle, TextStyles textStyle, TextPresentations textPresentation)
+        public Sort(SortDisplayModes displayMode, SortStyles sortStyle, TextStyles textStyle, TextPresentations textPresentation)
         {
-            AutoSort = autoSort;
             DisplayMode = displayMode;
             SortStyle = sortStyle;
             TextStyle = textStyle;
@@ -81,11 +79,6 @@ namespace ProgrammerUtils
                 returnString = returnString.ToLower();
 
             return returnString;
-        }
-
-        public void SetAutoSort(bool doAutoSort)
-        {
-            AutoSort = doAutoSort;
         }
 
         public void SetDisplayMode(SortDisplayModes displayMode)

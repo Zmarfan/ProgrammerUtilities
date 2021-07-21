@@ -19,6 +19,7 @@ namespace ProgrammerUtils
         readonly static Color COPY_CLICKED_BUTTON_COLOR = Color.LimeGreen;
 
         Sort _sorter;
+        Matcher _matcher;
 
         public Application()
         {
@@ -29,9 +30,14 @@ namespace ProgrammerUtils
         private void Init()
         {
             SortExportDropdown.SelectedIndex = 0;
-            _sorter = new Sort(AutoSortCheckbox.Checked, GetSortDisplayMode(), GetSortStyle(), Sort.TextStyles.NORMAL, Sort.TextPresentations.NORMAL);
+            _sorter = new Sort(GetSortDisplayMode(), GetSortStyle(), Sort.TextStyles.NORMAL, Sort.TextPresentations.NORMAL);
             SetButtonStatus(SortButton, !AutoSortCheckbox.Checked);
             DoSort();
+
+            _matcher = new Matcher();
+            SetButtonStatus(matchMatchButton, !matchAutoCompare.Checked);
+            DoMatch();
+
             SetChangeTextStyleButton();
             SetChangeTextPresentationButton();
             SortCopyNotice.Text = "";
@@ -84,7 +90,7 @@ namespace ProgrammerUtils
 
         private void SortTextChanged(object sender, EventArgs e)
         {
-            if (_sorter.AutoSort)
+            if (AutoSortCheckbox.Checked)
                 DoSort();
         }
 
@@ -118,7 +124,6 @@ namespace ProgrammerUtils
         private void AutoSortCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             SetButtonStatus(SortButton, !AutoSortCheckbox.Checked);
-            _sorter.SetAutoSort(AutoSortCheckbox.Checked);
 
             DoSort();
         }
@@ -179,6 +184,40 @@ namespace ProgrammerUtils
         {
             DoEnumSort();
         }
+        #endregion
+        #endregion
+
+        #region Match
+
+        private void DoMatch()
+        {
+            _matcher.DoMatch(MatchLeftText1, MatchLeftText2, matchRightText1, matchRightText2, matchRightText1Label, matchRightText2Label, matchCaseSensitive.Checked, MatchRemoveExtraWhiteSpace.Checked);
+        }
+
+        #region Events
+
+        private void matchMatchButton_Click(object sender, EventArgs e)
+        {
+            DoMatch();
+        }
+
+        private void matchAutoCompare_CheckedChanged(object sender, EventArgs e)
+        {
+            SetButtonStatus(matchMatchButton, !matchAutoCompare.Checked);
+        }
+
+        private void MatchCheckboxChecked(object sender, EventArgs e)
+        {
+            if (matchAutoCompare.Checked)
+                DoMatch();
+        }
+
+        private void matchTextChanged(object sender, EventArgs e)
+        {
+            if (matchAutoCompare.Checked)
+                DoMatch();
+        }
+
         #endregion
         #endregion
 

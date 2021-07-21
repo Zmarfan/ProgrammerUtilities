@@ -28,7 +28,7 @@ namespace ProgrammerUtils
 
         public static string GenerateEnumForLanguage(string enteredString, string languageString, Sort.SortStyles sortStyle, Sort.TextStyles textStyle, string enumName)
         {
-            Sort sorter = new Sort(true, Sort.SortDisplayModes.NEW_LINE, sortStyle, textStyle, Sort.TextPresentations.UNDERSCORE);
+            Sort sorter = new Sort(Sort.SortDisplayModes.NEW_LINE, sortStyle, textStyle, Sort.TextPresentations.UNDERSCORE);
             string[] entries = sorter.SortString(enteredString).Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
             ProgrammingLanguages language = GetLanguageFromString(languageString);
             enumName = enumName.Length == 0 ? DEFAULT_ENUM_NAME : enumName;
