@@ -176,8 +176,7 @@
             this.SortTableLayout.SetRowSpan(this.sortTextBoxLeft, 2);
             this.sortTextBoxLeft.Size = new System.Drawing.Size(414, 375);
             this.sortTextBoxLeft.TabIndex = 0;
-            this.sortTextBoxLeft.Text = "Sverige, Danmark, Finland, Ryssland, Spanien, Tyskland, Polen, Egypten\nEstland\nIs" +
-    "land\nJapan, China Hong Kong, Iran Irak";
+            this.sortTextBoxLeft.Text = "";
             this.sortTextBoxLeft.TextChanged += new System.EventHandler(this.SortTextChanged);
             // 
             // sortLabel1
