@@ -49,7 +49,16 @@ namespace ProgrammerUtils
             }
         }
 
-        public void DoMatch(
+        private readonly RichTextBox _introTextBox1;
+        private readonly RichTextBox _introTextBox2;
+        private readonly RichTextBox _finalTextBox1;
+        private readonly RichTextBox _finalTextBox2;
+        private readonly RichTextBox _finalTextBox3;
+        private readonly Label _finalLabel1;
+        private readonly Label _finalLabel2;
+        private readonly Label _finalLabel3;
+
+        public Matcher(
             RichTextBox introTextBox1,
             RichTextBox introTextBox2,
             RichTextBox finalTextBox1,
@@ -57,37 +66,46 @@ namespace ProgrammerUtils
             RichTextBox finalTextBox3,
             Label finalLabel1,
             Label finalLabel2,
-            Label finalLabel3,
-            bool caseSensitive,
-            bool removeExtraWhiteSpaces,
-            CombinedDisplayMode displayMode
+            Label finalLabel3
             )
         {
-            if (introTextBox1.Text.Length == 0 || introTextBox2.Text.Length == 0)
+            _introTextBox1 = introTextBox1;
+            _introTextBox2 = introTextBox2;
+            _finalTextBox1 = finalTextBox1;
+            _finalTextBox2 = finalTextBox2;
+            _finalTextBox3 = finalTextBox3;
+            _finalLabel1 = finalLabel1;
+            _finalLabel2 = finalLabel2;
+            _finalLabel3 = finalLabel3;
+        }
+
+        public void DoMatch(bool caseSensitive, bool removeExtraWhiteSpaces, CombinedDisplayMode displayMode)
+        {
+            if (_introTextBox1.Text.Length == 0 || _introTextBox2.Text.Length == 0)
             {
-                NoValidEntryData(finalLabel1, finalTextBox1);
-                NoValidEntryData(finalLabel2, finalTextBox2);
-                NoValidEntryData(finalLabel3, finalTextBox3);
+                NoValidEntryData(_finalLabel1, _finalTextBox1);
+                NoValidEntryData(_finalLabel2, _finalTextBox2);
+                NoValidEntryData(_finalLabel3, _finalTextBox3);
                 return;
             }
 
-            if (introTextBox1.Text == introTextBox2.Text || (caseSensitive && introTextBox1.Text.ToLower() == introTextBox2.Text.ToLower()))
+            if (_introTextBox1.Text == _introTextBox2.Text || (caseSensitive && _introTextBox1.Text.ToLower() == _introTextBox2.Text.ToLower()))
             {
-                TextsMatch(finalLabel1, finalTextBox1);
-                TextsMatch(finalLabel2, finalTextBox2);
-                TextsMatch(finalLabel3, finalTextBox3);
+                TextsMatch(_finalLabel1, _finalTextBox1);
+                TextsMatch(_finalLabel2, _finalTextBox2);
+                TextsMatch(_finalLabel3, _finalTextBox3);
                 return;
             }
 
-            TextsDoNotMatch(finalLabel1);
-            TextsDoNotMatch(finalLabel2);
-            TextsDoNotMatch(finalLabel3);
+            TextsDoNotMatch(_finalLabel1);
+            TextsDoNotMatch(_finalLabel2);
+            TextsDoNotMatch(_finalLabel3);
 
-            string s1 = removeExtraWhiteSpaces ? RemoveExtraWhiteSpaces(introTextBox1.Text) : introTextBox1.Text;
-            string s2 = removeExtraWhiteSpaces ? RemoveExtraWhiteSpaces(introTextBox2.Text) : introTextBox2.Text;
+            string s1 = removeExtraWhiteSpaces ? RemoveExtraWhiteSpaces(_introTextBox1.Text) : _introTextBox1.Text;
+            string s2 = removeExtraWhiteSpaces ? RemoveExtraWhiteSpaces(_introTextBox2.Text) : _introTextBox2.Text;
 
-            DoSeperateMatching(s1, s2, caseSensitive, finalTextBox1, finalTextBox2);
-            DoCombinedMatching(s1, s2, caseSensitive, finalTextBox3, displayMode);
+            DoSeperateMatching(s1, s2, caseSensitive, _finalTextBox1, _finalTextBox2);
+            DoCombinedMatching(s1, s2, caseSensitive, _finalTextBox3, displayMode);
         }
 
         private string RemoveExtraWhiteSpaces(string text)

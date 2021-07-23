@@ -36,7 +36,15 @@ namespace ProgrammerUtils
             SetButtonStatus(SortButton, !AutoSortCheckbox.Checked);
             DoSort();
 
-            _matcher = new Matcher();
+            _matcher = new Matcher(MatchLeftText1,
+                MatchLeftText2,
+                matchRightText1,
+                matchRightText2,
+                matchResultCombinedTextBox,
+                matchRightText1Label,
+                matchRightText2Label,
+                matchResultTabCombinedLabel
+                );
             SetButtonStatus(matchMatchButton, !matchAutoCompare.Checked);
             DoMatch();     
 
@@ -193,19 +201,7 @@ namespace ProgrammerUtils
 
         private void DoMatch()
         {
-            _matcher.DoMatch(
-                MatchLeftText1,
-                MatchLeftText2,
-                matchRightText1,
-                matchRightText2,
-                matchResultCombinedTextBox,
-                matchRightText1Label,
-                matchRightText2Label,
-                matchResultTabCombinedLabel,
-                matchCaseSensitive.Checked,
-                MatchRemoveExtraWhiteSpace.Checked,
-                GetCombinedDisplayMode()
-                );
+            _matcher.DoMatch(matchCaseSensitive.Checked, MatchRemoveExtraWhiteSpace.Checked, GetCombinedDisplayMode());
         }
 
         private Matcher.CombinedDisplayMode GetCombinedDisplayMode()
