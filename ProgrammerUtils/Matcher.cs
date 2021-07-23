@@ -16,6 +16,13 @@ namespace ProgrammerUtils
             TEXT2
         }
 
+        public enum CombinedDisplayMode
+        {
+            NEW_LINE,
+            NEW_WORD,
+            NEW_LETTER
+        }
+
         private struct CombinedViewCharacter
         {
             public char Character { get; private set; }
@@ -52,7 +59,8 @@ namespace ProgrammerUtils
             Label finalLabel2,
             Label finalLabel3,
             bool caseSensitive,
-            bool removeExtraWhiteSpaces
+            bool removeExtraWhiteSpaces,
+            CombinedDisplayMode displayMode
             )
         {
             if (introTextBox1.Text.Length == 0 || introTextBox2.Text.Length == 0)
@@ -79,7 +87,7 @@ namespace ProgrammerUtils
             string s2 = removeExtraWhiteSpaces ? RemoveExtraWhiteSpaces(introTextBox2.Text) : introTextBox2.Text;
 
             DoSeperateMatching(s1, s2, caseSensitive, finalTextBox1, finalTextBox2);
-            DoCombinedMatching(s1, s2, caseSensitive, finalTextBox3);
+            DoCombinedMatching(s1, s2, caseSensitive, finalTextBox3, displayMode);
         }
 
         private string RemoveExtraWhiteSpaces(string text)
@@ -130,11 +138,21 @@ namespace ProgrammerUtils
             ColorDifferencesInTextSeperate(text2HashSet, finalTextBox2, s2);
         }
 
-        private void DoCombinedMatching(string s1, string s2, bool caseSensitive, RichTextBox finalTextBox)
+        private void DoCombinedMatching(string s1, string s2, bool caseSensitive, RichTextBox finalTextBox, CombinedDisplayMode displayMode)
         {
+            char splitChar = '\0';
+            char displayChar = ' ';
+            if (displayMode == CombinedDisplayMode.NEW_LINE)
+            {
+                splitChar = '\n';
+                displayChar = '\n';
+            }
+            else if (displayMode == CombinedDisplayMode.NEW_WORD)
+                splitChar = ' ';
+
             List<bool> equalLinesList = new List<bool>();
-            string[] s1Splits = s1.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
-            string[] s2Splits = s2.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] s1Splits = displayMode == CombinedDisplayMode.NEW_LETTER ? s1.ToCharArray().Select(c => c.ToString()).ToArray() : s1.Split(new char[] { splitChar }, StringSplitOptions.RemoveEmptyEntries);
+            string[] s2Splits = displayMode == CombinedDisplayMode.NEW_LETTER ? s2.ToCharArray().Select(c => c.ToString()).ToArray() : s2.Split(new char[] { splitChar }, StringSplitOptions.RemoveEmptyEntries);
 
             int numberOfRows = Math.Max(s1Splits.Length, s2Splits.Length);
 
@@ -156,16 +174,17 @@ namespace ProgrammerUtils
                 if (equalLinesList[i])
                 {
                     finalText.AddRange(GetLineAsCombinedViewCharacters(thisS1String, CharacterType.COMBINED));
-                    finalText.Add(new CombinedViewCharacter('\n', CharacterType.COMBINED));
+                    if (displayMode != CombinedDisplayMode.NEW_LETTER)
+                        finalText.Add(new CombinedViewCharacter(displayChar, CharacterType.COMBINED));
                 }
                 else
                 {
                     finalText.AddRange(GetLineAsCombinedViewCharacters(thisS1String, CharacterType.TEXT1));
-                    if (thisS1String.Length != 0)
-                        finalText.Add(new CombinedViewCharacter('\n', CharacterType.COMBINED));
+                    if (thisS1String.Length != 0 && displayMode == CombinedDisplayMode.NEW_LINE)
+                        finalText.Add(new CombinedViewCharacter(displayChar, CharacterType.COMBINED));
                     finalText.AddRange(GetLineAsCombinedViewCharacters(thisS2String, CharacterType.TEXT2));
-                    if (thisS2String.Length != 0)
-                        finalText.Add(new CombinedViewCharacter('\n', CharacterType.COMBINED));
+                    if (thisS2String.Length != 0 && displayMode != CombinedDisplayMode.NEW_LETTER)
+                        finalText.Add(new CombinedViewCharacter(displayChar, CharacterType.COMBINED));
                 }
             }
 
