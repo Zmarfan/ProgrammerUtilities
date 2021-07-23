@@ -132,7 +132,7 @@ namespace ProgrammerUtils
 
         private void DoCombinedMatching(string s1, string s2, bool caseSensitive, RichTextBox finalTextBox)
         {
-            List<List<LCSChar>> lcsLists = new List<List<LCSChar>>();
+            List<bool> equalLinesList = new List<bool>();
             string[] s1Splits = s1.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
             string[] s2Splits = s2.Split(new char[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -142,7 +142,7 @@ namespace ProgrammerUtils
             {
                 string thisS1String = i < s1Splits.Length ? s1Splits[i] : string.Empty;
                 string thisS2String = i < s2Splits.Length ? s2Splits[i] : string.Empty;
-                lcsLists.Add(GetLargestCommonSubSequence(thisS1String, thisS2String, caseSensitive));
+                equalLinesList.Add(thisS1String == thisS2String);
             }
 
             List<CombinedViewCharacter> finalText = new List<CombinedViewCharacter>();
@@ -153,28 +153,36 @@ namespace ProgrammerUtils
                 string thisS2String = i < s2Splits.Length ? s2Splits[i] : string.Empty;
 
                 //No differences
-                if (lcsLists[i].Count == thisS1String.Length && lcsLists[i].Count == thisS2String.Length)
+                if (equalLinesList[i])
                 {
-                    for (int j = 0; j < thisS1String.Length; j++)
-                    {
-                        finalText.Add(new CombinedViewCharacter(thisS1String[j], CharacterType.COMBINED));
-                    }
+                    finalText.AddRange(GetLineAsCombinedViewCharacters(thisS1String, CharacterType.COMBINED));
+                    finalText.Add(new CombinedViewCharacter('\n', CharacterType.COMBINED));
                 }
                 else
                 {
-                    for (int k = 0; k < thisS1String.Length; k++)
-                    {
-                        finalText.Add(new CombinedViewCharacter(thisS1String[k], CharacterType.TEXT1));
-                    }
-                    finalText.Add(new CombinedViewCharacter('\n', CharacterType.COMBINED));
-                    for (int h = 0; h < thisS2String.Length; h++)
-                    {
-                        finalText.Add(new CombinedViewCharacter(thisS2String[h], CharacterType.TEXT2));
-                    }
+                    finalText.AddRange(GetLineAsCombinedViewCharacters(thisS1String, CharacterType.TEXT1));
+                    if (thisS1String.Length != 0)
+                        finalText.Add(new CombinedViewCharacter('\n', CharacterType.COMBINED));
+                    finalText.AddRange(GetLineAsCombinedViewCharacters(thisS2String, CharacterType.TEXT2));
+                    if (thisS2String.Length != 0)
+                        finalText.Add(new CombinedViewCharacter('\n', CharacterType.COMBINED));
                 }
-                finalText.Add(new CombinedViewCharacter('\n', CharacterType.COMBINED));
             }
 
+            PrintCombinedMatch(finalText, finalTextBox);
+        }
+
+        private List<CombinedViewCharacter> GetLineAsCombinedViewCharacters(string text, CharacterType type)
+        {
+            List<CombinedViewCharacter> list = new List<CombinedViewCharacter>();
+            for (int i = 0; i < text.Length; i++)
+                list.Add(new CombinedViewCharacter(text[i], type));
+
+            return list;
+        }
+
+        private void PrintCombinedMatch(List<CombinedViewCharacter> finalText, RichTextBox finalTextBox)
+        {
             StringBuilder builder = new StringBuilder();
 
             for (int i = 0; i < finalText.Count; i++)
