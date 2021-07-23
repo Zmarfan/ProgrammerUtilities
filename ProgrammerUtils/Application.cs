@@ -191,17 +191,17 @@ namespace ProgrammerUtils
 
         private void DoMatch()
         {
-            _matcher.DoMatch(MatchLeftText1, MatchLeftText2, matchRightText1, matchRightText2, matchRightText1Label, matchRightText2Label, matchCaseSensitive.Checked, MatchRemoveExtraWhiteSpace.Checked);
+            _matcher.DoMatch(MatchLeftText1, MatchLeftText2, matchRightText1, matchRightText2, matchResultCombinedTextBox, matchRightText1Label, matchRightText2Label, matchResultTabCombinedLabel, matchCaseSensitive.Checked, MatchRemoveExtraWhiteSpace.Checked);
         }
 
         #region Events
 
-        private void matchMatchButton_Click(object sender, EventArgs e)
+        private void MatchMatchButton_Click(object sender, EventArgs e)
         {
             DoMatch();
         }
 
-        private void matchAutoCompare_CheckedChanged(object sender, EventArgs e)
+        private void MatchAutoCompare_CheckedChanged(object sender, EventArgs e)
         {
             SetButtonStatus(matchMatchButton, !matchAutoCompare.Checked);
         }
@@ -212,13 +212,13 @@ namespace ProgrammerUtils
                 DoMatch();
         }
 
-        private void matchTextChanged(object sender, EventArgs e)
+        private void MatchTextChanged(object sender, EventArgs e)
         {
             if (matchAutoCompare.Checked)
                 DoMatch();
         }
 
-        private void matchClearButton_Click(object sender, EventArgs e)
+        private void MatchClearButton_Click(object sender, EventArgs e)
         {
             MatchLeftText1.Text = string.Empty;
             MatchLeftText2.Text = string.Empty;
