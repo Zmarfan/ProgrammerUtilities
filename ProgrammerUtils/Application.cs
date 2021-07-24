@@ -260,6 +260,29 @@ namespace ProgrammerUtils
         #endregion
         #endregion
 
+        #region HTML
+        #region Helper Functions
+        #endregion
+        #region Events
+        
+        private void HTMLTextStyleButtonChange(object sender, EventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            if (checkBox.Checked)
+            {
+                checkBox.BackColor = Color.AliceBlue;
+                checkBox.ForeColor = Color.Blue;
+            }
+            else
+            {
+                checkBox.BackColor = Color.Lavender;
+                checkBox.ForeColor = Color.FromArgb(255, 10, 13, 20);
+            }
+        }
+
+        #endregion
+        #endregion
+
         #region Copy Timer
 
         private void Copy(Button button)

@@ -52,6 +52,7 @@
     <Compile Include="Application.Designer.cs">
       <DependentUpon>Application.cs</DependentUpon>
     </Compile>
+    <Compile Include="HtmlCenter.cs" />
     <Compile Include="Matcher.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProgrammingConverter.cs" />

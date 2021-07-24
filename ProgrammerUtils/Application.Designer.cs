@@ -78,7 +78,7 @@
             this.MatchCombinedShowModeDropdown = new System.Windows.Forms.ComboBox();
             this.matchResultTab = new System.Windows.Forms.TabControl();
             this.matchResultTabSeperate = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.matcherSeperateTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.matchRightText2Label = new System.Windows.Forms.Label();
             this.matchRightText1Label = new System.Windows.Forms.Label();
             this.matchRightText2 = new System.Windows.Forms.RichTextBox();
@@ -89,12 +89,24 @@
             this.matchResultTabCombinedLabel = new System.Windows.Forms.Label();
             this.CountTab = new System.Windows.Forms.TabPage();
             this.htmlTab = new System.Windows.Forms.TabPage();
+            this.htmlTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlAutoSort = new System.Windows.Forms.CheckBox();
+            this.htmlButton = new System.Windows.Forms.Button();
+            this.htmlInputTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlInputLabel = new System.Windows.Forms.Label();
+            this.htmlInputTextbox = new System.Windows.Forms.RichTextBox();
+            this.htmlInputTextSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlStrikeThroughButton = new System.Windows.Forms.CheckBox();
+            this.htmlItalicButton = new System.Windows.Forms.CheckBox();
+            this.htmlBoldButton = new System.Windows.Forms.CheckBox();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.HelpDropdown = new System.Windows.Forms.ToolStripDropDownButton();
             this.asdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aasdasdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
+            this.htmlUnderscoreButton = new System.Windows.Forms.CheckBox();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -113,9 +125,14 @@
             this.matchSettingsTableLayout.SuspendLayout();
             this.matchResultTab.SuspendLayout();
             this.matchResultTabSeperate.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.matcherSeperateTableLayout.SuspendLayout();
             this.matchResultTabCombined.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.htmlTab.SuspendLayout();
+            this.htmlTableLayout.SuspendLayout();
+            this.htmlSettingsTableLayout.SuspendLayout();
+            this.htmlInputTableLayout.SuspendLayout();
+            this.htmlInputTextSettingsTableLayout.SuspendLayout();
             this.Toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -166,7 +183,7 @@
             this.SortTableLayout.ColumnCount = 3;
             this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.SortTableLayout.Controls.Add(this.sortLabel2, 1, 3);
             this.SortTableLayout.Controls.Add(this.sortTextBoxLeft, 0, 1);
             this.SortTableLayout.Controls.Add(this.sortLabel1, 0, 3);
@@ -231,7 +248,7 @@
             this.sortHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.sortHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.sortHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 350F));
-            this.sortHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 232F));
+            this.sortHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 245F));
             this.sortHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.sortHeader.Controls.Add(this.SortButton, 0, 0);
             this.sortHeader.Controls.Add(this.AutoSortCheckbox, 1, 0);
@@ -383,10 +400,10 @@
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(66, 311);
             this.tableLayoutPanel1.TabIndex = 5;
@@ -400,10 +417,10 @@
             this.SortCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SortCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SortCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortCopyButton.Location = new System.Drawing.Point(3, 123);
+            this.SortCopyButton.Location = new System.Drawing.Point(3, 135);
             this.SortCopyButton.Name = "SortCopyButton";
             this.SortCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.SortCopyButton.Size = new System.Drawing.Size(60, 54);
+            this.SortCopyButton.Size = new System.Drawing.Size(60, 60);
             this.SortCopyButton.TabIndex = 9;
             this.SortCopyButton.UseVisualStyleBackColor = false;
             this.SortCopyButton.Click += new System.EventHandler(this.SortCopyButton_Click);
@@ -416,9 +433,9 @@
             this.SortClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SortClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SortClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortClearButton.Location = new System.Drawing.Point(3, 183);
+            this.SortClearButton.Location = new System.Drawing.Point(3, 201);
             this.SortClearButton.Name = "SortClearButton";
-            this.SortClearButton.Size = new System.Drawing.Size(60, 54);
+            this.SortClearButton.Size = new System.Drawing.Size(60, 60);
             this.SortClearButton.TabIndex = 10;
             this.SortClearButton.Text = "Clear";
             this.SortClearButton.UseVisualStyleBackColor = false;
@@ -431,9 +448,9 @@
             this.SortTextPresentationButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SortTextPresentationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SortTextPresentationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortTextPresentationButton.Location = new System.Drawing.Point(3, 63);
+            this.SortTextPresentationButton.Location = new System.Drawing.Point(3, 69);
             this.SortTextPresentationButton.Name = "SortTextPresentationButton";
-            this.SortTextPresentationButton.Size = new System.Drawing.Size(60, 54);
+            this.SortTextPresentationButton.Size = new System.Drawing.Size(60, 60);
             this.SortTextPresentationButton.TabIndex = 8;
             this.SortTextPresentationButton.Text = "A_B";
             this.SortTextPresentationButton.UseVisualStyleBackColor = false;
@@ -448,7 +465,7 @@
             this.SortChangeTextCapsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortChangeTextCapsButton.Location = new System.Drawing.Point(3, 3);
             this.SortChangeTextCapsButton.Name = "SortChangeTextCapsButton";
-            this.SortChangeTextCapsButton.Size = new System.Drawing.Size(60, 54);
+            this.SortChangeTextCapsButton.Size = new System.Drawing.Size(60, 60);
             this.SortChangeTextCapsButton.TabIndex = 7;
             this.SortChangeTextCapsButton.Text = "ABC";
             this.SortChangeTextCapsButton.UseVisualStyleBackColor = false;
@@ -593,7 +610,7 @@
             this.sortEnum.Controls.Add(this.sortEnumTextBoxRight);
             this.sortEnum.Location = new System.Drawing.Point(4, 28);
             this.sortEnum.Name = "sortEnum";
-            this.sortEnum.Size = new System.Drawing.Size(412, 279);
+            this.sortEnum.Size = new System.Drawing.Size(431, 273);
             this.sortEnum.TabIndex = 1;
             this.sortEnum.Text = "Enum";
             this.sortEnum.UseVisualStyleBackColor = true;
@@ -604,7 +621,7 @@
             this.sortEnumTextBoxRight.Location = new System.Drawing.Point(0, 0);
             this.sortEnumTextBoxRight.Name = "sortEnumTextBoxRight";
             this.sortEnumTextBoxRight.ReadOnly = true;
-            this.sortEnumTextBoxRight.Size = new System.Drawing.Size(412, 279);
+            this.sortEnumTextBoxRight.Size = new System.Drawing.Size(431, 273);
             this.sortEnumTextBoxRight.TabIndex = 0;
             this.sortEnumTextBoxRight.Text = "";
             // 
@@ -800,7 +817,7 @@
             "Combined: Every line",
             "Combined: Every word",
             "Combined: Every letter"});
-            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 14);
+            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 13);
             this.MatchCombinedShowModeDropdown.Name = "MatchCombinedShowModeDropdown";
             this.matchSettingsTableLayout.SetRowSpan(this.MatchCombinedShowModeDropdown, 2);
             this.MatchCombinedShowModeDropdown.Size = new System.Drawing.Size(164, 24);
@@ -823,7 +840,7 @@
             // 
             // matchResultTabSeperate
             // 
-            this.matchResultTabSeperate.Controls.Add(this.tableLayoutPanel3);
+            this.matchResultTabSeperate.Controls.Add(this.matcherSeperateTableLayout);
             this.matchResultTabSeperate.Location = new System.Drawing.Point(4, 28);
             this.matchResultTabSeperate.Margin = new System.Windows.Forms.Padding(0);
             this.matchResultTabSeperate.Name = "matchResultTabSeperate";
@@ -832,25 +849,25 @@
             this.matchResultTabSeperate.Text = "Separate";
             this.matchResultTabSeperate.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel3
+            // matcherSeperateTableLayout
             // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.matchRightText2Label, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.matchRightText1Label, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.matchRightText2, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.matchRightText1, 0, 1);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 4;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(470, 378);
-            this.tableLayoutPanel3.TabIndex = 0;
+            this.matcherSeperateTableLayout.ColumnCount = 1;
+            this.matcherSeperateTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.matcherSeperateTableLayout.Controls.Add(this.matchRightText2Label, 0, 2);
+            this.matcherSeperateTableLayout.Controls.Add(this.matchRightText1Label, 0, 0);
+            this.matcherSeperateTableLayout.Controls.Add(this.matchRightText2, 0, 3);
+            this.matcherSeperateTableLayout.Controls.Add(this.matchRightText1, 0, 1);
+            this.matcherSeperateTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matcherSeperateTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.matcherSeperateTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.matcherSeperateTableLayout.Name = "matcherSeperateTableLayout";
+            this.matcherSeperateTableLayout.RowCount = 4;
+            this.matcherSeperateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.matcherSeperateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.matcherSeperateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.matcherSeperateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.matcherSeperateTableLayout.Size = new System.Drawing.Size(470, 378);
+            this.matcherSeperateTableLayout.TabIndex = 0;
             // 
             // matchRightText2Label
             // 
@@ -951,20 +968,203 @@
             this.CountTab.Location = new System.Drawing.Point(4, 25);
             this.CountTab.Name = "CountTab";
             this.CountTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CountTab.Size = new System.Drawing.Size(923, 474);
+            this.CountTab.Size = new System.Drawing.Size(962, 468);
             this.CountTab.TabIndex = 2;
             this.CountTab.Text = "Count";
             this.CountTab.UseVisualStyleBackColor = true;
             // 
             // htmlTab
             // 
+            this.htmlTab.Controls.Add(this.htmlTableLayout);
             this.htmlTab.Location = new System.Drawing.Point(4, 25);
             this.htmlTab.Name = "htmlTab";
             this.htmlTab.Padding = new System.Windows.Forms.Padding(3);
-            this.htmlTab.Size = new System.Drawing.Size(923, 474);
+            this.htmlTab.Size = new System.Drawing.Size(962, 468);
             this.htmlTab.TabIndex = 3;
             this.htmlTab.Text = "HTML:ify";
             this.htmlTab.UseVisualStyleBackColor = true;
+            // 
+            // htmlTableLayout
+            // 
+            this.htmlTableLayout.ColumnCount = 3;
+            this.htmlTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.htmlTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.htmlTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.htmlTableLayout.Controls.Add(this.htmlSettingsTableLayout, 0, 0);
+            this.htmlTableLayout.Controls.Add(this.htmlInputTableLayout, 0, 1);
+            this.htmlTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlTableLayout.Location = new System.Drawing.Point(3, 3);
+            this.htmlTableLayout.Name = "htmlTableLayout";
+            this.htmlTableLayout.RowCount = 2;
+            this.htmlTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.htmlTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlTableLayout.Size = new System.Drawing.Size(956, 462);
+            this.htmlTableLayout.TabIndex = 0;
+            // 
+            // htmlSettingsTableLayout
+            // 
+            this.htmlSettingsTableLayout.ColumnCount = 3;
+            this.htmlTableLayout.SetColumnSpan(this.htmlSettingsTableLayout, 2);
+            this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlSettingsTableLayout.Controls.Add(this.htmlAutoSort, 1, 0);
+            this.htmlSettingsTableLayout.Controls.Add(this.htmlButton, 0, 0);
+            this.htmlSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlSettingsTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.htmlSettingsTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.htmlSettingsTableLayout.Name = "htmlSettingsTableLayout";
+            this.htmlSettingsTableLayout.RowCount = 2;
+            this.htmlSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.htmlSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.htmlSettingsTableLayout.Size = new System.Drawing.Size(890, 52);
+            this.htmlSettingsTableLayout.TabIndex = 0;
+            // 
+            // htmlAutoSort
+            // 
+            this.htmlAutoSort.AutoSize = true;
+            this.htmlAutoSort.Checked = true;
+            this.htmlAutoSort.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.htmlAutoSort.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlAutoSort.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlAutoSort.Location = new System.Drawing.Point(203, 3);
+            this.htmlAutoSort.Name = "htmlAutoSort";
+            this.htmlSettingsTableLayout.SetRowSpan(this.htmlAutoSort, 2);
+            this.htmlAutoSort.Size = new System.Drawing.Size(89, 46);
+            this.htmlAutoSort.TabIndex = 3;
+            this.htmlAutoSort.Text = "Auto Sort";
+            this.htmlAutoSort.UseVisualStyleBackColor = true;
+            // 
+            // htmlButton
+            // 
+            this.htmlButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.htmlButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlButton.Location = new System.Drawing.Point(3, 3);
+            this.htmlButton.Name = "htmlButton";
+            this.htmlSettingsTableLayout.SetRowSpan(this.htmlButton, 2);
+            this.htmlButton.Size = new System.Drawing.Size(194, 46);
+            this.htmlButton.TabIndex = 0;
+            this.htmlButton.Text = "HTML:ify";
+            this.htmlButton.UseVisualStyleBackColor = false;
+            // 
+            // htmlInputTableLayout
+            // 
+            this.htmlInputTableLayout.ColumnCount = 1;
+            this.htmlInputTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlInputTableLayout.Controls.Add(this.htmlInputLabel, 0, 2);
+            this.htmlInputTableLayout.Controls.Add(this.htmlInputTextbox, 0, 0);
+            this.htmlInputTableLayout.Controls.Add(this.htmlInputTextSettingsTableLayout, 0, 1);
+            this.htmlInputTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlInputTableLayout.Location = new System.Drawing.Point(0, 52);
+            this.htmlInputTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.htmlInputTableLayout.Name = "htmlInputTableLayout";
+            this.htmlInputTableLayout.RowCount = 3;
+            this.htmlInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.htmlInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.htmlInputTableLayout.Size = new System.Drawing.Size(445, 410);
+            this.htmlInputTableLayout.TabIndex = 1;
+            // 
+            // htmlInputLabel
+            // 
+            this.htmlInputLabel.AutoSize = true;
+            this.htmlInputLabel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.htmlInputLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.htmlInputLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlInputLabel.Location = new System.Drawing.Point(3, 372);
+            this.htmlInputLabel.Name = "htmlInputLabel";
+            this.htmlInputLabel.Padding = new System.Windows.Forms.Padding(10);
+            this.htmlInputLabel.Size = new System.Drawing.Size(439, 38);
+            this.htmlInputLabel.TabIndex = 3;
+            this.htmlInputLabel.Text = "Write plain text that should be converted to HTML text!";
+            this.htmlInputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // htmlInputTextbox
+            // 
+            this.htmlInputTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlInputTextbox.Location = new System.Drawing.Point(3, 3);
+            this.htmlInputTextbox.Name = "htmlInputTextbox";
+            this.htmlInputTextbox.Size = new System.Drawing.Size(439, 328);
+            this.htmlInputTextbox.TabIndex = 1;
+            this.htmlInputTextbox.Text = "";
+            // 
+            // htmlInputTextSettingsTableLayout
+            // 
+            this.htmlInputTextSettingsTableLayout.ColumnCount = 7;
+            this.htmlInputTextSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.htmlInputTextSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.htmlInputTextSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.htmlInputTextSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.htmlInputTextSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.htmlInputTextSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.htmlInputTextSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlInputTextSettingsTableLayout.Controls.Add(this.htmlUnderscoreButton, 0, 0);
+            this.htmlInputTextSettingsTableLayout.Controls.Add(this.htmlStrikeThroughButton, 2, 0);
+            this.htmlInputTextSettingsTableLayout.Controls.Add(this.htmlItalicButton, 1, 0);
+            this.htmlInputTextSettingsTableLayout.Controls.Add(this.htmlBoldButton, 0, 0);
+            this.htmlInputTextSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlInputTextSettingsTableLayout.Location = new System.Drawing.Point(3, 337);
+            this.htmlInputTextSettingsTableLayout.Name = "htmlInputTextSettingsTableLayout";
+            this.htmlInputTextSettingsTableLayout.RowCount = 1;
+            this.htmlInputTextSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlInputTextSettingsTableLayout.Size = new System.Drawing.Size(439, 32);
+            this.htmlInputTextSettingsTableLayout.TabIndex = 4;
+            // 
+            // htmlStrikeThroughButton
+            // 
+            this.htmlStrikeThroughButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.htmlStrikeThroughButton.AutoSize = true;
+            this.htmlStrikeThroughButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlStrikeThroughButton.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlStrikeThroughButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlStrikeThroughButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlStrikeThroughButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlStrikeThroughButton.Location = new System.Drawing.Point(108, 3);
+            this.htmlStrikeThroughButton.Name = "htmlStrikeThroughButton";
+            this.htmlStrikeThroughButton.Size = new System.Drawing.Size(29, 26);
+            this.htmlStrikeThroughButton.TabIndex = 2;
+            this.htmlStrikeThroughButton.Text = "S";
+            this.htmlStrikeThroughButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlStrikeThroughButton.UseVisualStyleBackColor = false;
+            this.htmlStrikeThroughButton.CheckedChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
+            // 
+            // htmlItalicButton
+            // 
+            this.htmlItalicButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.htmlItalicButton.AutoSize = true;
+            this.htmlItalicButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlItalicButton.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlItalicButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlItalicButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlItalicButton.Font = new System.Drawing.Font("Times New Roman", 10.5F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlItalicButton.Location = new System.Drawing.Point(73, 3);
+            this.htmlItalicButton.Name = "htmlItalicButton";
+            this.htmlItalicButton.Size = new System.Drawing.Size(29, 26);
+            this.htmlItalicButton.TabIndex = 1;
+            this.htmlItalicButton.Text = "I";
+            this.htmlItalicButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlItalicButton.UseVisualStyleBackColor = false;
+            this.htmlItalicButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
+            // 
+            // htmlBoldButton
+            // 
+            this.htmlBoldButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.htmlBoldButton.AutoSize = true;
+            this.htmlBoldButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlBoldButton.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlBoldButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlBoldButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlBoldButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlBoldButton.Location = new System.Drawing.Point(3, 3);
+            this.htmlBoldButton.Name = "htmlBoldButton";
+            this.htmlBoldButton.Size = new System.Drawing.Size(29, 26);
+            this.htmlBoldButton.TabIndex = 0;
+            this.htmlBoldButton.Text = "B";
+            this.htmlBoldButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlBoldButton.UseVisualStyleBackColor = false;
+            this.htmlBoldButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
             // 
             // Toolbar
             // 
@@ -1015,6 +1215,24 @@
             this.CopyTimer.Interval = 1500;
             this.CopyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
             // 
+            // htmlUnderscoreButton
+            // 
+            this.htmlUnderscoreButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.htmlUnderscoreButton.AutoSize = true;
+            this.htmlUnderscoreButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlUnderscoreButton.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlUnderscoreButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlUnderscoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlUnderscoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.7F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlUnderscoreButton.Location = new System.Drawing.Point(38, 3);
+            this.htmlUnderscoreButton.Name = "htmlUnderscoreButton";
+            this.htmlUnderscoreButton.Size = new System.Drawing.Size(29, 26);
+            this.htmlUnderscoreButton.TabIndex = 3;
+            this.htmlUnderscoreButton.Text = "U";
+            this.htmlUnderscoreButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlUnderscoreButton.UseVisualStyleBackColor = false;
+            this.htmlUnderscoreButton.CheckedChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
+            // 
             // Application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1054,11 +1272,19 @@
             this.matchSettingsTableLayout.PerformLayout();
             this.matchResultTab.ResumeLayout(false);
             this.matchResultTabSeperate.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
+            this.matcherSeperateTableLayout.ResumeLayout(false);
+            this.matcherSeperateTableLayout.PerformLayout();
             this.matchResultTabCombined.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.htmlTab.ResumeLayout(false);
+            this.htmlTableLayout.ResumeLayout(false);
+            this.htmlSettingsTableLayout.ResumeLayout(false);
+            this.htmlSettingsTableLayout.PerformLayout();
+            this.htmlInputTableLayout.ResumeLayout(false);
+            this.htmlInputTableLayout.PerformLayout();
+            this.htmlInputTextSettingsTableLayout.ResumeLayout(false);
+            this.htmlInputTextSettingsTableLayout.PerformLayout();
             this.Toolbar.ResumeLayout(false);
             this.Toolbar.PerformLayout();
             this.ResumeLayout(false);
@@ -1122,7 +1348,7 @@
         private System.Windows.Forms.Button matchClearButton;
         private System.Windows.Forms.TabControl matchResultTab;
         private System.Windows.Forms.TabPage matchResultTabSeperate;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel matcherSeperateTableLayout;
         private System.Windows.Forms.Label matchRightText2Label;
         private System.Windows.Forms.Label matchRightText1Label;
         private System.Windows.Forms.RichTextBox matchRightText2;
@@ -1132,6 +1358,18 @@
         private System.Windows.Forms.RichTextBox matchResultCombinedTextBox;
         private System.Windows.Forms.Label matchResultTabCombinedLabel;
         private System.Windows.Forms.ComboBox MatchCombinedShowModeDropdown;
+        private System.Windows.Forms.TableLayoutPanel htmlTableLayout;
+        private System.Windows.Forms.TableLayoutPanel htmlSettingsTableLayout;
+        private System.Windows.Forms.CheckBox htmlAutoSort;
+        private System.Windows.Forms.Button htmlButton;
+        private System.Windows.Forms.TableLayoutPanel htmlInputTableLayout;
+        private System.Windows.Forms.Label htmlInputLabel;
+        private System.Windows.Forms.RichTextBox htmlInputTextbox;
+        private System.Windows.Forms.TableLayoutPanel htmlInputTextSettingsTableLayout;
+        private System.Windows.Forms.CheckBox htmlBoldButton;
+        private System.Windows.Forms.CheckBox htmlItalicButton;
+        private System.Windows.Forms.CheckBox htmlStrikeThroughButton;
+        private System.Windows.Forms.CheckBox htmlUnderscoreButton;
     }
 }
 
