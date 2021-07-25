@@ -172,55 +172,70 @@ namespace ProgrammerUtils
 
         private void DoCombinedMatching(string s1, string s2, bool caseSensitive, RichTextBox finalTextBox, CombinedDisplayMode displayMode)
         {
-            char splitChar = '\0';
-            char displayChar = ' ';
-            if (displayMode == CombinedDisplayMode.NEW_LINE)
-            {
-                splitChar = '\n';
-                displayChar = '\n';
-            }
-            else if (displayMode == CombinedDisplayMode.NEW_WORD)
-                splitChar = ' ';
+            string[] s1Splits = s1.Split(new char[] { '\n' }, StringSplitOptions.None);
+            string[] s2Splits = s2.Split(new char[] { '\n' }, StringSplitOptions.None);
 
-            List<bool> equalLinesList = new List<bool>();
-            string[] s1Splits = displayMode == CombinedDisplayMode.NEW_LETTER ? s1.ToCharArray().Select(c => c.ToString()).ToArray() : s1.Split(new char[] { splitChar }, StringSplitOptions.RemoveEmptyEntries);
-            string[] s2Splits = displayMode == CombinedDisplayMode.NEW_LETTER ? s2.ToCharArray().Select(c => c.ToString()).ToArray() : s2.Split(new char[] { splitChar }, StringSplitOptions.RemoveEmptyEntries);
+            object[] s1Object = new object[s1Splits.Length];
+            object[] s2Object = new object[s2Splits.Length];
 
+            for (int i = 0; i < s1Splits.Length; i++)
+                s1Object[i] = s1Splits[i];
+            for (int i = 0; i < s2Splits.Length; i++)
+                s2Object[i] = s2Splits[i];
+
+            List<LCSObject> lcs = GetLargestCommonSubSequence(s1Object, s2Object);
             int numberOfRows = Math.Max(s1Splits.Length, s2Splits.Length);
 
-            for (int i = 0; i < numberOfRows; i++)
-            {
-                string thisS1String = i < s1Splits.Length ? s1Splits[i] : string.Empty;
-                string thisS2String = i < s2Splits.Length ? s2Splits[i] : string.Empty;
-                equalLinesList.Add(thisS1String == thisS2String);
-            }
-
             List<CombinedViewCharacter> finalText = new List<CombinedViewCharacter>();
+            bool lastLineCommonRemoved = false;
+            int blockRemoveIndex = 0;
 
             for (int i = 0; i < numberOfRows; i++)
             {
-                string thisS1String = i < s1Splits.Length ? s1Splits[i] : string.Empty;
-                string thisS2String = i < s2Splits.Length ? s2Splits[i] : string.Empty;
+                int index = i + 1;
+                string thisS1String = i < s1Splits.Length ? (s1Splits[i] == string.Empty ? "\n" : s1Splits[i]) : string.Empty;
+                string thisS2String = i < s2Splits.Length ? (s2Splits[i] == string.Empty ? "\n" : s2Splits[i]) : string.Empty;
 
-                //No differences
-                if (equalLinesList[i])
+                bool isCommon = lcs.Where(entry => entry.S2Index == index).ToList().Count > 0;
+                bool removed = lcs.Where(entry => entry.S1Index == index).ToList().Count == 0;
+
+                if (isCommon)
                 {
-                    finalText.AddRange(GetLineAsCombinedViewCharacters(thisS1String, CharacterType.COMBINED));
-                    if (displayMode != CombinedDisplayMode.NEW_LETTER)
-                        finalText.Add(new CombinedViewCharacter(displayChar, CharacterType.COMBINED));
+                    if (removed && lastLineCommonRemoved)
+                        AddToFinalText(thisS1String, CharacterType.TEXT1, blockRemoveIndex, ref finalText);
+                    else
+                        lastLineCommonRemoved = false;
+
+                    AddToFinalText(thisS2String, CharacterType.COMBINED, finalText.Count, ref finalText);
+
+                    if (removed && !lastLineCommonRemoved)
+                    {
+                        AddToFinalText(thisS1String, CharacterType.TEXT1, finalText.Count, ref finalText);
+                        lastLineCommonRemoved = true;
+                        blockRemoveIndex = finalText.Count;
+                    }
                 }
                 else
                 {
-                    finalText.AddRange(GetLineAsCombinedViewCharacters(thisS1String, CharacterType.TEXT1));
-                    if (thisS1String.Length != 0 && displayMode == CombinedDisplayMode.NEW_LINE)
-                        finalText.Add(new CombinedViewCharacter(displayChar, CharacterType.COMBINED));
-                    finalText.AddRange(GetLineAsCombinedViewCharacters(thisS2String, CharacterType.TEXT2));
-                    if (thisS2String.Length != 0 && displayMode != CombinedDisplayMode.NEW_LETTER)
-                        finalText.Add(new CombinedViewCharacter(displayChar, CharacterType.COMBINED));
+                    if (removed)
+                        AddToFinalText(thisS1String, CharacterType.TEXT1, finalText.Count, ref finalText);
+                    else
+                        lastLineCommonRemoved = false;
+
+                    AddToFinalText(thisS2String, CharacterType.TEXT2, finalText.Count, ref finalText);
                 }
             }
 
             PrintCombinedMatch(finalText, finalTextBox);
+        }
+
+        private void AddToFinalText(string text, CharacterType type, int insertIndex, ref List<CombinedViewCharacter> finalText)
+        {
+            insertIndex = insertIndex < 0 ? 0 : insertIndex;
+
+            finalText.InsertRange(insertIndex, GetLineAsCombinedViewCharacters(text, type));
+            if (text != string.Empty && text != "\n")
+                finalText.Add(new CombinedViewCharacter('\n', CharacterType.COMBINED));
         }
 
         private List<CombinedViewCharacter> GetLineAsCombinedViewCharacters(string text, CharacterType type)

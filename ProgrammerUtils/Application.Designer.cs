@@ -681,7 +681,7 @@
             this.MatchLeftText2.Name = "MatchLeftText2";
             this.MatchLeftText2.Size = new System.Drawing.Size(472, 164);
             this.MatchLeftText2.TabIndex = 1;
-            this.MatchLeftText2.Text = "";
+            this.MatchLeftText2.Text = "1\n5\n2\n3\n4";
             this.MatchLeftText2.TextChanged += new System.EventHandler(this.MatchTextChanged);
             // 
             // MatchLeftText1
@@ -691,7 +691,7 @@
             this.MatchLeftText1.Name = "MatchLeftText1";
             this.MatchLeftText1.Size = new System.Drawing.Size(472, 164);
             this.MatchLeftText1.TabIndex = 0;
-            this.MatchLeftText1.Text = "";
+            this.MatchLeftText1.Text = "1\n2\n3\n4\n5";
             this.MatchLeftText1.TextChanged += new System.EventHandler(this.MatchTextChanged);
             // 
             // matchLeftText1Label
