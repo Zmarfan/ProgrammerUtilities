@@ -97,6 +97,7 @@
             this.htmlInputLabel = new System.Windows.Forms.Label();
             this.htmlInputTextbox = new System.Windows.Forms.RichTextBox();
             this.htmlInputTextSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlUnderscoreButton = new System.Windows.Forms.CheckBox();
             this.htmlStrikeThroughButton = new System.Windows.Forms.CheckBox();
             this.htmlItalicButton = new System.Windows.Forms.CheckBox();
             this.htmlBoldButton = new System.Windows.Forms.CheckBox();
@@ -106,7 +107,6 @@
             this.asdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aasdasdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
-            this.htmlUnderscoreButton = new System.Windows.Forms.CheckBox();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -817,7 +817,7 @@
             "Combined: Every line",
             "Combined: Every word",
             "Combined: Every letter"});
-            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 13);
+            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 14);
             this.MatchCombinedShowModeDropdown.Name = "MatchCombinedShowModeDropdown";
             this.matchSettingsTableLayout.SetRowSpan(this.MatchCombinedShowModeDropdown, 2);
             this.MatchCombinedShowModeDropdown.Size = new System.Drawing.Size(164, 24);
@@ -1112,6 +1112,24 @@
             this.htmlInputTextSettingsTableLayout.Size = new System.Drawing.Size(439, 32);
             this.htmlInputTextSettingsTableLayout.TabIndex = 4;
             // 
+            // htmlUnderscoreButton
+            // 
+            this.htmlUnderscoreButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.htmlUnderscoreButton.AutoSize = true;
+            this.htmlUnderscoreButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlUnderscoreButton.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlUnderscoreButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlUnderscoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlUnderscoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.7F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlUnderscoreButton.Location = new System.Drawing.Point(38, 3);
+            this.htmlUnderscoreButton.Name = "htmlUnderscoreButton";
+            this.htmlUnderscoreButton.Size = new System.Drawing.Size(29, 26);
+            this.htmlUnderscoreButton.TabIndex = 3;
+            this.htmlUnderscoreButton.Text = "U";
+            this.htmlUnderscoreButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlUnderscoreButton.UseVisualStyleBackColor = false;
+            this.htmlUnderscoreButton.CheckedChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
+            // 
             // htmlStrikeThroughButton
             // 
             this.htmlStrikeThroughButton.Appearance = System.Windows.Forms.Appearance.Button;
@@ -1214,24 +1232,6 @@
             // 
             this.CopyTimer.Interval = 1500;
             this.CopyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
-            // 
-            // htmlUnderscoreButton
-            // 
-            this.htmlUnderscoreButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.htmlUnderscoreButton.AutoSize = true;
-            this.htmlUnderscoreButton.BackColor = System.Drawing.Color.Lavender;
-            this.htmlUnderscoreButton.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.htmlUnderscoreButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlUnderscoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.htmlUnderscoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.7F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.htmlUnderscoreButton.Location = new System.Drawing.Point(38, 3);
-            this.htmlUnderscoreButton.Name = "htmlUnderscoreButton";
-            this.htmlUnderscoreButton.Size = new System.Drawing.Size(29, 26);
-            this.htmlUnderscoreButton.TabIndex = 3;
-            this.htmlUnderscoreButton.Text = "U";
-            this.htmlUnderscoreButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.htmlUnderscoreButton.UseVisualStyleBackColor = false;
-            this.htmlUnderscoreButton.CheckedChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
             // 
             // Application
             // 

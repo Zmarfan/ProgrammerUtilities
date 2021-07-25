@@ -35,15 +35,15 @@ namespace ProgrammerUtils
             }
         }
 
-        private struct LCSChar
+        private struct LCSObject
         {
-            public char Character { get; private set; }
+            public object Data { get; private set; }
             public int S1Index { get; private set; }
             public int S2Index { get; private set; }
 
-            public LCSChar(char character, int s1Index, int s2Index)
+            public LCSObject(object characdataer, int s1Index, int s2Index)
             {
-                Character = character;
+                Data = characdataer;
                 S1Index = s1Index;
                 S2Index = s2Index;
             }
@@ -104,7 +104,13 @@ namespace ProgrammerUtils
             string s1 = removeExtraWhiteSpaces ? RemoveExtraWhiteSpaces(_introTextBox1.Text) : _introTextBox1.Text;
             string s2 = removeExtraWhiteSpaces ? RemoveExtraWhiteSpaces(_introTextBox2.Text) : _introTextBox2.Text;
 
-            DoSeperateMatching(s1, s2, caseSensitive, _finalTextBox1, _finalTextBox2);
+            if (caseSensitive)
+            {
+                s1 = s1.ToLower();
+                s2 = s2.ToLower();
+            }
+
+            DoSeperateMatching(s1, s2, _finalTextBox1, _finalTextBox2);
             DoCombinedMatching(s1, s2, caseSensitive, _finalTextBox3, displayMode);
         }
 
@@ -145,9 +151,17 @@ namespace ProgrammerUtils
             label.Text = "The texts do not match!";
         }
 
-        private void DoSeperateMatching(string s1, string s2, bool caseSensitive, RichTextBox finalTextBox1, RichTextBox finalTextBox2)
+        private void DoSeperateMatching(string s1, string s2, RichTextBox finalTextBox1, RichTextBox finalTextBox2)
         {
-            List<LCSChar> lcsList = GetLargestCommonSubSequence(s1, s2, caseSensitive);
+            object[] s1Object = new object[s1.Length];
+            object[] s2Object = new object[s2.Length];
+
+            for (int i = 0; i < s1.Length; i++)
+                s1Object[i] = s1[i];
+            for (int i = 0; i < s2.Length; i++)
+                s2Object[i] = s2[i];
+
+            List<LCSObject> lcsList = GetLargestCommonSubSequence(s1Object, s2Object);
 
             HashSet<int> text1HashSet = new HashSet<int>(lcsList.Select(entry => entry.S1Index));
             HashSet<int> text2HashSet = new HashSet<int>(lcsList.Select(entry => entry.S2Index));
@@ -249,14 +263,8 @@ namespace ProgrammerUtils
             }
         }
 
-        private List<LCSChar> GetLargestCommonSubSequence(string s1, string s2, bool caseSensitive)
+        private List<LCSObject> GetLargestCommonSubSequence(object[] s1, object[] s2)
         {
-            if (caseSensitive)
-            {
-                s1 = s1.ToLower();
-                s2 = s2.ToLower();
-            }
-
             int s1Length = s1.Length;
             int s2Length = s2.Length;
 
@@ -268,7 +276,7 @@ namespace ProgrammerUtils
                 {
                     if (i == 0 || j == 0)
                         table[i, j] = 0;
-                    else if (s1[i - 1] == s2[j - 1])
+                    else if (s1[i - 1].GetHashCode() == s2[j - 1].GetHashCode())
                         table[i, j] = table[i - 1, j - 1] + 1;
                     else
                         table[i, j] = Math.Max(table[i - 1, j], table[i, j - 1]);
@@ -278,14 +286,14 @@ namespace ProgrammerUtils
             int index = table[s1Length, s2Length];
             int temp = index;
 
-            LCSChar[] largestCommonSubSequence = new LCSChar[index];
+            LCSObject[] largestCommonSubSequence = new LCSObject[index];
 
             int ii = s1Length, jj = s2Length;
             while (ii > 0 && jj > 0)
             {
-                if (s1[ii - 1] == s2[jj - 1])
+                if (s1[ii - 1].GetHashCode() == s2[jj - 1].GetHashCode())
                 {
-                    largestCommonSubSequence[index - 1] = new LCSChar(s1[ii - 1], ii, jj);
+                    largestCommonSubSequence[index - 1] = new LCSObject(s1[ii - 1], ii, jj);
 
                     ii--;
                     jj--;
