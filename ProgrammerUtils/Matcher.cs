@@ -267,10 +267,10 @@ namespace ProgrammerUtils
                         SetTextAreaColors(finalTextBox, System.Drawing.Color.FromArgb(255, 10, 13, 20), System.Drawing.Color.Transparent);
                         break;
                     case CharacterType.TEXT1:
-                        SetTextAreaColors(finalTextBox, System.Drawing.Color.FromArgb(255, 10, 13, 20), System.Drawing.Color.Plum);
+                        SetTextAreaColors(finalTextBox, System.Drawing.Color.FromArgb(255, 10, 13, 20), System.Drawing.Color.Pink);
                         break;
                     case CharacterType.TEXT2:
-                        SetTextAreaColors(finalTextBox, System.Drawing.Color.FromArgb(255, 10, 13, 20), System.Drawing.Color.PaleTurquoise);
+                        SetTextAreaColors(finalTextBox, System.Drawing.Color.FromArgb(255, 10, 13, 20), System.Drawing.Color.PaleGreen);
                         break;
                     default:
                         throw new Exception($"No implementation for type: {finalText[i].Type}");

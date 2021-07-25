@@ -666,7 +666,7 @@
             this.matchLeftText2Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.matchLeftText2Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.matchLeftText2Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchLeftText2Label.ForeColor = System.Drawing.Color.DarkCyan;
+            this.matchLeftText2Label.ForeColor = System.Drawing.Color.DarkGreen;
             this.matchLeftText2Label.Location = new System.Drawing.Point(3, 257);
             this.matchLeftText2Label.Name = "matchLeftText2Label";
             this.matchLeftText2Label.Size = new System.Drawing.Size(472, 35);
@@ -700,7 +700,7 @@
             this.matchLeftText1Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.matchLeftText1Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.matchLeftText1Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchLeftText1Label.ForeColor = System.Drawing.Color.DarkOrchid;
+            this.matchLeftText1Label.ForeColor = System.Drawing.Color.Red;
             this.matchLeftText1Label.Location = new System.Drawing.Point(3, 52);
             this.matchLeftText1Label.Name = "matchLeftText1Label";
             this.matchLeftText1Label.Size = new System.Drawing.Size(472, 35);
@@ -817,7 +817,7 @@
             "Combined: Every line",
             "Combined: Every word",
             "Combined: Every letter"});
-            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 14);
+            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 13);
             this.MatchCombinedShowModeDropdown.Name = "MatchCombinedShowModeDropdown";
             this.matchSettingsTableLayout.SetRowSpan(this.MatchCombinedShowModeDropdown, 2);
             this.MatchCombinedShowModeDropdown.Size = new System.Drawing.Size(164, 24);
