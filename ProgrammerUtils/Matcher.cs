@@ -35,7 +35,7 @@ namespace ProgrammerUtils
             }
         }
 
-        private struct LCSObject
+        private class LCSObject
         {
             public object Data { get; private set; }
             public int S1Index { get; private set; }
@@ -48,6 +48,9 @@ namespace ProgrammerUtils
                 S2Index = s2Index;
             }
         }
+
+        private static readonly string ADDED_NEW_LINE = "->\n";
+        private static readonly string REMOVED_NEW_LINE = "<-\n";
 
         private readonly RichTextBox _introTextBox1;
         private readonly RichTextBox _introTextBox2;
@@ -187,54 +190,51 @@ namespace ProgrammerUtils
             int numberOfRows = Math.Max(s1Splits.Length, s2Splits.Length);
 
             List<CombinedViewCharacter> finalText = new List<CombinedViewCharacter>();
-            bool lastLineCommonRemoved = false;
-            int blockRemoveIndex = 0;
 
-            for (int i = 0; i < numberOfRows; i++)
+            int currentLCSIndex = 0;
+            int s1IndexCounter = 0;
+            int s2IndexCounter = 0;
+
+            bool s1DoneLoop = false;
+            bool s2DoneLoop = false;
+
+            while (!s1DoneLoop || !s2DoneLoop)
             {
-                int index = i + 1;
-                string thisS1String = i < s1Splits.Length ? (s1Splits[i] == string.Empty ? "\n" : s1Splits[i]) : string.Empty;
-                string thisS2String = i < s2Splits.Length ? (s2Splits[i] == string.Empty ? "\n" : s2Splits[i]) : string.Empty;
+                s1DoneLoop = s1IndexCounter >= s1Splits.Length;
+                s2DoneLoop = s2IndexCounter >= s2Splits.Length;
 
-                bool isCommon = lcs.Where(entry => entry.S2Index == index).ToList().Count > 0;
-                bool removed = lcs.Where(entry => entry.S1Index == index).ToList().Count == 0;
+                string thisS1String = !s1DoneLoop ? (s1Splits[s1IndexCounter] == string.Empty ? REMOVED_NEW_LINE : s1Splits[s1IndexCounter]) : string.Empty;
+                string thisS2String = !s2DoneLoop ? (s2Splits[s2IndexCounter] == string.Empty ? ADDED_NEW_LINE : s2Splits[s2IndexCounter]) : string.Empty;
 
-                if (isCommon)
+                LCSObject currentObj = currentLCSIndex < lcs.Count ? lcs[currentLCSIndex] : null;
+
+                if (currentObj != null && currentObj.S1Index == s1IndexCounter + 1 && currentObj.S2Index == s2IndexCounter + 1)
                 {
-                    if (removed && lastLineCommonRemoved)
-                        AddToFinalText(thisS1String, CharacterType.TEXT1, blockRemoveIndex, ref finalText);
-                    else
-                        lastLineCommonRemoved = false;
-
-                    AddToFinalText(thisS2String, CharacterType.COMBINED, finalText.Count, ref finalText);
-
-                    if (removed && !lastLineCommonRemoved)
-                    {
-                        AddToFinalText(thisS1String, CharacterType.TEXT1, finalText.Count, ref finalText);
-                        lastLineCommonRemoved = true;
-                        blockRemoveIndex = finalText.Count;
-                    }
+                    AddToFinalText(thisS2String == ADDED_NEW_LINE ? "\n" : thisS2String, CharacterType.COMBINED, ref finalText);
+                    currentLCSIndex++;
+                    s1IndexCounter++;
+                    s2IndexCounter++;
                 }
-                else
+                else if (!s1DoneLoop && (currentObj == null || currentObj.S1Index != s1IndexCounter + 1))
                 {
-                    if (removed)
-                        AddToFinalText(thisS1String, CharacterType.TEXT1, finalText.Count, ref finalText);
-                    else
-                        lastLineCommonRemoved = false;
-
-                    AddToFinalText(thisS2String, CharacterType.TEXT2, finalText.Count, ref finalText);
+                    AddToFinalText(thisS1String, CharacterType.TEXT1, ref finalText);
+                    s1IndexCounter++;
+                }
+                else if (!s2DoneLoop && (currentObj == null || currentObj.S2Index != s2IndexCounter + 1))
+                {
+                    AddToFinalText(thisS2String, CharacterType.TEXT2, ref finalText);
+                    s2IndexCounter++;
                 }
             }
+
 
             PrintCombinedMatch(finalText, finalTextBox);
         }
 
-        private void AddToFinalText(string text, CharacterType type, int insertIndex, ref List<CombinedViewCharacter> finalText)
+        private void AddToFinalText(string text, CharacterType type, ref List<CombinedViewCharacter> finalText)
         {
-            insertIndex = insertIndex < 0 ? 0 : insertIndex;
-
-            finalText.InsertRange(insertIndex, GetLineAsCombinedViewCharacters(text, type));
-            if (text != string.Empty && text != "\n")
+            finalText.AddRange(GetLineAsCombinedViewCharacters(text, type));
+            if (text != string.Empty && text != ADDED_NEW_LINE && text != REMOVED_NEW_LINE && text != "\n")
                 finalText.Add(new CombinedViewCharacter('\n', CharacterType.COMBINED));
         }
 
