@@ -91,7 +91,6 @@
             this.htmlTab = new System.Windows.Forms.TabPage();
             this.htmlTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.htmlAutoSort = new System.Windows.Forms.CheckBox();
             this.htmlButton = new System.Windows.Forms.Button();
             this.htmlInputTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlInputLabel = new System.Windows.Forms.Label();
@@ -822,7 +821,7 @@
             this.MatchCombinedShowModeDropdown.Items.AddRange(new object[] {
             "Combined: Every line",
             "Combined: Every word"});
-            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 13);
+            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 14);
             this.MatchCombinedShowModeDropdown.Name = "MatchCombinedShowModeDropdown";
             this.matchSettingsTableLayout.SetRowSpan(this.MatchCombinedShowModeDropdown, 2);
             this.MatchCombinedShowModeDropdown.Size = new System.Drawing.Size(164, 24);
@@ -1014,7 +1013,6 @@
             this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.htmlSettingsTableLayout.Controls.Add(this.htmlAutoSort, 1, 0);
             this.htmlSettingsTableLayout.Controls.Add(this.htmlButton, 0, 0);
             this.htmlSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlSettingsTableLayout.Location = new System.Drawing.Point(0, 0);
@@ -1025,22 +1023,6 @@
             this.htmlSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.htmlSettingsTableLayout.Size = new System.Drawing.Size(890, 52);
             this.htmlSettingsTableLayout.TabIndex = 0;
-            // 
-            // htmlAutoSort
-            // 
-            this.htmlAutoSort.AutoSize = true;
-            this.htmlAutoSort.Checked = true;
-            this.htmlAutoSort.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.htmlAutoSort.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.htmlAutoSort.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlAutoSort.Location = new System.Drawing.Point(203, 3);
-            this.htmlAutoSort.Name = "htmlAutoSort";
-            this.htmlSettingsTableLayout.SetRowSpan(this.htmlAutoSort, 2);
-            this.htmlAutoSort.Size = new System.Drawing.Size(119, 46);
-            this.htmlAutoSort.TabIndex = 3;
-            this.htmlAutoSort.Text = "Auto HTML:ify";
-            this.htmlAutoSort.UseVisualStyleBackColor = true;
-            this.htmlAutoSort.CheckedChanged += new System.EventHandler(this.HtmlAutoSort_CheckedChanged);
             // 
             // htmlButton
             // 
@@ -1379,7 +1361,6 @@
             this.htmlTab.ResumeLayout(false);
             this.htmlTableLayout.ResumeLayout(false);
             this.htmlSettingsTableLayout.ResumeLayout(false);
-            this.htmlSettingsTableLayout.PerformLayout();
             this.htmlInputTableLayout.ResumeLayout(false);
             this.htmlInputTableLayout.PerformLayout();
             this.htmlInputTextSettingsTableLayout.ResumeLayout(false);
@@ -1461,7 +1442,6 @@
         private System.Windows.Forms.ComboBox MatchCombinedShowModeDropdown;
         private System.Windows.Forms.TableLayoutPanel htmlTableLayout;
         private System.Windows.Forms.TableLayoutPanel htmlSettingsTableLayout;
-        private System.Windows.Forms.CheckBox htmlAutoSort;
         private System.Windows.Forms.Button htmlButton;
         private System.Windows.Forms.TableLayoutPanel htmlInputTableLayout;
         private System.Windows.Forms.Label htmlInputLabel;

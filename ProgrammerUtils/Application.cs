@@ -52,7 +52,6 @@ namespace ProgrammerUtils
             
             _html = new HtmlCenter(htmlInputTextbox, htmlOutputTextbox);
 
-            SetButtonStatus(htmlButton, !htmlAutoSort.Checked);
             DoHtml();
 
             SetChangeTextStyleButton();
@@ -299,13 +298,6 @@ namespace ProgrammerUtils
 
         private void HtmlButton_Click(object sender, EventArgs e)
         {
-            DoHtml();
-        }
-
-        private void HtmlAutoSort_CheckedChanged(object sender, EventArgs e)
-        {
-            SetButtonStatus(htmlButton, !htmlAutoSort.Checked);
-
             DoHtml();
         }
 
