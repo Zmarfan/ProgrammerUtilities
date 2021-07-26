@@ -52,7 +52,7 @@ namespace ProgrammerUtils
             
             _html = new HtmlCenter(htmlInputTextbox, htmlOutputTextbox);
 
-            SetButtonStatus(htmlButton, true);
+            SetButtonStatus(htmlButton, !htmlAutoSort.Checked);
             DoHtml();
 
             SetChangeTextStyleButton();
@@ -302,6 +302,13 @@ namespace ProgrammerUtils
             DoHtml();
         }
 
+        private void HtmlAutoSort_CheckedChanged(object sender, EventArgs e)
+        {
+            SetButtonStatus(htmlButton, !htmlAutoSort.Checked);
+
+            DoHtml();
+        }
+
         private void HTMLTextStyleButtonChange(object sender, EventArgs e)
         {
             CheckBox checkBox = (CheckBox)sender;
@@ -379,6 +386,28 @@ namespace ProgrammerUtils
         {
             htmlRaisedButton.Checked = false;
             ChangeHtmlRaiseLowerText(htmlLoweredButton, HtmlCenter.LOWERED_OFFSET);
+        }
+
+        private void HtmlInputTextbox_SelectionChanged(object sender, EventArgs e)
+        {
+            if (htmlInputTextbox.SelectionLength == 0)
+            {
+                Font currentFont = htmlInputTextbox.SelectionFont;
+
+                htmlBoldButton.Checked = currentFont.Bold;
+                htmlItalicButton.Checked = currentFont.Italic;
+                htmlUnderscoreButton.Checked = currentFont.Underline;
+                htmlStrikeThroughButton.Checked = currentFont.Strikeout;
+                htmlRaisedButton.Checked = htmlInputTextbox.SelectionCharOffset == HtmlCenter.RAISED_OFFSET;
+                htmlLoweredButton.Checked = htmlInputTextbox.SelectionCharOffset == HtmlCenter.LOWERED_OFFSET;
+
+                HTMLTextStyleButtonChange(htmlBoldButton, null);
+                HTMLTextStyleButtonChange(htmlItalicButton, null);
+                HTMLTextStyleButtonChange(htmlUnderscoreButton, null);
+                HTMLTextStyleButtonChange(htmlStrikeThroughButton, null);
+                HTMLTextStyleButtonChange(htmlRaisedButton, null);
+                HTMLTextStyleButtonChange(htmlLoweredButton, null);
+            }
         }
 
         #endregion

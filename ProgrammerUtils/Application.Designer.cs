@@ -104,14 +104,14 @@
             this.htmlBoldButton = new System.Windows.Forms.CheckBox();
             this.htmlRaisedButton = new System.Windows.Forms.CheckBox();
             this.htmlOutputTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlOutputLabel = new System.Windows.Forms.Label();
+            this.htmlOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.HelpDropdown = new System.Windows.Forms.ToolStripDropDownButton();
             this.asdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aasdasdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
-            this.htmlOutputLabel = new System.Windows.Forms.Label();
-            this.htmlOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -822,7 +822,7 @@
             this.MatchCombinedShowModeDropdown.Items.AddRange(new object[] {
             "Combined: Every line",
             "Combined: Every word"});
-            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 14);
+            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 13);
             this.MatchCombinedShowModeDropdown.Name = "MatchCombinedShowModeDropdown";
             this.matchSettingsTableLayout.SetRowSpan(this.MatchCombinedShowModeDropdown, 2);
             this.MatchCombinedShowModeDropdown.Size = new System.Drawing.Size(164, 24);
@@ -1036,10 +1036,11 @@
             this.htmlAutoSort.Location = new System.Drawing.Point(203, 3);
             this.htmlAutoSort.Name = "htmlAutoSort";
             this.htmlSettingsTableLayout.SetRowSpan(this.htmlAutoSort, 2);
-            this.htmlAutoSort.Size = new System.Drawing.Size(89, 46);
+            this.htmlAutoSort.Size = new System.Drawing.Size(119, 46);
             this.htmlAutoSort.TabIndex = 3;
-            this.htmlAutoSort.Text = "Auto Sort";
+            this.htmlAutoSort.Text = "Auto HTML:ify";
             this.htmlAutoSort.UseVisualStyleBackColor = true;
+            this.htmlAutoSort.CheckedChanged += new System.EventHandler(this.HtmlAutoSort_CheckedChanged);
             // 
             // htmlButton
             // 
@@ -1097,6 +1098,7 @@
             this.htmlInputTextbox.Size = new System.Drawing.Size(439, 328);
             this.htmlInputTextbox.TabIndex = 1;
             this.htmlInputTextbox.Text = "";
+            this.htmlInputTextbox.SelectionChanged += new System.EventHandler(this.HtmlInputTextbox_SelectionChanged);
             // 
             // htmlInputTextSettingsTableLayout
             // 
@@ -1129,6 +1131,7 @@
             this.htmlLoweredButton.BackColor = System.Drawing.Color.Lavender;
             this.htmlLoweredButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("htmlLoweredButton.BackgroundImage")));
             this.htmlLoweredButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.htmlLoweredButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.htmlLoweredButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlLoweredButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.htmlLoweredButton.Location = new System.Drawing.Point(178, 3);
@@ -1146,6 +1149,7 @@
             this.htmlUnderscoreButton.AutoSize = true;
             this.htmlUnderscoreButton.BackColor = System.Drawing.Color.Lavender;
             this.htmlUnderscoreButton.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlUnderscoreButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.htmlUnderscoreButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlUnderscoreButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.htmlUnderscoreButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.7F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1165,6 +1169,7 @@
             this.htmlStrikeThroughButton.AutoSize = true;
             this.htmlStrikeThroughButton.BackColor = System.Drawing.Color.Lavender;
             this.htmlStrikeThroughButton.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlStrikeThroughButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.htmlStrikeThroughButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlStrikeThroughButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.htmlStrikeThroughButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1184,6 +1189,7 @@
             this.htmlItalicButton.AutoSize = true;
             this.htmlItalicButton.BackColor = System.Drawing.Color.Lavender;
             this.htmlItalicButton.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlItalicButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.htmlItalicButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlItalicButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.htmlItalicButton.Font = new System.Drawing.Font("Times New Roman", 10.5F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1203,6 +1209,7 @@
             this.htmlBoldButton.AutoSize = true;
             this.htmlBoldButton.BackColor = System.Drawing.Color.Lavender;
             this.htmlBoldButton.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlBoldButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.htmlBoldButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlBoldButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.htmlBoldButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1223,6 +1230,7 @@
             this.htmlRaisedButton.BackColor = System.Drawing.Color.Lavender;
             this.htmlRaisedButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("htmlRaisedButton.BackgroundImage")));
             this.htmlRaisedButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.htmlRaisedButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.htmlRaisedButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlRaisedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.htmlRaisedButton.Location = new System.Drawing.Point(143, 3);
@@ -1250,6 +1258,30 @@
             this.htmlOutputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.htmlOutputTableLayout.Size = new System.Drawing.Size(445, 410);
             this.htmlOutputTableLayout.TabIndex = 2;
+            // 
+            // htmlOutputLabel
+            // 
+            this.htmlOutputLabel.AutoSize = true;
+            this.htmlOutputLabel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.htmlOutputLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.htmlOutputLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlOutputLabel.Location = new System.Drawing.Point(3, 372);
+            this.htmlOutputLabel.Name = "htmlOutputLabel";
+            this.htmlOutputLabel.Padding = new System.Windows.Forms.Padding(10);
+            this.htmlOutputLabel.Size = new System.Drawing.Size(439, 38);
+            this.htmlOutputLabel.TabIndex = 4;
+            this.htmlOutputLabel.Text = "Text converted to HTML!";
+            this.htmlOutputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // htmlOutputTextbox
+            // 
+            this.htmlOutputTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlOutputTextbox.Location = new System.Drawing.Point(3, 3);
+            this.htmlOutputTextbox.Name = "htmlOutputTextbox";
+            this.htmlOutputTextbox.ReadOnly = true;
+            this.htmlOutputTextbox.Size = new System.Drawing.Size(439, 366);
+            this.htmlOutputTextbox.TabIndex = 5;
+            this.htmlOutputTextbox.Text = "";
             // 
             // Toolbar
             // 
@@ -1299,30 +1331,6 @@
             // 
             this.CopyTimer.Interval = 1500;
             this.CopyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
-            // 
-            // htmlOutputLabel
-            // 
-            this.htmlOutputLabel.AutoSize = true;
-            this.htmlOutputLabel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.htmlOutputLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.htmlOutputLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlOutputLabel.Location = new System.Drawing.Point(3, 372);
-            this.htmlOutputLabel.Name = "htmlOutputLabel";
-            this.htmlOutputLabel.Padding = new System.Windows.Forms.Padding(10);
-            this.htmlOutputLabel.Size = new System.Drawing.Size(439, 38);
-            this.htmlOutputLabel.TabIndex = 4;
-            this.htmlOutputLabel.Text = "Text converted to HTML!";
-            this.htmlOutputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // htmlOutputTextbox
-            // 
-            this.htmlOutputTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlOutputTextbox.Location = new System.Drawing.Point(3, 3);
-            this.htmlOutputTextbox.Name = "htmlOutputTextbox";
-            this.htmlOutputTextbox.ReadOnly = true;
-            this.htmlOutputTextbox.Size = new System.Drawing.Size(439, 366);
-            this.htmlOutputTextbox.TabIndex = 5;
-            this.htmlOutputTextbox.Text = "";
             // 
             // Application
             // 
