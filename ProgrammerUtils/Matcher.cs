@@ -35,15 +35,32 @@ namespace ProgrammerUtils
             }
         }
 
-        private class LCSObject
+        private struct LCSInObject
+        {
+            public object Data { get; private set; }
+            public object UniqueID { get; private set; }
+
+            public LCSInObject(object data, object uniqueID)
+            {
+                Data = data;
+                UniqueID = uniqueID;
+            }
+
+            public override int GetHashCode()
+            {
+                return (Data.ToString() + UniqueID.ToString()).GetHashCode();
+            }
+        }
+
+        private class LCSOutObject
         {
             public object Data { get; private set; }
             public int S1Index { get; private set; }
             public int S2Index { get; private set; }
 
-            public LCSObject(object characdataer, int s1Index, int s2Index)
+            public LCSOutObject(object data, int s1Index, int s2Index)
             {
-                Data = characdataer;
+                Data = data;
                 S1Index = s1Index;
                 S2Index = s2Index;
             }
@@ -156,15 +173,15 @@ namespace ProgrammerUtils
 
         private void DoSeperateMatching(string s1, string s2, RichTextBox finalTextBox1, RichTextBox finalTextBox2)
         {
-            object[] s1Object = new object[s1.Length];
-            object[] s2Object = new object[s2.Length];
+            LCSInObject[] s1Object = new LCSInObject[s1.Length];
+            LCSInObject[] s2Object = new LCSInObject[s2.Length];
 
             for (int i = 0; i < s1.Length; i++)
-                s1Object[i] = s1[i];
+                s1Object[i] = new LCSInObject(s1[i], string.Empty);
             for (int i = 0; i < s2.Length; i++)
-                s2Object[i] = s2[i];
+                s2Object[i] = new LCSInObject(s2[i], string.Empty);
 
-            List<LCSObject> lcsList = GetLargestCommonSubSequence(s1Object, s2Object);
+            List<LCSOutObject> lcsList = GetLargestCommonSubSequence(s1Object, s2Object);
 
             HashSet<int> text1HashSet = new HashSet<int>(lcsList.Select(entry => entry.S1Index));
             HashSet<int> text2HashSet = new HashSet<int>(lcsList.Select(entry => entry.S2Index));
@@ -178,15 +195,7 @@ namespace ProgrammerUtils
             string[] s1Splits = s1.Split(new char[] { '\n' }, StringSplitOptions.None);
             string[] s2Splits = s2.Split(new char[] { '\n' }, StringSplitOptions.None);
 
-            object[] s1Object = new object[s1Splits.Length];
-            object[] s2Object = new object[s2Splits.Length];
-
-            for (int i = 0; i < s1Splits.Length; i++)
-                s1Object[i] = s1Splits[i];
-            for (int i = 0; i < s2Splits.Length; i++)
-                s2Object[i] = s2Splits[i];
-
-            List<LCSObject> lcs = GetLargestCommonSubSequence(s1Object, s2Object);
+            List<LCSOutObject> lcs = GetLargestCommonSubSequence(CreateLCSInArray(s1Splits), CreateLCSInArray(s2Splits));
             int numberOfRows = Math.Max(s1Splits.Length, s2Splits.Length);
 
             List<CombinedViewCharacter> finalText = new List<CombinedViewCharacter>();
@@ -206,7 +215,7 @@ namespace ProgrammerUtils
                 string thisS1String = !s1DoneLoop ? (s1Splits[s1IndexCounter] == string.Empty ? REMOVED_NEW_LINE : s1Splits[s1IndexCounter]) : string.Empty;
                 string thisS2String = !s2DoneLoop ? (s2Splits[s2IndexCounter] == string.Empty ? ADDED_NEW_LINE : s2Splits[s2IndexCounter]) : string.Empty;
 
-                LCSObject currentObj = currentLCSIndex < lcs.Count ? lcs[currentLCSIndex] : null;
+                LCSOutObject currentObj = currentLCSIndex < lcs.Count ? lcs[currentLCSIndex] : null;
 
                 if (currentObj != null && currentObj.S1Index == s1IndexCounter + 1 && currentObj.S2Index == s2IndexCounter + 1)
                 {
@@ -227,8 +236,27 @@ namespace ProgrammerUtils
                 }
             }
 
-
             PrintCombinedMatch(finalText, finalTextBox);
+        }
+
+        private LCSInObject[] CreateLCSInArray(string[] splits)
+        {
+            Dictionary<string, int> duplicateEntries = new Dictionary<string, int>();
+            LCSInObject[] objects = new LCSInObject[splits.Length];
+
+            for (int i = 0; i < objects.Length; i++)
+            {
+                int uniqueId = 0;
+
+                if (duplicateEntries.ContainsKey(splits[i]))
+                    uniqueId = duplicateEntries[splits[i]]++;
+                else
+                    duplicateEntries.Add(splits[i], 1);
+
+                objects[i] = new LCSInObject(splits[i], uniqueId.ToString());
+            }
+
+            return objects;
         }
 
         private void AddToFinalText(string text, CharacterType type, ref List<CombinedViewCharacter> finalText)
@@ -278,7 +306,7 @@ namespace ProgrammerUtils
             }
         }
 
-        private List<LCSObject> GetLargestCommonSubSequence(object[] s1, object[] s2)
+        private List<LCSOutObject> GetLargestCommonSubSequence(LCSInObject[] s1, LCSInObject[] s2)
         {
             int s1Length = s1.Length;
             int s2Length = s2.Length;
@@ -301,14 +329,14 @@ namespace ProgrammerUtils
             int index = table[s1Length, s2Length];
             int temp = index;
 
-            LCSObject[] largestCommonSubSequence = new LCSObject[index];
+            LCSOutObject[] largestCommonSubSequence = new LCSOutObject[index];
 
             int ii = s1Length, jj = s2Length;
             while (ii > 0 && jj > 0)
             {
                 if (s1[ii - 1].GetHashCode() == s2[jj - 1].GetHashCode())
                 {
-                    largestCommonSubSequence[index - 1] = new LCSObject(s1[ii - 1], ii, jj);
+                    largestCommonSubSequence[index - 1] = new LCSOutObject(s1[ii - 1], ii, jj);
 
                     ii--;
                     jj--;
