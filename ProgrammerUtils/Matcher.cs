@@ -20,7 +20,6 @@ namespace ProgrammerUtils
         {
             NEW_LINE,
             NEW_WORD,
-            NEW_LETTER
         }
 
         private struct CombinedViewCharacter
@@ -131,7 +130,7 @@ namespace ProgrammerUtils
             }
 
             DoSeperateMatching(s1, s2, _finalTextBox1, _finalTextBox2);
-            DoCombinedMatching(s1, s2, caseSensitive, _finalTextBox3, displayMode);
+            DoCombinedMatching(s1, s2, _finalTextBox3, displayMode);
         }
 
         private string RemoveExtraWhiteSpaces(string text)
@@ -190,10 +189,13 @@ namespace ProgrammerUtils
             ColorDifferencesInTextSeperate(text2HashSet, finalTextBox2, s2);
         }
 
-        private void DoCombinedMatching(string s1, string s2, bool caseSensitive, RichTextBox finalTextBox, CombinedDisplayMode displayMode)
+        private void DoCombinedMatching(string s1, string s2, RichTextBox finalTextBox, CombinedDisplayMode displayMode)
         {
-            string[] s1Splits = s1.Split(new char[] { '\n' }, StringSplitOptions.None);
-            string[] s2Splits = s2.Split(new char[] { '\n' }, StringSplitOptions.None);
+            char splitChar = displayMode == CombinedDisplayMode.NEW_LINE ? '\n' : ' ';
+            StringSplitOptions spitOption = displayMode == CombinedDisplayMode.NEW_LINE ? StringSplitOptions.None : StringSplitOptions.RemoveEmptyEntries;
+
+            string[] s1Splits = s1.Split(new char[] { splitChar }, spitOption);
+            string[] s2Splits = s2.Split(new char[] { splitChar }, spitOption);
 
             List<LCSOutObject> lcs = GetLargestCommonSubSequence(CreateLCSInArray(s1Splits), CreateLCSInArray(s2Splits));
             int numberOfRows = Math.Max(s1Splits.Length, s2Splits.Length);
@@ -219,19 +221,19 @@ namespace ProgrammerUtils
 
                 if (currentObj != null && currentObj.S1Index == s1IndexCounter + 1 && currentObj.S2Index == s2IndexCounter + 1)
                 {
-                    AddToFinalText(thisS2String == ADDED_NEW_LINE ? "\n" : thisS2String, CharacterType.COMBINED, ref finalText);
+                    AddToFinalText(thisS2String == ADDED_NEW_LINE ? "\n" : thisS2String, CharacterType.COMBINED, splitChar, ref finalText);
                     currentLCSIndex++;
                     s1IndexCounter++;
                     s2IndexCounter++;
                 }
                 else if (!s1DoneLoop && (currentObj == null || currentObj.S1Index != s1IndexCounter + 1))
                 {
-                    AddToFinalText(thisS1String, CharacterType.TEXT1, ref finalText);
+                    AddToFinalText(thisS1String, CharacterType.TEXT1, splitChar, ref finalText);
                     s1IndexCounter++;
                 }
                 else if (!s2DoneLoop && (currentObj == null || currentObj.S2Index != s2IndexCounter + 1))
                 {
-                    AddToFinalText(thisS2String, CharacterType.TEXT2, ref finalText);
+                    AddToFinalText(thisS2String, CharacterType.TEXT2, splitChar, ref finalText);
                     s2IndexCounter++;
                 }
             }
@@ -259,11 +261,11 @@ namespace ProgrammerUtils
             return objects;
         }
 
-        private void AddToFinalText(string text, CharacterType type, ref List<CombinedViewCharacter> finalText)
+        private void AddToFinalText(string text, CharacterType type, char splitChar, ref List<CombinedViewCharacter> finalText)
         {
             finalText.AddRange(GetLineAsCombinedViewCharacters(text, type));
             if (text != string.Empty && text != ADDED_NEW_LINE && text != REMOVED_NEW_LINE && text != "\n")
-                finalText.Add(new CombinedViewCharacter('\n', CharacterType.COMBINED));
+                finalText.Add(new CombinedViewCharacter(splitChar, CharacterType.COMBINED));
         }
 
         private List<CombinedViewCharacter> GetLineAsCombinedViewCharacters(string text, CharacterType type)

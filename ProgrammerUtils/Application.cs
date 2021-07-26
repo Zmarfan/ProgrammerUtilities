@@ -20,6 +20,7 @@ namespace ProgrammerUtils
 
         Sort _sorter;
         Matcher _matcher;
+        HtmlCenter _html;
 
         public Application()
         {
@@ -45,8 +46,14 @@ namespace ProgrammerUtils
                 matchRightText2Label,
                 matchResultTabCombinedLabel
                 );
+
             SetButtonStatus(matchMatchButton, !matchAutoCompare.Checked);
-            DoMatch();     
+            DoMatch();    
+            
+            _html = new HtmlCenter(htmlInputTextbox, htmlOutputTextbox);
+
+            SetButtonStatus(htmlButton, true);
+            DoHtml();
 
             SetChangeTextStyleButton();
             SetChangeTextPresentationButton();
@@ -211,7 +218,6 @@ namespace ProgrammerUtils
             {
                 case "Combined: Every line": return Matcher.CombinedDisplayMode.NEW_LINE;
                 case "Combined: Every word": return Matcher.CombinedDisplayMode.NEW_WORD;
-                case "Combined: Every letter": return Matcher.CombinedDisplayMode.NEW_LETTER;
                 default:
                     throw new Exception($"There exist no implementation for this enum type: {current}");
             }
@@ -262,9 +268,40 @@ namespace ProgrammerUtils
 
         #region HTML
         #region Helper Functions
+
+        private void DoHtml()
+        {
+            _html.ConvertTextToHTML();
+        }
+
+        private void ChangeHtmlRaiseLowerText(CheckBox checkBox, int offset)
+        {
+            Font newFont, oldFont;
+            oldFont = htmlInputTextbox.SelectionFont;
+
+            if (!checkBox.Checked)
+            {
+                newFont = new Font(oldFont.Name, 7.8f, oldFont.Style, oldFont.Unit);
+                htmlInputTextbox.SelectionCharOffset = 0;
+            }
+            else
+            {
+                newFont = new Font(oldFont.Name, 5.8f, oldFont.Style, oldFont.Unit);
+                htmlInputTextbox.SelectionCharOffset = offset;
+            }
+
+            htmlInputTextbox.SelectionFont = newFont;
+            htmlInputTextbox.Focus();
+        }
+
         #endregion
         #region Events
-        
+
+        private void HtmlButton_Click(object sender, EventArgs e)
+        {
+            DoHtml();
+        }
+
         private void HTMLTextStyleButtonChange(object sender, EventArgs e)
         {
             CheckBox checkBox = (CheckBox)sender;
@@ -278,6 +315,70 @@ namespace ProgrammerUtils
                 checkBox.BackColor = Color.Lavender;
                 checkBox.ForeColor = Color.FromArgb(255, 10, 13, 20);
             }
+        }
+
+        private void HtmlBoldButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Font newFont, oldFont;
+            oldFont = htmlInputTextbox.SelectionFont;
+            if (!htmlBoldButton.Checked)
+                newFont = new Font(oldFont, oldFont.Style & ~FontStyle.Bold);
+            else
+                newFont = new Font(oldFont, oldFont.Style | FontStyle.Bold);
+
+            htmlInputTextbox.SelectionFont = newFont;
+            htmlInputTextbox.Focus();
+        }
+
+        private void HtmlItalicButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Font newFont, oldFont;
+            oldFont = htmlInputTextbox.SelectionFont;
+            if (!htmlItalicButton.Checked)
+                newFont = new Font(oldFont, oldFont.Style & ~FontStyle.Italic);
+            else
+                newFont = new Font(oldFont, oldFont.Style | FontStyle.Italic);
+
+            htmlInputTextbox.SelectionFont = newFont;
+            htmlInputTextbox.Focus();
+        }
+
+        private void HtmlStrikeThroughButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Font newFont, oldFont;
+            oldFont = htmlInputTextbox.SelectionFont;
+            if (!htmlStrikeThroughButton.Checked)
+                newFont = new Font(oldFont, oldFont.Style & ~FontStyle.Strikeout);
+            else
+                newFont = new Font(oldFont, oldFont.Style | FontStyle.Strikeout);
+
+            htmlInputTextbox.SelectionFont = newFont;
+            htmlInputTextbox.Focus();
+        }
+
+        private void HtmlUnderscoreButton_CheckedChanged(object sender, EventArgs e)
+        {
+            Font newFont, oldFont;
+            oldFont = htmlInputTextbox.SelectionFont;
+            if (!htmlUnderscoreButton.Checked)
+                newFont = new Font(oldFont, oldFont.Style & ~FontStyle.Underline);
+            else
+                newFont = new Font(oldFont, oldFont.Style | FontStyle.Underline);
+
+            htmlInputTextbox.SelectionFont = newFont;
+            htmlInputTextbox.Focus();
+        }
+
+        private void HtmlRaisedButton_CheckedChanged(object sender, EventArgs e)
+        {
+            htmlLoweredButton.Checked = false;
+            ChangeHtmlRaiseLowerText(htmlRaisedButton, HtmlCenter.RAISED_OFFSET);
+        }
+
+        private void HtmlLoweredButton_CheckedChanged(object sender, EventArgs e)
+        {
+            htmlRaisedButton.Checked = false;
+            ChangeHtmlRaiseLowerText(htmlLoweredButton, HtmlCenter.LOWERED_OFFSET);
         }
 
         #endregion
@@ -300,6 +401,6 @@ namespace ProgrammerUtils
             SortCopyNotice.Text = "";
             CopyTimer.Stop();
         }
-        #endregion   
+        #endregion
     }
 }

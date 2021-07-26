@@ -97,16 +97,21 @@
             this.htmlInputLabel = new System.Windows.Forms.Label();
             this.htmlInputTextbox = new System.Windows.Forms.RichTextBox();
             this.htmlInputTextSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlLoweredButton = new System.Windows.Forms.CheckBox();
             this.htmlUnderscoreButton = new System.Windows.Forms.CheckBox();
             this.htmlStrikeThroughButton = new System.Windows.Forms.CheckBox();
             this.htmlItalicButton = new System.Windows.Forms.CheckBox();
             this.htmlBoldButton = new System.Windows.Forms.CheckBox();
+            this.htmlRaisedButton = new System.Windows.Forms.CheckBox();
+            this.htmlOutputTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.HelpDropdown = new System.Windows.Forms.ToolStripDropDownButton();
             this.asdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aasdasdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
+            this.htmlOutputLabel = new System.Windows.Forms.Label();
+            this.htmlOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -133,6 +138,7 @@
             this.htmlSettingsTableLayout.SuspendLayout();
             this.htmlInputTableLayout.SuspendLayout();
             this.htmlInputTextSettingsTableLayout.SuspendLayout();
+            this.htmlOutputTableLayout.SuspendLayout();
             this.Toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -681,7 +687,7 @@
             this.MatchLeftText2.Name = "MatchLeftText2";
             this.MatchLeftText2.Size = new System.Drawing.Size(472, 164);
             this.MatchLeftText2.TabIndex = 1;
-            this.MatchLeftText2.Text = "1\n5\n2\n3\n4";
+            this.MatchLeftText2.Text = "";
             this.MatchLeftText2.TextChanged += new System.EventHandler(this.MatchTextChanged);
             // 
             // MatchLeftText1
@@ -691,7 +697,7 @@
             this.MatchLeftText1.Name = "MatchLeftText1";
             this.MatchLeftText1.Size = new System.Drawing.Size(472, 164);
             this.MatchLeftText1.TabIndex = 0;
-            this.MatchLeftText1.Text = "1\n2\n3\n4\n5";
+            this.MatchLeftText1.Text = "";
             this.MatchLeftText1.TextChanged += new System.EventHandler(this.MatchTextChanged);
             // 
             // matchLeftText1Label
@@ -815,9 +821,8 @@
             this.MatchCombinedShowModeDropdown.FormattingEnabled = true;
             this.MatchCombinedShowModeDropdown.Items.AddRange(new object[] {
             "Combined: Every line",
-            "Combined: Every word",
-            "Combined: Every letter"});
-            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 13);
+            "Combined: Every word"});
+            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 14);
             this.MatchCombinedShowModeDropdown.Name = "MatchCombinedShowModeDropdown";
             this.matchSettingsTableLayout.SetRowSpan(this.MatchCombinedShowModeDropdown, 2);
             this.MatchCombinedShowModeDropdown.Size = new System.Drawing.Size(164, 24);
@@ -992,6 +997,7 @@
             this.htmlTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.htmlTableLayout.Controls.Add(this.htmlSettingsTableLayout, 0, 0);
             this.htmlTableLayout.Controls.Add(this.htmlInputTableLayout, 0, 1);
+            this.htmlTableLayout.Controls.Add(this.htmlOutputTableLayout, 1, 1);
             this.htmlTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlTableLayout.Location = new System.Drawing.Point(3, 3);
             this.htmlTableLayout.Name = "htmlTableLayout";
@@ -1038,6 +1044,7 @@
             // htmlButton
             // 
             this.htmlButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.htmlButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.htmlButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.htmlButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1048,6 +1055,7 @@
             this.htmlButton.TabIndex = 0;
             this.htmlButton.Text = "HTML:ify";
             this.htmlButton.UseVisualStyleBackColor = false;
+            this.htmlButton.Click += new System.EventHandler(this.HtmlButton_Click);
             // 
             // htmlInputTableLayout
             // 
@@ -1100,10 +1108,12 @@
             this.htmlInputTextSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.htmlInputTextSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.htmlInputTextSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlInputTextSettingsTableLayout.Controls.Add(this.htmlLoweredButton, 5, 0);
             this.htmlInputTextSettingsTableLayout.Controls.Add(this.htmlUnderscoreButton, 0, 0);
             this.htmlInputTextSettingsTableLayout.Controls.Add(this.htmlStrikeThroughButton, 2, 0);
             this.htmlInputTextSettingsTableLayout.Controls.Add(this.htmlItalicButton, 1, 0);
             this.htmlInputTextSettingsTableLayout.Controls.Add(this.htmlBoldButton, 0, 0);
+            this.htmlInputTextSettingsTableLayout.Controls.Add(this.htmlRaisedButton, 4, 0);
             this.htmlInputTextSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlInputTextSettingsTableLayout.Location = new System.Drawing.Point(3, 337);
             this.htmlInputTextSettingsTableLayout.Name = "htmlInputTextSettingsTableLayout";
@@ -1111,6 +1121,24 @@
             this.htmlInputTextSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.htmlInputTextSettingsTableLayout.Size = new System.Drawing.Size(439, 32);
             this.htmlInputTextSettingsTableLayout.TabIndex = 4;
+            // 
+            // htmlLoweredButton
+            // 
+            this.htmlLoweredButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.htmlLoweredButton.AutoSize = true;
+            this.htmlLoweredButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlLoweredButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("htmlLoweredButton.BackgroundImage")));
+            this.htmlLoweredButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.htmlLoweredButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlLoweredButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlLoweredButton.Location = new System.Drawing.Point(178, 3);
+            this.htmlLoweredButton.Name = "htmlLoweredButton";
+            this.htmlLoweredButton.Size = new System.Drawing.Size(29, 26);
+            this.htmlLoweredButton.TabIndex = 5;
+            this.htmlLoweredButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlLoweredButton.UseVisualStyleBackColor = false;
+            this.htmlLoweredButton.CheckedChanged += new System.EventHandler(this.HtmlLoweredButton_CheckedChanged);
+            this.htmlLoweredButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
             // 
             // htmlUnderscoreButton
             // 
@@ -1128,7 +1156,8 @@
             this.htmlUnderscoreButton.Text = "U";
             this.htmlUnderscoreButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlUnderscoreButton.UseVisualStyleBackColor = false;
-            this.htmlUnderscoreButton.CheckedChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
+            this.htmlUnderscoreButton.CheckedChanged += new System.EventHandler(this.HtmlUnderscoreButton_CheckedChanged);
+            this.htmlUnderscoreButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
             // 
             // htmlStrikeThroughButton
             // 
@@ -1146,7 +1175,8 @@
             this.htmlStrikeThroughButton.Text = "S";
             this.htmlStrikeThroughButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlStrikeThroughButton.UseVisualStyleBackColor = false;
-            this.htmlStrikeThroughButton.CheckedChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
+            this.htmlStrikeThroughButton.CheckedChanged += new System.EventHandler(this.HtmlStrikeThroughButton_CheckedChanged);
+            this.htmlStrikeThroughButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
             // 
             // htmlItalicButton
             // 
@@ -1164,6 +1194,7 @@
             this.htmlItalicButton.Text = "I";
             this.htmlItalicButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlItalicButton.UseVisualStyleBackColor = false;
+            this.htmlItalicButton.CheckedChanged += new System.EventHandler(this.HtmlItalicButton_CheckedChanged);
             this.htmlItalicButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
             // 
             // htmlBoldButton
@@ -1182,7 +1213,43 @@
             this.htmlBoldButton.Text = "B";
             this.htmlBoldButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlBoldButton.UseVisualStyleBackColor = false;
+            this.htmlBoldButton.CheckedChanged += new System.EventHandler(this.HtmlBoldButton_CheckedChanged);
             this.htmlBoldButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
+            // 
+            // htmlRaisedButton
+            // 
+            this.htmlRaisedButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.htmlRaisedButton.AutoSize = true;
+            this.htmlRaisedButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlRaisedButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("htmlRaisedButton.BackgroundImage")));
+            this.htmlRaisedButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.htmlRaisedButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlRaisedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlRaisedButton.Location = new System.Drawing.Point(143, 3);
+            this.htmlRaisedButton.Name = "htmlRaisedButton";
+            this.htmlRaisedButton.Size = new System.Drawing.Size(29, 26);
+            this.htmlRaisedButton.TabIndex = 4;
+            this.htmlRaisedButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlRaisedButton.UseVisualStyleBackColor = false;
+            this.htmlRaisedButton.CheckedChanged += new System.EventHandler(this.HtmlRaisedButton_CheckedChanged);
+            this.htmlRaisedButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
+            // 
+            // htmlOutputTableLayout
+            // 
+            this.htmlOutputTableLayout.ColumnCount = 1;
+            this.htmlOutputTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlOutputTableLayout.Controls.Add(this.htmlOutputLabel, 0, 1);
+            this.htmlOutputTableLayout.Controls.Add(this.htmlOutputTextbox, 0, 0);
+            this.htmlOutputTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlOutputTableLayout.Location = new System.Drawing.Point(445, 52);
+            this.htmlOutputTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.htmlOutputTableLayout.Name = "htmlOutputTableLayout";
+            this.htmlOutputTableLayout.RowCount = 2;
+            this.htmlOutputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlOutputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.htmlOutputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.htmlOutputTableLayout.Size = new System.Drawing.Size(445, 410);
+            this.htmlOutputTableLayout.TabIndex = 2;
             // 
             // Toolbar
             // 
@@ -1232,6 +1299,30 @@
             // 
             this.CopyTimer.Interval = 1500;
             this.CopyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
+            // 
+            // htmlOutputLabel
+            // 
+            this.htmlOutputLabel.AutoSize = true;
+            this.htmlOutputLabel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.htmlOutputLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.htmlOutputLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlOutputLabel.Location = new System.Drawing.Point(3, 372);
+            this.htmlOutputLabel.Name = "htmlOutputLabel";
+            this.htmlOutputLabel.Padding = new System.Windows.Forms.Padding(10);
+            this.htmlOutputLabel.Size = new System.Drawing.Size(439, 38);
+            this.htmlOutputLabel.TabIndex = 4;
+            this.htmlOutputLabel.Text = "Text converted to HTML!";
+            this.htmlOutputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // htmlOutputTextbox
+            // 
+            this.htmlOutputTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlOutputTextbox.Location = new System.Drawing.Point(3, 3);
+            this.htmlOutputTextbox.Name = "htmlOutputTextbox";
+            this.htmlOutputTextbox.ReadOnly = true;
+            this.htmlOutputTextbox.Size = new System.Drawing.Size(439, 366);
+            this.htmlOutputTextbox.TabIndex = 5;
+            this.htmlOutputTextbox.Text = "";
             // 
             // Application
             // 
@@ -1285,6 +1376,8 @@
             this.htmlInputTableLayout.PerformLayout();
             this.htmlInputTextSettingsTableLayout.ResumeLayout(false);
             this.htmlInputTextSettingsTableLayout.PerformLayout();
+            this.htmlOutputTableLayout.ResumeLayout(false);
+            this.htmlOutputTableLayout.PerformLayout();
             this.Toolbar.ResumeLayout(false);
             this.Toolbar.PerformLayout();
             this.ResumeLayout(false);
@@ -1370,6 +1463,11 @@
         private System.Windows.Forms.CheckBox htmlItalicButton;
         private System.Windows.Forms.CheckBox htmlStrikeThroughButton;
         private System.Windows.Forms.CheckBox htmlUnderscoreButton;
+        private System.Windows.Forms.CheckBox htmlLoweredButton;
+        private System.Windows.Forms.CheckBox htmlRaisedButton;
+        private System.Windows.Forms.TableLayoutPanel htmlOutputTableLayout;
+        private System.Windows.Forms.Label htmlOutputLabel;
+        private System.Windows.Forms.RichTextBox htmlOutputTextbox;
     }
 }
 
