@@ -57,6 +57,11 @@ namespace ProgrammerUtils
             SetChangeTextStyleButton();
             SetChangeTextPresentationButton();
             SortCopyNotice.Text = "";
+
+            htmlColorRectangle.BackColorChanged += (s, e) => {
+                htmlColorRectangle.FlatAppearance.MouseOverBackColor = htmlColorRectangle.BackColor;
+                htmlColorRectangle.FlatAppearance.MouseDownBackColor = htmlColorRectangle.BackColor;
+            };
         }
 
         private void SetButtonStatus(Button button, bool status)
@@ -270,7 +275,7 @@ namespace ProgrammerUtils
 
         private void DoHtml()
         {
-            _html.ConvertTextToHTML();
+            _html.ConvertTextToHTML(htmlColorCheckbox.Checked, htmlColorRectangle.BackColor);
         }
 
         private void ChangeHtmlRaiseLowerText(CheckBox checkBox, int offset)
@@ -400,6 +405,12 @@ namespace ProgrammerUtils
                 HTMLTextStyleButtonChange(htmlRaisedButton, null);
                 HTMLTextStyleButtonChange(htmlLoweredButton, null);
             }
+        }
+
+        private void HtmlChooseColorButton_Click(object sender, EventArgs e)
+        {
+            htmlColorTagPicker.ShowDialog();
+            htmlColorRectangle.BackColor = htmlColorTagPicker.Color;
         }
 
         #endregion
