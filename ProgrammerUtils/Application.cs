@@ -21,11 +21,16 @@ namespace ProgrammerUtils
         Sort _sorter;
         Matcher _matcher;
         HtmlCenter _html;
+        HtmlExtraSettings test;
 
         public Application()
         {
             InitializeComponent();
-            Init(); 
+            Init();
+
+            //TESTING
+            test = new HtmlExtraSettings();
+            test.Show();
         }
 
         private void Init()

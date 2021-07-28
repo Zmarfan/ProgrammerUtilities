@@ -53,6 +53,12 @@
       <DependentUpon>Application.cs</DependentUpon>
     </Compile>
     <Compile Include="HtmlCenter.cs" />
+    <Compile Include="HtmlCustomRule.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HtmlCustomRule.Designer.cs">
+      <DependentUpon>HtmlCustomRule.cs</DependentUpon>
+    </Compile>
     <Compile Include="HtmlExtraSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     <Compile Include="Sort.cs" />
     <EmbeddedResource Include="Application.resx">
       <DependentUpon>Application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HtmlCustomRule.resx">
+      <DependentUpon>HtmlCustomRule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HtmlExtraSettings.resx">
       <DependentUpon>HtmlExtraSettings.cs</DependentUpon>
