@@ -25,6 +25,14 @@ namespace ProgrammerUtils
         public static readonly int RAISED_OFFSET = 7;
         public static readonly int LOWERED_OFFSET = -7;
         private static readonly Color DEFAULT_TEXT_COLOR = Color.FromArgb(255, 10, 13, 20);
+        private static Dictionary<string, string> SPECIAL_HTML_CHARACTERS = new Dictionary<string, string>()
+        {
+            { "\"", "&quot;" },
+            { "'", "&apos;" },
+            { "&", "&amp;" },
+            { "<", "&lt;" },
+            { ">", "&gt;" },
+        };
 
         private readonly RichTextBox _mainInputTextbox;
         private readonly RichTextBox _mainOutputTextbox;
@@ -35,9 +43,10 @@ namespace ProgrammerUtils
             _mainOutputTextbox = mainOutputTextbox;
         }
 
-        public void ConvertTextToHTML(bool useSpecialTagColor, Color tagColor)
+        public void ConvertTextToHTML(bool useSpecialTagColor, bool useSpecialEntityColor, Color tagColor, Color entityColor)
         {
             tagColor = useSpecialTagColor ? tagColor : DEFAULT_TEXT_COLOR;
+            entityColor = useSpecialEntityColor ? entityColor : DEFAULT_TEXT_COLOR;
 
             HtmlService service = new HtmlService();
             List<HtmlBuilderCharacter> finalOutput = new List<HtmlBuilderCharacter>();
@@ -50,8 +59,10 @@ namespace ProgrammerUtils
                 SetTagEndings(tagColor, ref service, ref finalOutput);
                 SetTagStarts(tagColor, ref service, ref finalOutput);
 
-                //Add actual text entered
-                finalOutput.AddRange(TextToHtmlCharacter(_mainInputTextbox.SelectedText, DEFAULT_TEXT_COLOR));
+                if (SPECIAL_HTML_CHARACTERS.ContainsKey(_mainInputTextbox.SelectedText))
+                    finalOutput.AddRange(TextToHtmlCharacter(SPECIAL_HTML_CHARACTERS[_mainInputTextbox.SelectedText], entityColor));
+                else
+                    finalOutput.AddRange(TextToHtmlCharacter(_mainInputTextbox.SelectedText, DEFAULT_TEXT_COLOR));
             }
 
             finalOutput.AddRange(TextToHtmlCharacter(service.CloseAllTags(), tagColor));

@@ -53,6 +53,12 @@
       <DependentUpon>Application.cs</DependentUpon>
     </Compile>
     <Compile Include="HtmlCenter.cs" />
+    <Compile Include="HtmlExtraSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HtmlExtraSettings.Designer.cs">
+      <DependentUpon>HtmlExtraSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="HtmlService.cs" />
     <Compile Include="Matcher.cs" />
     <Compile Include="Program.cs" />
@@ -61,6 +67,9 @@
     <Compile Include="Sort.cs" />
     <EmbeddedResource Include="Application.resx">
       <DependentUpon>Application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HtmlExtraSettings.resx">
+      <DependentUpon>HtmlExtraSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

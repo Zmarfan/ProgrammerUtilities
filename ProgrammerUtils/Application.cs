@@ -58,9 +58,14 @@ namespace ProgrammerUtils
             SetChangeTextPresentationButton();
             SortCopyNotice.Text = "";
 
-            htmlColorRectangle.BackColorChanged += (s, e) => {
-                htmlColorRectangle.FlatAppearance.MouseOverBackColor = htmlColorRectangle.BackColor;
-                htmlColorRectangle.FlatAppearance.MouseDownBackColor = htmlColorRectangle.BackColor;
+            htmlTagColorRectangle.BackColorChanged += (s, e) => {
+                htmlTagColorRectangle.FlatAppearance.MouseOverBackColor = htmlTagColorRectangle.BackColor;
+                htmlTagColorRectangle.FlatAppearance.MouseDownBackColor = htmlTagColorRectangle.BackColor;
+            };
+
+            htmlEntityColorRectangle.BackColorChanged += (s, e) => {
+                htmlEntityColorRectangle.FlatAppearance.MouseOverBackColor = htmlTagColorRectangle.BackColor;
+                htmlEntityColorRectangle.FlatAppearance.MouseDownBackColor = htmlTagColorRectangle.BackColor;
             };
         }
 
@@ -275,7 +280,7 @@ namespace ProgrammerUtils
 
         private void DoHtml()
         {
-            _html.ConvertTextToHTML(htmlColorCheckbox.Checked, htmlColorRectangle.BackColor);
+            _html.ConvertTextToHTML(htmlColorTagsCheckbox.Checked, htmlColorEntitiesCheckbox.Checked, htmlTagColorRectangle.BackColor, htmlEntityColorRectangle.BackColor);
         }
 
         private void ChangeHtmlRaiseLowerText(CheckBox checkBox, int offset)
@@ -410,7 +415,13 @@ namespace ProgrammerUtils
         private void HtmlChooseColorButton_Click(object sender, EventArgs e)
         {
             htmlColorTagPicker.ShowDialog();
-            htmlColorRectangle.BackColor = htmlColorTagPicker.Color;
+            htmlTagColorRectangle.BackColor = htmlColorTagPicker.Color;
+        }
+
+        private void HtmlChangeEntityColorButton_Click(object sender, EventArgs e)
+        {
+            htmlColorTagPicker.ShowDialog();
+            htmlEntityColorRectangle.BackColor = htmlColorTagPicker.Color;
         }
 
         #endregion

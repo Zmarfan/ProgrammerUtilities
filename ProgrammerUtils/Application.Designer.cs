@@ -91,11 +91,15 @@
             this.htmlTab = new System.Windows.Forms.TabPage();
             this.htmlTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlColorEntityTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlChangeEntityColorButton = new System.Windows.Forms.Button();
+            this.htmlEntityColorRectangle = new System.Windows.Forms.Button();
+            this.htmlColorEntitiesCheckbox = new System.Windows.Forms.CheckBox();
             this.htmlButton = new System.Windows.Forms.Button();
-            this.htmlColorCheckbox = new System.Windows.Forms.CheckBox();
-            this.htmlColorOptionTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlColorTagsCheckbox = new System.Windows.Forms.CheckBox();
+            this.htmlColorTagOptionTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlChooseColorButton = new System.Windows.Forms.Button();
-            this.htmlColorRectangle = new System.Windows.Forms.Button();
+            this.htmlTagColorRectangle = new System.Windows.Forms.Button();
             this.htmlInputTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlInputLabel = new System.Windows.Forms.Label();
             this.htmlInputTextbox = new System.Windows.Forms.RichTextBox();
@@ -141,7 +145,8 @@
             this.htmlTab.SuspendLayout();
             this.htmlTableLayout.SuspendLayout();
             this.htmlSettingsTableLayout.SuspendLayout();
-            this.htmlColorOptionTableLayout.SuspendLayout();
+            this.htmlColorEntityTableLayout.SuspendLayout();
+            this.htmlColorTagOptionTableLayout.SuspendLayout();
             this.htmlInputTableLayout.SuspendLayout();
             this.htmlInputTextSettingsTableLayout.SuspendLayout();
             this.htmlOutputTableLayout.SuspendLayout();
@@ -828,7 +833,7 @@
             this.MatchCombinedShowModeDropdown.Items.AddRange(new object[] {
             "Combined: Every line",
             "Combined: Every word"});
-            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 13);
+            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 14);
             this.MatchCombinedShowModeDropdown.Name = "MatchCombinedShowModeDropdown";
             this.matchSettingsTableLayout.SetRowSpan(this.MatchCombinedShowModeDropdown, 2);
             this.MatchCombinedShowModeDropdown.Size = new System.Drawing.Size(164, 24);
@@ -1015,15 +1020,18 @@
             // 
             // htmlSettingsTableLayout
             // 
-            this.htmlSettingsTableLayout.ColumnCount = 4;
+            this.htmlSettingsTableLayout.ColumnCount = 5;
             this.htmlTableLayout.SetColumnSpan(this.htmlSettingsTableLayout, 2);
             this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
+            this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
             this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorEntityTableLayout, 3, 1);
+            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorEntitiesCheckbox, 3, 0);
             this.htmlSettingsTableLayout.Controls.Add(this.htmlButton, 0, 0);
-            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorCheckbox, 2, 0);
-            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorOptionTableLayout, 2, 1);
+            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorTagsCheckbox, 2, 0);
+            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorTagOptionTableLayout, 2, 1);
             this.htmlSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlSettingsTableLayout.Location = new System.Drawing.Point(0, 0);
             this.htmlSettingsTableLayout.Margin = new System.Windows.Forms.Padding(0);
@@ -1033,6 +1041,69 @@
             this.htmlSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.htmlSettingsTableLayout.Size = new System.Drawing.Size(890, 52);
             this.htmlSettingsTableLayout.TabIndex = 0;
+            // 
+            // htmlColorEntityTableLayout
+            // 
+            this.htmlColorEntityTableLayout.ColumnCount = 2;
+            this.htmlColorEntityTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlColorEntityTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.htmlColorEntityTableLayout.Controls.Add(this.htmlChangeEntityColorButton, 0, 0);
+            this.htmlColorEntityTableLayout.Controls.Add(this.htmlEntityColorRectangle, 1, 0);
+            this.htmlColorEntityTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlColorEntityTableLayout.Location = new System.Drawing.Point(369, 26);
+            this.htmlColorEntityTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.htmlColorEntityTableLayout.Name = "htmlColorEntityTableLayout";
+            this.htmlColorEntityTableLayout.RowCount = 1;
+            this.htmlColorEntityTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlColorEntityTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.htmlColorEntityTableLayout.Size = new System.Drawing.Size(144, 26);
+            this.htmlColorEntityTableLayout.TabIndex = 5;
+            // 
+            // htmlChangeEntityColorButton
+            // 
+            this.htmlChangeEntityColorButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlChangeEntityColorButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlChangeEntityColorButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlChangeEntityColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlChangeEntityColorButton.Location = new System.Drawing.Point(0, 0);
+            this.htmlChangeEntityColorButton.Margin = new System.Windows.Forms.Padding(0);
+            this.htmlChangeEntityColorButton.Name = "htmlChangeEntityColorButton";
+            this.htmlChangeEntityColorButton.Size = new System.Drawing.Size(119, 26);
+            this.htmlChangeEntityColorButton.TabIndex = 3;
+            this.htmlChangeEntityColorButton.Text = "Tag Color";
+            this.htmlChangeEntityColorButton.UseVisualStyleBackColor = false;
+            this.htmlChangeEntityColorButton.Click += new System.EventHandler(this.HtmlChangeEntityColorButton_Click);
+            // 
+            // htmlEntityColorRectangle
+            // 
+            this.htmlEntityColorRectangle.BackColor = System.Drawing.Color.Red;
+            this.htmlEntityColorRectangle.Cursor = System.Windows.Forms.Cursors.Help;
+            this.htmlEntityColorRectangle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlEntityColorRectangle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.htmlEntityColorRectangle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.htmlEntityColorRectangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlEntityColorRectangle.Location = new System.Drawing.Point(124, 5);
+            this.htmlEntityColorRectangle.Margin = new System.Windows.Forms.Padding(5);
+            this.htmlEntityColorRectangle.Name = "htmlEntityColorRectangle";
+            this.htmlEntityColorRectangle.Size = new System.Drawing.Size(15, 16);
+            this.htmlEntityColorRectangle.TabIndex = 4;
+            this.htmlColorHoverTooltip.SetToolTip(this.htmlEntityColorRectangle, "Detta är ett test 2");
+            this.htmlEntityColorRectangle.UseVisualStyleBackColor = false;
+            // 
+            // htmlColorEntitiesCheckbox
+            // 
+            this.htmlColorEntitiesCheckbox.AutoSize = true;
+            this.htmlColorEntitiesCheckbox.Checked = true;
+            this.htmlColorEntitiesCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.htmlColorEntitiesCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlColorEntitiesCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlColorEntitiesCheckbox.Location = new System.Drawing.Point(372, 3);
+            this.htmlColorEntitiesCheckbox.Name = "htmlColorEntitiesCheckbox";
+            this.htmlColorEntitiesCheckbox.Size = new System.Drawing.Size(138, 20);
+            this.htmlColorEntitiesCheckbox.TabIndex = 4;
+            this.htmlColorEntitiesCheckbox.Text = "Color entities";
+            this.htmlColorEntitiesCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlColorEntitiesCheckbox.UseVisualStyleBackColor = true;
             // 
             // htmlButton
             // 
@@ -1050,35 +1121,37 @@
             this.htmlButton.UseVisualStyleBackColor = false;
             this.htmlButton.Click += new System.EventHandler(this.HtmlButton_Click);
             // 
-            // htmlColorCheckbox
+            // htmlColorTagsCheckbox
             // 
-            this.htmlColorCheckbox.AutoSize = true;
-            this.htmlColorCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.htmlColorCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlColorCheckbox.Location = new System.Drawing.Point(228, 3);
-            this.htmlColorCheckbox.Name = "htmlColorCheckbox";
-            this.htmlColorCheckbox.Size = new System.Drawing.Size(138, 20);
-            this.htmlColorCheckbox.TabIndex = 1;
-            this.htmlColorCheckbox.Text = "Color tags";
-            this.htmlColorCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.htmlColorCheckbox.UseVisualStyleBackColor = true;
+            this.htmlColorTagsCheckbox.AutoSize = true;
+            this.htmlColorTagsCheckbox.Checked = true;
+            this.htmlColorTagsCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.htmlColorTagsCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlColorTagsCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlColorTagsCheckbox.Location = new System.Drawing.Point(228, 3);
+            this.htmlColorTagsCheckbox.Name = "htmlColorTagsCheckbox";
+            this.htmlColorTagsCheckbox.Size = new System.Drawing.Size(138, 20);
+            this.htmlColorTagsCheckbox.TabIndex = 1;
+            this.htmlColorTagsCheckbox.Text = "Color tags";
+            this.htmlColorTagsCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlColorTagsCheckbox.UseVisualStyleBackColor = true;
             // 
-            // htmlColorOptionTableLayout
+            // htmlColorTagOptionTableLayout
             // 
-            this.htmlColorOptionTableLayout.ColumnCount = 2;
-            this.htmlColorOptionTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.htmlColorOptionTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.htmlColorOptionTableLayout.Controls.Add(this.htmlChooseColorButton, 0, 0);
-            this.htmlColorOptionTableLayout.Controls.Add(this.htmlColorRectangle, 1, 0);
-            this.htmlColorOptionTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlColorOptionTableLayout.Location = new System.Drawing.Point(225, 26);
-            this.htmlColorOptionTableLayout.Margin = new System.Windows.Forms.Padding(0);
-            this.htmlColorOptionTableLayout.Name = "htmlColorOptionTableLayout";
-            this.htmlColorOptionTableLayout.RowCount = 1;
-            this.htmlColorOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.htmlColorOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.htmlColorOptionTableLayout.Size = new System.Drawing.Size(144, 26);
-            this.htmlColorOptionTableLayout.TabIndex = 3;
+            this.htmlColorTagOptionTableLayout.ColumnCount = 2;
+            this.htmlColorTagOptionTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlColorTagOptionTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.htmlColorTagOptionTableLayout.Controls.Add(this.htmlChooseColorButton, 0, 0);
+            this.htmlColorTagOptionTableLayout.Controls.Add(this.htmlTagColorRectangle, 1, 0);
+            this.htmlColorTagOptionTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlColorTagOptionTableLayout.Location = new System.Drawing.Point(225, 26);
+            this.htmlColorTagOptionTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.htmlColorTagOptionTableLayout.Name = "htmlColorTagOptionTableLayout";
+            this.htmlColorTagOptionTableLayout.RowCount = 1;
+            this.htmlColorTagOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlColorTagOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.htmlColorTagOptionTableLayout.Size = new System.Drawing.Size(144, 26);
+            this.htmlColorTagOptionTableLayout.TabIndex = 3;
             // 
             // htmlChooseColorButton
             // 
@@ -1091,25 +1164,25 @@
             this.htmlChooseColorButton.Name = "htmlChooseColorButton";
             this.htmlChooseColorButton.Size = new System.Drawing.Size(119, 26);
             this.htmlChooseColorButton.TabIndex = 3;
-            this.htmlChooseColorButton.Text = "Choose Color";
+            this.htmlChooseColorButton.Text = "Tag Color";
             this.htmlChooseColorButton.UseVisualStyleBackColor = false;
             this.htmlChooseColorButton.Click += new System.EventHandler(this.HtmlChooseColorButton_Click);
             // 
-            // htmlColorRectangle
+            // htmlTagColorRectangle
             // 
-            this.htmlColorRectangle.BackColor = System.Drawing.Color.Blue;
-            this.htmlColorRectangle.Cursor = System.Windows.Forms.Cursors.Help;
-            this.htmlColorRectangle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlColorRectangle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
-            this.htmlColorRectangle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
-            this.htmlColorRectangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.htmlColorRectangle.Location = new System.Drawing.Point(124, 5);
-            this.htmlColorRectangle.Margin = new System.Windows.Forms.Padding(5);
-            this.htmlColorRectangle.Name = "htmlColorRectangle";
-            this.htmlColorRectangle.Size = new System.Drawing.Size(15, 16);
-            this.htmlColorRectangle.TabIndex = 4;
-            this.htmlColorHoverTooltip.SetToolTip(this.htmlColorRectangle, "Detta är ett test");
-            this.htmlColorRectangle.UseVisualStyleBackColor = false;
+            this.htmlTagColorRectangle.BackColor = System.Drawing.Color.Blue;
+            this.htmlTagColorRectangle.Cursor = System.Windows.Forms.Cursors.Help;
+            this.htmlTagColorRectangle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlTagColorRectangle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.htmlTagColorRectangle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Blue;
+            this.htmlTagColorRectangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlTagColorRectangle.Location = new System.Drawing.Point(124, 5);
+            this.htmlTagColorRectangle.Margin = new System.Windows.Forms.Padding(5);
+            this.htmlTagColorRectangle.Name = "htmlTagColorRectangle";
+            this.htmlTagColorRectangle.Size = new System.Drawing.Size(15, 16);
+            this.htmlTagColorRectangle.TabIndex = 4;
+            this.htmlColorHoverTooltip.SetToolTip(this.htmlTagColorRectangle, "Detta är ett test");
+            this.htmlTagColorRectangle.UseVisualStyleBackColor = false;
             // 
             // htmlInputTableLayout
             // 
@@ -1442,7 +1515,8 @@
             this.htmlTableLayout.ResumeLayout(false);
             this.htmlSettingsTableLayout.ResumeLayout(false);
             this.htmlSettingsTableLayout.PerformLayout();
-            this.htmlColorOptionTableLayout.ResumeLayout(false);
+            this.htmlColorEntityTableLayout.ResumeLayout(false);
+            this.htmlColorTagOptionTableLayout.ResumeLayout(false);
             this.htmlInputTableLayout.ResumeLayout(false);
             this.htmlInputTableLayout.PerformLayout();
             this.htmlInputTextSettingsTableLayout.ResumeLayout(false);
@@ -1538,12 +1612,16 @@
         private System.Windows.Forms.TableLayoutPanel htmlOutputTableLayout;
         private System.Windows.Forms.Label htmlOutputLabel;
         private System.Windows.Forms.RichTextBox htmlOutputTextbox;
-        private System.Windows.Forms.CheckBox htmlColorCheckbox;
+        private System.Windows.Forms.CheckBox htmlColorTagsCheckbox;
         private System.Windows.Forms.ColorDialog htmlColorTagPicker;
-        private System.Windows.Forms.TableLayoutPanel htmlColorOptionTableLayout;
+        private System.Windows.Forms.TableLayoutPanel htmlColorTagOptionTableLayout;
         private System.Windows.Forms.Button htmlChooseColorButton;
-        private System.Windows.Forms.Button htmlColorRectangle;
+        private System.Windows.Forms.Button htmlTagColorRectangle;
         private System.Windows.Forms.ToolTip htmlColorHoverTooltip;
+        private System.Windows.Forms.CheckBox htmlColorEntitiesCheckbox;
+        private System.Windows.Forms.TableLayoutPanel htmlColorEntityTableLayout;
+        private System.Windows.Forms.Button htmlChangeEntityColorButton;
+        private System.Windows.Forms.Button htmlEntityColorRectangle;
     }
 }
 
