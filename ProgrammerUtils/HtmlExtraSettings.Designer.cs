@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.mainTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.CustomSettingsFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.OptionsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.saveAndCloseButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
-            this.saveAndCloseButton = new System.Windows.Forms.Button();
-            this.htmlCustomRule1 = new ProgrammerUtils.HtmlCustomRule();
+            this.SavingInfoLabel = new System.Windows.Forms.Label();
+            this.displaySaveTimer = new System.Windows.Forms.Timer(this.components);
             this.mainTableLayout.SuspendLayout();
-            this.CustomSettingsFlowLayout.SuspendLayout();
             this.OptionsTableLayout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +60,6 @@
             // CustomSettingsFlowLayout
             // 
             this.CustomSettingsFlowLayout.AutoScroll = true;
-            this.CustomSettingsFlowLayout.Controls.Add(this.htmlCustomRule1);
             this.CustomSettingsFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CustomSettingsFlowLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.CustomSettingsFlowLayout.Location = new System.Drawing.Point(133, 3);
@@ -77,6 +77,7 @@
             this.OptionsTableLayout.Controls.Add(this.saveAndCloseButton, 0, 2);
             this.OptionsTableLayout.Controls.Add(this.SaveButton, 0, 1);
             this.OptionsTableLayout.Controls.Add(this.AddButton, 0, 0);
+            this.OptionsTableLayout.Controls.Add(this.SavingInfoLabel, 0, 3);
             this.OptionsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OptionsTableLayout.Location = new System.Drawing.Point(0, 0);
             this.OptionsTableLayout.Margin = new System.Windows.Forms.Padding(0);
@@ -91,6 +92,20 @@
             this.OptionsTableLayout.Size = new System.Drawing.Size(130, 309);
             this.OptionsTableLayout.TabIndex = 1;
             // 
+            // saveAndCloseButton
+            // 
+            this.saveAndCloseButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.saveAndCloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveAndCloseButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.saveAndCloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveAndCloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveAndCloseButton.Location = new System.Drawing.Point(8, 108);
+            this.saveAndCloseButton.Name = "saveAndCloseButton";
+            this.saveAndCloseButton.Size = new System.Drawing.Size(114, 44);
+            this.saveAndCloseButton.TabIndex = 2;
+            this.saveAndCloseButton.Text = "Save && Close";
+            this.saveAndCloseButton.UseVisualStyleBackColor = false;
+            // 
             // SaveButton
             // 
             this.SaveButton.BackColor = System.Drawing.Color.PaleGreen;
@@ -104,6 +119,7 @@
             this.SaveButton.TabIndex = 1;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // AddButton
             // 
@@ -120,28 +136,23 @@
             this.AddButton.UseVisualStyleBackColor = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // saveAndCloseButton
+            // SavingInfoLabel
             // 
-            this.saveAndCloseButton.BackColor = System.Drawing.Color.PaleGreen;
-            this.saveAndCloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.saveAndCloseButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.saveAndCloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveAndCloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveAndCloseButton.Location = new System.Drawing.Point(8, 108);
-            this.saveAndCloseButton.Name = "saveAndCloseButton";
-            this.saveAndCloseButton.Size = new System.Drawing.Size(114, 44);
-            this.saveAndCloseButton.TabIndex = 2;
-            this.saveAndCloseButton.Text = "Save && Close";
-            this.saveAndCloseButton.UseVisualStyleBackColor = false;
+            this.SavingInfoLabel.AutoSize = true;
+            this.SavingInfoLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.SavingInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SavingInfoLabel.ForeColor = System.Drawing.Color.Green;
+            this.SavingInfoLabel.Location = new System.Drawing.Point(8, 289);
+            this.SavingInfoLabel.Name = "SavingInfoLabel";
+            this.SavingInfoLabel.Size = new System.Drawing.Size(114, 15);
+            this.SavingInfoLabel.TabIndex = 3;
+            this.SavingInfoLabel.Text = "Saving info Text";
+            this.SavingInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // htmlCustomRule1
+            // displaySaveTimer
             // 
-            this.htmlCustomRule1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.htmlCustomRule1.Id = 0;
-            this.htmlCustomRule1.Location = new System.Drawing.Point(3, 3);
-            this.htmlCustomRule1.Name = "htmlCustomRule1";
-            this.htmlCustomRule1.Size = new System.Drawing.Size(386, 51);
-            this.htmlCustomRule1.TabIndex = 0;
+            this.displaySaveTimer.Interval = 5500;
+            this.displaySaveTimer.Tick += new System.EventHandler(this.DisplaySaveTimer_Tick);
             // 
             // HtmlExtraSettings
             // 
@@ -153,10 +164,9 @@
             this.MinimumSize = new System.Drawing.Size(575, 356);
             this.Name = "HtmlExtraSettings";
             this.Text = "Html:ify Custom Settings";
-            this.TopMost = true;
             this.mainTableLayout.ResumeLayout(false);
-            this.CustomSettingsFlowLayout.ResumeLayout(false);
             this.OptionsTableLayout.ResumeLayout(false);
+            this.OptionsTableLayout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -168,7 +178,8 @@
         private System.Windows.Forms.TableLayoutPanel OptionsTableLayout;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button SaveButton;
-        private HtmlCustomRule htmlCustomRule1;
         private System.Windows.Forms.Button saveAndCloseButton;
+        private System.Windows.Forms.Label SavingInfoLabel;
+        private System.Windows.Forms.Timer displaySaveTimer;
     }
 }

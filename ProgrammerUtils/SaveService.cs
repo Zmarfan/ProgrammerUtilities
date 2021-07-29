@@ -12,7 +12,7 @@ namespace ProgrammerUtils
 {
     class SaveService
     {
-        public static readonly string SAVE_FOLDER_PATH = "@src" + "/SaveData";
+        public static readonly string SAVE_FOLDER_PATH = "SaveData";
         public static readonly string DATA_ENDING = ".save";
 
         /// <summary>
@@ -23,6 +23,9 @@ namespace ProgrammerUtils
         /// <returns>Returns true when done saving</returns>
         public static bool Save(string saveName, object data)
         {
+            if (data == null)
+                return false;
+
             BinaryFormatter formatter = CreateBinaryFormatter();
 
             //Create folder for saving if one doesn't exist
@@ -73,7 +76,7 @@ namespace ProgrammerUtils
 
             HtmlCustomSettingSerilizationSurrogate htmlSurrogate = new HtmlCustomSettingSerilizationSurrogate();
 
-            selector.AddSurrogate(typeof(Color), new StreamingContext(StreamingContextStates.All), htmlSurrogate);
+            selector.AddSurrogate(typeof(HtmlExtraSettings.HtmlCustomSetting), new StreamingContext(StreamingContextStates.All), htmlSurrogate);
 
             formatter.SurrogateSelector = selector;
             return formatter;
@@ -84,6 +87,7 @@ namespace ProgrammerUtils
             public void GetObjectData(object obj, SerializationInfo info, StreamingContext context)
             {
                 HtmlExtraSettings.HtmlCustomSetting setting = (HtmlExtraSettings.HtmlCustomSetting)obj;
+                info.AddValue("active", setting.Active);
                 info.AddValue("char", setting.ReplaceChar);
                 info.AddValue("string", setting.ReplaceToString);
             }
@@ -91,6 +95,7 @@ namespace ProgrammerUtils
             public object SetObjectData(object obj, SerializationInfo info, StreamingContext context, ISurrogateSelector selector)
             {
                 HtmlExtraSettings.HtmlCustomSetting setting = (HtmlExtraSettings.HtmlCustomSetting)obj;
+                setting.Active = info.GetBoolean("active");
                 setting.ReplaceChar = info.GetChar("char");
                 setting.ReplaceToString = info.GetString("string");
                 return setting;

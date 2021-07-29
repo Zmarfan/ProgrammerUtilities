@@ -19,11 +19,28 @@ namespace ProgrammerUtils
 
         public event OnDeleteButtonPressedDelegate OnDeleteButtonPressed;
         public int Id { get; set; }
+        public bool Active
+        {
+            get
+            {
+                return activeCheckbox.Checked;
+            }
+            set
+            {
+                activeCheckbox.Checked = value;
+            }
+        }
         public char ReplaceCharacter
         {
             get
             {
+                if (replaceTextBox.Text.Length == 0)
+                    return '\0';
                 return replaceTextBox.Text.ToCharArray()[0];
+            }
+            set
+            {
+                replaceTextBox.Text = value.ToString();
             }
         }
         public string ReplacementString
@@ -31,6 +48,10 @@ namespace ProgrammerUtils
             get
             {
                 return replacedTextbox.Text;
+            }
+            set
+            {
+                replacedTextbox.Text = value;
             }
         }
 
