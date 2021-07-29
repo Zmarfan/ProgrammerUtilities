@@ -94,7 +94,7 @@
             // 
             // saveAndCloseButton
             // 
-            this.saveAndCloseButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.saveAndCloseButton.BackColor = System.Drawing.Color.SpringGreen;
             this.saveAndCloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveAndCloseButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.saveAndCloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -139,10 +139,10 @@
             // SavingInfoLabel
             // 
             this.SavingInfoLabel.AutoSize = true;
-            this.SavingInfoLabel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.SavingInfoLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.SavingInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SavingInfoLabel.ForeColor = System.Drawing.Color.Green;
-            this.SavingInfoLabel.Location = new System.Drawing.Point(8, 289);
+            this.SavingInfoLabel.Location = new System.Drawing.Point(8, 155);
             this.SavingInfoLabel.Name = "SavingInfoLabel";
             this.SavingInfoLabel.Size = new System.Drawing.Size(114, 15);
             this.SavingInfoLabel.TabIndex = 3;

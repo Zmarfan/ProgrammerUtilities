@@ -213,7 +213,7 @@
             this.SortTableLayout.Location = new System.Drawing.Point(3, 3);
             this.SortTableLayout.Name = "SortTableLayout";
             this.SortTableLayout.RowCount = 4;
-            this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -236,10 +236,10 @@
             // sortTextBoxLeft
             // 
             this.sortTextBoxLeft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortTextBoxLeft.Location = new System.Drawing.Point(3, 55);
+            this.sortTextBoxLeft.Location = new System.Drawing.Point(3, 58);
             this.sortTextBoxLeft.Name = "sortTextBoxLeft";
             this.SortTableLayout.SetRowSpan(this.sortTextBoxLeft, 2);
-            this.sortTextBoxLeft.Size = new System.Drawing.Size(439, 365);
+            this.sortTextBoxLeft.Size = new System.Drawing.Size(439, 362);
             this.sortTextBoxLeft.TabIndex = 0;
             this.sortTextBoxLeft.Text = "";
             this.sortTextBoxLeft.TextChanged += new System.EventHandler(this.SortTextChanged);
@@ -278,7 +278,7 @@
             this.sortHeader.RowCount = 2;
             this.sortHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.sortHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.sortHeader.Size = new System.Drawing.Size(890, 52);
+            this.sortHeader.Size = new System.Drawing.Size(890, 55);
             this.sortHeader.TabIndex = 4;
             // 
             // SortButton
@@ -291,7 +291,7 @@
             this.SortButton.Location = new System.Drawing.Point(3, 3);
             this.SortButton.Name = "SortButton";
             this.sortHeader.SetRowSpan(this.SortButton, 2);
-            this.SortButton.Size = new System.Drawing.Size(194, 46);
+            this.SortButton.Size = new System.Drawing.Size(194, 49);
             this.SortButton.TabIndex = 1;
             this.SortButton.Text = "Sort";
             this.SortButton.UseVisualStyleBackColor = false;
@@ -307,7 +307,7 @@
             this.AutoSortCheckbox.Location = new System.Drawing.Point(203, 3);
             this.AutoSortCheckbox.Name = "AutoSortCheckbox";
             this.sortHeader.SetRowSpan(this.AutoSortCheckbox, 2);
-            this.AutoSortCheckbox.Size = new System.Drawing.Size(89, 46);
+            this.AutoSortCheckbox.Size = new System.Drawing.Size(89, 49);
             this.AutoSortCheckbox.TabIndex = 2;
             this.AutoSortCheckbox.Text = "Auto Sort";
             this.AutoSortCheckbox.UseVisualStyleBackColor = true;
@@ -326,7 +326,7 @@
             this.sortModeTableLayout.Name = "sortModeTableLayout";
             this.sortModeTableLayout.RowCount = 1;
             this.sortModeTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.sortModeTableLayout.Size = new System.Drawing.Size(350, 26);
+            this.sortModeTableLayout.Size = new System.Drawing.Size(350, 27);
             this.sortModeTableLayout.TabIndex = 4;
             // 
             // sortAlphabeticlyRadio
@@ -338,7 +338,7 @@
             this.sortAlphabeticlyRadio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sortAlphabeticlyRadio.Location = new System.Drawing.Point(3, 3);
             this.sortAlphabeticlyRadio.Name = "sortAlphabeticlyRadio";
-            this.sortAlphabeticlyRadio.Size = new System.Drawing.Size(116, 20);
+            this.sortAlphabeticlyRadio.Size = new System.Drawing.Size(116, 21);
             this.sortAlphabeticlyRadio.TabIndex = 3;
             this.sortAlphabeticlyRadio.TabStop = true;
             this.sortAlphabeticlyRadio.Text = "Alphabetically";
@@ -352,7 +352,7 @@
             this.notSortAlphabeticlyRadio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.notSortAlphabeticlyRadio.Location = new System.Drawing.Point(178, 3);
             this.notSortAlphabeticlyRadio.Name = "notSortAlphabeticlyRadio";
-            this.notSortAlphabeticlyRadio.Size = new System.Drawing.Size(169, 20);
+            this.notSortAlphabeticlyRadio.Size = new System.Drawing.Size(169, 21);
             this.notSortAlphabeticlyRadio.TabIndex = 5;
             this.notSortAlphabeticlyRadio.Text = "Reverse";
             this.notSortAlphabeticlyRadio.UseVisualStyleBackColor = true;
@@ -366,13 +366,13 @@
             this.sortStyleTableLayout.Controls.Add(this.sortSeperatorCommaRadio, 0, 0);
             this.sortStyleTableLayout.Controls.Add(this.sortSeperatorNewLineRadio, 1, 0);
             this.sortStyleTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortStyleTableLayout.Location = new System.Drawing.Point(295, 26);
+            this.sortStyleTableLayout.Location = new System.Drawing.Point(295, 27);
             this.sortStyleTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.sortStyleTableLayout.Name = "sortStyleTableLayout";
             this.sortStyleTableLayout.RowCount = 1;
             this.sortStyleTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.sortStyleTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.sortStyleTableLayout.Size = new System.Drawing.Size(350, 26);
+            this.sortStyleTableLayout.Size = new System.Drawing.Size(350, 28);
             this.sortStyleTableLayout.TabIndex = 5;
             // 
             // sortSeperatorCommaRadio
@@ -382,7 +382,7 @@
             this.sortSeperatorCommaRadio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sortSeperatorCommaRadio.Location = new System.Drawing.Point(3, 3);
             this.sortSeperatorCommaRadio.Name = "sortSeperatorCommaRadio";
-            this.sortSeperatorCommaRadio.Size = new System.Drawing.Size(169, 20);
+            this.sortSeperatorCommaRadio.Size = new System.Drawing.Size(169, 22);
             this.sortSeperatorCommaRadio.TabIndex = 4;
             this.sortSeperatorCommaRadio.TabStop = true;
             this.sortSeperatorCommaRadio.Text = "Comma seperated";
@@ -397,7 +397,7 @@
             this.sortSeperatorNewLineRadio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sortSeperatorNewLineRadio.Location = new System.Drawing.Point(178, 3);
             this.sortSeperatorNewLineRadio.Name = "sortSeperatorNewLineRadio";
-            this.sortSeperatorNewLineRadio.Size = new System.Drawing.Size(169, 20);
+            this.sortSeperatorNewLineRadio.Size = new System.Drawing.Size(169, 22);
             this.sortSeperatorNewLineRadio.TabIndex = 6;
             this.sortSeperatorNewLineRadio.TabStop = true;
             this.sortSeperatorNewLineRadio.Text = "New line seperated";
@@ -413,7 +413,7 @@
             this.tableLayoutPanel1.Controls.Add(this.SortTextPresentationButton, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.SortChangeTextCapsButton, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(890, 52);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(890, 55);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -422,7 +422,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(66, 311);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(66, 308);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // SortClearButton
@@ -567,7 +567,7 @@
             this.SortCopyNotice.ForeColor = System.Drawing.Color.Green;
             this.SortCopyNotice.Location = new System.Drawing.Point(893, 0);
             this.SortCopyNotice.Name = "SortCopyNotice";
-            this.SortCopyNotice.Size = new System.Drawing.Size(60, 52);
+            this.SortCopyNotice.Size = new System.Drawing.Size(60, 55);
             this.SortCopyNotice.TabIndex = 7;
             this.SortCopyNotice.Text = "Copied!";
             this.SortCopyNotice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -578,10 +578,10 @@
             this.sortSortedTabs.Controls.Add(this.sortList);
             this.sortSortedTabs.Controls.Add(this.sortEnum);
             this.sortSortedTabs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortSortedTabs.Location = new System.Drawing.Point(448, 55);
+            this.sortSortedTabs.Location = new System.Drawing.Point(448, 58);
             this.sortSortedTabs.Name = "sortSortedTabs";
             this.sortSortedTabs.SelectedIndex = 0;
-            this.sortSortedTabs.Size = new System.Drawing.Size(439, 305);
+            this.sortSortedTabs.Size = new System.Drawing.Size(439, 302);
             this.sortSortedTabs.TabIndex = 8;
             // 
             // sortList
@@ -590,7 +590,7 @@
             this.sortList.Location = new System.Drawing.Point(4, 28);
             this.sortList.Margin = new System.Windows.Forms.Padding(0);
             this.sortList.Name = "sortList";
-            this.sortList.Size = new System.Drawing.Size(431, 273);
+            this.sortList.Size = new System.Drawing.Size(431, 270);
             this.sortList.TabIndex = 0;
             this.sortList.Text = "List";
             this.sortList.UseVisualStyleBackColor = true;
@@ -601,7 +601,7 @@
             this.sortTextBoxRight.Location = new System.Drawing.Point(0, 0);
             this.sortTextBoxRight.Name = "sortTextBoxRight";
             this.sortTextBoxRight.ReadOnly = true;
-            this.sortTextBoxRight.Size = new System.Drawing.Size(431, 273);
+            this.sortTextBoxRight.Size = new System.Drawing.Size(431, 270);
             this.sortTextBoxRight.TabIndex = 0;
             this.sortTextBoxRight.Text = "";
             // 
@@ -651,12 +651,11 @@
             this.matchTableLayout.Location = new System.Drawing.Point(3, 3);
             this.matchTableLayout.Name = "matchTableLayout";
             this.matchTableLayout.RowCount = 5;
-            this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.matchTableLayout.Size = new System.Drawing.Size(956, 462);
             this.matchTableLayout.TabIndex = 0;
             // 
@@ -667,7 +666,7 @@
             this.matchLeftText2Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.matchLeftText2Label.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchLeftText2Label.ForeColor = System.Drawing.Color.DarkGreen;
-            this.matchLeftText2Label.Location = new System.Drawing.Point(3, 257);
+            this.matchLeftText2Label.Location = new System.Drawing.Point(3, 258);
             this.matchLeftText2Label.Name = "matchLeftText2Label";
             this.matchLeftText2Label.Size = new System.Drawing.Size(472, 35);
             this.matchLeftText2Label.TabIndex = 3;
@@ -677,9 +676,9 @@
             // MatchLeftText2
             // 
             this.MatchLeftText2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MatchLeftText2.Location = new System.Drawing.Point(3, 295);
+            this.MatchLeftText2.Location = new System.Drawing.Point(3, 296);
             this.MatchLeftText2.Name = "MatchLeftText2";
-            this.MatchLeftText2.Size = new System.Drawing.Size(472, 164);
+            this.MatchLeftText2.Size = new System.Drawing.Size(472, 163);
             this.MatchLeftText2.TabIndex = 1;
             this.MatchLeftText2.Text = "";
             this.MatchLeftText2.TextChanged += new System.EventHandler(this.MatchTextChanged);
@@ -687,9 +686,9 @@
             // MatchLeftText1
             // 
             this.MatchLeftText1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MatchLeftText1.Location = new System.Drawing.Point(3, 90);
+            this.MatchLeftText1.Location = new System.Drawing.Point(3, 93);
             this.MatchLeftText1.Name = "MatchLeftText1";
-            this.MatchLeftText1.Size = new System.Drawing.Size(472, 164);
+            this.MatchLeftText1.Size = new System.Drawing.Size(472, 162);
             this.MatchLeftText1.TabIndex = 0;
             this.MatchLeftText1.Text = "";
             this.MatchLeftText1.TextChanged += new System.EventHandler(this.MatchTextChanged);
@@ -701,7 +700,7 @@
             this.matchLeftText1Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.matchLeftText1Label.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchLeftText1Label.ForeColor = System.Drawing.Color.Red;
-            this.matchLeftText1Label.Location = new System.Drawing.Point(3, 52);
+            this.matchLeftText1Label.Location = new System.Drawing.Point(3, 55);
             this.matchLeftText1Label.Name = "matchLeftText1Label";
             this.matchLeftText1Label.Size = new System.Drawing.Size(472, 35);
             this.matchLeftText1Label.TabIndex = 2;
@@ -731,7 +730,7 @@
             this.matchSettingsTableLayout.RowCount = 2;
             this.matchSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.matchSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.matchSettingsTableLayout.Size = new System.Drawing.Size(956, 52);
+            this.matchSettingsTableLayout.Size = new System.Drawing.Size(956, 55);
             this.matchSettingsTableLayout.TabIndex = 6;
             // 
             // matchMatchButton
@@ -744,7 +743,7 @@
             this.matchMatchButton.Location = new System.Drawing.Point(3, 3);
             this.matchMatchButton.Name = "matchMatchButton";
             this.matchSettingsTableLayout.SetRowSpan(this.matchMatchButton, 2);
-            this.matchMatchButton.Size = new System.Drawing.Size(194, 46);
+            this.matchMatchButton.Size = new System.Drawing.Size(194, 49);
             this.matchMatchButton.TabIndex = 0;
             this.matchMatchButton.Text = "Compare";
             this.matchMatchButton.UseVisualStyleBackColor = false;
@@ -760,7 +759,7 @@
             this.matchAutoCompare.Location = new System.Drawing.Point(203, 3);
             this.matchAutoCompare.Name = "matchAutoCompare";
             this.matchSettingsTableLayout.SetRowSpan(this.matchAutoCompare, 2);
-            this.matchAutoCompare.Size = new System.Drawing.Size(144, 46);
+            this.matchAutoCompare.Size = new System.Drawing.Size(144, 49);
             this.matchAutoCompare.TabIndex = 1;
             this.matchAutoCompare.Text = "Auto Compare";
             this.matchAutoCompare.UseVisualStyleBackColor = true;
@@ -773,7 +772,7 @@
             this.matchCaseSensitive.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchCaseSensitive.Location = new System.Drawing.Point(353, 3);
             this.matchCaseSensitive.Name = "matchCaseSensitive";
-            this.matchCaseSensitive.Size = new System.Drawing.Size(204, 20);
+            this.matchCaseSensitive.Size = new System.Drawing.Size(204, 21);
             this.matchCaseSensitive.TabIndex = 2;
             this.matchCaseSensitive.Text = "Case Sensitive";
             this.matchCaseSensitive.UseVisualStyleBackColor = true;
@@ -784,9 +783,9 @@
             this.MatchRemoveExtraWhiteSpace.AutoSize = true;
             this.MatchRemoveExtraWhiteSpace.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MatchRemoveExtraWhiteSpace.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MatchRemoveExtraWhiteSpace.Location = new System.Drawing.Point(353, 29);
+            this.MatchRemoveExtraWhiteSpace.Location = new System.Drawing.Point(353, 30);
             this.MatchRemoveExtraWhiteSpace.Name = "MatchRemoveExtraWhiteSpace";
-            this.MatchRemoveExtraWhiteSpace.Size = new System.Drawing.Size(204, 20);
+            this.MatchRemoveExtraWhiteSpace.Size = new System.Drawing.Size(204, 22);
             this.MatchRemoveExtraWhiteSpace.TabIndex = 3;
             this.MatchRemoveExtraWhiteSpace.Text = "Remove Extra Whitespaces";
             this.MatchRemoveExtraWhiteSpace.UseVisualStyleBackColor = true;
@@ -802,7 +801,7 @@
             this.matchClearButton.Location = new System.Drawing.Point(834, 3);
             this.matchClearButton.Name = "matchClearButton";
             this.matchSettingsTableLayout.SetRowSpan(this.matchClearButton, 2);
-            this.matchClearButton.Size = new System.Drawing.Size(119, 46);
+            this.matchClearButton.Size = new System.Drawing.Size(119, 49);
             this.matchClearButton.TabIndex = 4;
             this.matchClearButton.Text = "Clear";
             this.matchClearButton.UseVisualStyleBackColor = false;
@@ -816,7 +815,7 @@
             this.MatchCombinedShowModeDropdown.Items.AddRange(new object[] {
             "Combined: Every line",
             "Combined: Every word"});
-            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 13);
+            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 15);
             this.MatchCombinedShowModeDropdown.Name = "MatchCombinedShowModeDropdown";
             this.matchSettingsTableLayout.SetRowSpan(this.MatchCombinedShowModeDropdown, 2);
             this.MatchCombinedShowModeDropdown.Size = new System.Drawing.Size(164, 24);
@@ -829,12 +828,12 @@
             this.matchResultTab.Controls.Add(this.matchResultTabSeperate);
             this.matchResultTab.Controls.Add(this.matchResultTabCombined);
             this.matchResultTab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchResultTab.Location = new System.Drawing.Point(478, 52);
+            this.matchResultTab.Location = new System.Drawing.Point(478, 55);
             this.matchResultTab.Margin = new System.Windows.Forms.Padding(0);
             this.matchResultTab.Name = "matchResultTab";
             this.matchTableLayout.SetRowSpan(this.matchResultTab, 4);
             this.matchResultTab.SelectedIndex = 0;
-            this.matchResultTab.Size = new System.Drawing.Size(478, 410);
+            this.matchResultTab.Size = new System.Drawing.Size(478, 407);
             this.matchResultTab.TabIndex = 7;
             // 
             // matchResultTabSeperate
@@ -843,7 +842,7 @@
             this.matchResultTabSeperate.Location = new System.Drawing.Point(4, 28);
             this.matchResultTabSeperate.Margin = new System.Windows.Forms.Padding(0);
             this.matchResultTabSeperate.Name = "matchResultTabSeperate";
-            this.matchResultTabSeperate.Size = new System.Drawing.Size(470, 378);
+            this.matchResultTabSeperate.Size = new System.Drawing.Size(470, 375);
             this.matchResultTabSeperate.TabIndex = 0;
             this.matchResultTabSeperate.Text = "Separate";
             this.matchResultTabSeperate.UseVisualStyleBackColor = true;
@@ -865,7 +864,7 @@
             this.matcherSeperateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.matcherSeperateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.matcherSeperateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.matcherSeperateTableLayout.Size = new System.Drawing.Size(470, 378);
+            this.matcherSeperateTableLayout.Size = new System.Drawing.Size(470, 375);
             this.matcherSeperateTableLayout.TabIndex = 0;
             // 
             // matchRightText2Label
@@ -874,7 +873,7 @@
             this.matchRightText2Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.matchRightText2Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.matchRightText2Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchRightText2Label.Location = new System.Drawing.Point(3, 189);
+            this.matchRightText2Label.Location = new System.Drawing.Point(3, 187);
             this.matchRightText2Label.Name = "matchRightText2Label";
             this.matchRightText2Label.Size = new System.Drawing.Size(464, 35);
             this.matchRightText2Label.TabIndex = 12;
@@ -895,10 +894,10 @@
             // matchRightText2
             // 
             this.matchRightText2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchRightText2.Location = new System.Drawing.Point(3, 227);
+            this.matchRightText2.Location = new System.Drawing.Point(3, 225);
             this.matchRightText2.Name = "matchRightText2";
             this.matchRightText2.ReadOnly = true;
-            this.matchRightText2.Size = new System.Drawing.Size(464, 148);
+            this.matchRightText2.Size = new System.Drawing.Size(464, 147);
             this.matchRightText2.TabIndex = 10;
             this.matchRightText2.Text = "";
             // 
@@ -908,7 +907,7 @@
             this.matchRightText1.Location = new System.Drawing.Point(3, 38);
             this.matchRightText1.Name = "matchRightText1";
             this.matchRightText1.ReadOnly = true;
-            this.matchRightText1.Size = new System.Drawing.Size(464, 148);
+            this.matchRightText1.Size = new System.Drawing.Size(464, 146);
             this.matchRightText1.TabIndex = 9;
             this.matchRightText1.Text = "";
             // 
@@ -996,7 +995,7 @@
             this.htmlTableLayout.Location = new System.Drawing.Point(3, 3);
             this.htmlTableLayout.Name = "htmlTableLayout";
             this.htmlTableLayout.RowCount = 2;
-            this.htmlTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.htmlTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.htmlTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.htmlTableLayout.Size = new System.Drawing.Size(956, 462);
             this.htmlTableLayout.TabIndex = 0;
@@ -1022,7 +1021,7 @@
             this.htmlSettingsTableLayout.RowCount = 2;
             this.htmlSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.htmlSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.htmlSettingsTableLayout.Size = new System.Drawing.Size(890, 52);
+            this.htmlSettingsTableLayout.Size = new System.Drawing.Size(890, 55);
             this.htmlSettingsTableLayout.TabIndex = 0;
             // 
             // htmlColorEntityTableLayout
@@ -1033,13 +1032,13 @@
             this.htmlColorEntityTableLayout.Controls.Add(this.htmlChangeEntityColorButton, 0, 0);
             this.htmlColorEntityTableLayout.Controls.Add(this.htmlEntityColorRectangle, 1, 0);
             this.htmlColorEntityTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlColorEntityTableLayout.Location = new System.Drawing.Point(369, 26);
+            this.htmlColorEntityTableLayout.Location = new System.Drawing.Point(369, 27);
             this.htmlColorEntityTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.htmlColorEntityTableLayout.Name = "htmlColorEntityTableLayout";
             this.htmlColorEntityTableLayout.RowCount = 1;
             this.htmlColorEntityTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.htmlColorEntityTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.htmlColorEntityTableLayout.Size = new System.Drawing.Size(144, 26);
+            this.htmlColorEntityTableLayout.Size = new System.Drawing.Size(144, 28);
             this.htmlColorEntityTableLayout.TabIndex = 5;
             // 
             // htmlChangeEntityColorButton
@@ -1051,7 +1050,7 @@
             this.htmlChangeEntityColorButton.Location = new System.Drawing.Point(0, 0);
             this.htmlChangeEntityColorButton.Margin = new System.Windows.Forms.Padding(0);
             this.htmlChangeEntityColorButton.Name = "htmlChangeEntityColorButton";
-            this.htmlChangeEntityColorButton.Size = new System.Drawing.Size(119, 26);
+            this.htmlChangeEntityColorButton.Size = new System.Drawing.Size(119, 28);
             this.htmlChangeEntityColorButton.TabIndex = 3;
             this.htmlChangeEntityColorButton.Text = "Tag Color";
             this.htmlChangeEntityColorButton.UseVisualStyleBackColor = false;
@@ -1068,7 +1067,7 @@
             this.htmlEntityColorRectangle.Location = new System.Drawing.Point(124, 5);
             this.htmlEntityColorRectangle.Margin = new System.Windows.Forms.Padding(5);
             this.htmlEntityColorRectangle.Name = "htmlEntityColorRectangle";
-            this.htmlEntityColorRectangle.Size = new System.Drawing.Size(15, 16);
+            this.htmlEntityColorRectangle.Size = new System.Drawing.Size(15, 18);
             this.htmlEntityColorRectangle.TabIndex = 4;
             this.htmlColorHoverTooltip.SetToolTip(this.htmlEntityColorRectangle, "Detta är ett test 2");
             this.htmlEntityColorRectangle.UseVisualStyleBackColor = false;
@@ -1082,7 +1081,7 @@
             this.htmlColorEntitiesCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlColorEntitiesCheckbox.Location = new System.Drawing.Point(372, 3);
             this.htmlColorEntitiesCheckbox.Name = "htmlColorEntitiesCheckbox";
-            this.htmlColorEntitiesCheckbox.Size = new System.Drawing.Size(138, 20);
+            this.htmlColorEntitiesCheckbox.Size = new System.Drawing.Size(138, 21);
             this.htmlColorEntitiesCheckbox.TabIndex = 4;
             this.htmlColorEntitiesCheckbox.Text = "Color entities";
             this.htmlColorEntitiesCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1098,7 +1097,7 @@
             this.htmlButton.Location = new System.Drawing.Point(3, 3);
             this.htmlButton.Name = "htmlButton";
             this.htmlSettingsTableLayout.SetRowSpan(this.htmlButton, 2);
-            this.htmlButton.Size = new System.Drawing.Size(194, 46);
+            this.htmlButton.Size = new System.Drawing.Size(194, 49);
             this.htmlButton.TabIndex = 0;
             this.htmlButton.Text = "HTML:ify";
             this.htmlButton.UseVisualStyleBackColor = false;
@@ -1113,7 +1112,7 @@
             this.htmlColorTagsCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlColorTagsCheckbox.Location = new System.Drawing.Point(228, 3);
             this.htmlColorTagsCheckbox.Name = "htmlColorTagsCheckbox";
-            this.htmlColorTagsCheckbox.Size = new System.Drawing.Size(138, 20);
+            this.htmlColorTagsCheckbox.Size = new System.Drawing.Size(138, 21);
             this.htmlColorTagsCheckbox.TabIndex = 1;
             this.htmlColorTagsCheckbox.Text = "Color tags";
             this.htmlColorTagsCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1127,13 +1126,13 @@
             this.htmlColorTagOptionTableLayout.Controls.Add(this.htmlChooseColorButton, 0, 0);
             this.htmlColorTagOptionTableLayout.Controls.Add(this.htmlTagColorRectangle, 1, 0);
             this.htmlColorTagOptionTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlColorTagOptionTableLayout.Location = new System.Drawing.Point(225, 26);
+            this.htmlColorTagOptionTableLayout.Location = new System.Drawing.Point(225, 27);
             this.htmlColorTagOptionTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.htmlColorTagOptionTableLayout.Name = "htmlColorTagOptionTableLayout";
             this.htmlColorTagOptionTableLayout.RowCount = 1;
             this.htmlColorTagOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.htmlColorTagOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.htmlColorTagOptionTableLayout.Size = new System.Drawing.Size(144, 26);
+            this.htmlColorTagOptionTableLayout.Size = new System.Drawing.Size(144, 28);
             this.htmlColorTagOptionTableLayout.TabIndex = 3;
             // 
             // htmlChooseColorButton
@@ -1145,7 +1144,7 @@
             this.htmlChooseColorButton.Location = new System.Drawing.Point(0, 0);
             this.htmlChooseColorButton.Margin = new System.Windows.Forms.Padding(0);
             this.htmlChooseColorButton.Name = "htmlChooseColorButton";
-            this.htmlChooseColorButton.Size = new System.Drawing.Size(119, 26);
+            this.htmlChooseColorButton.Size = new System.Drawing.Size(119, 28);
             this.htmlChooseColorButton.TabIndex = 3;
             this.htmlChooseColorButton.Text = "Tag Color";
             this.htmlChooseColorButton.UseVisualStyleBackColor = false;
@@ -1162,7 +1161,7 @@
             this.htmlTagColorRectangle.Location = new System.Drawing.Point(124, 5);
             this.htmlTagColorRectangle.Margin = new System.Windows.Forms.Padding(5);
             this.htmlTagColorRectangle.Name = "htmlTagColorRectangle";
-            this.htmlTagColorRectangle.Size = new System.Drawing.Size(15, 16);
+            this.htmlTagColorRectangle.Size = new System.Drawing.Size(15, 18);
             this.htmlTagColorRectangle.TabIndex = 4;
             this.htmlColorHoverTooltip.SetToolTip(this.htmlTagColorRectangle, "Detta är ett test");
             this.htmlTagColorRectangle.UseVisualStyleBackColor = false;
@@ -1175,14 +1174,14 @@
             this.htmlInputTableLayout.Controls.Add(this.htmlInputTextbox, 0, 0);
             this.htmlInputTableLayout.Controls.Add(this.htmlInputTextSettingsTableLayout, 0, 1);
             this.htmlInputTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlInputTableLayout.Location = new System.Drawing.Point(0, 52);
+            this.htmlInputTableLayout.Location = new System.Drawing.Point(0, 55);
             this.htmlInputTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.htmlInputTableLayout.Name = "htmlInputTableLayout";
             this.htmlInputTableLayout.RowCount = 3;
             this.htmlInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.htmlInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.htmlInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.htmlInputTableLayout.Size = new System.Drawing.Size(445, 410);
+            this.htmlInputTableLayout.Size = new System.Drawing.Size(445, 407);
             this.htmlInputTableLayout.TabIndex = 1;
             // 
             // htmlInputLabel
@@ -1191,7 +1190,7 @@
             this.htmlInputLabel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.htmlInputLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.htmlInputLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlInputLabel.Location = new System.Drawing.Point(3, 372);
+            this.htmlInputLabel.Location = new System.Drawing.Point(3, 369);
             this.htmlInputLabel.Name = "htmlInputLabel";
             this.htmlInputLabel.Padding = new System.Windows.Forms.Padding(10);
             this.htmlInputLabel.Size = new System.Drawing.Size(439, 38);
@@ -1204,7 +1203,7 @@
             this.htmlInputTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlInputTextbox.Location = new System.Drawing.Point(3, 3);
             this.htmlInputTextbox.Name = "htmlInputTextbox";
-            this.htmlInputTextbox.Size = new System.Drawing.Size(439, 328);
+            this.htmlInputTextbox.Size = new System.Drawing.Size(439, 325);
             this.htmlInputTextbox.TabIndex = 1;
             this.htmlInputTextbox.Text = "";
             this.htmlInputTextbox.SelectionChanged += new System.EventHandler(this.HtmlInputTextbox_SelectionChanged);
@@ -1226,7 +1225,7 @@
             this.htmlInputTextSettingsTableLayout.Controls.Add(this.htmlBoldButton, 0, 0);
             this.htmlInputTextSettingsTableLayout.Controls.Add(this.htmlRaisedButton, 4, 0);
             this.htmlInputTextSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlInputTextSettingsTableLayout.Location = new System.Drawing.Point(3, 337);
+            this.htmlInputTextSettingsTableLayout.Location = new System.Drawing.Point(3, 334);
             this.htmlInputTextSettingsTableLayout.Name = "htmlInputTextSettingsTableLayout";
             this.htmlInputTextSettingsTableLayout.RowCount = 1;
             this.htmlInputTextSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -1320,14 +1319,14 @@
             this.htmlOutputTableLayout.Controls.Add(this.htmlOutputLabel, 0, 1);
             this.htmlOutputTableLayout.Controls.Add(this.htmlOutputTextbox, 0, 0);
             this.htmlOutputTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlOutputTableLayout.Location = new System.Drawing.Point(445, 52);
+            this.htmlOutputTableLayout.Location = new System.Drawing.Point(445, 55);
             this.htmlOutputTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.htmlOutputTableLayout.Name = "htmlOutputTableLayout";
             this.htmlOutputTableLayout.RowCount = 2;
             this.htmlOutputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.htmlOutputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.htmlOutputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.htmlOutputTableLayout.Size = new System.Drawing.Size(445, 410);
+            this.htmlOutputTableLayout.Size = new System.Drawing.Size(445, 407);
             this.htmlOutputTableLayout.TabIndex = 2;
             // 
             // htmlOutputLabel
@@ -1336,7 +1335,7 @@
             this.htmlOutputLabel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.htmlOutputLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.htmlOutputLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlOutputLabel.Location = new System.Drawing.Point(3, 372);
+            this.htmlOutputLabel.Location = new System.Drawing.Point(3, 369);
             this.htmlOutputLabel.Name = "htmlOutputLabel";
             this.htmlOutputLabel.Padding = new System.Windows.Forms.Padding(10);
             this.htmlOutputLabel.Size = new System.Drawing.Size(439, 38);
@@ -1350,7 +1349,7 @@
             this.htmlOutputTextbox.Location = new System.Drawing.Point(3, 3);
             this.htmlOutputTextbox.Name = "htmlOutputTextbox";
             this.htmlOutputTextbox.ReadOnly = true;
-            this.htmlOutputTextbox.Size = new System.Drawing.Size(439, 366);
+            this.htmlOutputTextbox.Size = new System.Drawing.Size(439, 363);
             this.htmlOutputTextbox.TabIndex = 5;
             this.htmlOutputTextbox.Text = "";
             // 
