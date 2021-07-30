@@ -47,6 +47,7 @@
             this.sortSeperatorCommaRadio = new System.Windows.Forms.RadioButton();
             this.sortSeperatorNewLineRadio = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.SortCopyButton = new System.Windows.Forms.Button();
             this.SortClearButton = new System.Windows.Forms.Button();
             this.SortTextPresentationButton = new System.Windows.Forms.Button();
             this.SortChangeTextCapsButton = new System.Windows.Forms.Button();
@@ -90,6 +91,10 @@
             this.htmlTab = new System.Windows.Forms.TabPage();
             this.htmlTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlColorCustomTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlChangeCustomColorButton = new System.Windows.Forms.Button();
+            this.htmlCustomColorRectangle = new System.Windows.Forms.Button();
+            this.htmlColorCustomCheckbox = new System.Windows.Forms.CheckBox();
             this.htmlColorEntityTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlChangeEntityColorButton = new System.Windows.Forms.Button();
             this.htmlEntityColorRectangle = new System.Windows.Forms.Button();
@@ -99,28 +104,28 @@
             this.htmlColorTagOptionTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlChooseColorButton = new System.Windows.Forms.Button();
             this.htmlTagColorRectangle = new System.Windows.Forms.Button();
+            this.htmlCustomRulesButton = new System.Windows.Forms.Button();
             this.htmlInputTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlInputLabel = new System.Windows.Forms.Label();
             this.htmlInputTextbox = new System.Windows.Forms.RichTextBox();
             this.htmlInputTextSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlLoweredButton = new System.Windows.Forms.CheckBox();
             this.htmlUnderscoreButton = new System.Windows.Forms.CheckBox();
             this.htmlStrikeThroughButton = new System.Windows.Forms.CheckBox();
             this.htmlItalicButton = new System.Windows.Forms.CheckBox();
             this.htmlBoldButton = new System.Windows.Forms.CheckBox();
+            this.htmlRaisedButton = new System.Windows.Forms.CheckBox();
             this.htmlOutputTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlOutputLabel = new System.Windows.Forms.Label();
             this.htmlOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.CopyTimer = new System.Windows.Forms.Timer(this.components);
-            this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
-            this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.SortCopyButton = new System.Windows.Forms.Button();
-            this.htmlLoweredButton = new System.Windows.Forms.CheckBox();
-            this.htmlRaisedButton = new System.Windows.Forms.CheckBox();
             this.HelpDropdown = new System.Windows.Forms.ToolStripDropDownButton();
             this.asdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aasdasdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CopyTimer = new System.Windows.Forms.Timer(this.components);
+            this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
+            this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -145,6 +150,7 @@
             this.htmlTab.SuspendLayout();
             this.htmlTableLayout.SuspendLayout();
             this.htmlSettingsTableLayout.SuspendLayout();
+            this.htmlColorCustomTableLayout.SuspendLayout();
             this.htmlColorEntityTableLayout.SuspendLayout();
             this.htmlColorTagOptionTableLayout.SuspendLayout();
             this.htmlInputTableLayout.SuspendLayout();
@@ -371,7 +377,7 @@
             this.sortStyleTableLayout.Name = "sortStyleTableLayout";
             this.sortStyleTableLayout.RowCount = 1;
             this.sortStyleTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.sortStyleTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.sortStyleTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.sortStyleTableLayout.Size = new System.Drawing.Size(350, 28);
             this.sortStyleTableLayout.TabIndex = 5;
             // 
@@ -424,6 +430,23 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(66, 308);
             this.tableLayoutPanel1.TabIndex = 5;
+            // 
+            // SortCopyButton
+            // 
+            this.SortCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.SortCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
+            this.SortCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SortCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SortCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SortCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortCopyButton.Location = new System.Drawing.Point(3, 135);
+            this.SortCopyButton.Name = "SortCopyButton";
+            this.SortCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.SortCopyButton.Size = new System.Drawing.Size(60, 60);
+            this.SortCopyButton.TabIndex = 9;
+            this.SortCopyButton.UseVisualStyleBackColor = false;
+            this.SortCopyButton.Click += new System.EventHandler(this.SortCopyButton_Click);
             // 
             // SortClearButton
             // 
@@ -610,7 +633,7 @@
             this.sortEnum.Controls.Add(this.sortEnumTextBoxRight);
             this.sortEnum.Location = new System.Drawing.Point(4, 28);
             this.sortEnum.Name = "sortEnum";
-            this.sortEnum.Size = new System.Drawing.Size(431, 273);
+            this.sortEnum.Size = new System.Drawing.Size(431, 270);
             this.sortEnum.TabIndex = 1;
             this.sortEnum.Text = "Enum";
             this.sortEnum.UseVisualStyleBackColor = true;
@@ -621,7 +644,7 @@
             this.sortEnumTextBoxRight.Location = new System.Drawing.Point(0, 0);
             this.sortEnumTextBoxRight.Name = "sortEnumTextBoxRight";
             this.sortEnumTextBoxRight.ReadOnly = true;
-            this.sortEnumTextBoxRight.Size = new System.Drawing.Size(431, 273);
+            this.sortEnumTextBoxRight.Size = new System.Drawing.Size(431, 270);
             this.sortEnumTextBoxRight.TabIndex = 0;
             this.sortEnumTextBoxRight.Text = "";
             // 
@@ -917,7 +940,7 @@
             this.matchResultTabCombined.Location = new System.Drawing.Point(4, 28);
             this.matchResultTabCombined.Margin = new System.Windows.Forms.Padding(0);
             this.matchResultTabCombined.Name = "matchResultTabCombined";
-            this.matchResultTabCombined.Size = new System.Drawing.Size(470, 378);
+            this.matchResultTabCombined.Size = new System.Drawing.Size(470, 375);
             this.matchResultTabCombined.TabIndex = 1;
             this.matchResultTabCombined.Text = "Combined";
             this.matchResultTabCombined.UseVisualStyleBackColor = true;
@@ -936,7 +959,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(470, 378);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(470, 375);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // matchResultCombinedTextBox
@@ -945,7 +968,7 @@
             this.matchResultCombinedTextBox.Location = new System.Drawing.Point(3, 38);
             this.matchResultCombinedTextBox.Name = "matchResultCombinedTextBox";
             this.matchResultCombinedTextBox.ReadOnly = true;
-            this.matchResultCombinedTextBox.Size = new System.Drawing.Size(464, 337);
+            this.matchResultCombinedTextBox.Size = new System.Drawing.Size(464, 334);
             this.matchResultCombinedTextBox.TabIndex = 10;
             this.matchResultCombinedTextBox.Text = "";
             // 
@@ -1002,18 +1025,24 @@
             // 
             // htmlSettingsTableLayout
             // 
-            this.htmlSettingsTableLayout.ColumnCount = 5;
+            this.htmlSettingsTableLayout.ColumnCount = 8;
             this.htmlTableLayout.SetColumnSpan(this.htmlSettingsTableLayout, 2);
             this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
+            this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 5F));
+            this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
             this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
             this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
             this.htmlSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorEntityTableLayout, 3, 1);
-            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorEntitiesCheckbox, 3, 0);
+            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorCustomTableLayout, 6, 1);
+            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorCustomCheckbox, 6, 0);
+            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorEntityTableLayout, 5, 1);
+            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorEntitiesCheckbox, 5, 0);
             this.htmlSettingsTableLayout.Controls.Add(this.htmlButton, 0, 0);
-            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorTagsCheckbox, 2, 0);
-            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorTagOptionTableLayout, 2, 1);
+            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorTagsCheckbox, 4, 0);
+            this.htmlSettingsTableLayout.Controls.Add(this.htmlColorTagOptionTableLayout, 4, 1);
+            this.htmlSettingsTableLayout.Controls.Add(this.htmlCustomRulesButton, 2, 0);
             this.htmlSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlSettingsTableLayout.Location = new System.Drawing.Point(0, 0);
             this.htmlSettingsTableLayout.Margin = new System.Windows.Forms.Padding(0);
@@ -1024,6 +1053,69 @@
             this.htmlSettingsTableLayout.Size = new System.Drawing.Size(890, 55);
             this.htmlSettingsTableLayout.TabIndex = 0;
             // 
+            // htmlColorCustomTableLayout
+            // 
+            this.htmlColorCustomTableLayout.ColumnCount = 2;
+            this.htmlColorCustomTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlColorCustomTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.htmlColorCustomTableLayout.Controls.Add(this.htmlChangeCustomColorButton, 0, 0);
+            this.htmlColorCustomTableLayout.Controls.Add(this.htmlCustomColorRectangle, 1, 0);
+            this.htmlColorCustomTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlColorCustomTableLayout.Location = new System.Drawing.Point(642, 27);
+            this.htmlColorCustomTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.htmlColorCustomTableLayout.Name = "htmlColorCustomTableLayout";
+            this.htmlColorCustomTableLayout.RowCount = 1;
+            this.htmlColorCustomTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlColorCustomTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.htmlColorCustomTableLayout.Size = new System.Drawing.Size(144, 28);
+            this.htmlColorCustomTableLayout.TabIndex = 8;
+            // 
+            // htmlChangeCustomColorButton
+            // 
+            this.htmlChangeCustomColorButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlChangeCustomColorButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlChangeCustomColorButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlChangeCustomColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlChangeCustomColorButton.Location = new System.Drawing.Point(0, 0);
+            this.htmlChangeCustomColorButton.Margin = new System.Windows.Forms.Padding(0);
+            this.htmlChangeCustomColorButton.Name = "htmlChangeCustomColorButton";
+            this.htmlChangeCustomColorButton.Size = new System.Drawing.Size(119, 28);
+            this.htmlChangeCustomColorButton.TabIndex = 3;
+            this.htmlChangeCustomColorButton.Text = "Custom Color";
+            this.htmlChangeCustomColorButton.UseVisualStyleBackColor = false;
+            this.htmlChangeCustomColorButton.Click += new System.EventHandler(this.HtmlChangeCustomColorButton_Click);
+            // 
+            // htmlCustomColorRectangle
+            // 
+            this.htmlCustomColorRectangle.BackColor = System.Drawing.Color.Green;
+            this.htmlCustomColorRectangle.Cursor = System.Windows.Forms.Cursors.Help;
+            this.htmlCustomColorRectangle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlCustomColorRectangle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.htmlCustomColorRectangle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.htmlCustomColorRectangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlCustomColorRectangle.Location = new System.Drawing.Point(124, 5);
+            this.htmlCustomColorRectangle.Margin = new System.Windows.Forms.Padding(5);
+            this.htmlCustomColorRectangle.Name = "htmlCustomColorRectangle";
+            this.htmlCustomColorRectangle.Size = new System.Drawing.Size(15, 18);
+            this.htmlCustomColorRectangle.TabIndex = 4;
+            this.htmlColorHoverTooltip.SetToolTip(this.htmlCustomColorRectangle, "R0G255B0");
+            this.htmlCustomColorRectangle.UseVisualStyleBackColor = false;
+            // 
+            // htmlColorCustomCheckbox
+            // 
+            this.htmlColorCustomCheckbox.AutoSize = true;
+            this.htmlColorCustomCheckbox.Checked = true;
+            this.htmlColorCustomCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.htmlColorCustomCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlColorCustomCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlColorCustomCheckbox.Location = new System.Drawing.Point(645, 3);
+            this.htmlColorCustomCheckbox.Name = "htmlColorCustomCheckbox";
+            this.htmlColorCustomCheckbox.Size = new System.Drawing.Size(138, 21);
+            this.htmlColorCustomCheckbox.TabIndex = 7;
+            this.htmlColorCustomCheckbox.Text = "Color custom";
+            this.htmlColorCustomCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlColorCustomCheckbox.UseVisualStyleBackColor = true;
+            // 
             // htmlColorEntityTableLayout
             // 
             this.htmlColorEntityTableLayout.ColumnCount = 2;
@@ -1032,12 +1124,12 @@
             this.htmlColorEntityTableLayout.Controls.Add(this.htmlChangeEntityColorButton, 0, 0);
             this.htmlColorEntityTableLayout.Controls.Add(this.htmlEntityColorRectangle, 1, 0);
             this.htmlColorEntityTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlColorEntityTableLayout.Location = new System.Drawing.Point(369, 27);
+            this.htmlColorEntityTableLayout.Location = new System.Drawing.Point(498, 27);
             this.htmlColorEntityTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.htmlColorEntityTableLayout.Name = "htmlColorEntityTableLayout";
             this.htmlColorEntityTableLayout.RowCount = 1;
             this.htmlColorEntityTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.htmlColorEntityTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.htmlColorEntityTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.htmlColorEntityTableLayout.Size = new System.Drawing.Size(144, 28);
             this.htmlColorEntityTableLayout.TabIndex = 5;
             // 
@@ -1069,7 +1161,7 @@
             this.htmlEntityColorRectangle.Name = "htmlEntityColorRectangle";
             this.htmlEntityColorRectangle.Size = new System.Drawing.Size(15, 18);
             this.htmlEntityColorRectangle.TabIndex = 4;
-            this.htmlColorHoverTooltip.SetToolTip(this.htmlEntityColorRectangle, "Detta är ett test 2");
+            this.htmlColorHoverTooltip.SetToolTip(this.htmlEntityColorRectangle, "R255G0B0");
             this.htmlEntityColorRectangle.UseVisualStyleBackColor = false;
             // 
             // htmlColorEntitiesCheckbox
@@ -1079,7 +1171,7 @@
             this.htmlColorEntitiesCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.htmlColorEntitiesCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.htmlColorEntitiesCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlColorEntitiesCheckbox.Location = new System.Drawing.Point(372, 3);
+            this.htmlColorEntitiesCheckbox.Location = new System.Drawing.Point(501, 3);
             this.htmlColorEntitiesCheckbox.Name = "htmlColorEntitiesCheckbox";
             this.htmlColorEntitiesCheckbox.Size = new System.Drawing.Size(138, 21);
             this.htmlColorEntitiesCheckbox.TabIndex = 4;
@@ -1110,7 +1202,7 @@
             this.htmlColorTagsCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.htmlColorTagsCheckbox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.htmlColorTagsCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlColorTagsCheckbox.Location = new System.Drawing.Point(228, 3);
+            this.htmlColorTagsCheckbox.Location = new System.Drawing.Point(357, 3);
             this.htmlColorTagsCheckbox.Name = "htmlColorTagsCheckbox";
             this.htmlColorTagsCheckbox.Size = new System.Drawing.Size(138, 21);
             this.htmlColorTagsCheckbox.TabIndex = 1;
@@ -1126,12 +1218,12 @@
             this.htmlColorTagOptionTableLayout.Controls.Add(this.htmlChooseColorButton, 0, 0);
             this.htmlColorTagOptionTableLayout.Controls.Add(this.htmlTagColorRectangle, 1, 0);
             this.htmlColorTagOptionTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlColorTagOptionTableLayout.Location = new System.Drawing.Point(225, 27);
+            this.htmlColorTagOptionTableLayout.Location = new System.Drawing.Point(354, 27);
             this.htmlColorTagOptionTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.htmlColorTagOptionTableLayout.Name = "htmlColorTagOptionTableLayout";
             this.htmlColorTagOptionTableLayout.RowCount = 1;
             this.htmlColorTagOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.htmlColorTagOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.htmlColorTagOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.htmlColorTagOptionTableLayout.Size = new System.Drawing.Size(144, 28);
             this.htmlColorTagOptionTableLayout.TabIndex = 3;
             // 
@@ -1163,8 +1255,24 @@
             this.htmlTagColorRectangle.Name = "htmlTagColorRectangle";
             this.htmlTagColorRectangle.Size = new System.Drawing.Size(15, 18);
             this.htmlTagColorRectangle.TabIndex = 4;
-            this.htmlColorHoverTooltip.SetToolTip(this.htmlTagColorRectangle, "Detta är ett test");
+            this.htmlColorHoverTooltip.SetToolTip(this.htmlTagColorRectangle, "R0G0B255");
             this.htmlTagColorRectangle.UseVisualStyleBackColor = false;
+            // 
+            // htmlCustomRulesButton
+            // 
+            this.htmlCustomRulesButton.BackColor = System.Drawing.Color.Thistle;
+            this.htmlCustomRulesButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlCustomRulesButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlCustomRulesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlCustomRulesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlCustomRulesButton.Location = new System.Drawing.Point(208, 3);
+            this.htmlCustomRulesButton.Name = "htmlCustomRulesButton";
+            this.htmlSettingsTableLayout.SetRowSpan(this.htmlCustomRulesButton, 2);
+            this.htmlCustomRulesButton.Size = new System.Drawing.Size(138, 49);
+            this.htmlCustomRulesButton.TabIndex = 6;
+            this.htmlCustomRulesButton.Text = "Custom Rules";
+            this.htmlCustomRulesButton.UseVisualStyleBackColor = false;
+            this.htmlCustomRulesButton.Click += new System.EventHandler(this.HtmlCustomRulesButton_Click);
             // 
             // htmlInputTableLayout
             // 
@@ -1231,6 +1339,25 @@
             this.htmlInputTextSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.htmlInputTextSettingsTableLayout.Size = new System.Drawing.Size(439, 32);
             this.htmlInputTextSettingsTableLayout.TabIndex = 4;
+            // 
+            // htmlLoweredButton
+            // 
+            this.htmlLoweredButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.htmlLoweredButton.AutoSize = true;
+            this.htmlLoweredButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlLoweredButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.html_Lowered;
+            this.htmlLoweredButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.htmlLoweredButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlLoweredButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlLoweredButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlLoweredButton.Location = new System.Drawing.Point(178, 3);
+            this.htmlLoweredButton.Name = "htmlLoweredButton";
+            this.htmlLoweredButton.Size = new System.Drawing.Size(29, 26);
+            this.htmlLoweredButton.TabIndex = 5;
+            this.htmlLoweredButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlLoweredButton.UseVisualStyleBackColor = false;
+            this.htmlLoweredButton.CheckedChanged += new System.EventHandler(this.HtmlLoweredButton_CheckedChanged);
+            this.htmlLoweredButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
             // 
             // htmlUnderscoreButton
             // 
@@ -1312,6 +1439,25 @@
             this.htmlBoldButton.CheckedChanged += new System.EventHandler(this.HtmlBoldButton_CheckedChanged);
             this.htmlBoldButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
             // 
+            // htmlRaisedButton
+            // 
+            this.htmlRaisedButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.htmlRaisedButton.AutoSize = true;
+            this.htmlRaisedButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlRaisedButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.html_Raised;
+            this.htmlRaisedButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.htmlRaisedButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlRaisedButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlRaisedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlRaisedButton.Location = new System.Drawing.Point(143, 3);
+            this.htmlRaisedButton.Name = "htmlRaisedButton";
+            this.htmlRaisedButton.Size = new System.Drawing.Size(29, 26);
+            this.htmlRaisedButton.TabIndex = 4;
+            this.htmlRaisedButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlRaisedButton.UseVisualStyleBackColor = false;
+            this.htmlRaisedButton.CheckedChanged += new System.EventHandler(this.HtmlRaisedButton_CheckedChanged);
+            this.htmlRaisedButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
+            // 
             // htmlOutputTableLayout
             // 
             this.htmlOutputTableLayout.ColumnCount = 1;
@@ -1372,75 +1518,6 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 30);
             // 
-            // CopyTimer
-            // 
-            this.CopyTimer.Interval = 1500;
-            this.CopyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
-            // 
-            // htmlColorTagPicker
-            // 
-            this.htmlColorTagPicker.FullOpen = true;
-            this.htmlColorTagPicker.SolidColorOnly = true;
-            // 
-            // htmlColorHoverTooltip
-            // 
-            this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
-            // 
-            // SortCopyButton
-            // 
-            this.SortCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.SortCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
-            this.SortCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SortCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SortCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SortCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SortCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortCopyButton.Location = new System.Drawing.Point(3, 135);
-            this.SortCopyButton.Name = "SortCopyButton";
-            this.SortCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.SortCopyButton.Size = new System.Drawing.Size(60, 60);
-            this.SortCopyButton.TabIndex = 9;
-            this.SortCopyButton.UseVisualStyleBackColor = false;
-            this.SortCopyButton.Click += new System.EventHandler(this.SortCopyButton_Click);
-            // 
-            // htmlLoweredButton
-            // 
-            this.htmlLoweredButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.htmlLoweredButton.AutoSize = true;
-            this.htmlLoweredButton.BackColor = System.Drawing.Color.Lavender;
-            this.htmlLoweredButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.html_Lowered;
-            this.htmlLoweredButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.htmlLoweredButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.htmlLoweredButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlLoweredButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.htmlLoweredButton.Location = new System.Drawing.Point(178, 3);
-            this.htmlLoweredButton.Name = "htmlLoweredButton";
-            this.htmlLoweredButton.Size = new System.Drawing.Size(29, 26);
-            this.htmlLoweredButton.TabIndex = 5;
-            this.htmlLoweredButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.htmlLoweredButton.UseVisualStyleBackColor = false;
-            this.htmlLoweredButton.CheckedChanged += new System.EventHandler(this.HtmlLoweredButton_CheckedChanged);
-            this.htmlLoweredButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
-            // 
-            // htmlRaisedButton
-            // 
-            this.htmlRaisedButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.htmlRaisedButton.AutoSize = true;
-            this.htmlRaisedButton.BackColor = System.Drawing.Color.Lavender;
-            this.htmlRaisedButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.html_Raised;
-            this.htmlRaisedButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.htmlRaisedButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.htmlRaisedButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlRaisedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.htmlRaisedButton.Location = new System.Drawing.Point(143, 3);
-            this.htmlRaisedButton.Name = "htmlRaisedButton";
-            this.htmlRaisedButton.Size = new System.Drawing.Size(29, 26);
-            this.htmlRaisedButton.TabIndex = 4;
-            this.htmlRaisedButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.htmlRaisedButton.UseVisualStyleBackColor = false;
-            this.htmlRaisedButton.CheckedChanged += new System.EventHandler(this.HtmlRaisedButton_CheckedChanged);
-            this.htmlRaisedButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
-            // 
             // HelpDropdown
             // 
             this.HelpDropdown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -1465,6 +1542,20 @@
             this.aasdasdasdToolStripMenuItem.Name = "aasdasdasdToolStripMenuItem";
             this.aasdasdasdToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.aasdasdasdToolStripMenuItem.Text = "aasdasdasd";
+            // 
+            // CopyTimer
+            // 
+            this.CopyTimer.Interval = 1500;
+            this.CopyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
+            // 
+            // htmlColorTagPicker
+            // 
+            this.htmlColorTagPicker.FullOpen = true;
+            this.htmlColorTagPicker.SolidColorOnly = true;
+            // 
+            // htmlColorHoverTooltip
+            // 
+            this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
             // 
             // Application
             // 
@@ -1514,6 +1605,7 @@
             this.htmlTableLayout.ResumeLayout(false);
             this.htmlSettingsTableLayout.ResumeLayout(false);
             this.htmlSettingsTableLayout.PerformLayout();
+            this.htmlColorCustomTableLayout.ResumeLayout(false);
             this.htmlColorEntityTableLayout.ResumeLayout(false);
             this.htmlColorTagOptionTableLayout.ResumeLayout(false);
             this.htmlInputTableLayout.ResumeLayout(false);
@@ -1621,6 +1713,11 @@
         private System.Windows.Forms.TableLayoutPanel htmlColorEntityTableLayout;
         private System.Windows.Forms.Button htmlChangeEntityColorButton;
         private System.Windows.Forms.Button htmlEntityColorRectangle;
+        private System.Windows.Forms.Button htmlCustomRulesButton;
+        private System.Windows.Forms.TableLayoutPanel htmlColorCustomTableLayout;
+        private System.Windows.Forms.Button htmlChangeCustomColorButton;
+        private System.Windows.Forms.Button htmlCustomColorRectangle;
+        private System.Windows.Forms.CheckBox htmlColorCustomCheckbox;
     }
 }
 

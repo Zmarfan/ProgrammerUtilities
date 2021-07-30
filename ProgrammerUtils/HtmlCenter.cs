@@ -43,10 +43,32 @@ namespace ProgrammerUtils
             _mainOutputTextbox = mainOutputTextbox;
         }
 
-        public void ConvertTextToHTML(bool useSpecialTagColor, bool useSpecialEntityColor, Color tagColor, Color entityColor)
+        public void ConvertTextToHTML(
+            bool useSpecialTagColor, 
+            bool useSpecialEntityColor, 
+            bool useSpecialCustomColor,
+            Color tagColor,
+            Color entityColor,
+            Color customColor
+            )
         {
             tagColor = useSpecialTagColor ? tagColor : DEFAULT_TEXT_COLOR;
             entityColor = useSpecialEntityColor ? entityColor : DEFAULT_TEXT_COLOR;
+            customColor = useSpecialCustomColor ? customColor : DEFAULT_TEXT_COLOR;
+
+            Dictionary<string, string> customRulesDictionary = new Dictionary<string, string>();
+            List<HtmlExtraSettings.HtmlCustomSetting> customRules = (List<HtmlExtraSettings.HtmlCustomSetting>)SaveService.Load(HtmlExtraSettings.SAVE_FILE_NAME);
+            
+            if (customRules != null)
+            {
+                customRules.Where(entry => entry.Active)
+                .ToList()
+                .ForEach(entry =>
+                {
+                    customRulesDictionary.Add(entry.ReplaceChar.ToString(), entry.ReplaceToString);
+                });
+            }
+            
 
             HtmlService service = new HtmlService();
             List<HtmlBuilderCharacter> finalOutput = new List<HtmlBuilderCharacter>();
@@ -61,6 +83,8 @@ namespace ProgrammerUtils
 
                 if (SPECIAL_HTML_CHARACTERS.ContainsKey(_mainInputTextbox.SelectedText))
                     finalOutput.AddRange(TextToHtmlCharacter(SPECIAL_HTML_CHARACTERS[_mainInputTextbox.SelectedText], entityColor));
+                else if (customRulesDictionary.ContainsKey(_mainInputTextbox.SelectedText))
+                    finalOutput.AddRange(TextToHtmlCharacter(customRulesDictionary[_mainInputTextbox.SelectedText], customColor));
                 else
                     finalOutput.AddRange(TextToHtmlCharacter(_mainInputTextbox.SelectedText, DEFAULT_TEXT_COLOR));
             }

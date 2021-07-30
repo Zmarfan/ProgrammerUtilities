@@ -37,6 +37,7 @@
             this.AddButton = new System.Windows.Forms.Button();
             this.SavingInfoLabel = new System.Windows.Forms.Label();
             this.displaySaveTimer = new System.Windows.Forms.Timer(this.components);
+            this.CloseButton = new System.Windows.Forms.Button();
             this.mainTableLayout.SuspendLayout();
             this.OptionsTableLayout.SuspendLayout();
             this.SuspendLayout();
@@ -74,17 +75,19 @@
             this.OptionsTableLayout.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.OptionsTableLayout.ColumnCount = 1;
             this.OptionsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.OptionsTableLayout.Controls.Add(this.CloseButton, 0, 3);
             this.OptionsTableLayout.Controls.Add(this.saveAndCloseButton, 0, 2);
             this.OptionsTableLayout.Controls.Add(this.SaveButton, 0, 1);
             this.OptionsTableLayout.Controls.Add(this.AddButton, 0, 0);
-            this.OptionsTableLayout.Controls.Add(this.SavingInfoLabel, 0, 3);
+            this.OptionsTableLayout.Controls.Add(this.SavingInfoLabel, 0, 4);
             this.OptionsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.OptionsTableLayout.Location = new System.Drawing.Point(0, 0);
             this.OptionsTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.OptionsTableLayout.Name = "OptionsTableLayout";
             this.OptionsTableLayout.Padding = new System.Windows.Forms.Padding(5);
-            this.OptionsTableLayout.RowCount = 4;
+            this.OptionsTableLayout.RowCount = 5;
             this.mainTableLayout.SetRowSpan(this.OptionsTableLayout, 2);
+            this.OptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.OptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.OptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.OptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
@@ -105,6 +108,7 @@
             this.saveAndCloseButton.TabIndex = 2;
             this.saveAndCloseButton.Text = "Save && Close";
             this.saveAndCloseButton.UseVisualStyleBackColor = false;
+            this.saveAndCloseButton.Click += new System.EventHandler(this.SaveAndCloseButton_Click);
             // 
             // SaveButton
             // 
@@ -142,7 +146,7 @@
             this.SavingInfoLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.SavingInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SavingInfoLabel.ForeColor = System.Drawing.Color.Green;
-            this.SavingInfoLabel.Location = new System.Drawing.Point(8, 155);
+            this.SavingInfoLabel.Location = new System.Drawing.Point(8, 205);
             this.SavingInfoLabel.Name = "SavingInfoLabel";
             this.SavingInfoLabel.Size = new System.Drawing.Size(114, 15);
             this.SavingInfoLabel.TabIndex = 3;
@@ -153,6 +157,21 @@
             // 
             this.displaySaveTimer.Interval = 5500;
             this.displaySaveTimer.Tick += new System.EventHandler(this.DisplaySaveTimer_Tick);
+            // 
+            // CloseButton
+            // 
+            this.CloseButton.BackColor = System.Drawing.Color.LightCoral;
+            this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CloseButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseButton.Location = new System.Drawing.Point(8, 158);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(114, 44);
+            this.CloseButton.TabIndex = 4;
+            this.CloseButton.Text = "Close Without Saving";
+            this.CloseButton.UseVisualStyleBackColor = false;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // HtmlExtraSettings
             // 
@@ -181,5 +200,6 @@
         private System.Windows.Forms.Button saveAndCloseButton;
         private System.Windows.Forms.Label SavingInfoLabel;
         private System.Windows.Forms.Timer displaySaveTimer;
+        private System.Windows.Forms.Button CloseButton;
     }
 }

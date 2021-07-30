@@ -26,7 +26,7 @@ namespace ProgrammerUtils
             }
         }
 
-        private readonly static string SAVE_FILE_NAME = "HtmlCustomSettings";
+        public readonly static string SAVE_FILE_NAME = "HtmlCustomSettings";
 
         private int _indexGiver = int.MinValue;
         private Dictionary<int, HtmlCustomRule> _allCustomRules = new Dictionary<int, HtmlCustomRule>();
@@ -39,8 +39,10 @@ namespace ProgrammerUtils
             LoadCustomRulesInMemory();
         }
 
-        private void SaveCustomRulesToMemory()
+        private bool SaveCustomRulesToMemory()
         {
+            displaySaveTimer.Start();
+
             List<HtmlCustomSetting> data = GetAllCustomSettings();
 
             HashSet<char> replaceCharacters = new HashSet<char>();
@@ -65,9 +67,12 @@ namespace ProgrammerUtils
             if (!emptyEntries && !duplicateEntries)
             {
                 if (SaveService.Save(SAVE_FILE_NAME, data))
+                {
                     WriteToSaveLabel(Color.Green, "Saved successfully!");
-                else
-                    WriteToSaveLabel(Color.Red, "An error occurred while trying to save!");
+                    return true;
+                }
+                
+                WriteToSaveLabel(Color.Red, "An error occurred while trying to save!");
             }
             else
             {
@@ -81,7 +86,7 @@ namespace ProgrammerUtils
                 WriteToSaveLabel(Color.Red, errorMessage.ToString());
             }
 
-            displaySaveTimer.Start();
+            return false;
         }
 
         private void LoadCustomRulesInMemory()
@@ -142,6 +147,17 @@ namespace ProgrammerUtils
         {
             displaySaveTimer.Stop();
             WriteToSaveLabel(Color.Black, string.Empty);
+        }
+
+        private void SaveAndCloseButton_Click(object sender, EventArgs e)
+        {
+            if (SaveCustomRulesToMemory())
+                Close();
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

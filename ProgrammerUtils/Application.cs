@@ -21,16 +21,12 @@ namespace ProgrammerUtils
         Sort _sorter;
         Matcher _matcher;
         HtmlCenter _html;
-        HtmlExtraSettings test;
+        HtmlExtraSettings _htmlExtraSettingsWindow;
 
         public Application()
         {
             InitializeComponent();
             Init();
-
-            //TESTING
-            test = new HtmlExtraSettings();
-            test.Show();
         }
 
         private void Init()
@@ -285,7 +281,14 @@ namespace ProgrammerUtils
 
         private void DoHtml()
         {
-            _html.ConvertTextToHTML(htmlColorTagsCheckbox.Checked, htmlColorEntitiesCheckbox.Checked, htmlTagColorRectangle.BackColor, htmlEntityColorRectangle.BackColor);
+            _html.ConvertTextToHTML(
+                htmlColorTagsCheckbox.Checked, 
+                htmlColorEntitiesCheckbox.Checked,
+                htmlColorCustomCheckbox.Checked,
+                htmlTagColorRectangle.BackColor, 
+                htmlEntityColorRectangle.BackColor,
+                htmlCustomColorRectangle.BackColor
+                );
         }
 
         private void ChangeHtmlRaiseLowerText(CheckBox checkBox, int offset)
@@ -308,12 +311,32 @@ namespace ProgrammerUtils
             htmlInputTextbox.Focus();
         }
 
+        private void ChangeColorForEntityOrTag(Button showColorButton)
+        {
+            if (htmlColorTagPicker.ShowDialog() == DialogResult.OK)
+            {
+                Color color = htmlColorTagPicker.Color;
+                showColorButton.BackColor = color;
+                htmlColorHoverTooltip.SetToolTip(showColorButton, $"R{color.R}G{color.G}B{color.B}");
+            }
+        }
+
         #endregion
         #region Events
 
         private void HtmlButton_Click(object sender, EventArgs e)
         {
             DoHtml();
+        }
+
+        private void HtmlCustomRulesButton_Click(object sender, EventArgs e)
+        {
+            if (_htmlExtraSettingsWindow == null)
+            {
+                _htmlExtraSettingsWindow = new HtmlExtraSettings();
+                _htmlExtraSettingsWindow.FormClosed += (s, ev) => { _htmlExtraSettingsWindow = null; };
+                _htmlExtraSettingsWindow.Show();
+            }
         }
 
         private void HTMLTextStyleButtonChange(object sender, EventArgs e)
@@ -419,14 +442,17 @@ namespace ProgrammerUtils
 
         private void HtmlChooseColorButton_Click(object sender, EventArgs e)
         {
-            htmlColorTagPicker.ShowDialog();
-            htmlTagColorRectangle.BackColor = htmlColorTagPicker.Color;
+            ChangeColorForEntityOrTag(htmlTagColorRectangle);
         }
 
         private void HtmlChangeEntityColorButton_Click(object sender, EventArgs e)
         {
-            htmlColorTagPicker.ShowDialog();
-            htmlEntityColorRectangle.BackColor = htmlColorTagPicker.Color;
+            ChangeColorForEntityOrTag(htmlEntityColorRectangle);
+        }
+
+        private void HtmlChangeCustomColorButton_Click(object sender, EventArgs e)
+        {
+            ChangeColorForEntityOrTag(htmlCustomColorRectangle);
         }
 
         #endregion
