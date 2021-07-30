@@ -58,6 +58,7 @@ namespace ProgrammerUtils
             SetChangeTextStyleButton();
             SetChangeTextPresentationButton();
             SortCopyNotice.Text = "";
+            htmlCopyLabel.Text = "";
 
             htmlTagColorRectangle.BackColorChanged += (s, e) => {
                 htmlTagColorRectangle.FlatAppearance.MouseOverBackColor = htmlTagColorRectangle.BackColor;
@@ -189,14 +190,14 @@ namespace ProgrammerUtils
 
         private void SortCopyButton_Click(object sender, EventArgs e)
         {
-            Copy(SortCopyButton);
+            Copy(SortCopyButton, SortCopyNotice);
             if (sortTextBoxRight.Text.Length > 0)
                 Clipboard.SetText(sortTextBoxRight.Text);
         }
 
         private void SortExportEnumButton_Click(object sender, EventArgs e)
         {
-            Copy(SortExportEnumButton);
+            Copy(SortExportEnumButton, SortCopyNotice);
             string enumString = ProgrammingConverter.GenerateEnumForLanguage(sortTextBoxLeft.Text, SortExportDropdown.Text, _sorter.SortStyle, _sorter.TextStyle, SortEnumClassName.Text);
             if (enumString.Length > 0)
                 Clipboard.SetText(enumString);
@@ -455,15 +456,22 @@ namespace ProgrammerUtils
             ChangeColorForEntityOrTag(htmlCustomColorRectangle);
         }
 
+        private void HtmlCopyButton_Click(object sender, EventArgs e)
+        {
+            Copy(htmlCopyButton, htmlCopyLabel);
+            if (htmlOutputTextbox.Text.Length > 0)
+                Clipboard.SetText(htmlOutputTextbox.Text);
+        }
+
         #endregion
         #endregion
 
         #region Copy Timer
 
-        private void Copy(Button button)
+        private void Copy(Button button, Label label)
         {
             button.BackColor = COPY_CLICKED_BUTTON_COLOR;
-            SortCopyNotice.Text = "Copied!";
+            label.Text = "Copied!";
             CopyTimer.Stop();
             CopyTimer.Start();
         }
@@ -471,8 +479,10 @@ namespace ProgrammerUtils
         private void CopyTimer_Tick(object sender, EventArgs e)
         {
             SortCopyButton.BackColor = COPY_BUTTON_COLOR;
+            htmlCopyButton.BackColor = COPY_BUTTON_COLOR;
             SortExportEnumButton.BackColor = COPY_BUTTON_COLOR;
             SortCopyNotice.Text = "";
+            htmlCopyLabel.Text = "";
             CopyTimer.Stop();
         }
         #endregion

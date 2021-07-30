@@ -118,6 +118,9 @@
             this.htmlOutputTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlOutputLabel = new System.Windows.Forms.Label();
             this.htmlOutputTextbox = new System.Windows.Forms.RichTextBox();
+            this.htmlSideTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlCopyButton = new System.Windows.Forms.Button();
+            this.htmlCopyLabel = new System.Windows.Forms.Label();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.HelpDropdown = new System.Windows.Forms.ToolStripDropDownButton();
@@ -156,6 +159,7 @@
             this.htmlInputTableLayout.SuspendLayout();
             this.htmlInputTextSettingsTableLayout.SuspendLayout();
             this.htmlOutputTableLayout.SuspendLayout();
+            this.htmlSideTableLayout.SuspendLayout();
             this.Toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1014,6 +1018,8 @@
             this.htmlTableLayout.Controls.Add(this.htmlSettingsTableLayout, 0, 0);
             this.htmlTableLayout.Controls.Add(this.htmlInputTableLayout, 0, 1);
             this.htmlTableLayout.Controls.Add(this.htmlOutputTableLayout, 1, 1);
+            this.htmlTableLayout.Controls.Add(this.htmlSideTableLayout, 2, 1);
+            this.htmlTableLayout.Controls.Add(this.htmlCopyLabel, 2, 0);
             this.htmlTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlTableLayout.Location = new System.Drawing.Point(3, 3);
             this.htmlTableLayout.Name = "htmlTableLayout";
@@ -1499,6 +1505,51 @@
             this.htmlOutputTextbox.TabIndex = 5;
             this.htmlOutputTextbox.Text = "";
             // 
+            // htmlSideTableLayout
+            // 
+            this.htmlSideTableLayout.ColumnCount = 1;
+            this.htmlSideTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlSideTableLayout.Controls.Add(this.htmlCopyButton, 0, 0);
+            this.htmlSideTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlSideTableLayout.Location = new System.Drawing.Point(890, 55);
+            this.htmlSideTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.htmlSideTableLayout.Name = "htmlSideTableLayout";
+            this.htmlSideTableLayout.RowCount = 2;
+            this.htmlSideTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.htmlSideTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.htmlSideTableLayout.Size = new System.Drawing.Size(66, 407);
+            this.htmlSideTableLayout.TabIndex = 3;
+            // 
+            // htmlCopyButton
+            // 
+            this.htmlCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.htmlCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
+            this.htmlCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.htmlCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlCopyButton.Location = new System.Drawing.Point(3, 3);
+            this.htmlCopyButton.Name = "htmlCopyButton";
+            this.htmlCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.htmlCopyButton.Size = new System.Drawing.Size(60, 60);
+            this.htmlCopyButton.TabIndex = 10;
+            this.htmlCopyButton.UseVisualStyleBackColor = false;
+            this.htmlCopyButton.Click += new System.EventHandler(this.HtmlCopyButton_Click);
+            // 
+            // htmlCopyLabel
+            // 
+            this.htmlCopyLabel.AutoSize = true;
+            this.htmlCopyLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlCopyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlCopyLabel.ForeColor = System.Drawing.Color.Green;
+            this.htmlCopyLabel.Location = new System.Drawing.Point(893, 0);
+            this.htmlCopyLabel.Name = "htmlCopyLabel";
+            this.htmlCopyLabel.Size = new System.Drawing.Size(60, 55);
+            this.htmlCopyLabel.TabIndex = 4;
+            this.htmlCopyLabel.Text = "Copied!";
+            this.htmlCopyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Toolbar
             // 
             this.MainTableLayout.SetColumnSpan(this.Toolbar, 2);
@@ -1603,6 +1654,7 @@
             this.tableLayoutPanel4.PerformLayout();
             this.htmlTab.ResumeLayout(false);
             this.htmlTableLayout.ResumeLayout(false);
+            this.htmlTableLayout.PerformLayout();
             this.htmlSettingsTableLayout.ResumeLayout(false);
             this.htmlSettingsTableLayout.PerformLayout();
             this.htmlColorCustomTableLayout.ResumeLayout(false);
@@ -1614,6 +1666,7 @@
             this.htmlInputTextSettingsTableLayout.PerformLayout();
             this.htmlOutputTableLayout.ResumeLayout(false);
             this.htmlOutputTableLayout.PerformLayout();
+            this.htmlSideTableLayout.ResumeLayout(false);
             this.Toolbar.ResumeLayout(false);
             this.Toolbar.PerformLayout();
             this.ResumeLayout(false);
@@ -1718,6 +1771,9 @@
         private System.Windows.Forms.Button htmlChangeCustomColorButton;
         private System.Windows.Forms.Button htmlCustomColorRectangle;
         private System.Windows.Forms.CheckBox htmlColorCustomCheckbox;
+        private System.Windows.Forms.TableLayoutPanel htmlSideTableLayout;
+        private System.Windows.Forms.Button htmlCopyButton;
+        private System.Windows.Forms.Label htmlCopyLabel;
     }
 }
 
