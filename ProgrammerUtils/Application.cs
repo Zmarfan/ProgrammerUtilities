@@ -319,6 +319,8 @@ namespace ProgrammerUtils
                 Color color = htmlColorTagPicker.Color;
                 showColorButton.BackColor = color;
                 htmlColorHoverTooltip.SetToolTip(showColorButton, $"R{color.R}G{color.G}B{color.B}");
+
+                DoHtml();
             }
         }
 

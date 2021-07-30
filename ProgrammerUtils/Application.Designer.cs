@@ -1088,7 +1088,7 @@
             this.htmlChangeCustomColorButton.Margin = new System.Windows.Forms.Padding(0);
             this.htmlChangeCustomColorButton.Name = "htmlChangeCustomColorButton";
             this.htmlChangeCustomColorButton.Size = new System.Drawing.Size(119, 28);
-            this.htmlChangeCustomColorButton.TabIndex = 3;
+            this.htmlChangeCustomColorButton.TabIndex = 7;
             this.htmlChangeCustomColorButton.Text = "Custom Color";
             this.htmlChangeCustomColorButton.UseVisualStyleBackColor = false;
             this.htmlChangeCustomColorButton.Click += new System.EventHandler(this.HtmlChangeCustomColorButton_Click);
@@ -1105,7 +1105,8 @@
             this.htmlCustomColorRectangle.Margin = new System.Windows.Forms.Padding(5);
             this.htmlCustomColorRectangle.Name = "htmlCustomColorRectangle";
             this.htmlCustomColorRectangle.Size = new System.Drawing.Size(15, 18);
-            this.htmlCustomColorRectangle.TabIndex = 4;
+            this.htmlCustomColorRectangle.TabIndex = 0;
+            this.htmlCustomColorRectangle.TabStop = false;
             this.htmlColorHoverTooltip.SetToolTip(this.htmlCustomColorRectangle, "R0G255B0");
             this.htmlCustomColorRectangle.UseVisualStyleBackColor = false;
             // 
@@ -1119,7 +1120,7 @@
             this.htmlColorCustomCheckbox.Location = new System.Drawing.Point(645, 3);
             this.htmlColorCustomCheckbox.Name = "htmlColorCustomCheckbox";
             this.htmlColorCustomCheckbox.Size = new System.Drawing.Size(138, 21);
-            this.htmlColorCustomCheckbox.TabIndex = 7;
+            this.htmlColorCustomCheckbox.TabIndex = 6;
             this.htmlColorCustomCheckbox.Text = "Color custom";
             this.htmlColorCustomCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlColorCustomCheckbox.UseVisualStyleBackColor = true;
@@ -1151,7 +1152,7 @@
             this.htmlChangeEntityColorButton.Margin = new System.Windows.Forms.Padding(0);
             this.htmlChangeEntityColorButton.Name = "htmlChangeEntityColorButton";
             this.htmlChangeEntityColorButton.Size = new System.Drawing.Size(119, 28);
-            this.htmlChangeEntityColorButton.TabIndex = 3;
+            this.htmlChangeEntityColorButton.TabIndex = 5;
             this.htmlChangeEntityColorButton.Text = "Tag Color";
             this.htmlChangeEntityColorButton.UseVisualStyleBackColor = false;
             this.htmlChangeEntityColorButton.Click += new System.EventHandler(this.HtmlChangeEntityColorButton_Click);
@@ -1168,7 +1169,8 @@
             this.htmlEntityColorRectangle.Margin = new System.Windows.Forms.Padding(5);
             this.htmlEntityColorRectangle.Name = "htmlEntityColorRectangle";
             this.htmlEntityColorRectangle.Size = new System.Drawing.Size(15, 18);
-            this.htmlEntityColorRectangle.TabIndex = 4;
+            this.htmlEntityColorRectangle.TabIndex = 0;
+            this.htmlEntityColorRectangle.TabStop = false;
             this.htmlColorHoverTooltip.SetToolTip(this.htmlEntityColorRectangle, "R255G0B0");
             this.htmlEntityColorRectangle.UseVisualStyleBackColor = false;
             // 
@@ -1213,7 +1215,7 @@
             this.htmlColorTagsCheckbox.Location = new System.Drawing.Point(357, 3);
             this.htmlColorTagsCheckbox.Name = "htmlColorTagsCheckbox";
             this.htmlColorTagsCheckbox.Size = new System.Drawing.Size(138, 21);
-            this.htmlColorTagsCheckbox.TabIndex = 1;
+            this.htmlColorTagsCheckbox.TabIndex = 2;
             this.htmlColorTagsCheckbox.Text = "Color tags";
             this.htmlColorTagsCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlColorTagsCheckbox.UseVisualStyleBackColor = true;
@@ -1262,7 +1264,8 @@
             this.htmlTagColorRectangle.Margin = new System.Windows.Forms.Padding(5);
             this.htmlTagColorRectangle.Name = "htmlTagColorRectangle";
             this.htmlTagColorRectangle.Size = new System.Drawing.Size(15, 18);
-            this.htmlTagColorRectangle.TabIndex = 4;
+            this.htmlTagColorRectangle.TabIndex = 0;
+            this.htmlTagColorRectangle.TabStop = false;
             this.htmlColorHoverTooltip.SetToolTip(this.htmlTagColorRectangle, "R0G0B255");
             this.htmlTagColorRectangle.UseVisualStyleBackColor = false;
             // 
@@ -1277,7 +1280,7 @@
             this.htmlCustomRulesButton.Name = "htmlCustomRulesButton";
             this.htmlSettingsTableLayout.SetRowSpan(this.htmlCustomRulesButton, 2);
             this.htmlCustomRulesButton.Size = new System.Drawing.Size(138, 49);
-            this.htmlCustomRulesButton.TabIndex = 6;
+            this.htmlCustomRulesButton.TabIndex = 1;
             this.htmlCustomRulesButton.Text = "Custom Rules";
             this.htmlCustomRulesButton.UseVisualStyleBackColor = false;
             this.htmlCustomRulesButton.Click += new System.EventHandler(this.HtmlCustomRulesButton_Click);
@@ -1320,7 +1323,7 @@
             this.htmlInputTextbox.Location = new System.Drawing.Point(3, 3);
             this.htmlInputTextbox.Name = "htmlInputTextbox";
             this.htmlInputTextbox.Size = new System.Drawing.Size(439, 325);
-            this.htmlInputTextbox.TabIndex = 1;
+            this.htmlInputTextbox.TabIndex = 8;
             this.htmlInputTextbox.Text = "";
             this.htmlInputTextbox.SelectionChanged += new System.EventHandler(this.HtmlInputTextbox_SelectionChanged);
             // 
@@ -1361,7 +1364,7 @@
             this.htmlLoweredButton.Location = new System.Drawing.Point(178, 3);
             this.htmlLoweredButton.Name = "htmlLoweredButton";
             this.htmlLoweredButton.Size = new System.Drawing.Size(29, 26);
-            this.htmlLoweredButton.TabIndex = 5;
+            this.htmlLoweredButton.TabIndex = 14;
             this.htmlLoweredButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlLoweredButton.UseVisualStyleBackColor = false;
             this.htmlLoweredButton.CheckedChanged += new System.EventHandler(this.HtmlLoweredButton_CheckedChanged);
@@ -1380,7 +1383,7 @@
             this.htmlUnderscoreButton.Location = new System.Drawing.Point(38, 3);
             this.htmlUnderscoreButton.Name = "htmlUnderscoreButton";
             this.htmlUnderscoreButton.Size = new System.Drawing.Size(29, 26);
-            this.htmlUnderscoreButton.TabIndex = 3;
+            this.htmlUnderscoreButton.TabIndex = 10;
             this.htmlUnderscoreButton.Text = "U";
             this.htmlUnderscoreButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlUnderscoreButton.UseVisualStyleBackColor = false;
@@ -1400,7 +1403,7 @@
             this.htmlStrikeThroughButton.Location = new System.Drawing.Point(108, 3);
             this.htmlStrikeThroughButton.Name = "htmlStrikeThroughButton";
             this.htmlStrikeThroughButton.Size = new System.Drawing.Size(29, 26);
-            this.htmlStrikeThroughButton.TabIndex = 2;
+            this.htmlStrikeThroughButton.TabIndex = 12;
             this.htmlStrikeThroughButton.Text = "S";
             this.htmlStrikeThroughButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlStrikeThroughButton.UseVisualStyleBackColor = false;
@@ -1420,7 +1423,7 @@
             this.htmlItalicButton.Location = new System.Drawing.Point(73, 3);
             this.htmlItalicButton.Name = "htmlItalicButton";
             this.htmlItalicButton.Size = new System.Drawing.Size(29, 26);
-            this.htmlItalicButton.TabIndex = 1;
+            this.htmlItalicButton.TabIndex = 11;
             this.htmlItalicButton.Text = "I";
             this.htmlItalicButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlItalicButton.UseVisualStyleBackColor = false;
@@ -1440,7 +1443,7 @@
             this.htmlBoldButton.Location = new System.Drawing.Point(3, 3);
             this.htmlBoldButton.Name = "htmlBoldButton";
             this.htmlBoldButton.Size = new System.Drawing.Size(29, 26);
-            this.htmlBoldButton.TabIndex = 0;
+            this.htmlBoldButton.TabIndex = 9;
             this.htmlBoldButton.Text = "B";
             this.htmlBoldButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlBoldButton.UseVisualStyleBackColor = false;
@@ -1460,7 +1463,7 @@
             this.htmlRaisedButton.Location = new System.Drawing.Point(143, 3);
             this.htmlRaisedButton.Name = "htmlRaisedButton";
             this.htmlRaisedButton.Size = new System.Drawing.Size(29, 26);
-            this.htmlRaisedButton.TabIndex = 4;
+            this.htmlRaisedButton.TabIndex = 13;
             this.htmlRaisedButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlRaisedButton.UseVisualStyleBackColor = false;
             this.htmlRaisedButton.CheckedChanged += new System.EventHandler(this.HtmlRaisedButton_CheckedChanged);
@@ -1504,7 +1507,7 @@
             this.htmlOutputTextbox.Name = "htmlOutputTextbox";
             this.htmlOutputTextbox.ReadOnly = true;
             this.htmlOutputTextbox.Size = new System.Drawing.Size(439, 363);
-            this.htmlOutputTextbox.TabIndex = 5;
+            this.htmlOutputTextbox.TabIndex = 15;
             this.htmlOutputTextbox.Text = "";
             // 
             // htmlSideTableLayout
@@ -1538,7 +1541,7 @@
             this.htmlOpenAllTags.Location = new System.Drawing.Point(3, 3);
             this.htmlOpenAllTags.Name = "htmlOpenAllTags";
             this.htmlOpenAllTags.Size = new System.Drawing.Size(60, 60);
-            this.htmlOpenAllTags.TabIndex = 12;
+            this.htmlOpenAllTags.TabIndex = 16;
             this.htmlOpenAllTags.Text = "HTML Special Chars";
             this.htmlOpenAllTags.UseVisualStyleBackColor = false;
             this.htmlOpenAllTags.Click += new System.EventHandler(this.HtmlOpenAllTags_Click);
@@ -1554,7 +1557,7 @@
             this.htmlClearButton.Location = new System.Drawing.Point(3, 135);
             this.htmlClearButton.Name = "htmlClearButton";
             this.htmlClearButton.Size = new System.Drawing.Size(60, 60);
-            this.htmlClearButton.TabIndex = 11;
+            this.htmlClearButton.TabIndex = 18;
             this.htmlClearButton.Text = "Clear";
             this.htmlClearButton.UseVisualStyleBackColor = false;
             this.htmlClearButton.Click += new System.EventHandler(this.HtmlClearButton_Click);
@@ -1572,7 +1575,7 @@
             this.htmlCopyButton.Name = "htmlCopyButton";
             this.htmlCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.htmlCopyButton.Size = new System.Drawing.Size(60, 60);
-            this.htmlCopyButton.TabIndex = 10;
+            this.htmlCopyButton.TabIndex = 17;
             this.htmlCopyButton.UseVisualStyleBackColor = false;
             this.htmlCopyButton.Click += new System.EventHandler(this.HtmlCopyButton_Click);
             // 
