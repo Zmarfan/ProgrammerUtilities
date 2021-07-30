@@ -468,6 +468,11 @@ namespace ProgrammerUtils
             htmlOutputTextbox.Text = "";
         }
 
+        private void HtmlOpenAllTags_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.html.am/reference/html-special-characters.cfm");
+        }
+
         #endregion
         #endregion
 

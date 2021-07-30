@@ -119,6 +119,8 @@
             this.htmlOutputLabel = new System.Windows.Forms.Label();
             this.htmlOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.htmlSideTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlOpenAllTags = new System.Windows.Forms.Button();
+            this.htmlClearButton = new System.Windows.Forms.Button();
             this.htmlCopyButton = new System.Windows.Forms.Button();
             this.htmlCopyLabel = new System.Windows.Forms.Label();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
@@ -129,7 +131,6 @@
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
             this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
             this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.htmlClearButton = new System.Windows.Forms.Button();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -1510,18 +1511,53 @@
             // 
             this.htmlSideTableLayout.ColumnCount = 1;
             this.htmlSideTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.htmlSideTableLayout.Controls.Add(this.htmlClearButton, 0, 1);
-            this.htmlSideTableLayout.Controls.Add(this.htmlCopyButton, 0, 0);
+            this.htmlSideTableLayout.Controls.Add(this.htmlOpenAllTags, 0, 0);
+            this.htmlSideTableLayout.Controls.Add(this.htmlClearButton, 0, 2);
+            this.htmlSideTableLayout.Controls.Add(this.htmlCopyButton, 0, 1);
             this.htmlSideTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlSideTableLayout.Location = new System.Drawing.Point(890, 55);
             this.htmlSideTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.htmlSideTableLayout.Name = "htmlSideTableLayout";
-            this.htmlSideTableLayout.RowCount = 3;
+            this.htmlSideTableLayout.RowCount = 4;
+            this.htmlSideTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.htmlSideTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.htmlSideTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.htmlSideTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.htmlSideTableLayout.Size = new System.Drawing.Size(66, 407);
             this.htmlSideTableLayout.TabIndex = 3;
+            // 
+            // htmlOpenAllTags
+            // 
+            this.htmlOpenAllTags.AutoSize = true;
+            this.htmlOpenAllTags.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.htmlOpenAllTags.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlOpenAllTags.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlOpenAllTags.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlOpenAllTags.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlOpenAllTags.ForeColor = System.Drawing.Color.DarkBlue;
+            this.htmlOpenAllTags.Location = new System.Drawing.Point(3, 3);
+            this.htmlOpenAllTags.Name = "htmlOpenAllTags";
+            this.htmlOpenAllTags.Size = new System.Drawing.Size(60, 60);
+            this.htmlOpenAllTags.TabIndex = 12;
+            this.htmlOpenAllTags.Text = "HTML Special Chars";
+            this.htmlOpenAllTags.UseVisualStyleBackColor = false;
+            this.htmlOpenAllTags.Click += new System.EventHandler(this.HtmlOpenAllTags_Click);
+            // 
+            // htmlClearButton
+            // 
+            this.htmlClearButton.AutoSize = true;
+            this.htmlClearButton.BackColor = System.Drawing.Color.LightPink;
+            this.htmlClearButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlClearButton.Location = new System.Drawing.Point(3, 135);
+            this.htmlClearButton.Name = "htmlClearButton";
+            this.htmlClearButton.Size = new System.Drawing.Size(60, 60);
+            this.htmlClearButton.TabIndex = 11;
+            this.htmlClearButton.Text = "Clear";
+            this.htmlClearButton.UseVisualStyleBackColor = false;
+            this.htmlClearButton.Click += new System.EventHandler(this.HtmlClearButton_Click);
             // 
             // htmlCopyButton
             // 
@@ -1532,7 +1568,7 @@
             this.htmlCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.htmlCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.htmlCopyButton.Location = new System.Drawing.Point(3, 3);
+            this.htmlCopyButton.Location = new System.Drawing.Point(3, 69);
             this.htmlCopyButton.Name = "htmlCopyButton";
             this.htmlCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.htmlCopyButton.Size = new System.Drawing.Size(60, 60);
@@ -1610,22 +1646,6 @@
             // htmlColorHoverTooltip
             // 
             this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
-            // 
-            // htmlClearButton
-            // 
-            this.htmlClearButton.AutoSize = true;
-            this.htmlClearButton.BackColor = System.Drawing.Color.LightPink;
-            this.htmlClearButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.htmlClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.htmlClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.htmlClearButton.Location = new System.Drawing.Point(3, 69);
-            this.htmlClearButton.Name = "htmlClearButton";
-            this.htmlClearButton.Size = new System.Drawing.Size(60, 60);
-            this.htmlClearButton.TabIndex = 11;
-            this.htmlClearButton.Text = "Clear";
-            this.htmlClearButton.UseVisualStyleBackColor = false;
-            this.htmlClearButton.Click += new System.EventHandler(this.HtmlClearButton_Click);
             // 
             // Application
             // 
@@ -1795,6 +1815,7 @@
         private System.Windows.Forms.Button htmlCopyButton;
         private System.Windows.Forms.Label htmlCopyLabel;
         private System.Windows.Forms.Button htmlClearButton;
+        private System.Windows.Forms.Button htmlOpenAllTags;
     }
 }
 
