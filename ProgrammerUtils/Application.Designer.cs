@@ -1125,6 +1125,7 @@
             this.htmlColorCustomCheckbox.Text = "Color custom";
             this.htmlColorCustomCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlColorCustomCheckbox.UseVisualStyleBackColor = true;
+            this.htmlColorCustomCheckbox.CheckedChanged += new System.EventHandler(this.HtmlColorCheckbox_CheckedChanged);
             // 
             // htmlColorEntityTableLayout
             // 
@@ -1190,6 +1191,7 @@
             this.htmlColorEntitiesCheckbox.Text = "Color entities";
             this.htmlColorEntitiesCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlColorEntitiesCheckbox.UseVisualStyleBackColor = true;
+            this.htmlColorEntitiesCheckbox.CheckedChanged += new System.EventHandler(this.HtmlColorCheckbox_CheckedChanged);
             // 
             // htmlButton
             // 
@@ -1221,6 +1223,7 @@
             this.htmlColorTagsCheckbox.Text = "Color tags";
             this.htmlColorTagsCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.htmlColorTagsCheckbox.UseVisualStyleBackColor = true;
+            this.htmlColorTagsCheckbox.CheckedChanged += new System.EventHandler(this.HtmlColorCheckbox_CheckedChanged);
             // 
             // htmlColorTagOptionTableLayout
             // 

@@ -475,6 +475,11 @@ namespace ProgrammerUtils
             System.Diagnostics.Process.Start("https://www.html.am/reference/html-special-characters.cfm");
         }
 
+        private void HtmlColorCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+            DoHtml();
+        }
+
         #endregion
         #endregion
 
