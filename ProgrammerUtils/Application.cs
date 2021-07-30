@@ -463,6 +463,11 @@ namespace ProgrammerUtils
                 Clipboard.SetText(htmlOutputTextbox.Text);
         }
 
+        private void HtmlClearButton_Click(object sender, EventArgs e)
+        {
+            htmlOutputTextbox.Text = "";
+        }
+
         #endregion
         #endregion
 
