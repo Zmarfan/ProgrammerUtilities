@@ -1084,6 +1084,7 @@
             this.htmlChangeCustomColorButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.htmlChangeCustomColorButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlChangeCustomColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlChangeCustomColorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.htmlChangeCustomColorButton.Location = new System.Drawing.Point(0, 0);
             this.htmlChangeCustomColorButton.Margin = new System.Windows.Forms.Padding(0);
             this.htmlChangeCustomColorButton.Name = "htmlChangeCustomColorButton";
@@ -1098,8 +1099,8 @@
             this.htmlCustomColorRectangle.BackColor = System.Drawing.Color.Green;
             this.htmlCustomColorRectangle.Cursor = System.Windows.Forms.Cursors.Help;
             this.htmlCustomColorRectangle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlCustomColorRectangle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.htmlCustomColorRectangle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.htmlCustomColorRectangle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Green;
+            this.htmlCustomColorRectangle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.htmlCustomColorRectangle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.htmlCustomColorRectangle.Location = new System.Drawing.Point(124, 5);
             this.htmlCustomColorRectangle.Margin = new System.Windows.Forms.Padding(5);
@@ -1148,6 +1149,7 @@
             this.htmlChangeEntityColorButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.htmlChangeEntityColorButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlChangeEntityColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlChangeEntityColorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.htmlChangeEntityColorButton.Location = new System.Drawing.Point(0, 0);
             this.htmlChangeEntityColorButton.Margin = new System.Windows.Forms.Padding(0);
             this.htmlChangeEntityColorButton.Name = "htmlChangeEntityColorButton";
@@ -1243,6 +1245,7 @@
             this.htmlChooseColorButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.htmlChooseColorButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlChooseColorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlChooseColorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.htmlChooseColorButton.Location = new System.Drawing.Point(0, 0);
             this.htmlChooseColorButton.Margin = new System.Windows.Forms.Padding(0);
             this.htmlChooseColorButton.Name = "htmlChooseColorButton";
@@ -1497,7 +1500,7 @@
             this.htmlOutputLabel.Padding = new System.Windows.Forms.Padding(10);
             this.htmlOutputLabel.Size = new System.Drawing.Size(439, 38);
             this.htmlOutputLabel.TabIndex = 4;
-            this.htmlOutputLabel.Text = "Text converted to HTML!";
+            this.htmlOutputLabel.Text = "Text converted to HTML.";
             this.htmlOutputLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // htmlOutputTextbox
