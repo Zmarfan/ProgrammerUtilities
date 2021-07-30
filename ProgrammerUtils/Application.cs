@@ -467,6 +467,7 @@ namespace ProgrammerUtils
 
         private void HtmlClearButton_Click(object sender, EventArgs e)
         {
+            htmlInputTextbox.Text = "";
             htmlOutputTextbox.Text = "";
         }
 
