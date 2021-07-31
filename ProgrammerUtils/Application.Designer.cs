@@ -130,7 +130,11 @@
             this.generateClearButton = new System.Windows.Forms.Button();
             this.generateCopyButton = new System.Windows.Forms.Button();
             this.generateSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.generateAmountOfWordsLabel = new System.Windows.Forms.Label();
             this.generateGenerateButton = new System.Windows.Forms.Button();
+            this.generateParagraphType = new System.Windows.Forms.ComboBox();
+            this.generateParagraphTypeLabel = new System.Windows.Forms.Label();
+            this.generateNumberOfWords = new System.Windows.Forms.NumericUpDown();
             this.generateOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -140,10 +144,10 @@
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
             this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
             this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.generateParagraphType = new System.Windows.Forms.ComboBox();
-            this.generateParagraphTypeLabel = new System.Windows.Forms.Label();
-            this.generateNumberOfWords = new System.Windows.Forms.NumericUpDown();
-            this.generateAmountOfWordsLabel = new System.Windows.Forms.Label();
+            this.generateSeed = new System.Windows.Forms.NumericUpDown();
+            this.generateSeedTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.generateSeedLabel = new System.Windows.Forms.Label();
+            this.generateCustomSeed = new System.Windows.Forms.CheckBox();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -179,8 +183,10 @@
             this.generateTableLayout.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.generateSettingsTableLayout.SuspendLayout();
-            this.Toolbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generateNumberOfWords)).BeginInit();
+            this.Toolbar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.generateSeed)).BeginInit();
+            this.generateSeedTableLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTableLayout
@@ -1693,6 +1699,7 @@
             this.generateClearButton.TabIndex = 18;
             this.generateClearButton.Text = "Clear";
             this.generateClearButton.UseVisualStyleBackColor = false;
+            this.generateClearButton.Click += new System.EventHandler(this.GenerateClearButton_Click);
             // 
             // generateCopyButton
             // 
@@ -1721,11 +1728,13 @@
             this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
             this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.generateSettingsTableLayout.Controls.Add(this.generateSeed, 3, 1);
             this.generateSettingsTableLayout.Controls.Add(this.generateAmountOfWordsLabel, 1, 0);
             this.generateSettingsTableLayout.Controls.Add(this.generateGenerateButton, 0, 0);
             this.generateSettingsTableLayout.Controls.Add(this.generateParagraphType, 2, 1);
             this.generateSettingsTableLayout.Controls.Add(this.generateParagraphTypeLabel, 2, 0);
             this.generateSettingsTableLayout.Controls.Add(this.generateNumberOfWords, 1, 1);
+            this.generateSettingsTableLayout.Controls.Add(this.generateSeedTableLayout, 3, 0);
             this.generateSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.generateSettingsTableLayout.Location = new System.Drawing.Point(0, 0);
             this.generateSettingsTableLayout.Margin = new System.Windows.Forms.Padding(0);
@@ -1735,6 +1744,17 @@
             this.generateSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.generateSettingsTableLayout.Size = new System.Drawing.Size(890, 55);
             this.generateSettingsTableLayout.TabIndex = 7;
+            // 
+            // generateAmountOfWordsLabel
+            // 
+            this.generateAmountOfWordsLabel.AutoSize = true;
+            this.generateAmountOfWordsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateAmountOfWordsLabel.Location = new System.Drawing.Point(203, 0);
+            this.generateAmountOfWordsLabel.Name = "generateAmountOfWordsLabel";
+            this.generateAmountOfWordsLabel.Size = new System.Drawing.Size(120, 27);
+            this.generateAmountOfWordsLabel.TabIndex = 4;
+            this.generateAmountOfWordsLabel.Text = "Amount of words";
+            this.generateAmountOfWordsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // generateGenerateButton
             // 
@@ -1751,6 +1771,58 @@
             this.generateGenerateButton.Text = "Generate Text";
             this.generateGenerateButton.UseVisualStyleBackColor = false;
             this.generateGenerateButton.Click += new System.EventHandler(this.GenerateGenerateButton_Click);
+            // 
+            // generateParagraphType
+            // 
+            this.generateParagraphType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateParagraphType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.generateParagraphType.FormattingEnabled = true;
+            this.generateParagraphType.Items.AddRange(new object[] {
+            "Blank row",
+            "Indent"});
+            this.generateParagraphType.Location = new System.Drawing.Point(329, 30);
+            this.generateParagraphType.Name = "generateParagraphType";
+            this.generateParagraphType.Size = new System.Drawing.Size(121, 24);
+            this.generateParagraphType.TabIndex = 1;
+            // 
+            // generateParagraphTypeLabel
+            // 
+            this.generateParagraphTypeLabel.AutoSize = true;
+            this.generateParagraphTypeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateParagraphTypeLabel.Location = new System.Drawing.Point(329, 0);
+            this.generateParagraphTypeLabel.Name = "generateParagraphTypeLabel";
+            this.generateParagraphTypeLabel.Size = new System.Drawing.Size(121, 27);
+            this.generateParagraphTypeLabel.TabIndex = 2;
+            this.generateParagraphTypeLabel.Text = "Paragraph type";
+            this.generateParagraphTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // generateNumberOfWords
+            // 
+            this.generateNumberOfWords.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateNumberOfWords.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.generateNumberOfWords.Location = new System.Drawing.Point(203, 30);
+            this.generateNumberOfWords.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.generateNumberOfWords.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.generateNumberOfWords.Name = "generateNumberOfWords";
+            this.generateNumberOfWords.Size = new System.Drawing.Size(120, 22);
+            this.generateNumberOfWords.TabIndex = 3;
+            this.generateNumberOfWords.Value = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
             // 
             // generateOutputTextbox
             // 
@@ -1821,68 +1893,70 @@
             // 
             this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
             // 
-            // generateParagraphType
+            // generateSeed
             // 
-            this.generateParagraphType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateParagraphType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.generateParagraphType.FormattingEnabled = true;
-            this.generateParagraphType.Items.AddRange(new object[] {
-            "Blank row",
-            "Indent"});
-            this.generateParagraphType.Location = new System.Drawing.Point(329, 30);
-            this.generateParagraphType.Name = "generateParagraphType";
-            this.generateParagraphType.Size = new System.Drawing.Size(121, 24);
-            this.generateParagraphType.TabIndex = 1;
-            // 
-            // generateParagraphTypeLabel
-            // 
-            this.generateParagraphTypeLabel.AutoSize = true;
-            this.generateParagraphTypeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateParagraphTypeLabel.Location = new System.Drawing.Point(329, 0);
-            this.generateParagraphTypeLabel.Name = "generateParagraphTypeLabel";
-            this.generateParagraphTypeLabel.Size = new System.Drawing.Size(121, 27);
-            this.generateParagraphTypeLabel.TabIndex = 2;
-            this.generateParagraphTypeLabel.Text = "Paragraph type";
-            this.generateParagraphTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // generateNumberOfWords
-            // 
-            this.generateNumberOfWords.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateNumberOfWords.Increment = new decimal(new int[] {
+            this.generateSeed.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateSeed.Enabled = false;
+            this.generateSeed.Increment = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.generateNumberOfWords.Location = new System.Drawing.Point(203, 30);
-            this.generateNumberOfWords.Maximum = new decimal(new int[] {
-            10000,
+            this.generateSeed.Location = new System.Drawing.Point(456, 30);
+            this.generateSeed.Maximum = new decimal(new int[] {
+            2147483647,
             0,
             0,
             0});
-            this.generateNumberOfWords.Minimum = new decimal(new int[] {
-            1,
+            this.generateSeed.Minimum = new decimal(new int[] {
+            -2147483648,
             0,
             0,
-            0});
-            this.generateNumberOfWords.Name = "generateNumberOfWords";
-            this.generateNumberOfWords.Size = new System.Drawing.Size(120, 22);
-            this.generateNumberOfWords.TabIndex = 3;
-            this.generateNumberOfWords.Value = new decimal(new int[] {
-            50,
-            0,
-            0,
-            0});
+            -2147483648});
+            this.generateSeed.Name = "generateSeed";
+            this.generateSeed.Size = new System.Drawing.Size(164, 22);
+            this.generateSeed.TabIndex = 5;
             // 
-            // generateAmountOfWordsLabel
+            // generateSeedTableLayout
             // 
-            this.generateAmountOfWordsLabel.AutoSize = true;
-            this.generateAmountOfWordsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateAmountOfWordsLabel.Location = new System.Drawing.Point(203, 0);
-            this.generateAmountOfWordsLabel.Name = "generateAmountOfWordsLabel";
-            this.generateAmountOfWordsLabel.Size = new System.Drawing.Size(120, 27);
-            this.generateAmountOfWordsLabel.TabIndex = 4;
-            this.generateAmountOfWordsLabel.Text = "Amount of words";
-            this.generateAmountOfWordsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.generateSeedTableLayout.ColumnCount = 2;
+            this.generateSeedTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.generateSeedTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.generateSeedTableLayout.Controls.Add(this.generateSeedLabel, 0, 0);
+            this.generateSeedTableLayout.Controls.Add(this.generateCustomSeed, 1, 0);
+            this.generateSeedTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateSeedTableLayout.Location = new System.Drawing.Point(453, 0);
+            this.generateSeedTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.generateSeedTableLayout.Name = "generateSeedTableLayout";
+            this.generateSeedTableLayout.RowCount = 1;
+            this.generateSeedTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.generateSeedTableLayout.Size = new System.Drawing.Size(170, 27);
+            this.generateSeedTableLayout.TabIndex = 7;
+            // 
+            // generateSeedLabel
+            // 
+            this.generateSeedLabel.AutoSize = true;
+            this.generateSeedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateSeedLabel.Enabled = false;
+            this.generateSeedLabel.Location = new System.Drawing.Point(3, 0);
+            this.generateSeedLabel.Name = "generateSeedLabel";
+            this.generateSeedLabel.Size = new System.Drawing.Size(41, 27);
+            this.generateSeedLabel.TabIndex = 7;
+            this.generateSeedLabel.Text = "Seed";
+            this.generateSeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // generateCustomSeed
+            // 
+            this.generateCustomSeed.AutoSize = true;
+            this.generateCustomSeed.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.generateCustomSeed.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateCustomSeed.Location = new System.Drawing.Point(50, 3);
+            this.generateCustomSeed.Name = "generateCustomSeed";
+            this.generateCustomSeed.Size = new System.Drawing.Size(117, 21);
+            this.generateCustomSeed.TabIndex = 8;
+            this.generateCustomSeed.Text = "Custom Seed";
+            this.generateCustomSeed.UseVisualStyleBackColor = true;
+            this.generateCustomSeed.CheckedChanged += new System.EventHandler(this.GenerateCustomSeed_CheckedChanged);
             // 
             // Application
             // 
@@ -1951,9 +2025,12 @@
             this.tableLayoutPanel3.PerformLayout();
             this.generateSettingsTableLayout.ResumeLayout(false);
             this.generateSettingsTableLayout.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.generateNumberOfWords)).EndInit();
             this.Toolbar.ResumeLayout(false);
             this.Toolbar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.generateNumberOfWords)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generateSeed)).EndInit();
+            this.generateSeedTableLayout.ResumeLayout(false);
+            this.generateSeedTableLayout.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2074,6 +2151,10 @@
         private System.Windows.Forms.Label generateParagraphTypeLabel;
         private System.Windows.Forms.NumericUpDown generateNumberOfWords;
         private System.Windows.Forms.Label generateAmountOfWordsLabel;
+        private System.Windows.Forms.NumericUpDown generateSeed;
+        private System.Windows.Forms.TableLayoutPanel generateSeedTableLayout;
+        private System.Windows.Forms.Label generateSeedLabel;
+        private System.Windows.Forms.CheckBox generateCustomSeed;
     }
 }
 

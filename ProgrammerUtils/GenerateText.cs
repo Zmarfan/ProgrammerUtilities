@@ -226,21 +226,28 @@ namespace ProgrammerUtils
         private static readonly int MAX_WORDS_BETWEEN_COMMAS = 20;
 
         private readonly RichTextBox _outputTextBox;
+        private readonly NumericUpDown _generateSeedNumericUpDown;
 
-        public GenerateText(RichTextBox outputTextBox)
+        public GenerateText(RichTextBox outputTextBox, NumericUpDown generateSeedNumericUpDown)
         {
             _outputTextBox = outputTextBox;
+            _generateSeedNumericUpDown = generateSeedNumericUpDown;
         }
 
-        public void GenerateRandomWords(int amountOfWords, ParagraphType paragraphType)
+        public void GenerateRandomWords(int amountOfWords, ParagraphType paragraphType, bool useCustomSeed)
         {
-            string generatedText = GenerateTextNow(amountOfWords, paragraphType);
+            string generatedText = GenerateTextNow(amountOfWords, paragraphType, useCustomSeed);
             _outputTextBox.Text = generatedText;
         }
 
-        private string GenerateTextNow(int amountOfWords, ParagraphType paragraphType)
+        private string GenerateTextNow(int amountOfWords, ParagraphType paragraphType, bool useCustomSeed)
         {
-            Random random = new Random();
+            Random seedRandom = new Random(Environment.TickCount);
+            int seed = useCustomSeed ? (int)_generateSeedNumericUpDown.Value : seedRandom.Next(int.MinValue, int.MaxValue);
+            Random random = new Random(seed);
+
+            _generateSeedNumericUpDown.Value = seed;
+
             StringBuilder builder = new StringBuilder();
 
             int currentWordIndex = 0;

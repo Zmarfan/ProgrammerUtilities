@@ -57,7 +57,7 @@ namespace ProgrammerUtils
 
             DoHtml();
 
-            _generateText = new GenerateText(generateOutputTextbox);
+            _generateText = new GenerateText(generateOutputTextbox, generateSeed);
 
             SetChangeTextStyleButton();
             SetChangeTextPresentationButton();
@@ -503,12 +503,19 @@ namespace ProgrammerUtils
             }
         }
 
+        private void EnableSeed(bool enable)
+        {
+            generateSeed.Enabled = enable;
+            generateSeedLabel.Enabled = enable;
+
+        }
+
         #endregion
         #region Events
 
         private void GenerateGenerateButton_Click(object sender, EventArgs e)
         {
-            _generateText.GenerateRandomWords((int)generateNumberOfWords.Value, GetParagraphType());
+            _generateText.GenerateRandomWords((int)generateNumberOfWords.Value, GetParagraphType(), generateCustomSeed.Checked);
         }
 
         private void GenerateCopyButton_Click(object sender, EventArgs e)
@@ -516,6 +523,16 @@ namespace ProgrammerUtils
             Copy(generateCopyButton, generateCopyLabel);
             if (generateOutputTextbox.Text.Length > 0)
                 Clipboard.SetText(generateOutputTextbox.Text);
+        }
+
+        private void GenerateClearButton_Click(object sender, EventArgs e)
+        {
+            generateOutputTextbox.Text = string.Empty;
+        }
+
+        private void GenerateCustomSeed_CheckedChanged(object sender, EventArgs e)
+        {
+            EnableSeed(generateCustomSeed.Checked);
         }
 
         #endregion
