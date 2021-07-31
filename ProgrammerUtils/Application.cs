@@ -508,7 +508,7 @@ namespace ProgrammerUtils
 
         private void GenerateGenerateButton_Click(object sender, EventArgs e)
         {
-            _generateText.GenerateRandomWords(1500, GetParagraphType());
+            _generateText.GenerateRandomWords((int)generateNumberOfWords.Value, GetParagraphType());
         }
 
         private void GenerateCopyButton_Click(object sender, EventArgs e)

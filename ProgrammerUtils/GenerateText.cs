@@ -255,6 +255,11 @@ namespace ProgrammerUtils
                         break;
 
                     int sentenceLength = random.Next(Math.Min(wordsLeft, MIN_WORDS_IN_SENTENCE), Math.Min(wordsLeft, MAX_WORDS_IN_SENTENCE));
+                    wordsLeft -= sentenceLength;
+
+                    if (wordsLeft < MAX_WORDS_IN_SENTENCE)
+                        sentenceLength += wordsLeft;
+
                     builder.Append(GenerateSentence(sentenceLength, ref random));
                     currentWordIndex += sentenceLength;
                 }
