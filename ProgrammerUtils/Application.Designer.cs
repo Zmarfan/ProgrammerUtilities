@@ -123,6 +123,15 @@
             this.htmlClearButton = new System.Windows.Forms.Button();
             this.htmlCopyButton = new System.Windows.Forms.Button();
             this.htmlCopyLabel = new System.Windows.Forms.Label();
+            this.generateTextTab = new System.Windows.Forms.TabPage();
+            this.generateTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.generateCopyLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.generateClearButton = new System.Windows.Forms.Button();
+            this.generateCopyButton = new System.Windows.Forms.Button();
+            this.generateSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.generateGenerateButton = new System.Windows.Forms.Button();
+            this.generateOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.HelpDropdown = new System.Windows.Forms.ToolStripDropDownButton();
@@ -162,6 +171,10 @@
             this.htmlInputTextSettingsTableLayout.SuspendLayout();
             this.htmlOutputTableLayout.SuspendLayout();
             this.htmlSideTableLayout.SuspendLayout();
+            this.generateTextTab.SuspendLayout();
+            this.generateTableLayout.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.generateSettingsTableLayout.SuspendLayout();
             this.Toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -189,6 +202,7 @@
             this.MainTabControl.Controls.Add(this.matchCompareTab);
             this.MainTabControl.Controls.Add(this.CountTab);
             this.MainTabControl.Controls.Add(this.htmlTab);
+            this.MainTabControl.Controls.Add(this.generateTextTab);
             this.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainTabControl.Location = new System.Drawing.Point(3, 33);
             this.MainTabControl.Name = "MainTabControl";
@@ -1598,6 +1612,148 @@
             this.htmlCopyLabel.Text = "Copied!";
             this.htmlCopyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // generateTextTab
+            // 
+            this.generateTextTab.Controls.Add(this.generateTableLayout);
+            this.generateTextTab.Location = new System.Drawing.Point(4, 25);
+            this.generateTextTab.Name = "generateTextTab";
+            this.generateTextTab.Padding = new System.Windows.Forms.Padding(3);
+            this.generateTextTab.Size = new System.Drawing.Size(962, 468);
+            this.generateTextTab.TabIndex = 4;
+            this.generateTextTab.Text = "Generate Text";
+            this.generateTextTab.UseVisualStyleBackColor = true;
+            // 
+            // generateTableLayout
+            // 
+            this.generateTableLayout.ColumnCount = 3;
+            this.generateTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.generateTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.generateTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.generateTableLayout.Controls.Add(this.generateCopyLabel, 0, 0);
+            this.generateTableLayout.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.generateTableLayout.Controls.Add(this.generateSettingsTableLayout, 0, 0);
+            this.generateTableLayout.Controls.Add(this.generateOutputTextbox, 0, 1);
+            this.generateTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateTableLayout.Location = new System.Drawing.Point(3, 3);
+            this.generateTableLayout.Name = "generateTableLayout";
+            this.generateTableLayout.RowCount = 2;
+            this.generateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.generateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.generateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.generateTableLayout.Size = new System.Drawing.Size(956, 462);
+            this.generateTableLayout.TabIndex = 0;
+            // 
+            // generateCopyLabel
+            // 
+            this.generateCopyLabel.AutoSize = true;
+            this.generateCopyLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateCopyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateCopyLabel.ForeColor = System.Drawing.Color.Green;
+            this.generateCopyLabel.Location = new System.Drawing.Point(893, 0);
+            this.generateCopyLabel.Name = "generateCopyLabel";
+            this.generateCopyLabel.Size = new System.Drawing.Size(60, 55);
+            this.generateCopyLabel.TabIndex = 10;
+            this.generateCopyLabel.Text = "Copied!";
+            this.generateCopyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.generateClearButton, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.generateCopyButton, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(890, 55);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 4;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(66, 407);
+            this.tableLayoutPanel3.TabIndex = 9;
+            // 
+            // generateClearButton
+            // 
+            this.generateClearButton.AutoSize = true;
+            this.generateClearButton.BackColor = System.Drawing.Color.LightPink;
+            this.generateClearButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.generateClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.generateClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateClearButton.Location = new System.Drawing.Point(3, 69);
+            this.generateClearButton.Name = "generateClearButton";
+            this.generateClearButton.Size = new System.Drawing.Size(60, 60);
+            this.generateClearButton.TabIndex = 18;
+            this.generateClearButton.Text = "Clear";
+            this.generateClearButton.UseVisualStyleBackColor = false;
+            // 
+            // generateCopyButton
+            // 
+            this.generateCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.generateCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
+            this.generateCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.generateCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.generateCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.generateCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateCopyButton.Location = new System.Drawing.Point(3, 3);
+            this.generateCopyButton.Name = "generateCopyButton";
+            this.generateCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.generateCopyButton.Size = new System.Drawing.Size(60, 60);
+            this.generateCopyButton.TabIndex = 17;
+            this.generateCopyButton.UseVisualStyleBackColor = false;
+            this.generateCopyButton.Click += new System.EventHandler(this.GenerateCopyButton_Click);
+            // 
+            // generateSettingsTableLayout
+            // 
+            this.generateSettingsTableLayout.ColumnCount = 6;
+            this.generateTableLayout.SetColumnSpan(this.generateSettingsTableLayout, 2);
+            this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
+            this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.generateSettingsTableLayout.Controls.Add(this.generateGenerateButton, 0, 0);
+            this.generateSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateSettingsTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.generateSettingsTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.generateSettingsTableLayout.Name = "generateSettingsTableLayout";
+            this.generateSettingsTableLayout.RowCount = 2;
+            this.generateSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.generateSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.generateSettingsTableLayout.Size = new System.Drawing.Size(890, 55);
+            this.generateSettingsTableLayout.TabIndex = 7;
+            // 
+            // generateGenerateButton
+            // 
+            this.generateGenerateButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.generateGenerateButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.generateGenerateButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateGenerateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.generateGenerateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateGenerateButton.Location = new System.Drawing.Point(3, 3);
+            this.generateGenerateButton.Name = "generateGenerateButton";
+            this.generateSettingsTableLayout.SetRowSpan(this.generateGenerateButton, 2);
+            this.generateGenerateButton.Size = new System.Drawing.Size(194, 49);
+            this.generateGenerateButton.TabIndex = 0;
+            this.generateGenerateButton.Text = "Generate Text";
+            this.generateGenerateButton.UseVisualStyleBackColor = false;
+            this.generateGenerateButton.Click += new System.EventHandler(this.GenerateGenerateButton_Click);
+            // 
+            // generateOutputTextbox
+            // 
+            this.generateTableLayout.SetColumnSpan(this.generateOutputTextbox, 2);
+            this.generateOutputTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateOutputTextbox.Location = new System.Drawing.Point(3, 58);
+            this.generateOutputTextbox.Name = "generateOutputTextbox";
+            this.generateOutputTextbox.ReadOnly = true;
+            this.generateOutputTextbox.Size = new System.Drawing.Size(884, 401);
+            this.generateOutputTextbox.TabIndex = 8;
+            this.generateOutputTextbox.Text = "";
+            // 
             // Toolbar
             // 
             this.MainTableLayout.SetColumnSpan(this.Toolbar, 2);
@@ -1716,6 +1872,12 @@
             this.htmlOutputTableLayout.PerformLayout();
             this.htmlSideTableLayout.ResumeLayout(false);
             this.htmlSideTableLayout.PerformLayout();
+            this.generateTextTab.ResumeLayout(false);
+            this.generateTableLayout.ResumeLayout(false);
+            this.generateTableLayout.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.generateSettingsTableLayout.ResumeLayout(false);
             this.Toolbar.ResumeLayout(false);
             this.Toolbar.PerformLayout();
             this.ResumeLayout(false);
@@ -1825,6 +1987,15 @@
         private System.Windows.Forms.Label htmlCopyLabel;
         private System.Windows.Forms.Button htmlClearButton;
         private System.Windows.Forms.Button htmlOpenAllTags;
+        private System.Windows.Forms.TabPage generateTextTab;
+        private System.Windows.Forms.TableLayoutPanel generateTableLayout;
+        private System.Windows.Forms.TableLayoutPanel generateSettingsTableLayout;
+        private System.Windows.Forms.Button generateGenerateButton;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button generateClearButton;
+        private System.Windows.Forms.Button generateCopyButton;
+        private System.Windows.Forms.RichTextBox generateOutputTextbox;
+        private System.Windows.Forms.Label generateCopyLabel;
     }
 }
 

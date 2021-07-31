@@ -52,6 +52,7 @@
     <Compile Include="Application.Designer.cs">
       <DependentUpon>Application.cs</DependentUpon>
     </Compile>
+    <Compile Include="GenerateText.cs" />
     <Compile Include="HtmlCenter.cs" />
     <Compile Include="HtmlCustomRule.cs">
       <SubType>UserControl</SubType>

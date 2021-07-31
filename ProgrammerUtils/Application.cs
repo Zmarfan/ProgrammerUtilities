@@ -21,6 +21,7 @@ namespace ProgrammerUtils
         Sort _sorter;
         Matcher _matcher;
         HtmlCenter _html;
+        GenerateText _generateText;
         HtmlExtraSettings _htmlExtraSettingsWindow;
 
         public Application()
@@ -55,10 +56,13 @@ namespace ProgrammerUtils
 
             DoHtml();
 
+            _generateText = new GenerateText(generateOutputTextbox);
+
             SetChangeTextStyleButton();
             SetChangeTextPresentationButton();
-            SortCopyNotice.Text = "";
-            htmlCopyLabel.Text = "";
+            SortCopyNotice.Text = string.Empty;
+            htmlCopyLabel.Text = string.Empty;
+            generateCopyLabel.Text = string.Empty;
 
             htmlTagColorRectangle.BackColorChanged += (s, e) => {
                 htmlTagColorRectangle.FlatAppearance.MouseOverBackColor = htmlTagColorRectangle.BackColor;
@@ -484,6 +488,26 @@ namespace ProgrammerUtils
         #endregion
         #endregion
 
+        #region Generate Text
+        #region Helper Methods
+        #endregion
+        #region Events
+
+        private void GenerateGenerateButton_Click(object sender, EventArgs e)
+        {
+            _generateText.GenerateRandomWords(1500);
+        }
+
+        private void GenerateCopyButton_Click(object sender, EventArgs e)
+        {
+            Copy(generateCopyButton, generateCopyLabel);
+            if (generateOutputTextbox.Text.Length > 0)
+                Clipboard.SetText(generateOutputTextbox.Text);
+        }
+
+        #endregion
+        #endregion
+
         #region Copy Timer
 
         private void Copy(Button button, Label label)
@@ -498,9 +522,11 @@ namespace ProgrammerUtils
         {
             SortCopyButton.BackColor = COPY_BUTTON_COLOR;
             htmlCopyButton.BackColor = COPY_BUTTON_COLOR;
+            generateCopyButton.BackColor = COPY_BUTTON_COLOR;
             SortExportEnumButton.BackColor = COPY_BUTTON_COLOR;
-            SortCopyNotice.Text = "";
-            htmlCopyLabel.Text = "";
+            SortCopyNotice.Text = string.Empty;
+            htmlCopyLabel.Text = string.Empty;
+            generateCopyLabel.Text = string.Empty;
             CopyTimer.Stop();
         }
         #endregion
