@@ -69,7 +69,7 @@ namespace ProgrammerUtils
             new RandomTextEntry("dolor", 76),
             new RandomTextEntry("donec", 63),
             new RandomTextEntry("dui", 75),
-            new RandomTextEntry("Duis", 49),
+            new RandomTextEntry("duis", 49),
             new RandomTextEntry("efficitur", 39),
             new RandomTextEntry("egestas", 55),
             new RandomTextEntry("eget", 111),
