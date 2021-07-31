@@ -9,6 +9,12 @@ namespace ProgrammerUtils
 {
     public class GenerateText
     {
+        public enum ParagraphType
+        {
+            BLANK_ROW,
+            INDENT
+        }
+
         private struct RandomTextEntry
         {
             public string Entry { get; private set; }
@@ -226,13 +232,13 @@ namespace ProgrammerUtils
             _outputTextBox = outputTextBox;
         }
 
-        public void GenerateRandomWords(int amountOfWords)
+        public void GenerateRandomWords(int amountOfWords, ParagraphType paragraphType)
         {
-            string generatedText = GenerateTextNow(amountOfWords);
+            string generatedText = GenerateTextNow(amountOfWords, paragraphType);
             _outputTextBox.Text = generatedText;
         }
 
-        private string GenerateTextNow(int amountOfWords)
+        private string GenerateTextNow(int amountOfWords, ParagraphType paragraphType)
         {
             Random random = new Random();
             StringBuilder builder = new StringBuilder();
@@ -254,7 +260,7 @@ namespace ProgrammerUtils
                 }
 
                 if (currentWordIndex < amountOfWords)
-                    builder.Append("\n\n");
+                    builder.Append(paragraphType == ParagraphType.BLANK_ROW ? "\n\n" : "\n     ");
             }
 
             return builder.ToString();

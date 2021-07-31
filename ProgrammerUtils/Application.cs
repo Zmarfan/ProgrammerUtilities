@@ -34,6 +34,7 @@ namespace ProgrammerUtils
         {
             SortExportDropdown.SelectedIndex = 0;
             MatchCombinedShowModeDropdown.SelectedIndex = 0;
+            generateParagraphType.SelectedIndex = 0;
 
             _sorter = new Sort(GetSortDisplayMode(), GetSortStyle(), Sort.TextStyles.NORMAL, Sort.TextPresentations.NORMAL);
             SetButtonStatus(SortButton, !AutoSortCheckbox.Checked);
@@ -490,12 +491,24 @@ namespace ProgrammerUtils
 
         #region Generate Text
         #region Helper Methods
+
+        private GenerateText.ParagraphType GetParagraphType()
+        {
+            string current = generateParagraphType.Text;
+            switch (current)
+            {
+                case ("Blank row"): return GenerateText.ParagraphType.BLANK_ROW;
+                case ("Indent"): return GenerateText.ParagraphType.INDENT;
+                default: throw new Exception($"There exist no implementation for this paragraph type: {current}");
+            }
+        }
+
         #endregion
         #region Events
 
         private void GenerateGenerateButton_Click(object sender, EventArgs e)
         {
-            _generateText.GenerateRandomWords(1500);
+            _generateText.GenerateRandomWords(1500, GetParagraphType());
         }
 
         private void GenerateCopyButton_Click(object sender, EventArgs e)

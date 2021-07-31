@@ -140,6 +140,8 @@
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
             this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
             this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.generateParagraphType = new System.Windows.Forms.ComboBox();
+            this.generateParagraphTypeLabel = new System.Windows.Forms.Label();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -1717,6 +1719,8 @@
             this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.generateSettingsTableLayout.Controls.Add(this.generateGenerateButton, 0, 0);
+            this.generateSettingsTableLayout.Controls.Add(this.generateParagraphType, 1, 1);
+            this.generateSettingsTableLayout.Controls.Add(this.generateParagraphTypeLabel, 1, 0);
             this.generateSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.generateSettingsTableLayout.Location = new System.Drawing.Point(0, 0);
             this.generateSettingsTableLayout.Margin = new System.Windows.Forms.Padding(0);
@@ -1812,6 +1816,30 @@
             // 
             this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
             // 
+            // generateParagraphType
+            // 
+            this.generateParagraphType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateParagraphType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.generateParagraphType.FormattingEnabled = true;
+            this.generateParagraphType.Items.AddRange(new object[] {
+            "Blank row",
+            "Indent"});
+            this.generateParagraphType.Location = new System.Drawing.Point(203, 30);
+            this.generateParagraphType.Name = "generateParagraphType";
+            this.generateParagraphType.Size = new System.Drawing.Size(144, 24);
+            this.generateParagraphType.TabIndex = 1;
+            // 
+            // generateParagraphTypeLabel
+            // 
+            this.generateParagraphTypeLabel.AutoSize = true;
+            this.generateParagraphTypeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateParagraphTypeLabel.Location = new System.Drawing.Point(203, 0);
+            this.generateParagraphTypeLabel.Name = "generateParagraphTypeLabel";
+            this.generateParagraphTypeLabel.Size = new System.Drawing.Size(144, 27);
+            this.generateParagraphTypeLabel.TabIndex = 2;
+            this.generateParagraphTypeLabel.Text = "Paragraph type";
+            this.generateParagraphTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1878,6 +1906,7 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.generateSettingsTableLayout.ResumeLayout(false);
+            this.generateSettingsTableLayout.PerformLayout();
             this.Toolbar.ResumeLayout(false);
             this.Toolbar.PerformLayout();
             this.ResumeLayout(false);
@@ -1996,6 +2025,8 @@
         private System.Windows.Forms.Button generateCopyButton;
         private System.Windows.Forms.RichTextBox generateOutputTextbox;
         private System.Windows.Forms.Label generateCopyLabel;
+        private System.Windows.Forms.ComboBox generateParagraphType;
+        private System.Windows.Forms.Label generateParagraphTypeLabel;
     }
 }
 
