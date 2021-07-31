@@ -89,6 +89,33 @@
             this.matchResultCombinedTextBox = new System.Windows.Forms.RichTextBox();
             this.matchResultTabCombinedLabel = new System.Windows.Forms.Label();
             this.CountTab = new System.Windows.Forms.TabPage();
+            this.countTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.countButton = new System.Windows.Forms.Button();
+            this.countInputTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.countInputTextbox = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.countOutputTabs = new System.Windows.Forms.TabControl();
+            this.countWordFrequencyTab = new System.Windows.Forms.TabPage();
+            this.countWordDensityTab = new System.Windows.Forms.TabPage();
+            this.countInfoTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.countInfoLabel = new System.Windows.Forms.Label();
+            this.countInfoFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             this.htmlTab = new System.Windows.Forms.TabPage();
             this.htmlTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
@@ -172,6 +199,13 @@
             this.matcherSeperateTableLayout.SuspendLayout();
             this.matchResultTabCombined.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.CountTab.SuspendLayout();
+            this.countTableLayout.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.countInputTableLayout.SuspendLayout();
+            this.countOutputTabs.SuspendLayout();
+            this.countInfoTableLayout.SuspendLayout();
+            this.countInfoFlowLayoutPanel.SuspendLayout();
             this.htmlTab.SuspendLayout();
             this.htmlTableLayout.SuspendLayout();
             this.htmlSettingsTableLayout.SuspendLayout();
@@ -1032,6 +1066,7 @@
             // 
             // CountTab
             // 
+            this.CountTab.Controls.Add(this.countTableLayout);
             this.CountTab.Location = new System.Drawing.Point(4, 25);
             this.CountTab.Name = "CountTab";
             this.CountTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1039,6 +1074,327 @@
             this.CountTab.TabIndex = 2;
             this.CountTab.Text = "Count";
             this.CountTab.UseVisualStyleBackColor = true;
+            // 
+            // countTableLayout
+            // 
+            this.countTableLayout.ColumnCount = 3;
+            this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+            this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+            this.countTableLayout.Controls.Add(this.tableLayoutPanel5, 0, 0);
+            this.countTableLayout.Controls.Add(this.countInputTableLayout, 0, 1);
+            this.countTableLayout.Controls.Add(this.countOutputTabs, 2, 1);
+            this.countTableLayout.Controls.Add(this.countInfoTableLayout, 1, 1);
+            this.countTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countTableLayout.Location = new System.Drawing.Point(3, 3);
+            this.countTableLayout.Name = "countTableLayout";
+            this.countTableLayout.RowCount = 2;
+            this.countTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.countTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.countTableLayout.Size = new System.Drawing.Size(956, 462);
+            this.countTableLayout.TabIndex = 0;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 3;
+            this.countTableLayout.SetColumnSpan(this.tableLayoutPanel5, 3);
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.Controls.Add(this.countButton, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(956, 55);
+            this.tableLayoutPanel5.TabIndex = 1;
+            // 
+            // countButton
+            // 
+            this.countButton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.countButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.countButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.countButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countButton.Location = new System.Drawing.Point(3, 3);
+            this.countButton.Name = "countButton";
+            this.tableLayoutPanel5.SetRowSpan(this.countButton, 2);
+            this.countButton.Size = new System.Drawing.Size(194, 49);
+            this.countButton.TabIndex = 0;
+            this.countButton.Text = "Count";
+            this.countButton.UseVisualStyleBackColor = false;
+            // 
+            // countInputTableLayout
+            // 
+            this.countInputTableLayout.ColumnCount = 1;
+            this.countInputTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.countInputTableLayout.Controls.Add(this.countInputTextbox, 0, 0);
+            this.countInputTableLayout.Controls.Add(this.label2, 0, 1);
+            this.countInputTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countInputTableLayout.Location = new System.Drawing.Point(0, 55);
+            this.countInputTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.countInputTableLayout.Name = "countInputTableLayout";
+            this.countInputTableLayout.RowCount = 2;
+            this.countInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.countInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.countInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.countInputTableLayout.Size = new System.Drawing.Size(356, 407);
+            this.countInputTableLayout.TabIndex = 3;
+            // 
+            // countInputTextbox
+            // 
+            this.countInputTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countInputTextbox.Location = new System.Drawing.Point(3, 3);
+            this.countInputTextbox.Name = "countInputTextbox";
+            this.countInputTextbox.Size = new System.Drawing.Size(350, 362);
+            this.countInputTextbox.TabIndex = 4;
+            this.countInputTextbox.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(3, 368);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(10);
+            this.label2.Size = new System.Drawing.Size(350, 39);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Text that should be analyzed.";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // countOutputTabs
+            // 
+            this.countOutputTabs.Controls.Add(this.countWordFrequencyTab);
+            this.countOutputTabs.Controls.Add(this.countWordDensityTab);
+            this.countOutputTabs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countOutputTabs.Location = new System.Drawing.Point(659, 58);
+            this.countOutputTabs.Name = "countOutputTabs";
+            this.countOutputTabs.SelectedIndex = 0;
+            this.countOutputTabs.Size = new System.Drawing.Size(294, 401);
+            this.countOutputTabs.TabIndex = 4;
+            // 
+            // countWordFrequencyTab
+            // 
+            this.countWordFrequencyTab.Location = new System.Drawing.Point(4, 25);
+            this.countWordFrequencyTab.Name = "countWordFrequencyTab";
+            this.countWordFrequencyTab.Padding = new System.Windows.Forms.Padding(3);
+            this.countWordFrequencyTab.Size = new System.Drawing.Size(286, 372);
+            this.countWordFrequencyTab.TabIndex = 0;
+            this.countWordFrequencyTab.Text = "Word Frequency";
+            this.countWordFrequencyTab.UseVisualStyleBackColor = true;
+            // 
+            // countWordDensityTab
+            // 
+            this.countWordDensityTab.Location = new System.Drawing.Point(4, 25);
+            this.countWordDensityTab.Name = "countWordDensityTab";
+            this.countWordDensityTab.Padding = new System.Windows.Forms.Padding(3);
+            this.countWordDensityTab.Size = new System.Drawing.Size(306, 372);
+            this.countWordDensityTab.TabIndex = 1;
+            this.countWordDensityTab.Text = "Word Density";
+            this.countWordDensityTab.UseVisualStyleBackColor = true;
+            // 
+            // countInfoTableLayout
+            // 
+            this.countInfoTableLayout.ColumnCount = 1;
+            this.countInfoTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.countInfoTableLayout.Controls.Add(this.countInfoLabel, 0, 0);
+            this.countInfoTableLayout.Controls.Add(this.countInfoFlowLayoutPanel, 0, 1);
+            this.countInfoTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countInfoTableLayout.Location = new System.Drawing.Point(356, 55);
+            this.countInfoTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.countInfoTableLayout.Name = "countInfoTableLayout";
+            this.countInfoTableLayout.RowCount = 2;
+            this.countInfoTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.countInfoTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.countInfoTableLayout.Size = new System.Drawing.Size(300, 407);
+            this.countInfoTableLayout.TabIndex = 5;
+            // 
+            // countInfoLabel
+            // 
+            this.countInfoLabel.AutoSize = true;
+            this.countInfoLabel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.countInfoLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.countInfoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countInfoLabel.Location = new System.Drawing.Point(3, 0);
+            this.countInfoLabel.Name = "countInfoLabel";
+            this.countInfoLabel.Padding = new System.Windows.Forms.Padding(10);
+            this.countInfoLabel.Size = new System.Drawing.Size(294, 39);
+            this.countInfoLabel.TabIndex = 4;
+            this.countInfoLabel.Text = "Text information";
+            this.countInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // countInfoFlowLayoutPanel
+            // 
+            this.countInfoFlowLayoutPanel.AutoScroll = true;
+            this.countInfoFlowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.countInfoFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button1);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button2);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button3);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button4);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button5);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button6);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button7);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button8);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button9);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button10);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button11);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button12);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button13);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button14);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.button15);
+            this.countInfoFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countInfoFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.countInfoFlowLayoutPanel.Location = new System.Drawing.Point(3, 42);
+            this.countInfoFlowLayoutPanel.Name = "countInfoFlowLayoutPanel";
+            this.countInfoFlowLayoutPanel.Size = new System.Drawing.Size(294, 362);
+            this.countInfoFlowLayoutPanel.TabIndex = 5;
+            this.countInfoFlowLayoutPanel.WrapContents = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(3, 32);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(3, 61);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(3, 90);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(3, 119);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "button5";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(3, 148);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(3, 177);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(75, 23);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(3, 206);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "button8";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(3, 235);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "button9";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(3, 264);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(75, 23);
+            this.button10.TabIndex = 9;
+            this.button10.Text = "button10";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(3, 293);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(75, 23);
+            this.button11.TabIndex = 10;
+            this.button11.Text = "button11";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(3, 322);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(75, 23);
+            this.button12.TabIndex = 11;
+            this.button12.Text = "button12";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.Location = new System.Drawing.Point(3, 351);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(75, 23);
+            this.button13.TabIndex = 12;
+            this.button13.Text = "button13";
+            this.button13.UseVisualStyleBackColor = true;
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(3, 380);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(75, 23);
+            this.button14.TabIndex = 13;
+            this.button14.Text = "button14";
+            this.button14.UseVisualStyleBackColor = true;
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(3, 409);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(75, 23);
+            this.button15.TabIndex = 14;
+            this.button15.Text = "button15";
+            this.button15.UseVisualStyleBackColor = true;
             // 
             // htmlTab
             // 
@@ -2047,6 +2403,15 @@
             this.matchResultTabCombined.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
+            this.CountTab.ResumeLayout(false);
+            this.countTableLayout.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.countInputTableLayout.ResumeLayout(false);
+            this.countInputTableLayout.PerformLayout();
+            this.countOutputTabs.ResumeLayout(false);
+            this.countInfoTableLayout.ResumeLayout(false);
+            this.countInfoTableLayout.PerformLayout();
+            this.countInfoFlowLayoutPanel.ResumeLayout(false);
             this.htmlTab.ResumeLayout(false);
             this.htmlTableLayout.ResumeLayout(false);
             this.htmlTableLayout.PerformLayout();
@@ -2204,6 +2569,33 @@
         private System.Windows.Forms.Label matchCombineStateLabel;
         private System.Windows.Forms.TrackBar generateParagraphSizeSlider;
         private System.Windows.Forms.Label generateParagraphSizeLabel;
+        private System.Windows.Forms.TableLayoutPanel countTableLayout;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.Button countButton;
+        private System.Windows.Forms.TableLayoutPanel countInputTableLayout;
+        private System.Windows.Forms.RichTextBox countInputTextbox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TabControl countOutputTabs;
+        private System.Windows.Forms.TabPage countWordFrequencyTab;
+        private System.Windows.Forms.TabPage countWordDensityTab;
+        private System.Windows.Forms.TableLayoutPanel countInfoTableLayout;
+        private System.Windows.Forms.Label countInfoLabel;
+        private System.Windows.Forms.FlowLayoutPanel countInfoFlowLayoutPanel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
     }
 }
 
