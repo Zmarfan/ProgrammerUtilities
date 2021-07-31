@@ -12,7 +12,8 @@ namespace ProgrammerUtils
         public enum ParagraphType
         {
             BLANK_ROW,
-            INDENT
+            INDENT,
+            NO_PARAGRAPHS
         }
 
         private struct RandomTextEntry
@@ -234,13 +235,24 @@ namespace ProgrammerUtils
             _generateSeedNumericUpDown = generateSeedNumericUpDown;
         }
 
-        public void GenerateRandomWords(int amountOfWords, ParagraphType paragraphType, bool useCustomSeed)
+        /// <param name="paragraphSize">Will be a value between 0 - 200 where 75 is considered baseline</param>
+        public void GenerateRandomWords(int amountOfWords, ParagraphType paragraphType, bool useCustomSeed, int paragraphSize)
         {
-            string generatedText = GenerateTextNow(amountOfWords, paragraphType, useCustomSeed);
+            string generatedText = GenerateTextNow(amountOfWords, paragraphType, useCustomSeed, GetParagraphSizeOffset(paragraphSize));
             _outputTextBox.Text = generatedText;
         }
 
-        private string GenerateTextNow(int amountOfWords, ParagraphType paragraphType, bool useCustomSeed)
+        /// <summary>
+        /// Returns a offset value for amount of min and max sentences in a paragraph. 75 for paragraphsize is considered baseline
+        /// </summary>
+        /// <param name="paragraphSize"></param>
+        /// <returns></returns>
+        private int GetParagraphSizeOffset(int paragraphSize)
+        {
+            return (int)Math.Round(paragraphSize / 10 - 7.5f);
+        }
+
+        private string GenerateTextNow(int amountOfWords, ParagraphType paragraphType, bool useCustomSeed, int paragraphOffset)
         {
             Random seedRandom = new Random(Environment.TickCount);
             int seed = useCustomSeed ? (int)_generateSeedNumericUpDown.Value : seedRandom.Next(int.MinValue, int.MaxValue);
@@ -253,7 +265,7 @@ namespace ProgrammerUtils
             int currentWordIndex = 0;
             while (currentWordIndex < amountOfWords)
             {
-                int paragraphSentences = random.Next(MIN_PARAGRAPH_SENTENCES, MAX_PARAGRAPH_SENTENCES);
+                int paragraphSentences = random.Next(Math.Max(1, MIN_PARAGRAPH_SENTENCES + paragraphOffset), Math.Max(1, MAX_PARAGRAPH_SENTENCES + paragraphOffset));
                 for (int sentenceIndex = 0; sentenceIndex < paragraphSentences; sentenceIndex++)
                 {
                     int wordsLeft = amountOfWords - currentWordIndex;
@@ -272,10 +284,22 @@ namespace ProgrammerUtils
                 }
 
                 if (currentWordIndex < amountOfWords)
-                    builder.Append(paragraphType == ParagraphType.BLANK_ROW ? "\n\n" : "\n     ");
+                    builder.Append(GetParagraphString(paragraphType));
             }
 
             return builder.ToString();
+        }
+
+        private string GetParagraphString(ParagraphType paragraphType)
+        {
+            switch (paragraphType)
+            {
+                case ParagraphType.BLANK_ROW: return "\n\n";
+                case ParagraphType.INDENT: return "\n     ";
+                case ParagraphType.NO_PARAGRAPHS: return string.Empty;
+                default:
+                    throw new Exception($"There exists no implementation for this paragraph type: {paragraphType}");
+            }
         }
 
         private string GenerateSentence(int sentenceLength, ref Random random)

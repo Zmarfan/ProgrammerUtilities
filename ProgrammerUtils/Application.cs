@@ -499,6 +499,7 @@ namespace ProgrammerUtils
             {
                 case ("Blank row"): return GenerateText.ParagraphType.BLANK_ROW;
                 case ("Indent"): return GenerateText.ParagraphType.INDENT;
+                case ("No paragraphs"): return GenerateText.ParagraphType.NO_PARAGRAPHS;
                 default: throw new Exception($"There exist no implementation for this paragraph type: {current}");
             }
         }
@@ -515,7 +516,7 @@ namespace ProgrammerUtils
 
         private void GenerateGenerateButton_Click(object sender, EventArgs e)
         {
-            _generateText.GenerateRandomWords((int)generateNumberOfWords.Value, GetParagraphType(), generateCustomSeed.Checked);
+            _generateText.GenerateRandomWords((int)generateNumberOfWords.Value, GetParagraphType(), generateCustomSeed.Checked, generateParagraphSizeSlider.Value);
         }
 
         private void GenerateCopyButton_Click(object sender, EventArgs e)
