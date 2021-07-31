@@ -492,6 +492,12 @@ namespace ProgrammerUtils
         #region Generate Text
         #region Helper Methods
 
+        private void DoGenerateText(bool customSeed)
+        {
+            if (_generateText != null)
+                _generateText.GenerateRandomWords((int)generateNumberOfWords.Value, GetParagraphType(), customSeed, generateParagraphSizeSlider.Value);
+        }
+
         private GenerateText.ParagraphType GetParagraphType()
         {
             string current = generateParagraphType.Text;
@@ -516,7 +522,7 @@ namespace ProgrammerUtils
 
         private void GenerateGenerateButton_Click(object sender, EventArgs e)
         {
-            _generateText.GenerateRandomWords((int)generateNumberOfWords.Value, GetParagraphType(), generateCustomSeed.Checked, generateParagraphSizeSlider.Value);
+            DoGenerateText(generateCustomSeed.Checked);
         }
 
         private void GenerateCopyButton_Click(object sender, EventArgs e)
@@ -534,6 +540,16 @@ namespace ProgrammerUtils
         private void GenerateCustomSeed_CheckedChanged(object sender, EventArgs e)
         {
             EnableSeed(generateCustomSeed.Checked);
+        }
+
+        private void GenerateParagraphType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DoGenerateText(true);
+        }
+
+        private void GenerateParagraphSizeSlider_MouseUp(object sender, MouseEventArgs e)
+        {
+            DoGenerateText(true);
         }
 
         #endregion

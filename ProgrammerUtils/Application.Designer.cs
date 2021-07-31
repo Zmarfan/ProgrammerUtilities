@@ -76,6 +76,7 @@
             this.MatchRemoveExtraWhiteSpace = new System.Windows.Forms.CheckBox();
             this.matchClearButton = new System.Windows.Forms.Button();
             this.MatchCombinedShowModeDropdown = new System.Windows.Forms.ComboBox();
+            this.matchCombineStateLabel = new System.Windows.Forms.Label();
             this.matchResultTab = new System.Windows.Forms.TabControl();
             this.matchResultTabSeperate = new System.Windows.Forms.TabPage();
             this.matcherSeperateTableLayout = new System.Windows.Forms.TableLayoutPanel();
@@ -139,6 +140,8 @@
             this.generateSeedTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.generateSeedLabel = new System.Windows.Forms.Label();
             this.generateCustomSeed = new System.Windows.Forms.CheckBox();
+            this.generateParagraphSizeSlider = new System.Windows.Forms.TrackBar();
+            this.generateParagraphSizeLabel = new System.Windows.Forms.Label();
             this.generateOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -148,9 +151,6 @@
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
             this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
             this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.matchCombineStateLabel = new System.Windows.Forms.Label();
-            this.generateParagraphSizeSlider = new System.Windows.Forms.TrackBar();
-            this.generateParagraphSizeLabel = new System.Windows.Forms.Label();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -189,8 +189,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.generateSeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.generateNumberOfWords)).BeginInit();
             this.generateSeedTableLayout.SuspendLayout();
-            this.Toolbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generateParagraphSizeSlider)).BeginInit();
+            this.Toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTableLayout
@@ -880,6 +880,17 @@
             this.MatchCombinedShowModeDropdown.TabIndex = 5;
             this.MatchCombinedShowModeDropdown.SelectedIndexChanged += new System.EventHandler(this.MatchCombinedShowModeDropdown_SelectedIndexChanged);
             // 
+            // matchCombineStateLabel
+            // 
+            this.matchCombineStateLabel.AutoSize = true;
+            this.matchCombineStateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchCombineStateLabel.Location = new System.Drawing.Point(563, 0);
+            this.matchCombineStateLabel.Name = "matchCombineStateLabel";
+            this.matchCombineStateLabel.Size = new System.Drawing.Size(164, 27);
+            this.matchCombineStateLabel.TabIndex = 6;
+            this.matchCombineStateLabel.Text = "Compare mode";
+            this.matchCombineStateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // matchResultTab
             // 
             this.matchResultTab.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
@@ -975,7 +986,7 @@
             this.matchResultTabCombined.Location = new System.Drawing.Point(4, 28);
             this.matchResultTabCombined.Margin = new System.Windows.Forms.Padding(0);
             this.matchResultTabCombined.Name = "matchResultTabCombined";
-            this.matchResultTabCombined.Size = new System.Drawing.Size(470, 375);
+            this.matchResultTabCombined.Size = new System.Drawing.Size(470, 372);
             this.matchResultTabCombined.TabIndex = 1;
             this.matchResultTabCombined.Text = "Combined";
             this.matchResultTabCombined.UseVisualStyleBackColor = true;
@@ -994,7 +1005,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(470, 375);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(470, 372);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // matchResultCombinedTextBox
@@ -1003,7 +1014,7 @@
             this.matchResultCombinedTextBox.Location = new System.Drawing.Point(3, 38);
             this.matchResultCombinedTextBox.Name = "matchResultCombinedTextBox";
             this.matchResultCombinedTextBox.ReadOnly = true;
-            this.matchResultCombinedTextBox.Size = new System.Drawing.Size(464, 334);
+            this.matchResultCombinedTextBox.Size = new System.Drawing.Size(464, 331);
             this.matchResultCombinedTextBox.TabIndex = 10;
             this.matchResultCombinedTextBox.Text = "";
             // 
@@ -1815,6 +1826,7 @@
             this.generateParagraphType.Name = "generateParagraphType";
             this.generateParagraphType.Size = new System.Drawing.Size(121, 24);
             this.generateParagraphType.TabIndex = 1;
+            this.generateParagraphType.SelectedIndexChanged += new System.EventHandler(this.GenerateParagraphType_SelectedIndexChanged);
             // 
             // generateParagraphTypeLabel
             // 
@@ -1896,6 +1908,32 @@
             this.generateCustomSeed.UseVisualStyleBackColor = true;
             this.generateCustomSeed.CheckedChanged += new System.EventHandler(this.GenerateCustomSeed_CheckedChanged);
             // 
+            // generateParagraphSizeSlider
+            // 
+            this.generateParagraphSizeSlider.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.generateParagraphSizeSlider.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateParagraphSizeSlider.Location = new System.Drawing.Point(453, 27);
+            this.generateParagraphSizeSlider.Margin = new System.Windows.Forms.Padding(0);
+            this.generateParagraphSizeSlider.Maximum = 200;
+            this.generateParagraphSizeSlider.Name = "generateParagraphSizeSlider";
+            this.generateParagraphSizeSlider.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.generateParagraphSizeSlider.Size = new System.Drawing.Size(117, 28);
+            this.generateParagraphSizeSlider.TabIndex = 8;
+            this.generateParagraphSizeSlider.TickFrequency = 75;
+            this.generateParagraphSizeSlider.Value = 75;
+            this.generateParagraphSizeSlider.MouseUp += new System.Windows.Forms.MouseEventHandler(this.GenerateParagraphSizeSlider_MouseUp);
+            // 
+            // generateParagraphSizeLabel
+            // 
+            this.generateParagraphSizeLabel.AutoSize = true;
+            this.generateParagraphSizeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateParagraphSizeLabel.Location = new System.Drawing.Point(456, 0);
+            this.generateParagraphSizeLabel.Name = "generateParagraphSizeLabel";
+            this.generateParagraphSizeLabel.Size = new System.Drawing.Size(111, 27);
+            this.generateParagraphSizeLabel.TabIndex = 9;
+            this.generateParagraphSizeLabel.Text = "Paragraph sizes";
+            this.generateParagraphSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // generateOutputTextbox
             // 
             this.generateTableLayout.SetColumnSpan(this.generateOutputTextbox, 2);
@@ -1964,42 +2002,6 @@
             // htmlColorHoverTooltip
             // 
             this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
-            // 
-            // matchCombineStateLabel
-            // 
-            this.matchCombineStateLabel.AutoSize = true;
-            this.matchCombineStateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchCombineStateLabel.Location = new System.Drawing.Point(563, 0);
-            this.matchCombineStateLabel.Name = "matchCombineStateLabel";
-            this.matchCombineStateLabel.Size = new System.Drawing.Size(164, 27);
-            this.matchCombineStateLabel.TabIndex = 6;
-            this.matchCombineStateLabel.Text = "Compare mode";
-            this.matchCombineStateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // generateParagraphSizeSlider
-            // 
-            this.generateParagraphSizeSlider.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.generateParagraphSizeSlider.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateParagraphSizeSlider.Location = new System.Drawing.Point(453, 27);
-            this.generateParagraphSizeSlider.Margin = new System.Windows.Forms.Padding(0);
-            this.generateParagraphSizeSlider.Maximum = 200;
-            this.generateParagraphSizeSlider.Name = "generateParagraphSizeSlider";
-            this.generateParagraphSizeSlider.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.generateParagraphSizeSlider.Size = new System.Drawing.Size(117, 28);
-            this.generateParagraphSizeSlider.TabIndex = 8;
-            this.generateParagraphSizeSlider.TickFrequency = 75;
-            this.generateParagraphSizeSlider.Value = 75;
-            // 
-            // generateParagraphSizeLabel
-            // 
-            this.generateParagraphSizeLabel.AutoSize = true;
-            this.generateParagraphSizeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateParagraphSizeLabel.Location = new System.Drawing.Point(456, 0);
-            this.generateParagraphSizeLabel.Name = "generateParagraphSizeLabel";
-            this.generateParagraphSizeLabel.Size = new System.Drawing.Size(111, 27);
-            this.generateParagraphSizeLabel.TabIndex = 9;
-            this.generateParagraphSizeLabel.Text = "Paragraph sizes";
-            this.generateParagraphSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Application
             // 
@@ -2072,9 +2074,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.generateNumberOfWords)).EndInit();
             this.generateSeedTableLayout.ResumeLayout(false);
             this.generateSeedTableLayout.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.generateParagraphSizeSlider)).EndInit();
             this.Toolbar.ResumeLayout(false);
             this.Toolbar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.generateParagraphSizeSlider)).EndInit();
             this.ResumeLayout(false);
 
         }
