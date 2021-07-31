@@ -130,11 +130,15 @@
             this.generateClearButton = new System.Windows.Forms.Button();
             this.generateCopyButton = new System.Windows.Forms.Button();
             this.generateSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.generateSeed = new System.Windows.Forms.NumericUpDown();
             this.generateAmountOfWordsLabel = new System.Windows.Forms.Label();
             this.generateGenerateButton = new System.Windows.Forms.Button();
             this.generateParagraphType = new System.Windows.Forms.ComboBox();
             this.generateParagraphTypeLabel = new System.Windows.Forms.Label();
             this.generateNumberOfWords = new System.Windows.Forms.NumericUpDown();
+            this.generateSeedTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.generateSeedLabel = new System.Windows.Forms.Label();
+            this.generateCustomSeed = new System.Windows.Forms.CheckBox();
             this.generateOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -144,10 +148,7 @@
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
             this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
             this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.generateSeed = new System.Windows.Forms.NumericUpDown();
-            this.generateSeedTableLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.generateSeedLabel = new System.Windows.Forms.Label();
-            this.generateCustomSeed = new System.Windows.Forms.CheckBox();
+            this.matchCombineStateLabel = new System.Windows.Forms.Label();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -183,10 +184,10 @@
             this.generateTableLayout.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.generateSettingsTableLayout.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.generateNumberOfWords)).BeginInit();
-            this.Toolbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generateSeed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generateNumberOfWords)).BeginInit();
             this.generateSeedTableLayout.SuspendLayout();
+            this.Toolbar.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTableLayout
@@ -776,7 +777,8 @@
             this.matchSettingsTableLayout.Controls.Add(this.matchCaseSensitive, 2, 0);
             this.matchSettingsTableLayout.Controls.Add(this.MatchRemoveExtraWhiteSpace, 2, 1);
             this.matchSettingsTableLayout.Controls.Add(this.matchClearButton, 5, 0);
-            this.matchSettingsTableLayout.Controls.Add(this.MatchCombinedShowModeDropdown, 3, 0);
+            this.matchSettingsTableLayout.Controls.Add(this.MatchCombinedShowModeDropdown, 3, 1);
+            this.matchSettingsTableLayout.Controls.Add(this.matchCombineStateLabel, 3, 0);
             this.matchSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchSettingsTableLayout.Location = new System.Drawing.Point(0, 0);
             this.matchSettingsTableLayout.Margin = new System.Windows.Forms.Padding(0);
@@ -863,15 +865,14 @@
             // 
             // MatchCombinedShowModeDropdown
             // 
-            this.MatchCombinedShowModeDropdown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.MatchCombinedShowModeDropdown.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MatchCombinedShowModeDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.MatchCombinedShowModeDropdown.FormattingEnabled = true;
             this.MatchCombinedShowModeDropdown.Items.AddRange(new object[] {
-            "Combined: Every line",
-            "Combined: Every word"});
-            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 15);
+            "Every line",
+            "Every word"});
+            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(563, 30);
             this.MatchCombinedShowModeDropdown.Name = "MatchCombinedShowModeDropdown";
-            this.matchSettingsTableLayout.SetRowSpan(this.MatchCombinedShowModeDropdown, 2);
             this.MatchCombinedShowModeDropdown.Size = new System.Drawing.Size(164, 24);
             this.MatchCombinedShowModeDropdown.TabIndex = 5;
             this.MatchCombinedShowModeDropdown.SelectedIndexChanged += new System.EventHandler(this.MatchCombinedShowModeDropdown_SelectedIndexChanged);
@@ -882,12 +883,12 @@
             this.matchResultTab.Controls.Add(this.matchResultTabSeperate);
             this.matchResultTab.Controls.Add(this.matchResultTabCombined);
             this.matchResultTab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchResultTab.Location = new System.Drawing.Point(478, 55);
-            this.matchResultTab.Margin = new System.Windows.Forms.Padding(0);
+            this.matchResultTab.Location = new System.Drawing.Point(478, 58);
+            this.matchResultTab.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.matchResultTab.Name = "matchResultTab";
             this.matchTableLayout.SetRowSpan(this.matchResultTab, 4);
             this.matchResultTab.SelectedIndex = 0;
-            this.matchResultTab.Size = new System.Drawing.Size(478, 407);
+            this.matchResultTab.Size = new System.Drawing.Size(478, 404);
             this.matchResultTab.TabIndex = 7;
             // 
             // matchResultTabSeperate
@@ -896,7 +897,7 @@
             this.matchResultTabSeperate.Location = new System.Drawing.Point(4, 28);
             this.matchResultTabSeperate.Margin = new System.Windows.Forms.Padding(0);
             this.matchResultTabSeperate.Name = "matchResultTabSeperate";
-            this.matchResultTabSeperate.Size = new System.Drawing.Size(470, 375);
+            this.matchResultTabSeperate.Size = new System.Drawing.Size(470, 372);
             this.matchResultTabSeperate.TabIndex = 0;
             this.matchResultTabSeperate.Text = "Separate";
             this.matchResultTabSeperate.UseVisualStyleBackColor = true;
@@ -918,7 +919,7 @@
             this.matcherSeperateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.matcherSeperateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.matcherSeperateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.matcherSeperateTableLayout.Size = new System.Drawing.Size(470, 375);
+            this.matcherSeperateTableLayout.Size = new System.Drawing.Size(470, 372);
             this.matcherSeperateTableLayout.TabIndex = 0;
             // 
             // matchRightText2Label
@@ -927,7 +928,7 @@
             this.matchRightText2Label.BackColor = System.Drawing.SystemColors.ControlLight;
             this.matchRightText2Label.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.matchRightText2Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchRightText2Label.Location = new System.Drawing.Point(3, 187);
+            this.matchRightText2Label.Location = new System.Drawing.Point(3, 186);
             this.matchRightText2Label.Name = "matchRightText2Label";
             this.matchRightText2Label.Size = new System.Drawing.Size(464, 35);
             this.matchRightText2Label.TabIndex = 12;
@@ -948,10 +949,10 @@
             // matchRightText2
             // 
             this.matchRightText2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchRightText2.Location = new System.Drawing.Point(3, 225);
+            this.matchRightText2.Location = new System.Drawing.Point(3, 224);
             this.matchRightText2.Name = "matchRightText2";
             this.matchRightText2.ReadOnly = true;
-            this.matchRightText2.Size = new System.Drawing.Size(464, 147);
+            this.matchRightText2.Size = new System.Drawing.Size(464, 145);
             this.matchRightText2.TabIndex = 10;
             this.matchRightText2.Text = "";
             // 
@@ -961,7 +962,7 @@
             this.matchRightText1.Location = new System.Drawing.Point(3, 38);
             this.matchRightText1.Name = "matchRightText1";
             this.matchRightText1.ReadOnly = true;
-            this.matchRightText1.Size = new System.Drawing.Size(464, 146);
+            this.matchRightText1.Size = new System.Drawing.Size(464, 145);
             this.matchRightText1.TabIndex = 9;
             this.matchRightText1.Text = "";
             // 
@@ -1745,6 +1746,30 @@
             this.generateSettingsTableLayout.Size = new System.Drawing.Size(890, 55);
             this.generateSettingsTableLayout.TabIndex = 7;
             // 
+            // generateSeed
+            // 
+            this.generateSeed.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateSeed.Enabled = false;
+            this.generateSeed.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.generateSeed.Location = new System.Drawing.Point(456, 30);
+            this.generateSeed.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
+            this.generateSeed.Minimum = new decimal(new int[] {
+            -2147483648,
+            0,
+            0,
+            -2147483648});
+            this.generateSeed.Name = "generateSeed";
+            this.generateSeed.Size = new System.Drawing.Size(164, 22);
+            this.generateSeed.TabIndex = 5;
+            // 
             // generateAmountOfWordsLabel
             // 
             this.generateAmountOfWordsLabel.AutoSize = true;
@@ -1824,6 +1849,47 @@
             0,
             0});
             // 
+            // generateSeedTableLayout
+            // 
+            this.generateSeedTableLayout.ColumnCount = 2;
+            this.generateSeedTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.generateSeedTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.generateSeedTableLayout.Controls.Add(this.generateSeedLabel, 0, 0);
+            this.generateSeedTableLayout.Controls.Add(this.generateCustomSeed, 1, 0);
+            this.generateSeedTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateSeedTableLayout.Location = new System.Drawing.Point(453, 0);
+            this.generateSeedTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.generateSeedTableLayout.Name = "generateSeedTableLayout";
+            this.generateSeedTableLayout.RowCount = 1;
+            this.generateSeedTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.generateSeedTableLayout.Size = new System.Drawing.Size(170, 27);
+            this.generateSeedTableLayout.TabIndex = 7;
+            // 
+            // generateSeedLabel
+            // 
+            this.generateSeedLabel.AutoSize = true;
+            this.generateSeedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateSeedLabel.Enabled = false;
+            this.generateSeedLabel.Location = new System.Drawing.Point(3, 0);
+            this.generateSeedLabel.Name = "generateSeedLabel";
+            this.generateSeedLabel.Size = new System.Drawing.Size(41, 27);
+            this.generateSeedLabel.TabIndex = 7;
+            this.generateSeedLabel.Text = "Seed";
+            this.generateSeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // generateCustomSeed
+            // 
+            this.generateCustomSeed.AutoSize = true;
+            this.generateCustomSeed.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.generateCustomSeed.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateCustomSeed.Location = new System.Drawing.Point(50, 3);
+            this.generateCustomSeed.Name = "generateCustomSeed";
+            this.generateCustomSeed.Size = new System.Drawing.Size(117, 21);
+            this.generateCustomSeed.TabIndex = 8;
+            this.generateCustomSeed.Text = "Custom Seed";
+            this.generateCustomSeed.UseVisualStyleBackColor = true;
+            this.generateCustomSeed.CheckedChanged += new System.EventHandler(this.GenerateCustomSeed_CheckedChanged);
+            // 
             // generateOutputTextbox
             // 
             this.generateTableLayout.SetColumnSpan(this.generateOutputTextbox, 2);
@@ -1893,70 +1959,16 @@
             // 
             this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
             // 
-            // generateSeed
+            // matchCombineStateLabel
             // 
-            this.generateSeed.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateSeed.Enabled = false;
-            this.generateSeed.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.generateSeed.Location = new System.Drawing.Point(456, 30);
-            this.generateSeed.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
-            0});
-            this.generateSeed.Minimum = new decimal(new int[] {
-            -2147483648,
-            0,
-            0,
-            -2147483648});
-            this.generateSeed.Name = "generateSeed";
-            this.generateSeed.Size = new System.Drawing.Size(164, 22);
-            this.generateSeed.TabIndex = 5;
-            // 
-            // generateSeedTableLayout
-            // 
-            this.generateSeedTableLayout.ColumnCount = 2;
-            this.generateSeedTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.generateSeedTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.generateSeedTableLayout.Controls.Add(this.generateSeedLabel, 0, 0);
-            this.generateSeedTableLayout.Controls.Add(this.generateCustomSeed, 1, 0);
-            this.generateSeedTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateSeedTableLayout.Location = new System.Drawing.Point(453, 0);
-            this.generateSeedTableLayout.Margin = new System.Windows.Forms.Padding(0);
-            this.generateSeedTableLayout.Name = "generateSeedTableLayout";
-            this.generateSeedTableLayout.RowCount = 1;
-            this.generateSeedTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.generateSeedTableLayout.Size = new System.Drawing.Size(170, 27);
-            this.generateSeedTableLayout.TabIndex = 7;
-            // 
-            // generateSeedLabel
-            // 
-            this.generateSeedLabel.AutoSize = true;
-            this.generateSeedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateSeedLabel.Enabled = false;
-            this.generateSeedLabel.Location = new System.Drawing.Point(3, 0);
-            this.generateSeedLabel.Name = "generateSeedLabel";
-            this.generateSeedLabel.Size = new System.Drawing.Size(41, 27);
-            this.generateSeedLabel.TabIndex = 7;
-            this.generateSeedLabel.Text = "Seed";
-            this.generateSeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // generateCustomSeed
-            // 
-            this.generateCustomSeed.AutoSize = true;
-            this.generateCustomSeed.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.generateCustomSeed.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateCustomSeed.Location = new System.Drawing.Point(50, 3);
-            this.generateCustomSeed.Name = "generateCustomSeed";
-            this.generateCustomSeed.Size = new System.Drawing.Size(117, 21);
-            this.generateCustomSeed.TabIndex = 8;
-            this.generateCustomSeed.Text = "Custom Seed";
-            this.generateCustomSeed.UseVisualStyleBackColor = true;
-            this.generateCustomSeed.CheckedChanged += new System.EventHandler(this.GenerateCustomSeed_CheckedChanged);
+            this.matchCombineStateLabel.AutoSize = true;
+            this.matchCombineStateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchCombineStateLabel.Location = new System.Drawing.Point(563, 0);
+            this.matchCombineStateLabel.Name = "matchCombineStateLabel";
+            this.matchCombineStateLabel.Size = new System.Drawing.Size(164, 27);
+            this.matchCombineStateLabel.TabIndex = 6;
+            this.matchCombineStateLabel.Text = "Compare mode";
+            this.matchCombineStateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Application
             // 
@@ -2025,12 +2037,12 @@
             this.tableLayoutPanel3.PerformLayout();
             this.generateSettingsTableLayout.ResumeLayout(false);
             this.generateSettingsTableLayout.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.generateNumberOfWords)).EndInit();
-            this.Toolbar.ResumeLayout(false);
-            this.Toolbar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generateSeed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.generateNumberOfWords)).EndInit();
             this.generateSeedTableLayout.ResumeLayout(false);
             this.generateSeedTableLayout.PerformLayout();
+            this.Toolbar.ResumeLayout(false);
+            this.Toolbar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2155,6 +2167,7 @@
         private System.Windows.Forms.TableLayoutPanel generateSeedTableLayout;
         private System.Windows.Forms.Label generateSeedLabel;
         private System.Windows.Forms.CheckBox generateCustomSeed;
+        private System.Windows.Forms.Label matchCombineStateLabel;
     }
 }
 

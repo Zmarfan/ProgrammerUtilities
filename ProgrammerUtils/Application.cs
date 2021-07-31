@@ -232,8 +232,8 @@ namespace ProgrammerUtils
             string current = MatchCombinedShowModeDropdown.Text;
             switch (current)
             {
-                case "Combined: Every line": return Matcher.CombinedDisplayMode.NEW_LINE;
-                case "Combined: Every word": return Matcher.CombinedDisplayMode.NEW_WORD;
+                case "Every line": return Matcher.CombinedDisplayMode.NEW_LINE;
+                case "Every word": return Matcher.CombinedDisplayMode.NEW_WORD;
                 default:
                     throw new Exception($"There exist no implementation for this enum type: {current}");
             }
