@@ -40,7 +40,7 @@
             // 
             // mainTableLayout
             // 
-            this.mainTableLayout.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.mainTableLayout.BackColor = System.Drawing.Color.Gainsboro;
             this.mainTableLayout.ColumnCount = 7;
             this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -109,6 +109,7 @@
             this.activeCheckbox.TabIndex = 3;
             this.activeCheckbox.Text = "Active";
             this.activeCheckbox.UseVisualStyleBackColor = false;
+            this.activeCheckbox.CheckedChanged += new System.EventHandler(this.ActiveCheckbox_CheckedChanged);
             // 
             // label2
             // 
