@@ -168,6 +168,7 @@
             this.countDetailCharacters = new ProgrammerUtils.CountDetail();
             this.countDetailSentences = new ProgrammerUtils.CountDetail();
             this.countDetailParagraphs = new ProgrammerUtils.CountDetail();
+            this.countDetailDifferentWords = new ProgrammerUtils.CountDetail();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -1231,6 +1232,7 @@
             this.countInfoFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.countInfoFlowLayoutPanel.Controls.Add(this.countDetailWords);
             this.countInfoFlowLayoutPanel.Controls.Add(this.countDetailUniqueWords);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.countDetailDifferentWords);
             this.countInfoFlowLayoutPanel.Controls.Add(this.countDetailCharacters);
             this.countInfoFlowLayoutPanel.Controls.Add(this.countDetailSentences);
             this.countInfoFlowLayoutPanel.Controls.Add(this.countDetailParagraphs);
@@ -2229,7 +2231,7 @@
             // 
             this.countDetailCharacters._DetailText = "Characters";
             this.countDetailCharacters._ValueText = "0";
-            this.countDetailCharacters.Location = new System.Drawing.Point(0, 74);
+            this.countDetailCharacters.Location = new System.Drawing.Point(0, 111);
             this.countDetailCharacters.Margin = new System.Windows.Forms.Padding(0);
             this.countDetailCharacters.Name = "countDetailCharacters";
             this.countDetailCharacters.Size = new System.Drawing.Size(292, 37);
@@ -2239,7 +2241,7 @@
             // 
             this.countDetailSentences._DetailText = "Sentences";
             this.countDetailSentences._ValueText = "0";
-            this.countDetailSentences.Location = new System.Drawing.Point(0, 111);
+            this.countDetailSentences.Location = new System.Drawing.Point(0, 148);
             this.countDetailSentences.Margin = new System.Windows.Forms.Padding(0);
             this.countDetailSentences.Name = "countDetailSentences";
             this.countDetailSentences.Size = new System.Drawing.Size(292, 37);
@@ -2249,11 +2251,21 @@
             // 
             this.countDetailParagraphs._DetailText = "Paragraphs";
             this.countDetailParagraphs._ValueText = "0";
-            this.countDetailParagraphs.Location = new System.Drawing.Point(0, 148);
+            this.countDetailParagraphs.Location = new System.Drawing.Point(0, 185);
             this.countDetailParagraphs.Margin = new System.Windows.Forms.Padding(0);
             this.countDetailParagraphs.Name = "countDetailParagraphs";
             this.countDetailParagraphs.Size = new System.Drawing.Size(292, 37);
             this.countDetailParagraphs.TabIndex = 3;
+            // 
+            // countDetailDifferentWords
+            // 
+            this.countDetailDifferentWords._DetailText = "Different Words";
+            this.countDetailDifferentWords._ValueText = "0";
+            this.countDetailDifferentWords.Location = new System.Drawing.Point(0, 74);
+            this.countDetailDifferentWords.Margin = new System.Windows.Forms.Padding(0);
+            this.countDetailDifferentWords.Name = "countDetailDifferentWords";
+            this.countDetailDifferentWords.Size = new System.Drawing.Size(292, 37);
+            this.countDetailDifferentWords.TabIndex = 5;
             // 
             // Application
             // 
@@ -2482,6 +2494,7 @@
         private CountDetail countDetailSentences;
         private CountDetail countDetailParagraphs;
         private CountDetail countDetailUniqueWords;
+        private CountDetail countDetailDifferentWords;
     }
 }
 

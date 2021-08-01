@@ -60,7 +60,7 @@ namespace ProgrammerUtils
 
             _generateText = new GenerateText(generateOutputTextbox, generateSeed);
 
-            _counter = new Counter(countInputTextbox, countDetailWords, countDetailUniqueWords, countDetailCharacters, countDetailSentences, countDetailParagraphs);
+            _counter = new Counter(countInputTextbox, countDetailWords, countDetailUniqueWords, countDetailDifferentWords, countDetailCharacters, countDetailSentences, countDetailParagraphs);
 
             SetChangeTextStyleButton();
             SetChangeTextPresentationButton();
