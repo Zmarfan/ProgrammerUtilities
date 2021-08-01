@@ -52,6 +52,12 @@
     <Compile Include="Application.Designer.cs">
       <DependentUpon>Application.cs</DependentUpon>
     </Compile>
+    <Compile Include="CountDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CountDetail.Designer.cs">
+      <DependentUpon>CountDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="GenerateText.cs" />
     <Compile Include="HtmlCenter.cs" />
     <Compile Include="HtmlCustomRule.cs">
@@ -71,10 +77,19 @@
     <Compile Include="Program.cs" />
     <Compile Include="ProgrammingConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RoundLabel.Designer.cs">
+      <DependentUpon>RoundLabel.cs</DependentUpon>
+    </Compile>
     <Compile Include="SaveService.cs" />
     <Compile Include="Sort.cs" />
     <EmbeddedResource Include="Application.resx">
       <DependentUpon>Application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountDetail.resx">
+      <DependentUpon>CountDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HtmlCustomRule.resx">
       <DependentUpon>HtmlCustomRule.cs</DependentUpon>

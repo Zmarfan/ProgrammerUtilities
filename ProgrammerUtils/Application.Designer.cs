@@ -47,7 +47,6 @@
             this.sortSeperatorCommaRadio = new System.Windows.Forms.RadioButton();
             this.sortSeperatorNewLineRadio = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.SortCopyButton = new System.Windows.Forms.Button();
             this.SortClearButton = new System.Windows.Forms.Button();
             this.SortTextPresentationButton = new System.Windows.Forms.Button();
             this.SortChangeTextCapsButton = new System.Windows.Forms.Button();
@@ -101,21 +100,6 @@
             this.countInfoTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.countInfoLabel = new System.Windows.Forms.Label();
             this.countInfoFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
             this.htmlTab = new System.Windows.Forms.TabPage();
             this.htmlTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
@@ -137,26 +121,22 @@
             this.htmlInputLabel = new System.Windows.Forms.Label();
             this.htmlInputTextbox = new System.Windows.Forms.RichTextBox();
             this.htmlInputTextSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.htmlLoweredButton = new System.Windows.Forms.CheckBox();
             this.htmlUnderscoreButton = new System.Windows.Forms.CheckBox();
             this.htmlStrikeThroughButton = new System.Windows.Forms.CheckBox();
             this.htmlItalicButton = new System.Windows.Forms.CheckBox();
             this.htmlBoldButton = new System.Windows.Forms.CheckBox();
-            this.htmlRaisedButton = new System.Windows.Forms.CheckBox();
             this.htmlOutputTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlOutputLabel = new System.Windows.Forms.Label();
             this.htmlOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.htmlSideTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlOpenAllTags = new System.Windows.Forms.Button();
             this.htmlClearButton = new System.Windows.Forms.Button();
-            this.htmlCopyButton = new System.Windows.Forms.Button();
             this.htmlCopyLabel = new System.Windows.Forms.Label();
             this.generateTextTab = new System.Windows.Forms.TabPage();
             this.generateTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.generateCopyLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.generateClearButton = new System.Windows.Forms.Button();
-            this.generateCopyButton = new System.Windows.Forms.Button();
             this.generateSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.generateSeed = new System.Windows.Forms.NumericUpDown();
             this.generateAmountOfWordsLabel = new System.Windows.Forms.Label();
@@ -172,12 +152,18 @@
             this.generateOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.HelpDropdown = new System.Windows.Forms.ToolStripDropDownButton();
-            this.asdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aasdasdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
             this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
             this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.SortCopyButton = new System.Windows.Forms.Button();
+            this.htmlLoweredButton = new System.Windows.Forms.CheckBox();
+            this.htmlRaisedButton = new System.Windows.Forms.CheckBox();
+            this.htmlCopyButton = new System.Windows.Forms.Button();
+            this.generateCopyButton = new System.Windows.Forms.Button();
+            this.HelpDropdown = new System.Windows.Forms.ToolStripDropDownButton();
+            this.asdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aasdasdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.countDetail1 = new ProgrammerUtils.CountDetail();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -499,23 +485,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(66, 308);
             this.tableLayoutPanel1.TabIndex = 5;
-            // 
-            // SortCopyButton
-            // 
-            this.SortCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.SortCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
-            this.SortCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SortCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SortCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SortCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SortCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortCopyButton.Location = new System.Drawing.Point(3, 135);
-            this.SortCopyButton.Name = "SortCopyButton";
-            this.SortCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.SortCopyButton.Size = new System.Drawing.Size(60, 60);
-            this.SortCopyButton.TabIndex = 9;
-            this.SortCopyButton.UseVisualStyleBackColor = false;
-            this.SortCopyButton.Click += new System.EventHandler(this.SortCopyButton_Click);
             // 
             // SortClearButton
             // 
@@ -1198,7 +1167,7 @@
             this.countWordDensityTab.Location = new System.Drawing.Point(4, 25);
             this.countWordDensityTab.Name = "countWordDensityTab";
             this.countWordDensityTab.Padding = new System.Windows.Forms.Padding(3);
-            this.countWordDensityTab.Size = new System.Drawing.Size(306, 372);
+            this.countWordDensityTab.Size = new System.Drawing.Size(286, 372);
             this.countWordDensityTab.TabIndex = 1;
             this.countWordDensityTab.Text = "Word Density";
             this.countWordDensityTab.UseVisualStyleBackColor = true;
@@ -1238,21 +1207,7 @@
             this.countInfoFlowLayoutPanel.AutoScroll = true;
             this.countInfoFlowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.countInfoFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button1);
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button2);
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button3);
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button4);
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button5);
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button6);
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button7);
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button8);
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button9);
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button10);
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button11);
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button12);
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button13);
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button14);
-            this.countInfoFlowLayoutPanel.Controls.Add(this.button15);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.countDetail1);
             this.countInfoFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.countInfoFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.countInfoFlowLayoutPanel.Location = new System.Drawing.Point(3, 42);
@@ -1260,141 +1215,6 @@
             this.countInfoFlowLayoutPanel.Size = new System.Drawing.Size(294, 362);
             this.countInfoFlowLayoutPanel.TabIndex = 5;
             this.countInfoFlowLayoutPanel.WrapContents = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(3, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(3, 61);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(3, 90);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(3, 119);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(3, 148);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(3, 177);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "button7";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(3, 206);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "button8";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.Location = new System.Drawing.Point(3, 235);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "button9";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(3, 264);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 9;
-            this.button10.Text = "button10";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(3, 293);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 10;
-            this.button11.Text = "button11";
-            this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(3, 322);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(75, 23);
-            this.button12.TabIndex = 11;
-            this.button12.Text = "button12";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Location = new System.Drawing.Point(3, 351);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(75, 23);
-            this.button13.TabIndex = 12;
-            this.button13.Text = "button13";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            this.button14.Location = new System.Drawing.Point(3, 380);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(75, 23);
-            this.button14.TabIndex = 13;
-            this.button14.Text = "button14";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Location = new System.Drawing.Point(3, 409);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(75, 23);
-            this.button15.TabIndex = 14;
-            this.button15.Text = "button15";
-            this.button15.UseVisualStyleBackColor = true;
             // 
             // htmlTab
             // 
@@ -1753,25 +1573,6 @@
             this.htmlInputTextSettingsTableLayout.Size = new System.Drawing.Size(439, 32);
             this.htmlInputTextSettingsTableLayout.TabIndex = 4;
             // 
-            // htmlLoweredButton
-            // 
-            this.htmlLoweredButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.htmlLoweredButton.AutoSize = true;
-            this.htmlLoweredButton.BackColor = System.Drawing.Color.Lavender;
-            this.htmlLoweredButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.html_Lowered;
-            this.htmlLoweredButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.htmlLoweredButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.htmlLoweredButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlLoweredButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.htmlLoweredButton.Location = new System.Drawing.Point(178, 3);
-            this.htmlLoweredButton.Name = "htmlLoweredButton";
-            this.htmlLoweredButton.Size = new System.Drawing.Size(29, 26);
-            this.htmlLoweredButton.TabIndex = 14;
-            this.htmlLoweredButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.htmlLoweredButton.UseVisualStyleBackColor = false;
-            this.htmlLoweredButton.CheckedChanged += new System.EventHandler(this.HtmlLoweredButton_CheckedChanged);
-            this.htmlLoweredButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
-            // 
             // htmlUnderscoreButton
             // 
             this.htmlUnderscoreButton.Appearance = System.Windows.Forms.Appearance.Button;
@@ -1851,25 +1652,6 @@
             this.htmlBoldButton.UseVisualStyleBackColor = false;
             this.htmlBoldButton.CheckedChanged += new System.EventHandler(this.HtmlBoldButton_CheckedChanged);
             this.htmlBoldButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
-            // 
-            // htmlRaisedButton
-            // 
-            this.htmlRaisedButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.htmlRaisedButton.AutoSize = true;
-            this.htmlRaisedButton.BackColor = System.Drawing.Color.Lavender;
-            this.htmlRaisedButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.html_Raised;
-            this.htmlRaisedButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.htmlRaisedButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.htmlRaisedButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlRaisedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.htmlRaisedButton.Location = new System.Drawing.Point(143, 3);
-            this.htmlRaisedButton.Name = "htmlRaisedButton";
-            this.htmlRaisedButton.Size = new System.Drawing.Size(29, 26);
-            this.htmlRaisedButton.TabIndex = 13;
-            this.htmlRaisedButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.htmlRaisedButton.UseVisualStyleBackColor = false;
-            this.htmlRaisedButton.CheckedChanged += new System.EventHandler(this.HtmlRaisedButton_CheckedChanged);
-            this.htmlRaisedButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
             // 
             // htmlOutputTableLayout
             // 
@@ -1964,23 +1746,6 @@
             this.htmlClearButton.UseVisualStyleBackColor = false;
             this.htmlClearButton.Click += new System.EventHandler(this.HtmlClearButton_Click);
             // 
-            // htmlCopyButton
-            // 
-            this.htmlCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.htmlCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
-            this.htmlCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.htmlCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.htmlCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.htmlCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.htmlCopyButton.Location = new System.Drawing.Point(3, 69);
-            this.htmlCopyButton.Name = "htmlCopyButton";
-            this.htmlCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.htmlCopyButton.Size = new System.Drawing.Size(60, 60);
-            this.htmlCopyButton.TabIndex = 17;
-            this.htmlCopyButton.UseVisualStyleBackColor = false;
-            this.htmlCopyButton.Click += new System.EventHandler(this.HtmlCopyButton_Click);
-            // 
             // htmlCopyLabel
             // 
             this.htmlCopyLabel.AutoSize = true;
@@ -2071,23 +1836,6 @@
             this.generateClearButton.Text = "Clear";
             this.generateClearButton.UseVisualStyleBackColor = false;
             this.generateClearButton.Click += new System.EventHandler(this.GenerateClearButton_Click);
-            // 
-            // generateCopyButton
-            // 
-            this.generateCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.generateCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
-            this.generateCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.generateCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.generateCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.generateCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generateCopyButton.Location = new System.Drawing.Point(3, 3);
-            this.generateCopyButton.Name = "generateCopyButton";
-            this.generateCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.generateCopyButton.Size = new System.Drawing.Size(60, 60);
-            this.generateCopyButton.TabIndex = 17;
-            this.generateCopyButton.UseVisualStyleBackColor = false;
-            this.generateCopyButton.Click += new System.EventHandler(this.GenerateCopyButton_Click);
             // 
             // generateSettingsTableLayout
             // 
@@ -2320,6 +2068,109 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 30);
             // 
+            // CopyTimer
+            // 
+            this.CopyTimer.Interval = 1500;
+            this.CopyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
+            // 
+            // htmlColorTagPicker
+            // 
+            this.htmlColorTagPicker.FullOpen = true;
+            this.htmlColorTagPicker.SolidColorOnly = true;
+            // 
+            // htmlColorHoverTooltip
+            // 
+            this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
+            // 
+            // SortCopyButton
+            // 
+            this.SortCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.SortCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
+            this.SortCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SortCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SortCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SortCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortCopyButton.Location = new System.Drawing.Point(3, 135);
+            this.SortCopyButton.Name = "SortCopyButton";
+            this.SortCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.SortCopyButton.Size = new System.Drawing.Size(60, 60);
+            this.SortCopyButton.TabIndex = 9;
+            this.SortCopyButton.UseVisualStyleBackColor = false;
+            this.SortCopyButton.Click += new System.EventHandler(this.SortCopyButton_Click);
+            // 
+            // htmlLoweredButton
+            // 
+            this.htmlLoweredButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.htmlLoweredButton.AutoSize = true;
+            this.htmlLoweredButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlLoweredButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.html_Lowered;
+            this.htmlLoweredButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.htmlLoweredButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlLoweredButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlLoweredButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlLoweredButton.Location = new System.Drawing.Point(178, 3);
+            this.htmlLoweredButton.Name = "htmlLoweredButton";
+            this.htmlLoweredButton.Size = new System.Drawing.Size(29, 26);
+            this.htmlLoweredButton.TabIndex = 14;
+            this.htmlLoweredButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlLoweredButton.UseVisualStyleBackColor = false;
+            this.htmlLoweredButton.CheckedChanged += new System.EventHandler(this.HtmlLoweredButton_CheckedChanged);
+            this.htmlLoweredButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
+            // 
+            // htmlRaisedButton
+            // 
+            this.htmlRaisedButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.htmlRaisedButton.AutoSize = true;
+            this.htmlRaisedButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlRaisedButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.html_Raised;
+            this.htmlRaisedButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.htmlRaisedButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlRaisedButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlRaisedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlRaisedButton.Location = new System.Drawing.Point(143, 3);
+            this.htmlRaisedButton.Name = "htmlRaisedButton";
+            this.htmlRaisedButton.Size = new System.Drawing.Size(29, 26);
+            this.htmlRaisedButton.TabIndex = 13;
+            this.htmlRaisedButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlRaisedButton.UseVisualStyleBackColor = false;
+            this.htmlRaisedButton.CheckedChanged += new System.EventHandler(this.HtmlRaisedButton_CheckedChanged);
+            this.htmlRaisedButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
+            // 
+            // htmlCopyButton
+            // 
+            this.htmlCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.htmlCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
+            this.htmlCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.htmlCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlCopyButton.Location = new System.Drawing.Point(3, 69);
+            this.htmlCopyButton.Name = "htmlCopyButton";
+            this.htmlCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.htmlCopyButton.Size = new System.Drawing.Size(60, 60);
+            this.htmlCopyButton.TabIndex = 17;
+            this.htmlCopyButton.UseVisualStyleBackColor = false;
+            this.htmlCopyButton.Click += new System.EventHandler(this.HtmlCopyButton_Click);
+            // 
+            // generateCopyButton
+            // 
+            this.generateCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.generateCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
+            this.generateCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.generateCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.generateCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.generateCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateCopyButton.Location = new System.Drawing.Point(3, 3);
+            this.generateCopyButton.Name = "generateCopyButton";
+            this.generateCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.generateCopyButton.Size = new System.Drawing.Size(60, 60);
+            this.generateCopyButton.TabIndex = 17;
+            this.generateCopyButton.UseVisualStyleBackColor = false;
+            this.generateCopyButton.Click += new System.EventHandler(this.GenerateCopyButton_Click);
+            // 
             // HelpDropdown
             // 
             this.HelpDropdown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -2345,19 +2196,12 @@
             this.aasdasdasdToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.aasdasdasdToolStripMenuItem.Text = "aasdasdasd";
             // 
-            // CopyTimer
+            // countDetail1
             // 
-            this.CopyTimer.Interval = 1500;
-            this.CopyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
-            // 
-            // htmlColorTagPicker
-            // 
-            this.htmlColorTagPicker.FullOpen = true;
-            this.htmlColorTagPicker.SolidColorOnly = true;
-            // 
-            // htmlColorHoverTooltip
-            // 
-            this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
+            this.countDetail1.Location = new System.Drawing.Point(3, 3);
+            this.countDetail1.Name = "countDetail1";
+            this.countDetail1.Size = new System.Drawing.Size(284, 37);
+            this.countDetail1.TabIndex = 0;
             // 
             // Application
             // 
@@ -2581,21 +2425,7 @@
         private System.Windows.Forms.TableLayoutPanel countInfoTableLayout;
         private System.Windows.Forms.Label countInfoLabel;
         private System.Windows.Forms.FlowLayoutPanel countInfoFlowLayoutPanel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
+        private CountDetail countDetail1;
     }
 }
 
