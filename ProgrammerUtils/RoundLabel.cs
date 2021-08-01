@@ -19,6 +19,7 @@ namespace ProgrammerUtils
             DoubleBuffered = true;
         }
 
+        protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
             using (var graphicsPath = _getRoundRectangle(ClientRectangle, CornerRadius))
