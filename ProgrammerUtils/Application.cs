@@ -22,6 +22,7 @@ namespace ProgrammerUtils
         Matcher _matcher;
         HtmlCenter _html;
         GenerateText _generateText;
+        Counter _counter;
         HtmlExtraSettings _htmlExtraSettingsWindow;
 
         public Application()
@@ -58,6 +59,8 @@ namespace ProgrammerUtils
             DoHtml();
 
             _generateText = new GenerateText(generateOutputTextbox, generateSeed);
+
+            _counter = new Counter(countInputTextbox, countDetailWords, countDetailUniqueWords, countDetailCharacters, countDetailSentences, countDetailParagraphs);
 
             SetChangeTextStyleButton();
             SetChangeTextPresentationButton();
@@ -550,6 +553,19 @@ namespace ProgrammerUtils
         private void GenerateParagraphSizeSlider_MouseUp(object sender, MouseEventArgs e)
         {
             DoGenerateText(true);
+        }
+
+        #endregion
+        #endregion
+
+        #region Count
+        #region Helper Methods
+        #endregion
+        #region Events
+
+        private void CountButton_Click(object sender, EventArgs e)
+        {
+            _counter.Execute();
         }
 
         #endregion

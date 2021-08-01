@@ -58,6 +58,7 @@
     <Compile Include="CountDetail.Designer.cs">
       <DependentUpon>CountDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Counter.cs" />
     <Compile Include="GenerateText.cs" />
     <Compile Include="HtmlCenter.cs" />
     <Compile Include="HtmlCustomRule.cs">

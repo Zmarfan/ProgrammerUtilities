@@ -56,7 +56,7 @@
             // 
             this.detailLabel.AutoSize = true;
             this.detailLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.detailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detailLabel.Location = new System.Drawing.Point(4, 1);
             this.detailLabel.Name = "detailLabel";
             this.detailLabel.Size = new System.Drawing.Size(128, 35);

@@ -1121,6 +1121,7 @@
             this.countButton.TabIndex = 0;
             this.countButton.Text = "Count";
             this.countButton.UseVisualStyleBackColor = false;
+            this.countButton.Click += new System.EventHandler(this.CountButton_Click);
             // 
             // countInputTableLayout
             // 

@@ -222,7 +222,7 @@ namespace ProgrammerUtils
         private static readonly int MIN_PARAGRAPH_SENTENCES = 4;
         private static readonly int MAX_PARAGRAPH_SENTENCES = 10;
         private static readonly int MIN_WORDS_IN_SENTENCE = 3;
-        private static readonly int MAX_WORDS_IN_SENTENCE = 35;
+        private static readonly int MAX_WORDS_IN_SENTENCE = 25;
         private static readonly int MIN_WORDS_BETWEEN_COMMAS = 3;
         private static readonly int MAX_WORDS_BETWEEN_COMMAS = 20;
 
@@ -287,6 +287,9 @@ namespace ProgrammerUtils
                     builder.Append(GetParagraphString(paragraphType));
             }
 
+            //Removes last added space
+            builder.Remove(builder.Length - 1, 1);
+
             return builder.ToString();
         }
 
@@ -332,7 +335,7 @@ namespace ProgrammerUtils
                 builder.Append(lastWord);
             }
 
-            builder.Append(". ");
+            builder.Append( ". ");
 
             return builder.ToString();
         }
