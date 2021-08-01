@@ -9,9 +9,34 @@ namespace ProgrammerUtils
     public partial class RoundLabel : Label
     {
         [Browsable(true)]
-        public Color RoundedBackColor { get; set; }
+        public Color RoundedBackColor
+        { 
+            get
+            {
+                return _roundedBackColor;
+            }
+            set
+            {
+                _roundedBackColor = value;
+                Invalidate();
+            }
+        }
         [Browsable(true)]
-        public int CornerRadius { get; set; } = 15;
+        public int CornerRadius
+        {
+            get
+            {
+                return _cornerRadius;
+            }
+            set
+            {
+                _cornerRadius = value;
+                Invalidate();
+            }
+        }
+
+        private Color _roundedBackColor;
+        private int _cornerRadius = 15;
 
         public RoundLabel()
         {

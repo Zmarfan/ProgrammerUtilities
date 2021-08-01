@@ -47,6 +47,7 @@
             this.sortSeperatorCommaRadio = new System.Windows.Forms.RadioButton();
             this.sortSeperatorNewLineRadio = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.SortCopyButton = new System.Windows.Forms.Button();
             this.SortClearButton = new System.Windows.Forms.Button();
             this.SortTextPresentationButton = new System.Windows.Forms.Button();
             this.SortChangeTextCapsButton = new System.Windows.Forms.Button();
@@ -121,22 +122,26 @@
             this.htmlInputLabel = new System.Windows.Forms.Label();
             this.htmlInputTextbox = new System.Windows.Forms.RichTextBox();
             this.htmlInputTextSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.htmlLoweredButton = new System.Windows.Forms.CheckBox();
             this.htmlUnderscoreButton = new System.Windows.Forms.CheckBox();
             this.htmlStrikeThroughButton = new System.Windows.Forms.CheckBox();
             this.htmlItalicButton = new System.Windows.Forms.CheckBox();
             this.htmlBoldButton = new System.Windows.Forms.CheckBox();
+            this.htmlRaisedButton = new System.Windows.Forms.CheckBox();
             this.htmlOutputTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlOutputLabel = new System.Windows.Forms.Label();
             this.htmlOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.htmlSideTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlOpenAllTags = new System.Windows.Forms.Button();
             this.htmlClearButton = new System.Windows.Forms.Button();
+            this.htmlCopyButton = new System.Windows.Forms.Button();
             this.htmlCopyLabel = new System.Windows.Forms.Label();
             this.generateTextTab = new System.Windows.Forms.TabPage();
             this.generateTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.generateCopyLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.generateClearButton = new System.Windows.Forms.Button();
+            this.generateCopyButton = new System.Windows.Forms.Button();
             this.generateSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.generateSeed = new System.Windows.Forms.NumericUpDown();
             this.generateAmountOfWordsLabel = new System.Windows.Forms.Label();
@@ -152,18 +157,17 @@
             this.generateOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.CopyTimer = new System.Windows.Forms.Timer(this.components);
-            this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
-            this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.SortCopyButton = new System.Windows.Forms.Button();
-            this.htmlLoweredButton = new System.Windows.Forms.CheckBox();
-            this.htmlRaisedButton = new System.Windows.Forms.CheckBox();
-            this.htmlCopyButton = new System.Windows.Forms.Button();
-            this.generateCopyButton = new System.Windows.Forms.Button();
             this.HelpDropdown = new System.Windows.Forms.ToolStripDropDownButton();
             this.asdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aasdasdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.countDetail1 = new ProgrammerUtils.CountDetail();
+            this.CopyTimer = new System.Windows.Forms.Timer(this.components);
+            this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
+            this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.countDetailWords = new ProgrammerUtils.CountDetail();
+            this.countDetailUniqueWords = new ProgrammerUtils.CountDetail();
+            this.countDetailCharacters = new ProgrammerUtils.CountDetail();
+            this.countDetailSentences = new ProgrammerUtils.CountDetail();
+            this.countDetailParagraphs = new ProgrammerUtils.CountDetail();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -485,6 +489,23 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(66, 308);
             this.tableLayoutPanel1.TabIndex = 5;
+            // 
+            // SortCopyButton
+            // 
+            this.SortCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.SortCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
+            this.SortCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SortCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SortCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SortCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortCopyButton.Location = new System.Drawing.Point(3, 135);
+            this.SortCopyButton.Name = "SortCopyButton";
+            this.SortCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.SortCopyButton.Size = new System.Drawing.Size(60, 60);
+            this.SortCopyButton.TabIndex = 9;
+            this.SortCopyButton.UseVisualStyleBackColor = false;
+            this.SortCopyButton.Click += new System.EventHandler(this.SortCopyButton_Click);
             // 
             // SortClearButton
             // 
@@ -1205,9 +1226,13 @@
             // countInfoFlowLayoutPanel
             // 
             this.countInfoFlowLayoutPanel.AutoScroll = true;
-            this.countInfoFlowLayoutPanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.countInfoFlowLayoutPanel.BackColor = System.Drawing.Color.LightGray;
             this.countInfoFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.countInfoFlowLayoutPanel.Controls.Add(this.countDetail1);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.countDetailWords);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.countDetailUniqueWords);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.countDetailCharacters);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.countDetailSentences);
+            this.countInfoFlowLayoutPanel.Controls.Add(this.countDetailParagraphs);
             this.countInfoFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.countInfoFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.countInfoFlowLayoutPanel.Location = new System.Drawing.Point(3, 42);
@@ -1573,6 +1598,25 @@
             this.htmlInputTextSettingsTableLayout.Size = new System.Drawing.Size(439, 32);
             this.htmlInputTextSettingsTableLayout.TabIndex = 4;
             // 
+            // htmlLoweredButton
+            // 
+            this.htmlLoweredButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.htmlLoweredButton.AutoSize = true;
+            this.htmlLoweredButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlLoweredButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.html_Lowered;
+            this.htmlLoweredButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.htmlLoweredButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlLoweredButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlLoweredButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlLoweredButton.Location = new System.Drawing.Point(178, 3);
+            this.htmlLoweredButton.Name = "htmlLoweredButton";
+            this.htmlLoweredButton.Size = new System.Drawing.Size(29, 26);
+            this.htmlLoweredButton.TabIndex = 14;
+            this.htmlLoweredButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlLoweredButton.UseVisualStyleBackColor = false;
+            this.htmlLoweredButton.CheckedChanged += new System.EventHandler(this.HtmlLoweredButton_CheckedChanged);
+            this.htmlLoweredButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
+            // 
             // htmlUnderscoreButton
             // 
             this.htmlUnderscoreButton.Appearance = System.Windows.Forms.Appearance.Button;
@@ -1652,6 +1696,25 @@
             this.htmlBoldButton.UseVisualStyleBackColor = false;
             this.htmlBoldButton.CheckedChanged += new System.EventHandler(this.HtmlBoldButton_CheckedChanged);
             this.htmlBoldButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
+            // 
+            // htmlRaisedButton
+            // 
+            this.htmlRaisedButton.Appearance = System.Windows.Forms.Appearance.Button;
+            this.htmlRaisedButton.AutoSize = true;
+            this.htmlRaisedButton.BackColor = System.Drawing.Color.Lavender;
+            this.htmlRaisedButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.html_Raised;
+            this.htmlRaisedButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.htmlRaisedButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlRaisedButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlRaisedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlRaisedButton.Location = new System.Drawing.Point(143, 3);
+            this.htmlRaisedButton.Name = "htmlRaisedButton";
+            this.htmlRaisedButton.Size = new System.Drawing.Size(29, 26);
+            this.htmlRaisedButton.TabIndex = 13;
+            this.htmlRaisedButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.htmlRaisedButton.UseVisualStyleBackColor = false;
+            this.htmlRaisedButton.CheckedChanged += new System.EventHandler(this.HtmlRaisedButton_CheckedChanged);
+            this.htmlRaisedButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
             // 
             // htmlOutputTableLayout
             // 
@@ -1746,6 +1809,23 @@
             this.htmlClearButton.UseVisualStyleBackColor = false;
             this.htmlClearButton.Click += new System.EventHandler(this.HtmlClearButton_Click);
             // 
+            // htmlCopyButton
+            // 
+            this.htmlCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.htmlCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
+            this.htmlCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.htmlCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.htmlCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.htmlCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.htmlCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlCopyButton.Location = new System.Drawing.Point(3, 69);
+            this.htmlCopyButton.Name = "htmlCopyButton";
+            this.htmlCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.htmlCopyButton.Size = new System.Drawing.Size(60, 60);
+            this.htmlCopyButton.TabIndex = 17;
+            this.htmlCopyButton.UseVisualStyleBackColor = false;
+            this.htmlCopyButton.Click += new System.EventHandler(this.HtmlCopyButton_Click);
+            // 
             // htmlCopyLabel
             // 
             this.htmlCopyLabel.AutoSize = true;
@@ -1836,6 +1916,23 @@
             this.generateClearButton.Text = "Clear";
             this.generateClearButton.UseVisualStyleBackColor = false;
             this.generateClearButton.Click += new System.EventHandler(this.GenerateClearButton_Click);
+            // 
+            // generateCopyButton
+            // 
+            this.generateCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.generateCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
+            this.generateCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.generateCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.generateCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.generateCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.generateCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.generateCopyButton.Location = new System.Drawing.Point(3, 3);
+            this.generateCopyButton.Name = "generateCopyButton";
+            this.generateCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
+            this.generateCopyButton.Size = new System.Drawing.Size(60, 60);
+            this.generateCopyButton.TabIndex = 17;
+            this.generateCopyButton.UseVisualStyleBackColor = false;
+            this.generateCopyButton.Click += new System.EventHandler(this.GenerateCopyButton_Click);
             // 
             // generateSettingsTableLayout
             // 
@@ -2068,109 +2165,6 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 30);
             // 
-            // CopyTimer
-            // 
-            this.CopyTimer.Interval = 1500;
-            this.CopyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
-            // 
-            // htmlColorTagPicker
-            // 
-            this.htmlColorTagPicker.FullOpen = true;
-            this.htmlColorTagPicker.SolidColorOnly = true;
-            // 
-            // htmlColorHoverTooltip
-            // 
-            this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
-            // 
-            // SortCopyButton
-            // 
-            this.SortCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.SortCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
-            this.SortCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SortCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SortCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SortCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SortCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortCopyButton.Location = new System.Drawing.Point(3, 135);
-            this.SortCopyButton.Name = "SortCopyButton";
-            this.SortCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.SortCopyButton.Size = new System.Drawing.Size(60, 60);
-            this.SortCopyButton.TabIndex = 9;
-            this.SortCopyButton.UseVisualStyleBackColor = false;
-            this.SortCopyButton.Click += new System.EventHandler(this.SortCopyButton_Click);
-            // 
-            // htmlLoweredButton
-            // 
-            this.htmlLoweredButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.htmlLoweredButton.AutoSize = true;
-            this.htmlLoweredButton.BackColor = System.Drawing.Color.Lavender;
-            this.htmlLoweredButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.html_Lowered;
-            this.htmlLoweredButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.htmlLoweredButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.htmlLoweredButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlLoweredButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.htmlLoweredButton.Location = new System.Drawing.Point(178, 3);
-            this.htmlLoweredButton.Name = "htmlLoweredButton";
-            this.htmlLoweredButton.Size = new System.Drawing.Size(29, 26);
-            this.htmlLoweredButton.TabIndex = 14;
-            this.htmlLoweredButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.htmlLoweredButton.UseVisualStyleBackColor = false;
-            this.htmlLoweredButton.CheckedChanged += new System.EventHandler(this.HtmlLoweredButton_CheckedChanged);
-            this.htmlLoweredButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
-            // 
-            // htmlRaisedButton
-            // 
-            this.htmlRaisedButton.Appearance = System.Windows.Forms.Appearance.Button;
-            this.htmlRaisedButton.AutoSize = true;
-            this.htmlRaisedButton.BackColor = System.Drawing.Color.Lavender;
-            this.htmlRaisedButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.html_Raised;
-            this.htmlRaisedButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.htmlRaisedButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.htmlRaisedButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlRaisedButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.htmlRaisedButton.Location = new System.Drawing.Point(143, 3);
-            this.htmlRaisedButton.Name = "htmlRaisedButton";
-            this.htmlRaisedButton.Size = new System.Drawing.Size(29, 26);
-            this.htmlRaisedButton.TabIndex = 13;
-            this.htmlRaisedButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.htmlRaisedButton.UseVisualStyleBackColor = false;
-            this.htmlRaisedButton.CheckedChanged += new System.EventHandler(this.HtmlRaisedButton_CheckedChanged);
-            this.htmlRaisedButton.CheckStateChanged += new System.EventHandler(this.HTMLTextStyleButtonChange);
-            // 
-            // htmlCopyButton
-            // 
-            this.htmlCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.htmlCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
-            this.htmlCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.htmlCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.htmlCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.htmlCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.htmlCopyButton.Location = new System.Drawing.Point(3, 69);
-            this.htmlCopyButton.Name = "htmlCopyButton";
-            this.htmlCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.htmlCopyButton.Size = new System.Drawing.Size(60, 60);
-            this.htmlCopyButton.TabIndex = 17;
-            this.htmlCopyButton.UseVisualStyleBackColor = false;
-            this.htmlCopyButton.Click += new System.EventHandler(this.HtmlCopyButton_Click);
-            // 
-            // generateCopyButton
-            // 
-            this.generateCopyButton.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.generateCopyButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.copy_image;
-            this.generateCopyButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.generateCopyButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.generateCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.generateCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generateCopyButton.Location = new System.Drawing.Point(3, 3);
-            this.generateCopyButton.Name = "generateCopyButton";
-            this.generateCopyButton.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
-            this.generateCopyButton.Size = new System.Drawing.Size(60, 60);
-            this.generateCopyButton.TabIndex = 17;
-            this.generateCopyButton.UseVisualStyleBackColor = false;
-            this.generateCopyButton.Click += new System.EventHandler(this.GenerateCopyButton_Click);
-            // 
             // HelpDropdown
             // 
             this.HelpDropdown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -2196,12 +2190,69 @@
             this.aasdasdasdToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
             this.aasdasdasdToolStripMenuItem.Text = "aasdasdasd";
             // 
-            // countDetail1
+            // CopyTimer
             // 
-            this.countDetail1.Location = new System.Drawing.Point(3, 3);
-            this.countDetail1.Name = "countDetail1";
-            this.countDetail1.Size = new System.Drawing.Size(284, 37);
-            this.countDetail1.TabIndex = 0;
+            this.CopyTimer.Interval = 1500;
+            this.CopyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
+            // 
+            // htmlColorTagPicker
+            // 
+            this.htmlColorTagPicker.FullOpen = true;
+            this.htmlColorTagPicker.SolidColorOnly = true;
+            // 
+            // htmlColorHoverTooltip
+            // 
+            this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
+            // 
+            // countDetailWords
+            // 
+            this.countDetailWords._DetailText = "Words";
+            this.countDetailWords._ValueText = "0";
+            this.countDetailWords.Location = new System.Drawing.Point(0, 0);
+            this.countDetailWords.Margin = new System.Windows.Forms.Padding(0);
+            this.countDetailWords.Name = "countDetailWords";
+            this.countDetailWords.Size = new System.Drawing.Size(292, 37);
+            this.countDetailWords.TabIndex = 0;
+            // 
+            // countDetailUniqueWords
+            // 
+            this.countDetailUniqueWords._DetailText = "Unique Words";
+            this.countDetailUniqueWords._ValueText = "0";
+            this.countDetailUniqueWords.Location = new System.Drawing.Point(0, 37);
+            this.countDetailUniqueWords.Margin = new System.Windows.Forms.Padding(0);
+            this.countDetailUniqueWords.Name = "countDetailUniqueWords";
+            this.countDetailUniqueWords.Size = new System.Drawing.Size(292, 37);
+            this.countDetailUniqueWords.TabIndex = 4;
+            // 
+            // countDetailCharacters
+            // 
+            this.countDetailCharacters._DetailText = "Characters";
+            this.countDetailCharacters._ValueText = "0";
+            this.countDetailCharacters.Location = new System.Drawing.Point(0, 74);
+            this.countDetailCharacters.Margin = new System.Windows.Forms.Padding(0);
+            this.countDetailCharacters.Name = "countDetailCharacters";
+            this.countDetailCharacters.Size = new System.Drawing.Size(292, 37);
+            this.countDetailCharacters.TabIndex = 1;
+            // 
+            // countDetailSentences
+            // 
+            this.countDetailSentences._DetailText = "Sentences";
+            this.countDetailSentences._ValueText = "0";
+            this.countDetailSentences.Location = new System.Drawing.Point(0, 111);
+            this.countDetailSentences.Margin = new System.Windows.Forms.Padding(0);
+            this.countDetailSentences.Name = "countDetailSentences";
+            this.countDetailSentences.Size = new System.Drawing.Size(292, 37);
+            this.countDetailSentences.TabIndex = 2;
+            // 
+            // countDetailParagraphs
+            // 
+            this.countDetailParagraphs._DetailText = "Paragraphs";
+            this.countDetailParagraphs._ValueText = "0";
+            this.countDetailParagraphs.Location = new System.Drawing.Point(0, 148);
+            this.countDetailParagraphs.Margin = new System.Windows.Forms.Padding(0);
+            this.countDetailParagraphs.Name = "countDetailParagraphs";
+            this.countDetailParagraphs.Size = new System.Drawing.Size(292, 37);
+            this.countDetailParagraphs.TabIndex = 3;
             // 
             // Application
             // 
@@ -2425,7 +2476,11 @@
         private System.Windows.Forms.TableLayoutPanel countInfoTableLayout;
         private System.Windows.Forms.Label countInfoLabel;
         private System.Windows.Forms.FlowLayoutPanel countInfoFlowLayoutPanel;
-        private CountDetail countDetail1;
+        private CountDetail countDetailWords;
+        private CountDetail countDetailCharacters;
+        private CountDetail countDetailSentences;
+        private CountDetail countDetailParagraphs;
+        private CountDetail countDetailUniqueWords;
     }
 }
 
