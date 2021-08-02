@@ -58,16 +58,17 @@ namespace ProgrammerUtils
 
             string text = _inputTextbox.Text;
             List<string> allParagraphs = text.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries).ToList();
-            string unpartitionedText = string.Join("", allParagraphs.ToArray());
+            int allCharacters = string.Join("", allParagraphs.ToArray()).Length;
+            string workText = text.Replace('\n', ' ');
 
             _paragraphsCountDetail._ValueText = allParagraphs.Count.ToString();
-            _charactersCountDetail._ValueText = unpartitionedText.Length.ToString();
+            _charactersCountDetail._ValueText = allCharacters.ToString();
 
-            List<string> allWords = unpartitionedText.Split(new string[] { " ", ", ", ",", ". ", "." }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            List<string> allWords = workText.Split(new string[] { " ", ", ", ",", ". ", "." }, StringSplitOptions.RemoveEmptyEntries).ToList();
             _wordsCountDetail._ValueText = allWords.Count.ToString();
 
 
-            string[] sentences = unpartitionedText.Split(new string[] { ". ", "." }, StringSplitOptions.RemoveEmptyEntries);
+            string[] sentences = workText.Split(new string[] { ". ", "." }, StringSplitOptions.RemoveEmptyEntries);
             _sentencesCountDetail._ValueText = sentences.Length.ToString();
 
             Dictionary<string, int> differentWords = CalculateWords(allWords);
