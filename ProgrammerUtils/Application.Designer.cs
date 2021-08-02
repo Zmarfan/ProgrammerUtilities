@@ -95,6 +95,7 @@
             this.countButton = new System.Windows.Forms.Button();
             this.countSortModes = new System.Windows.Forms.ComboBox();
             this.countSortModeLabel = new System.Windows.Forms.Label();
+            this.countCaseSensitive = new System.Windows.Forms.CheckBox();
             this.countInputTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.countInputTextbox = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -176,7 +177,6 @@
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
             this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
             this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.countCaseSensitive = new System.Windows.Forms.CheckBox();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -1176,6 +1176,22 @@
             this.countSortModeLabel.TabIndex = 7;
             this.countSortModeLabel.Text = "Sort mode";
             this.countSortModeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // countCaseSensitive
+            // 
+            this.countCaseSensitive.AutoSize = true;
+            this.countCaseSensitive.Checked = true;
+            this.countCaseSensitive.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.countCaseSensitive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.countCaseSensitive.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countCaseSensitive.Location = new System.Drawing.Point(330, 3);
+            this.countCaseSensitive.Name = "countCaseSensitive";
+            this.tableLayoutPanel5.SetRowSpan(this.countCaseSensitive, 2);
+            this.countCaseSensitive.Size = new System.Drawing.Size(121, 49);
+            this.countCaseSensitive.TabIndex = 8;
+            this.countCaseSensitive.Text = "Case sensitive";
+            this.countCaseSensitive.UseVisualStyleBackColor = true;
+            this.countCaseSensitive.CheckedChanged += new System.EventHandler(this.CountCaseSensitive_CheckedChanged);
             // 
             // countInputTableLayout
             // 
@@ -2375,20 +2391,6 @@
             // htmlColorHoverTooltip
             // 
             this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
-            // 
-            // countCaseSensitive
-            // 
-            this.countCaseSensitive.AutoSize = true;
-            this.countCaseSensitive.Checked = true;
-            this.countCaseSensitive.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.countCaseSensitive.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.countCaseSensitive.Location = new System.Drawing.Point(330, 3);
-            this.countCaseSensitive.Name = "countCaseSensitive";
-            this.countCaseSensitive.Size = new System.Drawing.Size(121, 21);
-            this.countCaseSensitive.TabIndex = 8;
-            this.countCaseSensitive.Text = "Case sensitive";
-            this.countCaseSensitive.UseVisualStyleBackColor = true;
-            this.countCaseSensitive.CheckedChanged += new System.EventHandler(this.CountCaseSensitive_CheckedChanged);
             // 
             // Application
             // 
