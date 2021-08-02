@@ -45,8 +45,8 @@
             // mainTableLayout
             // 
             this.mainTableLayout.ColumnCount = 2;
-            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
-            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 370F));
+            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
+            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 374F));
             this.mainTableLayout.Controls.Add(this.CustomSettingsFlowLayout, 1, 0);
             this.mainTableLayout.Controls.Add(this.OptionsTableLayout, 0, 0);
             this.mainTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -55,7 +55,7 @@
             this.mainTableLayout.RowCount = 2;
             this.mainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.mainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.mainTableLayout.Size = new System.Drawing.Size(557, 309);
+            this.mainTableLayout.Size = new System.Drawing.Size(512, 309);
             this.mainTableLayout.TabIndex = 0;
             // 
             // CustomSettingsFlowLayout
@@ -63,10 +63,10 @@
             this.CustomSettingsFlowLayout.AutoScroll = true;
             this.CustomSettingsFlowLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CustomSettingsFlowLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.CustomSettingsFlowLayout.Location = new System.Drawing.Point(133, 3);
+            this.CustomSettingsFlowLayout.Location = new System.Drawing.Point(117, 3);
             this.CustomSettingsFlowLayout.Name = "CustomSettingsFlowLayout";
             this.mainTableLayout.SetRowSpan(this.CustomSettingsFlowLayout, 2);
-            this.CustomSettingsFlowLayout.Size = new System.Drawing.Size(421, 303);
+            this.CustomSettingsFlowLayout.Size = new System.Drawing.Size(392, 303);
             this.CustomSettingsFlowLayout.TabIndex = 0;
             this.CustomSettingsFlowLayout.WrapContents = false;
             // 
@@ -84,7 +84,7 @@
             this.OptionsTableLayout.Location = new System.Drawing.Point(0, 0);
             this.OptionsTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.OptionsTableLayout.Name = "OptionsTableLayout";
-            this.OptionsTableLayout.Padding = new System.Windows.Forms.Padding(5);
+            this.OptionsTableLayout.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.OptionsTableLayout.RowCount = 5;
             this.mainTableLayout.SetRowSpan(this.OptionsTableLayout, 2);
             this.OptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
@@ -92,7 +92,7 @@
             this.OptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.OptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.OptionsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.OptionsTableLayout.Size = new System.Drawing.Size(130, 309);
+            this.OptionsTableLayout.Size = new System.Drawing.Size(114, 309);
             this.OptionsTableLayout.TabIndex = 1;
             // 
             // CloseButton
@@ -101,10 +101,10 @@
             this.CloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CloseButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloseButton.Location = new System.Drawing.Point(8, 158);
+            this.CloseButton.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseButton.Location = new System.Drawing.Point(7, 158);
             this.CloseButton.Name = "CloseButton";
-            this.CloseButton.Size = new System.Drawing.Size(114, 44);
+            this.CloseButton.Size = new System.Drawing.Size(100, 44);
             this.CloseButton.TabIndex = 4;
             this.CloseButton.Text = "Close Without Saving";
             this.CloseButton.UseVisualStyleBackColor = false;
@@ -116,10 +116,10 @@
             this.saveAndCloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.saveAndCloseButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.saveAndCloseButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveAndCloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveAndCloseButton.Location = new System.Drawing.Point(8, 108);
+            this.saveAndCloseButton.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveAndCloseButton.Location = new System.Drawing.Point(7, 108);
             this.saveAndCloseButton.Name = "saveAndCloseButton";
-            this.saveAndCloseButton.Size = new System.Drawing.Size(114, 44);
+            this.saveAndCloseButton.Size = new System.Drawing.Size(100, 44);
             this.saveAndCloseButton.TabIndex = 2;
             this.saveAndCloseButton.Text = "Save && Close";
             this.saveAndCloseButton.UseVisualStyleBackColor = false;
@@ -131,10 +131,10 @@
             this.SaveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SaveButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SaveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveButton.Location = new System.Drawing.Point(8, 58);
+            this.SaveButton.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.Location = new System.Drawing.Point(7, 58);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(114, 44);
+            this.SaveButton.Size = new System.Drawing.Size(100, 44);
             this.SaveButton.TabIndex = 1;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = false;
@@ -146,10 +146,10 @@
             this.AddButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddButton.Location = new System.Drawing.Point(8, 8);
+            this.AddButton.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddButton.Location = new System.Drawing.Point(7, 8);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(114, 44);
+            this.AddButton.Size = new System.Drawing.Size(100, 44);
             this.AddButton.TabIndex = 0;
             this.AddButton.Text = "Add Rule";
             this.AddButton.UseVisualStyleBackColor = false;
@@ -159,11 +159,11 @@
             // 
             this.SavingInfoLabel.AutoSize = true;
             this.SavingInfoLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SavingInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SavingInfoLabel.Font = new System.Drawing.Font("Arial", 7F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SavingInfoLabel.ForeColor = System.Drawing.Color.Green;
-            this.SavingInfoLabel.Location = new System.Drawing.Point(8, 205);
+            this.SavingInfoLabel.Location = new System.Drawing.Point(7, 205);
             this.SavingInfoLabel.Name = "SavingInfoLabel";
-            this.SavingInfoLabel.Size = new System.Drawing.Size(114, 15);
+            this.SavingInfoLabel.Size = new System.Drawing.Size(100, 15);
             this.SavingInfoLabel.TabIndex = 3;
             this.SavingInfoLabel.Text = "Saving info Text";
             this.SavingInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -175,12 +175,13 @@
             // 
             // HtmlExtraSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(557, 309);
+            this.ClientSize = new System.Drawing.Size(512, 309);
             this.Controls.Add(this.mainTableLayout);
-            this.MaximumSize = new System.Drawing.Size(575, 2000);
-            this.MinimumSize = new System.Drawing.Size(575, 356);
+            this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaximumSize = new System.Drawing.Size(530, 2000);
+            this.MinimumSize = new System.Drawing.Size(530, 356);
             this.Name = "HtmlExtraSettings";
             this.Text = "Html:ify Custom Rules";
             this.mainTableLayout.ResumeLayout(false);

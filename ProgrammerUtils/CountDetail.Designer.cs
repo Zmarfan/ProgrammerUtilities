@@ -49,7 +49,7 @@
             this.tableLayout.RowCount = 1;
             this.tableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayout.Size = new System.Drawing.Size(271, 37);
+            this.tableLayout.Size = new System.Drawing.Size(249, 37);
             this.tableLayout.TabIndex = 0;
             // 
             // detailLabel
@@ -57,10 +57,10 @@
             this.detailLabel.AutoEllipsis = true;
             this.detailLabel.AutoSize = true;
             this.detailLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.detailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.detailLabel.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detailLabel.Location = new System.Drawing.Point(4, 1);
             this.detailLabel.Name = "detailLabel";
-            this.detailLabel.Size = new System.Drawing.Size(128, 35);
+            this.detailLabel.Size = new System.Drawing.Size(117, 35);
             this.detailLabel.TabIndex = 0;
             this.detailLabel.Text = "DetailLabel:";
             this.detailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -70,26 +70,27 @@
             this.valueLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.valueLabel.AutoSize = true;
             this.valueLabel.CornerRadius = 20;
-            this.valueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valueLabel.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valueLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.valueLabel.Location = new System.Drawing.Point(163, 7);
-            this.valueLabel.Margin = new System.Windows.Forms.Padding(3, 0, 12, 0);
+            this.valueLabel.Location = new System.Drawing.Point(148, 7);
+            this.valueLabel.Margin = new System.Windows.Forms.Padding(3, 0, 10, 0);
             this.valueLabel.Name = "valueLabel";
             this.valueLabel.Padding = new System.Windows.Forms.Padding(3);
             this.valueLabel.RoundedBackColor = System.Drawing.Color.Gray;
-            this.valueLabel.Size = new System.Drawing.Size(95, 23);
+            this.valueLabel.Size = new System.Drawing.Size(90, 22);
             this.valueLabel.TabIndex = 1;
             this.valueLabel.Text = "ValueLabel";
             this.valueLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // CountDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayout);
+            this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CountDetail";
-            this.Size = new System.Drawing.Size(271, 37);
+            this.Size = new System.Drawing.Size(249, 37);
             this.tableLayout.ResumeLayout(false);
             this.tableLayout.PerformLayout();
             this.ResumeLayout(false);

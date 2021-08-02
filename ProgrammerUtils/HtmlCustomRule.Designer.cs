@@ -44,10 +44,10 @@
             this.mainTableLayout.ColumnCount = 7;
             this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
+            this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.mainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.mainTableLayout.Controls.Add(this.replacedTextbox, 4, 0);
             this.mainTableLayout.Controls.Add(this.label1, 1, 0);
@@ -60,22 +60,22 @@
             this.mainTableLayout.Name = "mainTableLayout";
             this.mainTableLayout.RowCount = 1;
             this.mainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.mainTableLayout.Size = new System.Drawing.Size(386, 51);
+            this.mainTableLayout.Size = new System.Drawing.Size(361, 51);
             this.mainTableLayout.TabIndex = 0;
             // 
             // replacedTextbox
             // 
             this.replacedTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.replacedTextbox.Location = new System.Drawing.Point(239, 14);
+            this.replacedTextbox.Location = new System.Drawing.Point(231, 14);
             this.replacedTextbox.Name = "replacedTextbox";
-            this.replacedTextbox.Size = new System.Drawing.Size(94, 22);
+            this.replacedTextbox.Size = new System.Drawing.Size(82, 22);
             this.replacedTextbox.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(97, 0);
+            this.label1.Location = new System.Drawing.Point(93, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 51);
             this.label1.TabIndex = 1;
@@ -85,10 +85,10 @@
             // replaceTextBox
             // 
             this.replaceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.replaceTextBox.Location = new System.Drawing.Point(171, 14);
+            this.replaceTextBox.Location = new System.Drawing.Point(167, 14);
             this.replaceTextBox.MaxLength = 1;
             this.replaceTextBox.Name = "replaceTextBox";
-            this.replaceTextBox.Size = new System.Drawing.Size(24, 22);
+            this.replaceTextBox.Size = new System.Drawing.Size(20, 22);
             this.replaceTextBox.TabIndex = 2;
             // 
             // activeCheckbox
@@ -101,11 +101,11 @@
             this.activeCheckbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.activeCheckbox.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.activeCheckbox.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.activeCheckbox.Location = new System.Drawing.Point(8, 8);
-            this.activeCheckbox.Margin = new System.Windows.Forms.Padding(8);
+            this.activeCheckbox.Location = new System.Drawing.Point(7, 8);
+            this.activeCheckbox.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.activeCheckbox.Name = "activeCheckbox";
-            this.activeCheckbox.Padding = new System.Windows.Forms.Padding(5);
-            this.activeCheckbox.Size = new System.Drawing.Size(78, 35);
+            this.activeCheckbox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.activeCheckbox.Size = new System.Drawing.Size(76, 35);
             this.activeCheckbox.TabIndex = 3;
             this.activeCheckbox.Text = "Active";
             this.activeCheckbox.UseVisualStyleBackColor = false;
@@ -115,7 +115,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(201, 0);
+            this.label2.Location = new System.Drawing.Point(193, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 51);
             this.label2.TabIndex = 4;
@@ -131,10 +131,10 @@
             this.removeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.removeButton.Location = new System.Drawing.Point(346, 10);
-            this.removeButton.Margin = new System.Windows.Forms.Padding(10);
+            this.removeButton.Location = new System.Drawing.Point(325, 10);
+            this.removeButton.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
             this.removeButton.Name = "removeButton";
-            this.removeButton.Size = new System.Drawing.Size(31, 31);
+            this.removeButton.Size = new System.Drawing.Size(27, 31);
             this.removeButton.TabIndex = 6;
             this.removeButton.Text = "X";
             this.removeButton.UseVisualStyleBackColor = false;
@@ -144,12 +144,13 @@
             // 
             // HtmlCustomRule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.mainTableLayout);
+            this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "HtmlCustomRule";
-            this.Size = new System.Drawing.Size(386, 51);
+            this.Size = new System.Drawing.Size(361, 51);
             this.mainTableLayout.ResumeLayout(false);
             this.mainTableLayout.PerformLayout();
             this.ResumeLayout(false);

@@ -43,36 +43,36 @@
             this.logo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.logo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.logo.Image = global::ProgrammerUtils.Properties.Resources.logo;
-            this.logo.Location = new System.Drawing.Point(203, 12);
+            this.logo.Location = new System.Drawing.Point(175, 12);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(337, 211);
+            this.logo.Size = new System.Drawing.Size(295, 211);
             this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logo.TabIndex = 0;
             this.logo.TabStop = false;
             // 
             // infoLabel
             // 
-            this.infoLabel.Location = new System.Drawing.Point(12, 12);
+            this.infoLabel.Location = new System.Drawing.Point(10, 12);
             this.infoLabel.Name = "infoLabel";
-            this.infoLabel.Size = new System.Drawing.Size(185, 211);
+            this.infoLabel.Size = new System.Drawing.Size(162, 211);
             this.infoLabel.TabIndex = 1;
             this.infoLabel.Text = "Programming Utilities 1.0.0\r\nBuilt for Windows platforms.\r\nVersion 1.0.0.\r\n";
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // info2Label
             // 
-            this.info2Label.Location = new System.Drawing.Point(12, 226);
+            this.info2Label.Location = new System.Drawing.Point(10, 226);
             this.info2Label.Name = "info2Label";
-            this.info2Label.Size = new System.Drawing.Size(528, 114);
+            this.info2Label.Size = new System.Drawing.Size(462, 114);
             this.info2Label.TabIndex = 2;
             this.info2Label.Text = resources.GetString("info2Label.Text");
             // 
             // linkGithub
             // 
             this.linkGithub.AutoSize = true;
-            this.linkGithub.Location = new System.Drawing.Point(42, 311);
+            this.linkGithub.Location = new System.Drawing.Point(40, 306);
             this.linkGithub.Name = "linkGithub";
-            this.linkGithub.Size = new System.Drawing.Size(87, 17);
+            this.linkGithub.Size = new System.Drawing.Size(87, 16);
             this.linkGithub.TabIndex = 3;
             this.linkGithub.TabStop = true;
             this.linkGithub.Text = "Github Page";
@@ -81,9 +81,9 @@
             // linkPortfolio
             // 
             this.linkPortfolio.AutoSize = true;
-            this.linkPortfolio.Location = new System.Drawing.Point(334, 311);
+            this.linkPortfolio.Location = new System.Drawing.Point(333, 306);
             this.linkPortfolio.Name = "linkPortfolio";
-            this.linkPortfolio.Size = new System.Drawing.Size(129, 17);
+            this.linkPortfolio.Size = new System.Drawing.Size(129, 16);
             this.linkPortfolio.TabIndex = 4;
             this.linkPortfolio.TabStop = true;
             this.linkPortfolio.Text = "Developer Portfolio";
@@ -91,9 +91,9 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(460, 339);
+            this.closeButton.Location = new System.Drawing.Point(402, 339);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(80, 28);
+            this.closeButton.Size = new System.Drawing.Size(70, 28);
             this.closeButton.TabIndex = 5;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
@@ -101,15 +101,16 @@
             // 
             // HelpWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 379);
+            this.ClientSize = new System.Drawing.Size(480, 379);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.linkPortfolio);
             this.Controls.Add(this.linkGithub);
             this.Controls.Add(this.info2Label);
             this.Controls.Add(this.infoLabel);
             this.Controls.Add(this.logo);
+            this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
