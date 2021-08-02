@@ -163,12 +163,14 @@
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
             this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
             this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.countWordFrequencyFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.countWordDensityFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.countDetailWords = new ProgrammerUtils.CountDetail();
             this.countDetailUniqueWords = new ProgrammerUtils.CountDetail();
+            this.countDetailDifferentWords = new ProgrammerUtils.CountDetail();
             this.countDetailCharacters = new ProgrammerUtils.CountDetail();
             this.countDetailSentences = new ProgrammerUtils.CountDetail();
             this.countDetailParagraphs = new ProgrammerUtils.CountDetail();
-            this.countDetailDifferentWords = new ProgrammerUtils.CountDetail();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -195,6 +197,8 @@
             this.tableLayoutPanel5.SuspendLayout();
             this.countInputTableLayout.SuspendLayout();
             this.countOutputTabs.SuspendLayout();
+            this.countWordFrequencyTab.SuspendLayout();
+            this.countWordDensityTab.SuspendLayout();
             this.countInfoTableLayout.SuspendLayout();
             this.countInfoFlowLayoutPanel.SuspendLayout();
             this.htmlTab.SuspendLayout();
@@ -1071,7 +1075,7 @@
             this.countTableLayout.ColumnCount = 3;
             this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 300F));
+            this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 315F));
             this.countTableLayout.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.countTableLayout.Controls.Add(this.countInputTableLayout, 0, 1);
             this.countTableLayout.Controls.Add(this.countOutputTabs, 2, 1);
@@ -1138,7 +1142,7 @@
             this.countInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.countInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.countInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.countInputTableLayout.Size = new System.Drawing.Size(356, 407);
+            this.countInputTableLayout.Size = new System.Drawing.Size(341, 407);
             this.countInputTableLayout.TabIndex = 3;
             // 
             // countInputTextbox
@@ -1146,7 +1150,7 @@
             this.countInputTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.countInputTextbox.Location = new System.Drawing.Point(3, 3);
             this.countInputTextbox.Name = "countInputTextbox";
-            this.countInputTextbox.Size = new System.Drawing.Size(350, 362);
+            this.countInputTextbox.Size = new System.Drawing.Size(335, 362);
             this.countInputTextbox.TabIndex = 4;
             this.countInputTextbox.Text = "";
             // 
@@ -1159,7 +1163,7 @@
             this.label2.Location = new System.Drawing.Point(3, 368);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(10);
-            this.label2.Size = new System.Drawing.Size(350, 39);
+            this.label2.Size = new System.Drawing.Size(335, 39);
             this.label2.TabIndex = 3;
             this.label2.Text = "Text that should be analyzed.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1169,28 +1173,31 @@
             this.countOutputTabs.Controls.Add(this.countWordFrequencyTab);
             this.countOutputTabs.Controls.Add(this.countWordDensityTab);
             this.countOutputTabs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.countOutputTabs.Location = new System.Drawing.Point(659, 58);
+            this.countOutputTabs.Location = new System.Drawing.Point(644, 58);
             this.countOutputTabs.Name = "countOutputTabs";
             this.countOutputTabs.SelectedIndex = 0;
-            this.countOutputTabs.Size = new System.Drawing.Size(294, 401);
+            this.countOutputTabs.Size = new System.Drawing.Size(309, 401);
             this.countOutputTabs.TabIndex = 4;
             // 
             // countWordFrequencyTab
             // 
+            this.countWordFrequencyTab.Controls.Add(this.countWordFrequencyFlowLayoutPanel);
+            this.countWordFrequencyTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countWordFrequencyTab.Location = new System.Drawing.Point(4, 25);
             this.countWordFrequencyTab.Name = "countWordFrequencyTab";
             this.countWordFrequencyTab.Padding = new System.Windows.Forms.Padding(3);
-            this.countWordFrequencyTab.Size = new System.Drawing.Size(286, 372);
+            this.countWordFrequencyTab.Size = new System.Drawing.Size(301, 372);
             this.countWordFrequencyTab.TabIndex = 0;
             this.countWordFrequencyTab.Text = "Word Frequency";
             this.countWordFrequencyTab.UseVisualStyleBackColor = true;
             // 
             // countWordDensityTab
             // 
+            this.countWordDensityTab.Controls.Add(this.countWordDensityFlowLayoutPanel);
             this.countWordDensityTab.Location = new System.Drawing.Point(4, 25);
             this.countWordDensityTab.Name = "countWordDensityTab";
             this.countWordDensityTab.Padding = new System.Windows.Forms.Padding(3);
-            this.countWordDensityTab.Size = new System.Drawing.Size(286, 372);
+            this.countWordDensityTab.Size = new System.Drawing.Size(301, 372);
             this.countWordDensityTab.TabIndex = 1;
             this.countWordDensityTab.Text = "Word Density";
             this.countWordDensityTab.UseVisualStyleBackColor = true;
@@ -1202,7 +1209,7 @@
             this.countInfoTableLayout.Controls.Add(this.countInfoLabel, 0, 0);
             this.countInfoTableLayout.Controls.Add(this.countInfoFlowLayoutPanel, 0, 1);
             this.countInfoTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.countInfoTableLayout.Location = new System.Drawing.Point(356, 55);
+            this.countInfoTableLayout.Location = new System.Drawing.Point(341, 55);
             this.countInfoTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.countInfoTableLayout.Name = "countInfoTableLayout";
             this.countInfoTableLayout.RowCount = 2;
@@ -1217,6 +1224,7 @@
             this.countInfoLabel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.countInfoLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.countInfoLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countInfoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countInfoLabel.Location = new System.Drawing.Point(3, 0);
             this.countInfoLabel.Name = "countInfoLabel";
             this.countInfoLabel.Padding = new System.Windows.Forms.Padding(10);
@@ -2207,6 +2215,33 @@
             // 
             this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
             // 
+            // countWordFrequencyFlowLayoutPanel
+            // 
+            this.countWordFrequencyFlowLayoutPanel.AutoScroll = true;
+            this.countWordFrequencyFlowLayoutPanel.BackColor = System.Drawing.Color.LightGray;
+            this.countWordFrequencyFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.countWordFrequencyFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countWordFrequencyFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.countWordFrequencyFlowLayoutPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countWordFrequencyFlowLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.countWordFrequencyFlowLayoutPanel.Name = "countWordFrequencyFlowLayoutPanel";
+            this.countWordFrequencyFlowLayoutPanel.Size = new System.Drawing.Size(295, 366);
+            this.countWordFrequencyFlowLayoutPanel.TabIndex = 6;
+            this.countWordFrequencyFlowLayoutPanel.WrapContents = false;
+            // 
+            // countWordDensityFlowLayoutPanel
+            // 
+            this.countWordDensityFlowLayoutPanel.AutoScroll = true;
+            this.countWordDensityFlowLayoutPanel.BackColor = System.Drawing.Color.LightGray;
+            this.countWordDensityFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.countWordDensityFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countWordDensityFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.countWordDensityFlowLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.countWordDensityFlowLayoutPanel.Name = "countWordDensityFlowLayoutPanel";
+            this.countWordDensityFlowLayoutPanel.Size = new System.Drawing.Size(295, 366);
+            this.countWordDensityFlowLayoutPanel.TabIndex = 7;
+            this.countWordDensityFlowLayoutPanel.WrapContents = false;
+            // 
             // countDetailWords
             // 
             this.countDetailWords._DetailText = "Words";
@@ -2226,6 +2261,16 @@
             this.countDetailUniqueWords.Name = "countDetailUniqueWords";
             this.countDetailUniqueWords.Size = new System.Drawing.Size(292, 37);
             this.countDetailUniqueWords.TabIndex = 4;
+            // 
+            // countDetailDifferentWords
+            // 
+            this.countDetailDifferentWords._DetailText = "Different Words";
+            this.countDetailDifferentWords._ValueText = "0";
+            this.countDetailDifferentWords.Location = new System.Drawing.Point(0, 74);
+            this.countDetailDifferentWords.Margin = new System.Windows.Forms.Padding(0);
+            this.countDetailDifferentWords.Name = "countDetailDifferentWords";
+            this.countDetailDifferentWords.Size = new System.Drawing.Size(292, 37);
+            this.countDetailDifferentWords.TabIndex = 5;
             // 
             // countDetailCharacters
             // 
@@ -2256,16 +2301,6 @@
             this.countDetailParagraphs.Name = "countDetailParagraphs";
             this.countDetailParagraphs.Size = new System.Drawing.Size(292, 37);
             this.countDetailParagraphs.TabIndex = 3;
-            // 
-            // countDetailDifferentWords
-            // 
-            this.countDetailDifferentWords._DetailText = "Different Words";
-            this.countDetailDifferentWords._ValueText = "0";
-            this.countDetailDifferentWords.Location = new System.Drawing.Point(0, 74);
-            this.countDetailDifferentWords.Margin = new System.Windows.Forms.Padding(0);
-            this.countDetailDifferentWords.Name = "countDetailDifferentWords";
-            this.countDetailDifferentWords.Size = new System.Drawing.Size(292, 37);
-            this.countDetailDifferentWords.TabIndex = 5;
             // 
             // Application
             // 
@@ -2317,6 +2352,8 @@
             this.countInputTableLayout.ResumeLayout(false);
             this.countInputTableLayout.PerformLayout();
             this.countOutputTabs.ResumeLayout(false);
+            this.countWordFrequencyTab.ResumeLayout(false);
+            this.countWordDensityTab.ResumeLayout(false);
             this.countInfoTableLayout.ResumeLayout(false);
             this.countInfoTableLayout.PerformLayout();
             this.countInfoFlowLayoutPanel.ResumeLayout(false);
@@ -2495,6 +2532,8 @@
         private CountDetail countDetailParagraphs;
         private CountDetail countDetailUniqueWords;
         private CountDetail countDetailDifferentWords;
+        private System.Windows.Forms.FlowLayoutPanel countWordFrequencyFlowLayoutPanel;
+        private System.Windows.Forms.FlowLayoutPanel countWordDensityFlowLayoutPanel;
     }
 }
 
