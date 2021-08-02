@@ -642,10 +642,20 @@ namespace ProgrammerUtils
 
         #region Taskbar
 
+        private void FileExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void HelpAbout_Click(object sender, EventArgs e)
         {
             _helpWindow = new HelpWindow();
             _helpWindow.ShowDialog();
+        }
+
+        private void HowToUseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Zmarfan/ProgrammerUtils");
         }
 
         #endregion
