@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HtmlExtraSettings));
             this.mainTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.CustomSettingsFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.OptionsTableLayout = new System.Windows.Forms.TableLayoutPanel();
@@ -189,6 +190,7 @@
             this.ClientSize = new System.Drawing.Size(512, 356);
             this.Controls.Add(this.mainTableLayout);
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(530, 2000);
             this.MinimumSize = new System.Drawing.Size(530, 356);
             this.Name = "HtmlExtraSettings";

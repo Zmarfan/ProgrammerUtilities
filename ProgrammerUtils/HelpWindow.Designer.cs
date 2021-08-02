@@ -69,7 +69,10 @@
             // 
             // linkGithub
             // 
+            this.linkGithub.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
             this.linkGithub.AutoSize = true;
+            this.linkGithub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkGithub.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
             this.linkGithub.Location = new System.Drawing.Point(40, 306);
             this.linkGithub.Name = "linkGithub";
             this.linkGithub.Size = new System.Drawing.Size(87, 16);
@@ -80,7 +83,10 @@
             // 
             // linkPortfolio
             // 
+            this.linkPortfolio.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
             this.linkPortfolio.AutoSize = true;
+            this.linkPortfolio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkPortfolio.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
             this.linkPortfolio.Location = new System.Drawing.Point(333, 306);
             this.linkPortfolio.Name = "linkPortfolio";
             this.linkPortfolio.Size = new System.Drawing.Size(129, 16);
@@ -91,19 +97,24 @@
             // 
             // closeButton
             // 
-            this.closeButton.Location = new System.Drawing.Point(402, 339);
+            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Location = new System.Drawing.Point(372, 336);
             this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(70, 28);
+            this.closeButton.Size = new System.Drawing.Size(100, 44);
             this.closeButton.TabIndex = 5;
             this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = true;
+            this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
             // HelpWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 379);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(480, 392);
             this.Controls.Add(this.closeButton);
             this.Controls.Add(this.linkPortfolio);
             this.Controls.Add(this.linkGithub);
@@ -111,6 +122,7 @@
             this.Controls.Add(this.infoLabel);
             this.Controls.Add(this.logo);
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
