@@ -52,11 +52,15 @@ namespace ProgrammerUtils
             _paragraphsCountDetail = paragraphsCountDetail;
         }
 
-        public void Execute()
+        public void Execute(SortMode sortMode, bool caseSensitive)
         {
             RemoveOldData();
 
             string text = _inputTextbox.Text;
+
+            if (!caseSensitive)
+                text = text.ToLower();
+
             List<string> allParagraphs = text.Split(new string[] { "\n" }, StringSplitOptions.RemoveEmptyEntries).ToList();
             int allCharacters = string.Join("", allParagraphs.ToArray()).Length;
             string workText = text.Replace('\n', ' ');
@@ -73,7 +77,7 @@ namespace ProgrammerUtils
 
             Dictionary<string, int> differentWords = CalculateWords(allWords);
 
-            FillNewData(allWords.Count, differentWords, SortMode.ALPHABETICAL);
+            FillNewData(allWords.Count, differentWords, sortMode);
         }
 
         private void RemoveOldData()

@@ -36,6 +36,7 @@ namespace ProgrammerUtils
             SortExportDropdown.SelectedIndex = 0;
             MatchCombinedShowModeDropdown.SelectedIndex = 0;
             generateParagraphType.SelectedIndex = 0;
+            countSortModes.SelectedIndex = 0;
 
             _sorter = new Sort(GetSortDisplayMode(), GetSortStyle(), Sort.TextStyles.NORMAL, Sort.TextPresentations.NORMAL);
             SetButtonStatus(SortButton, !AutoSortCheckbox.Checked);
@@ -571,12 +572,45 @@ namespace ProgrammerUtils
 
         #region Count
         #region Helper Methods
+
+        private void DoCount()
+        {
+            if (_counter != null)
+                _counter.Execute(GetCurrentSortMode(), countCaseSensitive.Checked);
+        }
+
+        private Counter.SortMode GetCurrentSortMode()
+        {
+            switch (countSortModes.Text)
+            {
+                case ("Alphabetical"): return Counter.SortMode.ALPHABETICAL;
+                case ("Value"): return Counter.SortMode.AMOUNT;
+                default: throw new Exception($"There exists no implementation for the sortMode {countSortModes.Text}");
+            }
+        }
+
         #endregion
         #region Events
 
         private void CountButton_Click(object sender, EventArgs e)
         {
-            _counter.Execute();
+            DoCount();
+        }
+
+        private void CountClearButton_Click(object sender, EventArgs e)
+        {
+            countInputTextbox.Text = string.Empty;
+            DoCount();
+        }
+
+        private void CountSortModes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DoCount();
+        }
+
+        private void CountCaseSensitive_CheckedChanged(object sender, EventArgs e)
+        {
+            DoCount();
         }
 
         #endregion

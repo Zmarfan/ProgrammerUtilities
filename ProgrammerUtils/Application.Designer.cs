@@ -91,7 +91,10 @@
             this.CountTab = new System.Windows.Forms.TabPage();
             this.countTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.countClearButton = new System.Windows.Forms.Button();
             this.countButton = new System.Windows.Forms.Button();
+            this.countSortModes = new System.Windows.Forms.ComboBox();
+            this.countSortModeLabel = new System.Windows.Forms.Label();
             this.countInputTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.countInputTextbox = new System.Windows.Forms.RichTextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -100,6 +103,8 @@
             this.countWordFrequencyFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.countWordDensityTab = new System.Windows.Forms.TabPage();
             this.countWordDensityFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.countUniqueWordsTab = new System.Windows.Forms.TabPage();
+            this.countUniqueWordsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.countInfoTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.countInfoLabel = new System.Windows.Forms.Label();
             this.countInfoFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -171,8 +176,7 @@
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
             this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
             this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.countUniqueWordsTab = new System.Windows.Forms.TabPage();
-            this.countUniqueWordsFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.countCaseSensitive = new System.Windows.Forms.CheckBox();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -201,6 +205,7 @@
             this.countTabs.SuspendLayout();
             this.countWordFrequencyTab.SuspendLayout();
             this.countWordDensityTab.SuspendLayout();
+            this.countUniqueWordsTab.SuspendLayout();
             this.countInfoTableLayout.SuspendLayout();
             this.countInfoFlowLayoutPanel.SuspendLayout();
             this.htmlTab.SuspendLayout();
@@ -222,7 +227,6 @@
             this.generateSeedTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generateParagraphSizeSlider)).BeginInit();
             this.Toolbar.SuspendLayout();
-            this.countUniqueWordsTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTableLayout
@@ -1094,17 +1098,18 @@
             // 
             // tableLayoutPanel5
             // 
-            this.tableLayoutPanel5.ColumnCount = 3;
+            this.tableLayoutPanel5.ColumnCount = 5;
             this.countTableLayout.SetColumnSpan(this.tableLayoutPanel5, 3);
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.tableLayoutPanel5.Controls.Add(this.countClearButton, 4, 0);
             this.tableLayoutPanel5.Controls.Add(this.countButton, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.countSortModes, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.countSortModeLabel, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.countCaseSensitive, 2, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(0);
@@ -1114,6 +1119,22 @@
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(956, 55);
             this.tableLayoutPanel5.TabIndex = 1;
+            // 
+            // countClearButton
+            // 
+            this.countClearButton.BackColor = System.Drawing.Color.LightPink;
+            this.countClearButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.countClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.countClearButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countClearButton.Location = new System.Drawing.Point(834, 3);
+            this.countClearButton.Name = "countClearButton";
+            this.tableLayoutPanel5.SetRowSpan(this.countClearButton, 2);
+            this.countClearButton.Size = new System.Drawing.Size(119, 49);
+            this.countClearButton.TabIndex = 5;
+            this.countClearButton.Text = "Clear";
+            this.countClearButton.UseVisualStyleBackColor = false;
+            this.countClearButton.Click += new System.EventHandler(this.CountClearButton_Click);
             // 
             // countButton
             // 
@@ -1130,6 +1151,31 @@
             this.countButton.Text = "Count";
             this.countButton.UseVisualStyleBackColor = false;
             this.countButton.Click += new System.EventHandler(this.CountButton_Click);
+            // 
+            // countSortModes
+            // 
+            this.countSortModes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countSortModes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.countSortModes.FormattingEnabled = true;
+            this.countSortModes.Items.AddRange(new object[] {
+            "Alphabetical",
+            "Value"});
+            this.countSortModes.Location = new System.Drawing.Point(203, 30);
+            this.countSortModes.Name = "countSortModes";
+            this.countSortModes.Size = new System.Drawing.Size(121, 24);
+            this.countSortModes.TabIndex = 6;
+            this.countSortModes.SelectedIndexChanged += new System.EventHandler(this.CountSortModes_SelectedIndexChanged);
+            // 
+            // countSortModeLabel
+            // 
+            this.countSortModeLabel.AutoSize = true;
+            this.countSortModeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countSortModeLabel.Location = new System.Drawing.Point(203, 0);
+            this.countSortModeLabel.Name = "countSortModeLabel";
+            this.countSortModeLabel.Size = new System.Drawing.Size(121, 27);
+            this.countSortModeLabel.TabIndex = 7;
+            this.countSortModeLabel.Text = "Sort mode";
+            this.countSortModeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // countInputTableLayout
             // 
@@ -1232,6 +1278,30 @@
             this.countWordDensityFlowLayoutPanel.Size = new System.Drawing.Size(295, 366);
             this.countWordDensityFlowLayoutPanel.TabIndex = 7;
             this.countWordDensityFlowLayoutPanel.WrapContents = false;
+            // 
+            // countUniqueWordsTab
+            // 
+            this.countUniqueWordsTab.Controls.Add(this.countUniqueWordsFlowLayoutPanel);
+            this.countUniqueWordsTab.Location = new System.Drawing.Point(4, 25);
+            this.countUniqueWordsTab.Name = "countUniqueWordsTab";
+            this.countUniqueWordsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.countUniqueWordsTab.Size = new System.Drawing.Size(301, 372);
+            this.countUniqueWordsTab.TabIndex = 2;
+            this.countUniqueWordsTab.Text = "Unique Words";
+            this.countUniqueWordsTab.UseVisualStyleBackColor = true;
+            // 
+            // countUniqueWordsFlowLayoutPanel
+            // 
+            this.countUniqueWordsFlowLayoutPanel.AutoScroll = true;
+            this.countUniqueWordsFlowLayoutPanel.BackColor = System.Drawing.Color.LightGray;
+            this.countUniqueWordsFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.countUniqueWordsFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countUniqueWordsFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.countUniqueWordsFlowLayoutPanel.Location = new System.Drawing.Point(3, 3);
+            this.countUniqueWordsFlowLayoutPanel.Name = "countUniqueWordsFlowLayoutPanel";
+            this.countUniqueWordsFlowLayoutPanel.Size = new System.Drawing.Size(295, 366);
+            this.countUniqueWordsFlowLayoutPanel.TabIndex = 8;
+            this.countUniqueWordsFlowLayoutPanel.WrapContents = false;
             // 
             // countInfoTableLayout
             // 
@@ -2306,29 +2376,19 @@
             // 
             this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
             // 
-            // countUniqueWordsTab
+            // countCaseSensitive
             // 
-            this.countUniqueWordsTab.Controls.Add(this.countUniqueWordsFlowLayoutPanel);
-            this.countUniqueWordsTab.Location = new System.Drawing.Point(4, 25);
-            this.countUniqueWordsTab.Name = "countUniqueWordsTab";
-            this.countUniqueWordsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.countUniqueWordsTab.Size = new System.Drawing.Size(301, 372);
-            this.countUniqueWordsTab.TabIndex = 2;
-            this.countUniqueWordsTab.Text = "Unique Words";
-            this.countUniqueWordsTab.UseVisualStyleBackColor = true;
-            // 
-            // countUniqueWordsFlowLayoutPanel
-            // 
-            this.countUniqueWordsFlowLayoutPanel.AutoScroll = true;
-            this.countUniqueWordsFlowLayoutPanel.BackColor = System.Drawing.Color.LightGray;
-            this.countUniqueWordsFlowLayoutPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.countUniqueWordsFlowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.countUniqueWordsFlowLayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.countUniqueWordsFlowLayoutPanel.Location = new System.Drawing.Point(3, 3);
-            this.countUniqueWordsFlowLayoutPanel.Name = "countUniqueWordsFlowLayoutPanel";
-            this.countUniqueWordsFlowLayoutPanel.Size = new System.Drawing.Size(295, 366);
-            this.countUniqueWordsFlowLayoutPanel.TabIndex = 8;
-            this.countUniqueWordsFlowLayoutPanel.WrapContents = false;
+            this.countCaseSensitive.AutoSize = true;
+            this.countCaseSensitive.Checked = true;
+            this.countCaseSensitive.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.countCaseSensitive.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.countCaseSensitive.Location = new System.Drawing.Point(330, 3);
+            this.countCaseSensitive.Name = "countCaseSensitive";
+            this.countCaseSensitive.Size = new System.Drawing.Size(121, 21);
+            this.countCaseSensitive.TabIndex = 8;
+            this.countCaseSensitive.Text = "Case sensitive";
+            this.countCaseSensitive.UseVisualStyleBackColor = true;
+            this.countCaseSensitive.CheckedChanged += new System.EventHandler(this.CountCaseSensitive_CheckedChanged);
             // 
             // Application
             // 
@@ -2377,11 +2437,13 @@
             this.CountTab.ResumeLayout(false);
             this.countTableLayout.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.countInputTableLayout.ResumeLayout(false);
             this.countInputTableLayout.PerformLayout();
             this.countTabs.ResumeLayout(false);
             this.countWordFrequencyTab.ResumeLayout(false);
             this.countWordDensityTab.ResumeLayout(false);
+            this.countUniqueWordsTab.ResumeLayout(false);
             this.countInfoTableLayout.ResumeLayout(false);
             this.countInfoTableLayout.PerformLayout();
             this.countInfoFlowLayoutPanel.ResumeLayout(false);
@@ -2415,7 +2477,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.generateParagraphSizeSlider)).EndInit();
             this.Toolbar.ResumeLayout(false);
             this.Toolbar.PerformLayout();
-            this.countUniqueWordsTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2565,6 +2626,10 @@
         private System.Windows.Forms.FlowLayoutPanel countWordDensityFlowLayoutPanel;
         private System.Windows.Forms.TabPage countUniqueWordsTab;
         private System.Windows.Forms.FlowLayoutPanel countUniqueWordsFlowLayoutPanel;
+        private System.Windows.Forms.Button countClearButton;
+        private System.Windows.Forms.ComboBox countSortModes;
+        private System.Windows.Forms.Label countSortModeLabel;
+        private System.Windows.Forms.CheckBox countCaseSensitive;
     }
 }
 
