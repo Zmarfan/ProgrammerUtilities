@@ -14,10 +14,10 @@ namespace ProgrammerUtils
     {
         public delegate void OnDeleteButtonPressedDelegate(int id);
 
-        private static readonly Color ACTIVE_COLOR = Color.Gainsboro;
-        private static readonly Color NOT_ACTIVE_COLOR = Color.DarkGray;
-        private static readonly Color ON_NOT_HOVER_COLOR = Color.WhiteSmoke;
-        private static readonly Color ON_HOVER_COLOR = Color.Maroon;
+        private static readonly Color ACTIVE_COLOR = Color.FromArgb(255, 27, 32, 41);
+        private static readonly Color NOT_ACTIVE_COLOR = Color.FromArgb(255, 15, 18, 22);
+        private static readonly Color ON_NOT_HOVER_COLOR = Color.White;
+        private static readonly Color ON_HOVER_COLOR = Color.FromArgb(255, 27, 32, 41);
 
         public event OnDeleteButtonPressedDelegate OnDeleteButtonPressed;
         public int Id { get; set; }
@@ -59,9 +59,7 @@ namespace ProgrammerUtils
 
         private void ChangeActiveState(bool active)
         {
-            label1.Enabled = active;
             replaceTextBox.Enabled = active;
-            label2.Enabled = active;
             replacedTextbox.Enabled = active;
 
             mainTableLayout.BackColor = active ? ACTIVE_COLOR : NOT_ACTIVE_COLOR;

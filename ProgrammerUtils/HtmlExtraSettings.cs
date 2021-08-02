@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,18 +30,21 @@ namespace ProgrammerUtils
         public readonly static string SAVE_FILE_NAME = "HtmlCustomSettings";
 
         private int _indexGiver = int.MinValue;
+        private static readonly Color VALID_SAVE_COLOR = Color.FromArgb(255, 26, 153, 118);
+        private static readonly Color INVALID_SAVE_COLOR = Color.FromArgb(255, 188, 52, 52);
         private readonly Dictionary<int, HtmlCustomRule> _allCustomRules = new Dictionary<int, HtmlCustomRule>();
 
         public HtmlExtraSettings()
         {
             InitializeComponent();
-            SavingInfoLabel.Text = string.Empty;
 
+            SavingInfoLabel.Text = string.Empty;
             LoadCustomRulesInMemory();
         }
 
         private bool SaveCustomRulesToMemory()
         {
+            displaySaveTimer.Stop();
             displaySaveTimer.Start();
 
             List<HtmlCustomSetting> data = GetAllCustomSettings();
@@ -68,11 +72,11 @@ namespace ProgrammerUtils
             {
                 if (SaveService.Save(SAVE_FILE_NAME, data))
                 {
-                    WriteToSaveLabel(Color.Green, "Saved successfully!");
+                    WriteToSaveLabel(VALID_SAVE_COLOR, "Saved successfully!");
                     return true;
                 }
                 
-                WriteToSaveLabel(Color.Red, "An error occurred while trying to save!");
+                WriteToSaveLabel(INVALID_SAVE_COLOR, "An error occurred while trying to save!");
             }
             else
             {
@@ -83,7 +87,7 @@ namespace ProgrammerUtils
                 if (duplicateEntries)
                     errorMessage.Append("There exists custom rules with duplicate data!\n");
 
-                WriteToSaveLabel(Color.Red, errorMessage.ToString());
+                WriteToSaveLabel(INVALID_SAVE_COLOR, errorMessage.ToString());
             }
 
             return false;
