@@ -170,10 +170,10 @@
             this.generateParagraphSizeLabel = new System.Windows.Forms.Label();
             this.generateOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.HelpDropdown = new System.Windows.Forms.ToolStripDropDownButton();
-            this.asdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aasdasdasdToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.howToUseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.helpAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
             this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
             this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
@@ -2341,42 +2341,42 @@
             this.Toolbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.Toolbar.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Toolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator1,
             this.HelpDropdown});
             this.Toolbar.Location = new System.Drawing.Point(0, 0);
             this.Toolbar.Name = "Toolbar";
             this.Toolbar.Size = new System.Drawing.Size(976, 30);
             this.Toolbar.TabIndex = 1;
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 30);
-            // 
             // HelpDropdown
             // 
             this.HelpDropdown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.HelpDropdown.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.asdasdToolStripMenuItem,
-            this.aasdasdasdToolStripMenuItem});
+            this.howToUseToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.helpAbout});
             this.HelpDropdown.Image = ((System.Drawing.Image)(resources.GetObject("HelpDropdown.Image")));
-            this.HelpDropdown.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.HelpDropdown.Margin = new System.Windows.Forms.Padding(5, 1, 0, 2);
             this.HelpDropdown.Name = "HelpDropdown";
             this.HelpDropdown.Size = new System.Drawing.Size(55, 27);
             this.HelpDropdown.Text = "Help";
             // 
-            // asdasdToolStripMenuItem
+            // howToUseToolStripMenuItem
             // 
-            this.asdasdToolStripMenuItem.Name = "asdasdToolStripMenuItem";
-            this.asdasdToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
-            this.asdasdToolStripMenuItem.Text = "asdasd";
+            this.howToUseToolStripMenuItem.Name = "howToUseToolStripMenuItem";
+            this.howToUseToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.howToUseToolStripMenuItem.Text = "How to use";
             // 
-            // aasdasdasdToolStripMenuItem
+            // toolStripSeparator1
             // 
-            this.aasdasdasdToolStripMenuItem.Name = "aasdasdasdToolStripMenuItem";
-            this.aasdasdasdToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
-            this.aasdasdasdToolStripMenuItem.Text = "aasdasdasd";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(213, 6);
+            // 
+            // helpAbout
+            // 
+            this.helpAbout.Name = "helpAbout";
+            this.helpAbout.Size = new System.Drawing.Size(216, 26);
+            this.helpAbout.Text = "About";
+            this.helpAbout.Click += new System.EventHandler(this.HelpAbout_Click);
             // 
             // CopyTimer
             // 
@@ -2401,6 +2401,7 @@
             this.ClientSize = new System.Drawing.Size(976, 533);
             this.Controls.Add(this.MainTableLayout);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(894, 528);
             this.Name = "Application";
             this.Text = "ProgrammingUtils";
@@ -2491,9 +2492,7 @@
         private System.Windows.Forms.TabPage matchCompareTab;
         private System.Windows.Forms.ToolStrip Toolbar;
         private System.Windows.Forms.ToolStripDropDownButton HelpDropdown;
-        private System.Windows.Forms.ToolStripMenuItem asdasdToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem aasdasdasdToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem helpAbout;
         private System.Windows.Forms.TableLayoutPanel SortTableLayout;
         private System.Windows.Forms.TabPage CountTab;
         private System.Windows.Forms.TabPage htmlTab;
@@ -2632,6 +2631,8 @@
         private System.Windows.Forms.ComboBox countSortModes;
         private System.Windows.Forms.Label countSortModeLabel;
         private System.Windows.Forms.CheckBox countCaseSensitive;
+        private System.Windows.Forms.ToolStripMenuItem howToUseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
 

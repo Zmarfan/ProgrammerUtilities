@@ -24,6 +24,7 @@ namespace ProgrammerUtils
         GenerateText _generateText;
         Counter _counter;
         HtmlExtraSettings _htmlExtraSettingsWindow;
+        HelpWindow _helpWindow;
 
         public Application()
         {
@@ -637,6 +638,16 @@ namespace ProgrammerUtils
             generateCopyLabel.Text = string.Empty;
             CopyTimer.Stop();
         }
+        #endregion
+
+        #region Taskbar
+
+        private void HelpAbout_Click(object sender, EventArgs e)
+        {
+            _helpWindow = new HelpWindow();
+            _helpWindow.ShowDialog();
+        }
+
         #endregion
     }
 }

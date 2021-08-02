@@ -60,6 +60,12 @@
     </Compile>
     <Compile Include="Counter.cs" />
     <Compile Include="GenerateText.cs" />
+    <Compile Include="HelpWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HelpWindow.Designer.cs">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="HtmlCenter.cs" />
     <Compile Include="HtmlCustomRule.cs">
       <SubType>UserControl</SubType>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CountDetail.resx">
       <DependentUpon>CountDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpWindow.resx">
+      <DependentUpon>HelpWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HtmlCustomRule.resx">
       <DependentUpon>HtmlCustomRule.cs</DependentUpon>
@@ -129,6 +138,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\html_Lowered.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
