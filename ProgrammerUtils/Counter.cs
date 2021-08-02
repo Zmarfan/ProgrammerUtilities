@@ -17,6 +17,7 @@ namespace ProgrammerUtils
 
         private readonly FlowLayoutPanel _wordFrequencyParent;
         private readonly FlowLayoutPanel _wordDensityParent;
+        private readonly FlowLayoutPanel _uniqueWordsFlowLayoutPanel;
 
         private readonly RichTextBox _inputTextbox;
         private readonly CountDetail _wordsCountDetail;
@@ -29,6 +30,7 @@ namespace ProgrammerUtils
         public Counter(
             FlowLayoutPanel wordFrequencyParent,
             FlowLayoutPanel wordDensityParent,
+            FlowLayoutPanel uniqueWordsFlowLayoutPanel,
             RichTextBox inputTextbox,
             CountDetail wordsCountDetail,
             CountDetail uniqueWordsCountDetail,
@@ -40,6 +42,7 @@ namespace ProgrammerUtils
         {
             _wordFrequencyParent = wordFrequencyParent;
             _wordDensityParent = wordDensityParent;
+            _uniqueWordsFlowLayoutPanel = uniqueWordsFlowLayoutPanel;
             _inputTextbox = inputTextbox;
             _wordsCountDetail = wordsCountDetail;
             _uniqueWordsCountDetail = uniqueWordsCountDetail;
@@ -69,16 +72,20 @@ namespace ProgrammerUtils
 
             Dictionary<string, int> differentWords = CalculateWords(allWords);
 
-            FillNewData(allWords.Count, differentWords, SortMode.AMOUNT);
+            FillNewData(allWords.Count, differentWords, SortMode.ALPHABETICAL);
         }
 
         private void RemoveOldData()
         {
-            for (int i = _wordFrequencyParent.Controls.Count - 1; i >= 0; i--)
-                _wordFrequencyParent.Controls.RemoveAt(i);
+            ClearFlowLayoutPanel(_wordFrequencyParent);
+            ClearFlowLayoutPanel(_wordDensityParent);
+            ClearFlowLayoutPanel(_uniqueWordsFlowLayoutPanel);
+        }
 
-            for (int i = _wordDensityParent.Controls.Count - 1; i >= 0; i--)
-                _wordDensityParent.Controls.RemoveAt(i);
+        private void ClearFlowLayoutPanel(FlowLayoutPanel flowLayoutPanel)
+        {
+            for (int i = flowLayoutPanel.Controls.Count - 1; i >= 0; i--)
+                flowLayoutPanel.Controls.RemoveAt(i);
         }
 
         private Dictionary<string, int> CalculateWords(List<string> allWords)
@@ -115,6 +122,13 @@ namespace ProgrammerUtils
 
             foreach (KeyValuePair<string, int> entry in sortedWords)
                 SpawnCountDetail(entry.Key, ((entry.Value / (float)totalAmountOfWords) * 100).ToString("0.00") + "%", _wordFrequencyParent);
+
+            List<KeyValuePair<string, int>> uniqueWords = sortedWords.Where(e => e.Value == 1).ToList();
+            if (sortMode != SortMode.ALPHABETICAL)
+                uniqueWords.Sort((entry1, entry2) => entry1.Key.CompareTo(entry2.Key));
+
+            foreach (KeyValuePair<string, int> entry in uniqueWords)
+                SpawnCountDetail(entry.Key, "Unique", _uniqueWordsFlowLayoutPanel);
         }
 
         private void SpawnCountDetail(string detailText, string valueText, FlowLayoutPanel parent)

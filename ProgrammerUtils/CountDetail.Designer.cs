@@ -54,6 +54,7 @@
             // 
             // detailLabel
             // 
+            this.detailLabel.AutoEllipsis = true;
             this.detailLabel.AutoSize = true;
             this.detailLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.detailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

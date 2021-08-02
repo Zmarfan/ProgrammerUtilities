@@ -60,7 +60,18 @@ namespace ProgrammerUtils
 
             _generateText = new GenerateText(generateOutputTextbox, generateSeed);
 
-            _counter = new Counter(countWordFrequencyFlowLayoutPanel, countWordDensityFlowLayoutPanel, countInputTextbox, countDetailWords, countDetailUniqueWords, countDetailDifferentWords, countDetailCharacters, countDetailSentences, countDetailParagraphs);
+            _counter = new Counter(
+                countWordFrequencyFlowLayoutPanel, 
+                countWordDensityFlowLayoutPanel, 
+                countUniqueWordsFlowLayoutPanel,
+                countInputTextbox, 
+                countDetailWords, 
+                countDetailUniqueWords, 
+                countDetailDifferentWords, 
+                countDetailCharacters, 
+                countDetailSentences, 
+                countDetailParagraphs
+                );
 
             SetChangeTextStyleButton();
             SetChangeTextPresentationButton();
