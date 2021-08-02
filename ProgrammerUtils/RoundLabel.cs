@@ -47,7 +47,7 @@ namespace ProgrammerUtils
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            using (var graphicsPath = _getRoundRectangle(ClientRectangle, CornerRadius))
+            using (var graphicsPath = GetRoundRectangle(ClientRectangle, CornerRadius))
             {
                 e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
                 using (var brush = new SolidBrush(RoundedBackColor))
@@ -58,7 +58,7 @@ namespace ProgrammerUtils
             }
         }
 
-        private GraphicsPath _getRoundRectangle(Rectangle rectangle, int cRadius)
+        private GraphicsPath GetRoundRectangle(Rectangle rectangle, int cRadius)
         {
             int diminisher = 1;
             GraphicsPath path = new GraphicsPath();

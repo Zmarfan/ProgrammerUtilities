@@ -13,13 +13,13 @@ namespace ProgrammerUtils
 {
     public partial class CountDetail : UserControl
     {
-        public string _DetailText
+        public string DetailText
         {
             get => detailLabel.Text;
             set => detailLabel.Text = value;
         }
 
-        public string _ValueText
+        public string ValueText
         {
             get => valueLabel.Text;
             set => valueLabel.Text = value;

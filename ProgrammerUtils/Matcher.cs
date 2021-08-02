@@ -198,7 +198,6 @@ namespace ProgrammerUtils
             string[] s2Splits = s2.Split(new char[] { splitChar }, spitOption);
 
             List<LCSOutObject> lcs = GetLargestCommonSubSequence(CreateLCSInArray(s1Splits), CreateLCSInArray(s2Splits));
-            int numberOfRows = Math.Max(s1Splits.Length, s2Splits.Length);
 
             List<CombinedViewCharacter> finalText = new List<CombinedViewCharacter>();
 
@@ -329,7 +328,6 @@ namespace ProgrammerUtils
             }
 
             int index = table[s1Length, s2Length];
-            int temp = index;
 
             LCSOutObject[] largestCommonSubSequence = new LCSOutObject[index];
 

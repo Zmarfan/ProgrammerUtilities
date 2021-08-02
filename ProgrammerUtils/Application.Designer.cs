@@ -109,6 +109,12 @@
             this.countInfoTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.countInfoLabel = new System.Windows.Forms.Label();
             this.countInfoFlowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.countDetailWords = new ProgrammerUtils.CountDetail();
+            this.countDetailUniqueWords = new ProgrammerUtils.CountDetail();
+            this.countDetailDifferentWords = new ProgrammerUtils.CountDetail();
+            this.countDetailCharacters = new ProgrammerUtils.CountDetail();
+            this.countDetailSentences = new ProgrammerUtils.CountDetail();
+            this.countDetailParagraphs = new ProgrammerUtils.CountDetail();
             this.htmlTab = new System.Windows.Forms.TabPage();
             this.htmlTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.htmlSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
@@ -164,6 +170,8 @@
             this.generateParagraphSizeLabel = new System.Windows.Forms.Label();
             this.generateOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.Toolbar = new System.Windows.Forms.ToolStrip();
+            this.FileDropdown = new System.Windows.Forms.ToolStripDropDownButton();
+            this.FileExit = new System.Windows.Forms.ToolStripMenuItem();
             this.HelpDropdown = new System.Windows.Forms.ToolStripDropDownButton();
             this.howToUseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -171,14 +179,6 @@
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
             this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
             this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
-            this.FileDropdown = new System.Windows.Forms.ToolStripDropDownButton();
-            this.FileExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.countDetailWords = new ProgrammerUtils.CountDetail();
-            this.countDetailUniqueWords = new ProgrammerUtils.CountDetail();
-            this.countDetailDifferentWords = new ProgrammerUtils.CountDetail();
-            this.countDetailCharacters = new ProgrammerUtils.CountDetail();
-            this.countDetailSentences = new ProgrammerUtils.CountDetail();
-            this.countDetailParagraphs = new ProgrammerUtils.CountDetail();
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -1371,6 +1371,66 @@
             this.countInfoFlowLayoutPanel.TabIndex = 5;
             this.countInfoFlowLayoutPanel.WrapContents = false;
             // 
+            // countDetailWords
+            // 
+            this.countDetailWords.DetailText = "Words";
+            this.countDetailWords.ValueText = "0";
+            this.countDetailWords.Location = new System.Drawing.Point(0, 0);
+            this.countDetailWords.Margin = new System.Windows.Forms.Padding(0);
+            this.countDetailWords.Name = "countDetailWords";
+            this.countDetailWords.Size = new System.Drawing.Size(292, 37);
+            this.countDetailWords.TabIndex = 0;
+            // 
+            // countDetailUniqueWords
+            // 
+            this.countDetailUniqueWords.DetailText = "Unique Words";
+            this.countDetailUniqueWords.ValueText = "0";
+            this.countDetailUniqueWords.Location = new System.Drawing.Point(0, 37);
+            this.countDetailUniqueWords.Margin = new System.Windows.Forms.Padding(0);
+            this.countDetailUniqueWords.Name = "countDetailUniqueWords";
+            this.countDetailUniqueWords.Size = new System.Drawing.Size(292, 37);
+            this.countDetailUniqueWords.TabIndex = 4;
+            // 
+            // countDetailDifferentWords
+            // 
+            this.countDetailDifferentWords.DetailText = "Different Words";
+            this.countDetailDifferentWords.ValueText = "0";
+            this.countDetailDifferentWords.Location = new System.Drawing.Point(0, 74);
+            this.countDetailDifferentWords.Margin = new System.Windows.Forms.Padding(0);
+            this.countDetailDifferentWords.Name = "countDetailDifferentWords";
+            this.countDetailDifferentWords.Size = new System.Drawing.Size(292, 37);
+            this.countDetailDifferentWords.TabIndex = 5;
+            // 
+            // countDetailCharacters
+            // 
+            this.countDetailCharacters.DetailText = "Characters";
+            this.countDetailCharacters.ValueText = "0";
+            this.countDetailCharacters.Location = new System.Drawing.Point(0, 111);
+            this.countDetailCharacters.Margin = new System.Windows.Forms.Padding(0);
+            this.countDetailCharacters.Name = "countDetailCharacters";
+            this.countDetailCharacters.Size = new System.Drawing.Size(292, 37);
+            this.countDetailCharacters.TabIndex = 1;
+            // 
+            // countDetailSentences
+            // 
+            this.countDetailSentences.DetailText = "Sentences";
+            this.countDetailSentences.ValueText = "0";
+            this.countDetailSentences.Location = new System.Drawing.Point(0, 148);
+            this.countDetailSentences.Margin = new System.Windows.Forms.Padding(0);
+            this.countDetailSentences.Name = "countDetailSentences";
+            this.countDetailSentences.Size = new System.Drawing.Size(292, 37);
+            this.countDetailSentences.TabIndex = 2;
+            // 
+            // countDetailParagraphs
+            // 
+            this.countDetailParagraphs.DetailText = "Paragraphs";
+            this.countDetailParagraphs.ValueText = "0";
+            this.countDetailParagraphs.Location = new System.Drawing.Point(0, 185);
+            this.countDetailParagraphs.Margin = new System.Windows.Forms.Padding(0);
+            this.countDetailParagraphs.Name = "countDetailParagraphs";
+            this.countDetailParagraphs.Size = new System.Drawing.Size(292, 37);
+            this.countDetailParagraphs.TabIndex = 3;
+            // 
             // htmlTab
             // 
             this.htmlTab.Controls.Add(this.htmlTableLayout);
@@ -2290,6 +2350,28 @@
             this.Toolbar.Size = new System.Drawing.Size(976, 30);
             this.Toolbar.TabIndex = 1;
             // 
+            // FileDropdown
+            // 
+            this.FileDropdown.AutoToolTip = false;
+            this.FileDropdown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.FileDropdown.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FileExit});
+            this.FileDropdown.Image = ((System.Drawing.Image)(resources.GetObject("FileDropdown.Image")));
+            this.FileDropdown.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.FileDropdown.Name = "FileDropdown";
+            this.FileDropdown.ShowDropDownArrow = false;
+            this.FileDropdown.Size = new System.Drawing.Size(36, 27);
+            this.FileDropdown.Text = "File";
+            // 
+            // FileExit
+            // 
+            this.FileExit.Name = "FileExit";
+            this.FileExit.ShortcutKeyDisplayString = "Ctrl+Q";
+            this.FileExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
+            this.FileExit.Size = new System.Drawing.Size(169, 26);
+            this.FileExit.Text = "Exit";
+            this.FileExit.Click += new System.EventHandler(this.FileExit_Click);
+            // 
             // HelpDropdown
             // 
             this.HelpDropdown.AutoToolTip = false;
@@ -2311,19 +2393,19 @@
             this.howToUseToolStripMenuItem.Name = "howToUseToolStripMenuItem";
             this.howToUseToolStripMenuItem.ShortcutKeyDisplayString = "F1";
             this.howToUseToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.howToUseToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.howToUseToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.howToUseToolStripMenuItem.Text = "How to use";
             this.howToUseToolStripMenuItem.Click += new System.EventHandler(this.HowToUseToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(213, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(188, 6);
             // 
             // helpAbout
             // 
             this.helpAbout.Name = "helpAbout";
-            this.helpAbout.Size = new System.Drawing.Size(216, 26);
+            this.helpAbout.Size = new System.Drawing.Size(191, 26);
             this.helpAbout.Text = "About";
             this.helpAbout.Click += new System.EventHandler(this.HelpAbout_Click);
             // 
@@ -2340,88 +2422,6 @@
             // htmlColorHoverTooltip
             // 
             this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
-            // 
-            // FileDropdown
-            // 
-            this.FileDropdown.AutoToolTip = false;
-            this.FileDropdown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.FileDropdown.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FileExit});
-            this.FileDropdown.Image = ((System.Drawing.Image)(resources.GetObject("FileDropdown.Image")));
-            this.FileDropdown.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.FileDropdown.Name = "FileDropdown";
-            this.FileDropdown.ShowDropDownArrow = false;
-            this.FileDropdown.Size = new System.Drawing.Size(36, 27);
-            this.FileDropdown.Text = "File";
-            // 
-            // FileExit
-            // 
-            this.FileExit.Name = "FileExit";
-            this.FileExit.ShortcutKeyDisplayString = "Ctrl+Q";
-            this.FileExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.FileExit.Size = new System.Drawing.Size(216, 26);
-            this.FileExit.Text = "Exit";
-            this.FileExit.Click += new System.EventHandler(this.FileExit_Click);
-            // 
-            // countDetailWords
-            // 
-            this.countDetailWords._DetailText = "Words";
-            this.countDetailWords._ValueText = "0";
-            this.countDetailWords.Location = new System.Drawing.Point(0, 0);
-            this.countDetailWords.Margin = new System.Windows.Forms.Padding(0);
-            this.countDetailWords.Name = "countDetailWords";
-            this.countDetailWords.Size = new System.Drawing.Size(292, 37);
-            this.countDetailWords.TabIndex = 0;
-            // 
-            // countDetailUniqueWords
-            // 
-            this.countDetailUniqueWords._DetailText = "Unique Words";
-            this.countDetailUniqueWords._ValueText = "0";
-            this.countDetailUniqueWords.Location = new System.Drawing.Point(0, 37);
-            this.countDetailUniqueWords.Margin = new System.Windows.Forms.Padding(0);
-            this.countDetailUniqueWords.Name = "countDetailUniqueWords";
-            this.countDetailUniqueWords.Size = new System.Drawing.Size(292, 37);
-            this.countDetailUniqueWords.TabIndex = 4;
-            // 
-            // countDetailDifferentWords
-            // 
-            this.countDetailDifferentWords._DetailText = "Different Words";
-            this.countDetailDifferentWords._ValueText = "0";
-            this.countDetailDifferentWords.Location = new System.Drawing.Point(0, 74);
-            this.countDetailDifferentWords.Margin = new System.Windows.Forms.Padding(0);
-            this.countDetailDifferentWords.Name = "countDetailDifferentWords";
-            this.countDetailDifferentWords.Size = new System.Drawing.Size(292, 37);
-            this.countDetailDifferentWords.TabIndex = 5;
-            // 
-            // countDetailCharacters
-            // 
-            this.countDetailCharacters._DetailText = "Characters";
-            this.countDetailCharacters._ValueText = "0";
-            this.countDetailCharacters.Location = new System.Drawing.Point(0, 111);
-            this.countDetailCharacters.Margin = new System.Windows.Forms.Padding(0);
-            this.countDetailCharacters.Name = "countDetailCharacters";
-            this.countDetailCharacters.Size = new System.Drawing.Size(292, 37);
-            this.countDetailCharacters.TabIndex = 1;
-            // 
-            // countDetailSentences
-            // 
-            this.countDetailSentences._DetailText = "Sentences";
-            this.countDetailSentences._ValueText = "0";
-            this.countDetailSentences.Location = new System.Drawing.Point(0, 148);
-            this.countDetailSentences.Margin = new System.Windows.Forms.Padding(0);
-            this.countDetailSentences.Name = "countDetailSentences";
-            this.countDetailSentences.Size = new System.Drawing.Size(292, 37);
-            this.countDetailSentences.TabIndex = 2;
-            // 
-            // countDetailParagraphs
-            // 
-            this.countDetailParagraphs._DetailText = "Paragraphs";
-            this.countDetailParagraphs._ValueText = "0";
-            this.countDetailParagraphs.Location = new System.Drawing.Point(0, 185);
-            this.countDetailParagraphs.Margin = new System.Windows.Forms.Padding(0);
-            this.countDetailParagraphs.Name = "countDetailParagraphs";
-            this.countDetailParagraphs.Size = new System.Drawing.Size(292, 37);
-            this.countDetailParagraphs.TabIndex = 3;
             // 
             // Application
             // 

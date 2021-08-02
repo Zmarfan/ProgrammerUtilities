@@ -29,7 +29,7 @@ namespace ProgrammerUtils
         public readonly static string SAVE_FILE_NAME = "HtmlCustomSettings";
 
         private int _indexGiver = int.MinValue;
-        private Dictionary<int, HtmlCustomRule> _allCustomRules = new Dictionary<int, HtmlCustomRule>();
+        private readonly Dictionary<int, HtmlCustomRule> _allCustomRules = new Dictionary<int, HtmlCustomRule>();
 
         public HtmlExtraSettings()
         {

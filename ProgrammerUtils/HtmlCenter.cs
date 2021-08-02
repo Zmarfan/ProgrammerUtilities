@@ -25,7 +25,7 @@ namespace ProgrammerUtils
         public static readonly int RAISED_OFFSET = 7;
         public static readonly int LOWERED_OFFSET = -7;
         private static readonly Color DEFAULT_TEXT_COLOR = Color.FromArgb(255, 10, 13, 20);
-        private static Dictionary<string, string> SPECIAL_HTML_CHARACTERS = new Dictionary<string, string>()
+        private static readonly Dictionary<string, string> SPECIAL_HTML_CHARACTERS = new Dictionary<string, string>()
         {
             { "\"", "&quot;" },
             { "'", "&apos;" },

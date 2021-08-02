@@ -65,15 +65,15 @@ namespace ProgrammerUtils
             int allCharacters = string.Join("", allParagraphs.ToArray()).Length;
             string workText = text.Replace('\n', ' ');
 
-            _paragraphsCountDetail._ValueText = allParagraphs.Count.ToString();
-            _charactersCountDetail._ValueText = allCharacters.ToString();
+            _paragraphsCountDetail.ValueText = allParagraphs.Count.ToString();
+            _charactersCountDetail.ValueText = allCharacters.ToString();
 
             List<string> allWords = workText.Split(new string[] { " ", ", ", ",", ". ", "." }, StringSplitOptions.RemoveEmptyEntries).ToList();
-            _wordsCountDetail._ValueText = allWords.Count.ToString();
+            _wordsCountDetail.ValueText = allWords.Count.ToString();
 
 
             string[] sentences = workText.Split(new string[] { ". ", "." }, StringSplitOptions.RemoveEmptyEntries);
-            _sentencesCountDetail._ValueText = sentences.Length.ToString();
+            _sentencesCountDetail.ValueText = sentences.Length.ToString();
 
             Dictionary<string, int> differentWords = CalculateWords(allWords);
 
@@ -105,8 +105,8 @@ namespace ProgrammerUtils
                     differentWords[word]++;
             });
 
-            _uniqueWordsCountDetail._ValueText = differentWords.Where(entry => entry.Value == 1).Count().ToString();
-            _differentWordsCountDetail._ValueText = differentWords.Count.ToString();
+            _uniqueWordsCountDetail.ValueText = differentWords.Where(entry => entry.Value == 1).Count().ToString();
+            _differentWordsCountDetail.ValueText = differentWords.Count.ToString();
 
             return differentWords;
         }
@@ -140,8 +140,8 @@ namespace ProgrammerUtils
         {
             CountDetail countDetail = new CountDetail
             {
-                _DetailText = detailText,
-                _ValueText = valueText
+                DetailText = detailText,
+                ValueText = valueText
             };
 
             parent.Controls.Add(countDetail);

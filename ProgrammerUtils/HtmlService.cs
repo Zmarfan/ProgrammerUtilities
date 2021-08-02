@@ -60,7 +60,7 @@ namespace ProgrammerUtils
                 { HtmlStyles.LOWERED, new HtmlEntry(LOWERED_START_TAG, LOWERED_END_TAG) },
             };
 
-        private Stack<HtmlStyles> _activeTags = new Stack<HtmlStyles>();
+        private readonly Stack<HtmlStyles> _activeTags = new Stack<HtmlStyles>();
 
         public bool IsTagActive(HtmlStyles style)
         {
