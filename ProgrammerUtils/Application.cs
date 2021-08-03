@@ -642,9 +642,21 @@ namespace ProgrammerUtils
 
         #region Taskbar
 
+        private void SelectNavigationButton(NavigationButton button)
+        {
+            navigationButton1.SelectButton(navigationButton1 == button);
+            navigationButton2.SelectButton(navigationButton2 == button);
+            navigationButton3.SelectButton(navigationButton3 == button);
+            navigationButton4.SelectButton(navigationButton4 == button);
+            navigationButton5.SelectButton(navigationButton5 == button);
+            navigationHelpButton.SelectButton(navigationHelpButton == button);
+        }
+
         private void NavigationHelpButton_OnButtonClicked()
         {
+            SelectNavigationButton(navigationHelpButton);
             _helpWindow = new HelpWindow();
+            _helpWindow.FormClosed += (a, b) => { navigationHelpButton.SelectButton(false); };
             _helpWindow.ShowDialog();
         }
 

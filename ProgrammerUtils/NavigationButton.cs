@@ -56,6 +56,11 @@ namespace ProgrammerUtils
         public void SelectButton(bool selectStatus)
         {
             _selected = selectStatus;
+
+            if (!selectStatus)
+            {
+                BackColor = ButtonColor;
+            }    
         }
 
         private void SubscribeToMouseEvents(Control control)

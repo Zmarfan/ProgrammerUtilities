@@ -41,7 +41,7 @@
             // logo
             // 
             this.logo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.logo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.logo.Image = global::ProgrammerUtils.Properties.Resources.logo;
             this.logo.Location = new System.Drawing.Point(175, 12);
             this.logo.Name = "logo";
