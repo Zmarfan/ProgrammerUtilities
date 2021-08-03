@@ -108,6 +108,12 @@
     </Compile>
     <Compile Include="SaveService.cs" />
     <Compile Include="Sort.cs" />
+    <Compile Include="SortControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SortControl.Designer.cs">
+      <DependentUpon>SortControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Timer.cs" />
     <EmbeddedResource Include="Application.resx">
       <DependentUpon>Application.cs</DependentUpon>
@@ -140,6 +146,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SortControl.resx">
+      <DependentUpon>SortControl.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

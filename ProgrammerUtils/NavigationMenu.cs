@@ -36,8 +36,6 @@ namespace ProgrammerUtils
         public void ChangeExpansionMode()
         {
             Expanded = !Expanded;
-
-            int margin = Expanded ? EXPANDED_BUTTON_LEFT_MARGIN : NOT_EXPANDED_BUTTON_LEFT_MARGIN;
         }
 
         public void ChangeImageLeftMargin(float ratio)
