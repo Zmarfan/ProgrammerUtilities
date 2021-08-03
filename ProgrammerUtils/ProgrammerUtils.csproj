@@ -83,6 +83,12 @@
       <DependentUpon>HelpWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="HtmlCenter.cs" />
+    <Compile Include="HTMLControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HTMLControl.Designer.cs">
+      <DependentUpon>HTMLControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="HtmlCustomRule.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HelpWindow.resx">
       <DependentUpon>HelpWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HTMLControl.resx">
+      <DependentUpon>HTMLControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HtmlCustomRule.resx">
       <DependentUpon>HtmlCustomRule.cs</DependentUpon>

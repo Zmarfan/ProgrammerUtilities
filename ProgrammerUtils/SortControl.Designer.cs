@@ -78,7 +78,7 @@ namespace ProgrammerUtils
             this.SortTableLayout.ColumnCount = 3;
             this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68F));
             this.SortTableLayout.Controls.Add(this.sortLabel2, 1, 3);
             this.SortTableLayout.Controls.Add(this.sortTextBoxLeft, 0, 1);
             this.SortTableLayout.Controls.Add(this.sortLabel1, 0, 3);
@@ -528,7 +528,7 @@ namespace ProgrammerUtils
             this.sortEnum.Location = new System.Drawing.Point(4, 28);
             this.sortEnum.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.sortEnum.Name = "sortEnum";
-            this.sortEnum.Size = new System.Drawing.Size(340, 300);
+            this.sortEnum.Size = new System.Drawing.Size(339, 300);
             this.sortEnum.TabIndex = 1;
             this.sortEnum.Text = "Enum";
             this.sortEnum.UseVisualStyleBackColor = true;
@@ -540,13 +540,14 @@ namespace ProgrammerUtils
             this.sortEnumTextBoxRight.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.sortEnumTextBoxRight.Name = "sortEnumTextBoxRight";
             this.sortEnumTextBoxRight.ReadOnly = true;
-            this.sortEnumTextBoxRight.Size = new System.Drawing.Size(340, 300);
+            this.sortEnumTextBoxRight.Size = new System.Drawing.Size(339, 300);
             this.sortEnumTextBoxRight.TabIndex = 0;
             this.sortEnumTextBoxRight.Text = "";
             // 
             // copyTimer
             // 
-            this.copyTimer.Interval = 3000;
+            this.copyTimer.Interval = 1500;
+            this.copyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
             // 
             // SortControl
             // 

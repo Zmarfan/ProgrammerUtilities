@@ -368,7 +368,7 @@ namespace ProgrammerUtils
             this.matchResultTabCombined.Location = new System.Drawing.Point(4, 28);
             this.matchResultTabCombined.Margin = new System.Windows.Forms.Padding(0);
             this.matchResultTabCombined.Name = "matchResultTabCombined";
-            this.matchResultTabCombined.Size = new System.Drawing.Size(286, 397);
+            this.matchResultTabCombined.Size = new System.Drawing.Size(368, 365);
             this.matchResultTabCombined.TabIndex = 1;
             this.matchResultTabCombined.Text = "Combined";
             this.matchResultTabCombined.UseVisualStyleBackColor = true;
@@ -387,7 +387,7 @@ namespace ProgrammerUtils
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(286, 397);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(368, 365);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // matchResultCombinedTextBox
@@ -397,7 +397,7 @@ namespace ProgrammerUtils
             this.matchResultCombinedTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.matchResultCombinedTextBox.Name = "matchResultCombinedTextBox";
             this.matchResultCombinedTextBox.ReadOnly = true;
-            this.matchResultCombinedTextBox.Size = new System.Drawing.Size(282, 356);
+            this.matchResultCombinedTextBox.Size = new System.Drawing.Size(364, 324);
             this.matchResultCombinedTextBox.TabIndex = 10;
             this.matchResultCombinedTextBox.Text = "";
             // 
@@ -410,7 +410,7 @@ namespace ProgrammerUtils
             this.matchResultTabCombinedLabel.Location = new System.Drawing.Point(2, 0);
             this.matchResultTabCombinedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.matchResultTabCombinedLabel.Name = "matchResultTabCombinedLabel";
-            this.matchResultTabCombinedLabel.Size = new System.Drawing.Size(282, 35);
+            this.matchResultTabCombinedLabel.Size = new System.Drawing.Size(364, 35);
             this.matchResultTabCombinedLabel.TabIndex = 3;
             this.matchResultTabCombinedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
