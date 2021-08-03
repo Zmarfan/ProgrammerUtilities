@@ -12,6 +12,16 @@ namespace ProgrammerUtils
 {
     public partial class NavigationMenu : UserControl
     {
+        public enum NavigationButtons
+        {
+            SORT,
+            COMPARE,
+            COUNT,
+            HTML,
+            GENERATE_TEXT,
+            HELP,
+        }
+
         public static readonly int EXPANDED_BUTTON_LEFT_MARGIN = 15;
         public static readonly int NOT_EXPANDED_BUTTON_LEFT_MARGIN = 5;
 
@@ -31,6 +41,12 @@ namespace ProgrammerUtils
         public NavigationMenu()
         {
             InitializeComponent();
+            Init();
+        }
+
+        private void Init()
+        {
+            SelectNavigationButton(NavigationButtons.SORT);
         }
 
         public void ChangeExpansionMode()
@@ -49,6 +65,16 @@ namespace ProgrammerUtils
             navigationGenerateTextButton.ChangeImageLeftMargin(deltaMargin);
             navigationHelpButton.ChangeImageLeftMargin(deltaMargin);
         }
+        public void SelectNavigationButton(NavigationButtons button)
+        {
+            navigationSortButton.SelectButton(NavigationButtons.SORT == button);
+            navigationCompareButton.SelectButton(NavigationButtons.COMPARE == button);
+            navigationCountButton.SelectButton(NavigationButtons.COUNT == button);
+            navigationHTMLButton.SelectButton(NavigationButtons.HTML == button);
+            navigationGenerateTextButton.SelectButton(NavigationButtons.GENERATE_TEXT == button);
+            navigationHelpButton.SelectButton(NavigationButtons.HELP == button);
+        }
+
 
         private void NavigationTopButton_MouseEnter(object sender, EventArgs e)
         {
@@ -77,45 +103,35 @@ namespace ProgrammerUtils
             else
                 NavigationTopButton_MouseLeave(null, null);
         }
-        private void SelectNavigationButton(NavigationButton button)
-        {
-            navigationSortButton.SelectButton(navigationSortButton == button);
-            navigationCompareButton.SelectButton(navigationCompareButton == button);
-            navigationCountButton.SelectButton(navigationCountButton == button);
-            navigationHTMLButton.SelectButton(navigationHTMLButton == button);
-            navigationGenerateTextButton.SelectButton(navigationGenerateTextButton == button);
-            navigationHelpButton.SelectButton(navigationHelpButton == button);
-        }
 
         private void NavigationHelpButton_OnButtonClicked()
         {
-            SelectNavigationButton(navigationHelpButton);
             _helpWindow = new HelpWindow();
             _helpWindow.FormClosed += (a, b) => { navigationHelpButton.SelectButton(false); };
             _helpWindow.ShowDialog();
         }
 
-        private void NavigationSortButton_Load(object sender, EventArgs e)
+        private void NavigationSortButton_OnButtonClicked()
         {
             OnSortClicked?.Invoke();
         }
 
-        private void NavigationCompareButton_Load(object sender, EventArgs e)
+        private void NavigationCompareButton_OnButtonClicked()
         {
             OnCompareClicked?.Invoke();
         }
 
-        private void NavigationCountButton_Load(object sender, EventArgs e)
+        private void NavigationCountButton_OnButtonClicked()
         {
             OnCountClicked?.Invoke();
         }
 
-        private void NavigationHTMLButton_Load(object sender, EventArgs e)
+        private void NavigationHTMLButton_OnButtonClicked()
         {
             OnHTMLClicked?.Invoke();
         }
 
-        private void NavigationGenerateTextButton_Load(object sender, EventArgs e)
+        private void NavigationGenerateTextButton_OnButtonClicked()
         {
             OnGenerateTextClicked?.Invoke();
         }

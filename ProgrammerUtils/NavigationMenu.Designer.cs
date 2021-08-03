@@ -167,7 +167,7 @@ namespace ProgrammerUtils
             this.navigationGenerateTextButton.Name = "navigationGenerateTextButton";
             this.navigationGenerateTextButton.Size = new System.Drawing.Size(253, 50);
             this.navigationGenerateTextButton.TabIndex = 5;
-            this.navigationGenerateTextButton.Load += new System.EventHandler(this.NavigationGenerateTextButton_Load);
+            this.navigationGenerateTextButton.OnButtonClicked += new ProgrammerUtils.NavigationButton.NavigationButtonClickedDelegate(this.NavigationGenerateTextButton_OnButtonClicked);
             // 
             // navigationHTMLButton
             // 
@@ -184,7 +184,7 @@ namespace ProgrammerUtils
             this.navigationHTMLButton.Name = "navigationHTMLButton";
             this.navigationHTMLButton.Size = new System.Drawing.Size(253, 50);
             this.navigationHTMLButton.TabIndex = 4;
-            this.navigationHTMLButton.Load += new System.EventHandler(this.NavigationHTMLButton_Load);
+            this.navigationHTMLButton.OnButtonClicked += new ProgrammerUtils.NavigationButton.NavigationButtonClickedDelegate(this.NavigationHTMLButton_OnButtonClicked);
             // 
             // navigationCountButton
             // 
@@ -201,7 +201,7 @@ namespace ProgrammerUtils
             this.navigationCountButton.Name = "navigationCountButton";
             this.navigationCountButton.Size = new System.Drawing.Size(253, 50);
             this.navigationCountButton.TabIndex = 3;
-            this.navigationCountButton.Load += new System.EventHandler(this.NavigationCountButton_Load);
+            this.navigationCountButton.OnButtonClicked += new ProgrammerUtils.NavigationButton.NavigationButtonClickedDelegate(this.NavigationCountButton_OnButtonClicked);
             // 
             // navigationCompareButton
             // 
@@ -218,7 +218,7 @@ namespace ProgrammerUtils
             this.navigationCompareButton.Name = "navigationCompareButton";
             this.navigationCompareButton.Size = new System.Drawing.Size(253, 50);
             this.navigationCompareButton.TabIndex = 2;
-            this.navigationCompareButton.Load += new System.EventHandler(this.NavigationCompareButton_Load);
+            this.navigationCompareButton.OnButtonClicked += new ProgrammerUtils.NavigationButton.NavigationButtonClickedDelegate(this.NavigationCompareButton_OnButtonClicked);
             // 
             // navigationSortButton
             // 
@@ -235,7 +235,7 @@ namespace ProgrammerUtils
             this.navigationSortButton.Name = "navigationSortButton";
             this.navigationSortButton.Size = new System.Drawing.Size(253, 50);
             this.navigationSortButton.TabIndex = 1;
-            this.navigationSortButton.Load += new System.EventHandler(this.NavigationSortButton_Load);
+            this.navigationSortButton.OnButtonClicked += new ProgrammerUtils.NavigationButton.NavigationButtonClickedDelegate(this.NavigationSortButton_OnButtonClicked);
             // 
             // NavigationMenu
             // 

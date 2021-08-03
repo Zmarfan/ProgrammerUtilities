@@ -28,6 +28,12 @@ namespace ProgrammerUtils
         private static readonly int EXPANDED_NAVIGATION_MENU_SIZE = 250;
         private static readonly int NOT_EXPANDED_NAVIGATION_MENU_SIZE = 44;
 
+        private SortControl _sortControl;
+        private CompareControl _compareControl;
+        private CountControl _countControl;
+        private HTMLControl _htmlControl;
+        private GenerateTextControl _generateTextControl;
+
         DateTime _lastTime = DateTime.Now;
         readonly Timer _navigationMenuOpenCloseTimer = new Timer(0.15f);
         private bool _navigationTransitioning = false;
@@ -48,9 +54,59 @@ namespace ProgrammerUtils
         private void Init()
         {
             FrameTimer.Start();
+
+            _sortControl = new SortControl();
+            _compareControl = new CompareControl();
+            _countControl = new CountControl();
+            _htmlControl = new HTMLControl();
+            _generateTextControl = new GenerateTextControl();
+
+            PlayAreaPanel.Controls.Add(_sortControl);
+            PlayAreaPanel.Controls.Add(_compareControl);
+            PlayAreaPanel.Controls.Add(_countControl);
+            PlayAreaPanel.Controls.Add(_htmlControl);
+            PlayAreaPanel.Controls.Add(_generateTextControl);
+
+            _sortControl.Dock = DockStyle.Fill;
+            _compareControl.Dock = DockStyle.Fill;
+            _countControl.Dock = DockStyle.Fill;
+            _htmlControl.Dock = DockStyle.Fill;
+            _generateTextControl.Dock = DockStyle.Fill;
+
+            _compareControl.Location = _sortControl.Location;
+            _countControl.Location = _sortControl.Location;
+            _htmlControl.Location = _sortControl.Location;
+            _generateTextControl.Location = _sortControl.Location;
+
+            HideAllContent();
+            _sortControl.Show();
         }
 
-        #region Navigation
+        private void InitNavigationBar()
+        {
+            navigationMenu.OnNavigationButtonClicked += HeaderNavigationButtonClicked;
+            navigationMenu.OnSortClicked += () => { GeneralNavigationButtonClicked(_sortControl, NavigationMenu.NavigationButtons.SORT); };
+            navigationMenu.OnCompareClicked += () => { GeneralNavigationButtonClicked(_compareControl, NavigationMenu.NavigationButtons.COMPARE); };
+            navigationMenu.OnCountClicked += () => { GeneralNavigationButtonClicked(_countControl, NavigationMenu.NavigationButtons.COUNT); };
+            navigationMenu.OnHTMLClicked += () => { GeneralNavigationButtonClicked(_htmlControl, NavigationMenu.NavigationButtons.HTML); };
+            navigationMenu.OnGenerateTextClicked += () => { GeneralNavigationButtonClicked(_generateTextControl, NavigationMenu.NavigationButtons.GENERATE_TEXT); };
+        }
+
+        private void GeneralNavigationButtonClicked(Control control, NavigationMenu.NavigationButtons button)
+        {
+            HideAllContent();
+            control.Show();
+            navigationMenu.SelectNavigationButton(button);
+        }
+
+        private void HideAllContent()
+        {
+            _sortControl.Hide();
+            _compareControl.Hide();
+            _countControl.Hide();
+            _htmlControl.Hide();
+            _generateTextControl.Hide();
+        }
 
         private bool NavigationMenuTick(float delta)
         {
@@ -75,18 +131,12 @@ namespace ProgrammerUtils
             return _navigationTransitioning;
         }
 
-        private void InitNavigationBar()
-        {
-            navigationMenu.OnNavigationButtonClicked += NavigationButtonClicked;
-        }
-
-        private void NavigationButtonClicked()
+        private void HeaderNavigationButtonClicked()
         {
             _navigationTransitioning = true;
             navigationMenu.ChangeExpansionMode();
         }
 
-        #endregion
 
         private void FrameTimer_Tick(object sender, EventArgs e)
         {

@@ -56,11 +56,7 @@ namespace ProgrammerUtils
         public void SelectButton(bool selectStatus)
         {
             _selected = selectStatus;
-
-            if (!selectStatus)
-            {
-                BackColor = ButtonColor;
-            }    
+            BackColor = selectStatus ? ButtonClickColor : ButtonColor;
         }
 
         public void ChangeImageLeftMargin(int newMargin)
