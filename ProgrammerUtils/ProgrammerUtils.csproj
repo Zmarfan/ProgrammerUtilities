@@ -108,6 +108,7 @@
     </Compile>
     <Compile Include="SaveService.cs" />
     <Compile Include="Sort.cs" />
+    <Compile Include="Timer.cs" />
     <EmbeddedResource Include="Application.resx">
       <DependentUpon>Application.cs</DependentUpon>
     </EmbeddedResource>

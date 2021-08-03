@@ -38,13 +38,18 @@ namespace ProgrammerUtils
             Expanded = !Expanded;
 
             int margin = Expanded ? EXPANDED_BUTTON_LEFT_MARGIN : NOT_EXPANDED_BUTTON_LEFT_MARGIN;
+        }
 
-            navigationSortButton.ChangeImageLeftMargin(margin);
-            navigationCompareButton.ChangeImageLeftMargin(margin);
-            navigationCountButton.ChangeImageLeftMargin(margin);
-            navigationHTMLButton.ChangeImageLeftMargin(margin);
-            navigationGenerateTextButton.ChangeImageLeftMargin(margin);
-            navigationHelpButton.ChangeImageLeftMargin(margin);
+        public void ChangeImageLeftMargin(float ratio)
+        {
+            int deltaMargin = (int)(((EXPANDED_BUTTON_LEFT_MARGIN - NOT_EXPANDED_BUTTON_LEFT_MARGIN) * ratio) + NOT_EXPANDED_BUTTON_LEFT_MARGIN);
+
+            navigationSortButton.ChangeImageLeftMargin(deltaMargin);
+            navigationCompareButton.ChangeImageLeftMargin(deltaMargin);
+            navigationCountButton.ChangeImageLeftMargin(deltaMargin);
+            navigationHTMLButton.ChangeImageLeftMargin(deltaMargin);
+            navigationGenerateTextButton.ChangeImageLeftMargin(deltaMargin);
+            navigationHelpButton.ChangeImageLeftMargin(deltaMargin);
         }
 
         private void NavigationTopButton_MouseEnter(object sender, EventArgs e)

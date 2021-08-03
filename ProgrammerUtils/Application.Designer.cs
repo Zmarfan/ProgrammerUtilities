@@ -173,6 +173,7 @@
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
             this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
             this.htmlColorHoverTooltip = new System.Windows.Forms.ToolTip(this.components);
+            this.FrameTimer = new System.Windows.Forms.Timer(this.components);
             this.MainTableLayout.SuspendLayout();
             this.MainTabControl.SuspendLayout();
             this.SortTab.SuspendLayout();
@@ -2457,6 +2458,11 @@
             // 
             this.htmlColorHoverTooltip.ToolTipTitle = "Color:";
             // 
+            // FrameTimer
+            // 
+            this.FrameTimer.Interval = 20;
+            this.FrameTimer.Tick += new System.EventHandler(this.FrameTimer_Tick);
+            // 
             // Application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -2465,6 +2471,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(854, 544);
             this.Controls.Add(this.MainTableLayout);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -2693,6 +2700,7 @@
         private System.Windows.Forms.Label countSortModeLabel;
         private System.Windows.Forms.CheckBox countCaseSensitive;
         private NavigationMenu navigationMenu;
+        private System.Windows.Forms.Timer FrameTimer;
     }
 }
 
