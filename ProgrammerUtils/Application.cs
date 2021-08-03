@@ -13,6 +13,9 @@ namespace ProgrammerUtils
 {
     public partial class Application : Form
     {
+        private static readonly int EXPANDED_NAVIGATION_MENU_SIZE = 250;
+        private static readonly int NOT_EXPANDED_NAVIGATION_MENU_SIZE = 44;
+
         readonly static Color NORMAL_ACTIVE_BUTTON_COLOR = Color.LightSteelBlue;
         readonly static Color NORMAL_NOT_ACTIVE_BUTTON_COLOR = Color.Gray;
         readonly static Color COPY_BUTTON_COLOR = Color.LightGoldenrodYellow;
@@ -24,14 +27,13 @@ namespace ProgrammerUtils
         GenerateText _generateText;
         Counter _counter;
         HtmlExtraSettings _htmlExtraSettingsWindow;
-        HelpWindow _helpWindow;
 
         public Application()
         {
             InitializeComponent();
             Init();
+            InitNavigationBar();
         }
-
         private void Init()
         {
             SortExportDropdown.SelectedIndex = 0;
@@ -97,6 +99,23 @@ namespace ProgrammerUtils
             button.Enabled = status;
             button.BackColor = status ? NORMAL_ACTIVE_BUTTON_COLOR : NORMAL_NOT_ACTIVE_BUTTON_COLOR;
         }
+
+        #region Navigation
+
+        private void InitNavigationBar()
+        {
+            navigationMenu.OnNavigationButtonClicked += NavigationButtonClicked;
+        }
+
+        private void NavigationButtonClicked()
+        {
+            TableLayoutColumnStyleCollection columns = MainTableLayout.ColumnStyles;
+
+            navigationMenu.ChangeExpansionMode();
+            columns[0].Width = navigationMenu.Expanded ? EXPANDED_NAVIGATION_MENU_SIZE : NOT_EXPANDED_NAVIGATION_MENU_SIZE;
+        }
+
+        #endregion
 
         #region Sort
         #region Helper Functions
@@ -639,46 +658,5 @@ namespace ProgrammerUtils
             CopyTimer.Stop();
         }
         #endregion
-
-        #region Taskbar
-
-        private void SelectNavigationButton(NavigationButton button)
-        {
-            navigationButton1.SelectButton(navigationButton1 == button);
-            navigationButton2.SelectButton(navigationButton2 == button);
-            navigationButton3.SelectButton(navigationButton3 == button);
-            navigationButton4.SelectButton(navigationButton4 == button);
-            navigationButton5.SelectButton(navigationButton5 == button);
-            navigationHelpButton.SelectButton(navigationHelpButton == button);
-        }
-
-        private void NavigationHelpButton_OnButtonClicked()
-        {
-            SelectNavigationButton(navigationHelpButton);
-            _helpWindow = new HelpWindow();
-            _helpWindow.FormClosed += (a, b) => { navigationHelpButton.SelectButton(false); };
-            _helpWindow.ShowDialog();
-        }
-
-        //OLD STUFF v
-
-        private void FileExit_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void HelpAbout_Click(object sender, EventArgs e)
-        {
-            _helpWindow = new HelpWindow();
-            _helpWindow.ShowDialog();
-        }
-
-        private void HowToUseToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/Zmarfan/ProgrammerUtils");
-        }
-
-        #endregion
-
     }
 }

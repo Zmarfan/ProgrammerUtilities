@@ -40,8 +40,8 @@ namespace ProgrammerUtils
             this.MainTableLayout.ColumnCount = 2;
             this.MainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.MainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.MainTableLayout.Controls.Add(this.ButtonLabel, 1, 0);
             this.MainTableLayout.Controls.Add(this.Picture, 0, 0);
+            this.MainTableLayout.Controls.Add(this.ButtonLabel, 1, 0);
             this.MainTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainTableLayout.Location = new System.Drawing.Point(0, 0);
             this.MainTableLayout.Margin = new System.Windows.Forms.Padding(0);
@@ -53,16 +53,16 @@ namespace ProgrammerUtils
             // 
             // ButtonLabel
             // 
-            this.ButtonLabel.AutoSize = true;
-            this.ButtonLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ButtonLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ButtonLabel.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(231)))), ((int)(((byte)(231)))));
-            this.ButtonLabel.Location = new System.Drawing.Point(78, 0);
+            this.ButtonLabel.Location = new System.Drawing.Point(78, 13);
             this.ButtonLabel.Name = "ButtonLabel";
-            this.ButtonLabel.Size = new System.Drawing.Size(169, 50);
+            this.ButtonLabel.Size = new System.Drawing.Size(165, 23);
             this.ButtonLabel.TabIndex = 0;
             this.ButtonLabel.Text = "Text";
             this.ButtonLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonLabel.Click += new System.EventHandler(this.ButtonLabel_Click);
             // 
             // Picture
             // 
@@ -85,7 +85,6 @@ namespace ProgrammerUtils
             this.Name = "NavigationButton";
             this.Size = new System.Drawing.Size(250, 50);
             this.MainTableLayout.ResumeLayout(false);
-            this.MainTableLayout.PerformLayout();
             this.ResumeLayout(false);
 
         }

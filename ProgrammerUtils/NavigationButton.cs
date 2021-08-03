@@ -63,6 +63,11 @@ namespace ProgrammerUtils
             }    
         }
 
+        public void ChangeImageLeftMargin(int newMargin)
+        {
+            Picture.Margin = new Padding(newMargin, 0, 0, 0);
+        }
+
         private void SubscribeToMouseEvents(Control control)
         {
             control.MouseDown += NavigationButton_MouseDown;
@@ -107,6 +112,11 @@ namespace ProgrammerUtils
             {
                 BackColor = ButtonHoverColor;
             }
+        }
+
+        private void ButtonLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

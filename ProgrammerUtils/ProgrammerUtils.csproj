@@ -91,6 +91,12 @@
     <Compile Include="NavigationButton.Designer.cs">
       <DependentUpon>NavigationButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="NavigationMenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationMenu.Designer.cs">
+      <DependentUpon>NavigationMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProgrammingConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NavigationButton.resx">
       <DependentUpon>NavigationButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationMenu.resx">
+      <DependentUpon>NavigationMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -172,6 +181,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\GenerateTextButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\MenuButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
