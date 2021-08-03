@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +47,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Application.cs">
@@ -81,6 +85,12 @@
     </Compile>
     <Compile Include="HtmlService.cs" />
     <Compile Include="Matcher.cs" />
+    <Compile Include="NavigationButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="NavigationButton.Designer.cs">
+      <DependentUpon>NavigationButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProgrammingConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -106,6 +116,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HtmlExtraSettings.resx">
       <DependentUpon>HtmlExtraSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NavigationButton.resx">
+      <DependentUpon>NavigationButton.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -144,6 +157,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\question_mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\SortButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
