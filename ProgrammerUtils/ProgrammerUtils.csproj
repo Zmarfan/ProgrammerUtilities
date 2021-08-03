@@ -56,6 +56,12 @@
     <Compile Include="Application.Designer.cs">
       <DependentUpon>Application.cs</DependentUpon>
     </Compile>
+    <Compile Include="CompareControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompareControl.Designer.cs">
+      <DependentUpon>CompareControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CountDetail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     <Compile Include="Timer.cs" />
     <EmbeddedResource Include="Application.resx">
       <DependentUpon>Application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CompareControl.resx">
+      <DependentUpon>CompareControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CountDetail.resx">
       <DependentUpon>CountDetail.cs</DependentUpon>
