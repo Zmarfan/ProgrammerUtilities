@@ -642,6 +642,14 @@ namespace ProgrammerUtils
 
         #region Taskbar
 
+        private void NavigationHelpButton_OnButtonClicked()
+        {
+            _helpWindow = new HelpWindow();
+            _helpWindow.ShowDialog();
+        }
+
+        //OLD STUFF v
+
         private void FileExit_Click(object sender, EventArgs e)
         {
             Close();
@@ -659,5 +667,6 @@ namespace ProgrammerUtils
         }
 
         #endregion
+
     }
 }
