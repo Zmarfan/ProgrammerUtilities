@@ -62,6 +62,12 @@
     <Compile Include="CompareControl.Designer.cs">
       <DependentUpon>CompareControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CountControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CountControl.Designer.cs">
+      <DependentUpon>CountControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CountDetail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CompareControl.resx">
       <DependentUpon>CompareControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountControl.resx">
+      <DependentUpon>CountControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CountDetail.resx">
       <DependentUpon>CountDetail.cs</DependentUpon>

@@ -34,7 +34,6 @@ namespace ProgrammerUtils
 
         HtmlCenter _html;
         GenerateText _generateText;
-        Counter _counter;
         HtmlExtraSettings _htmlExtraSettingsWindow;
 
         public Application()
@@ -55,26 +54,12 @@ namespace ProgrammerUtils
             FrameTimer.Start();
 
             generateParagraphType.SelectedIndex = 0;
-            countSortModes.SelectedIndex = 0;
 
             _html = new HtmlCenter(htmlInputTextbox, htmlOutputTextbox);
 
             DoHtml();
 
             _generateText = new GenerateText(generateOutputTextbox, generateSeed);
-
-            _counter = new Counter(
-                countWordFrequencyFlowLayoutPanel, 
-                countWordDensityFlowLayoutPanel, 
-                countUniqueWordsFlowLayoutPanel,
-                countInputTextbox, 
-                countDetailWords, 
-                countDetailUniqueWords, 
-                countDetailDifferentWords, 
-                countDetailCharacters, 
-                countDetailSentences, 
-                countDetailParagraphs
-                );
 
             htmlCopyLabel.Text = string.Empty;
             generateCopyLabel.Text = string.Empty;
@@ -114,10 +99,8 @@ namespace ProgrammerUtils
                     _navigationMenuOpenCloseTimer.Reset();
                     _navigationTransitioning = false;
                 }
-
-                return true;
             }
-            return false;
+            return _navigationTransitioning;
         }
 
         private void InitNavigationBar()
@@ -401,52 +384,6 @@ namespace ProgrammerUtils
         private void GenerateParagraphSizeSlider_MouseUp(object sender, MouseEventArgs e)
         {
             DoGenerateText(true);
-        }
-
-        #endregion
-        #endregion
-
-        #region Count
-        #region Helper Methods
-
-        private void DoCount()
-        {
-            if (_counter != null)
-                _counter.Execute(GetCurrentSortMode(), countCaseSensitive.Checked);
-        }
-
-        private Counter.SortMode GetCurrentSortMode()
-        {
-            switch (countSortModes.Text)
-            {
-                case ("Alphabetical"): return Counter.SortMode.ALPHABETICAL;
-                case ("Value"): return Counter.SortMode.AMOUNT;
-                default: throw new Exception($"There exists no implementation for the sortMode {countSortModes.Text}");
-            }
-        }
-
-        #endregion
-        #region Events
-
-        private void CountButton_Click(object sender, EventArgs e)
-        {
-            DoCount();
-        }
-
-        private void CountClearButton_Click(object sender, EventArgs e)
-        {
-            countInputTextbox.Text = string.Empty;
-            DoCount();
-        }
-
-        private void CountSortModes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            DoCount();
-        }
-
-        private void CountCaseSensitive_CheckedChanged(object sender, EventArgs e)
-        {
-            DoCount();
         }
 
         #endregion
