@@ -76,6 +76,12 @@
     </Compile>
     <Compile Include="Counter.cs" />
     <Compile Include="GenerateText.cs" />
+    <Compile Include="GenerateTextControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GenerateTextControl.Designer.cs">
+      <DependentUpon>GenerateTextControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="HelpWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CountDetail.resx">
       <DependentUpon>CountDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GenerateTextControl.resx">
+      <DependentUpon>GenerateTextControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HelpWindow.resx">
       <DependentUpon>HelpWindow.cs</DependentUpon>
