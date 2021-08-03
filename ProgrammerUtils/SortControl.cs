@@ -200,5 +200,14 @@ namespace ProgrammerUtils
         #endregion
 
         #endregion
+
+        private void SortExportDropdown_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            int index = e.Index >= 0 ? e.Index : 0;
+            var brush = new SolidBrush(SortExportDropdown.ForeColor);
+            e.DrawBackground();
+            e.Graphics.DrawString(SortExportDropdown.Items[index].ToString(), e.Font, brush, e.Bounds, StringFormat.GenericDefault);
+            e.DrawFocusRectangle();
+        }
     }
 }

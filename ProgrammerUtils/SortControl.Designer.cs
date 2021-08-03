@@ -426,9 +426,13 @@ namespace ProgrammerUtils
             // 
             // SortExportDropdown
             // 
+            this.SortExportDropdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
             this.SortExportDropdown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SortExportDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.SortExportDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SortExportDropdown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SortExportDropdown.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SortExportDropdown.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.SortExportDropdown.FormattingEnabled = true;
             this.SortExportDropdown.Items.AddRange(new object[] {
             "Java",
@@ -437,8 +441,9 @@ namespace ProgrammerUtils
             this.SortExportDropdown.Location = new System.Drawing.Point(2, 35);
             this.SortExportDropdown.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.SortExportDropdown.Name = "SortExportDropdown";
-            this.SortExportDropdown.Size = new System.Drawing.Size(251, 24);
+            this.SortExportDropdown.Size = new System.Drawing.Size(251, 23);
             this.SortExportDropdown.TabIndex = 12;
+            this.SortExportDropdown.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.SortExportDropdown_DrawItem);
             this.SortExportDropdown.SelectedIndexChanged += new System.EventHandler(this.SortExportDropdown_SelectedIndexChanged);
             // 
             // SortExportEnumButton
