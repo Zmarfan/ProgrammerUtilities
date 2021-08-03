@@ -169,13 +169,6 @@
             this.generateParagraphSizeSlider = new System.Windows.Forms.TrackBar();
             this.generateParagraphSizeLabel = new System.Windows.Forms.Label();
             this.generateOutputTextbox = new System.Windows.Forms.RichTextBox();
-            this.Toolbar = new System.Windows.Forms.ToolStrip();
-            this.FileDropdown = new System.Windows.Forms.ToolStripDropDownButton();
-            this.FileExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.HelpDropdown = new System.Windows.Forms.ToolStripDropDownButton();
-            this.howToUseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.helpAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.NavigationTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.navigationHelpButton = new ProgrammerUtils.NavigationButton();
             this.navigationButton5 = new ProgrammerUtils.NavigationButton();
@@ -237,7 +230,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.generateNumberOfWords)).BeginInit();
             this.generateSeedTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generateParagraphSizeSlider)).BeginInit();
-            this.Toolbar.SuspendLayout();
             this.NavigationTableLayout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -246,16 +238,15 @@
             this.MainTableLayout.ColumnCount = 2;
             this.MainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
             this.MainTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.MainTableLayout.Controls.Add(this.MainTabControl, 1, 1);
-            this.MainTableLayout.Controls.Add(this.Toolbar, 0, 0);
-            this.MainTableLayout.Controls.Add(this.NavigationTableLayout, 0, 1);
+            this.MainTableLayout.Controls.Add(this.MainTabControl, 1, 0);
+            this.MainTableLayout.Controls.Add(this.NavigationTableLayout, 0, 0);
             this.MainTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainTableLayout.Location = new System.Drawing.Point(0, 0);
             this.MainTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.MainTableLayout.Name = "MainTableLayout";
-            this.MainTableLayout.RowCount = 2;
-            this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.MainTableLayout.RowCount = 1;
             this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.MainTableLayout.Size = new System.Drawing.Size(854, 544);
             this.MainTableLayout.TabIndex = 0;
             // 
@@ -267,12 +258,12 @@
             this.MainTabControl.Controls.Add(this.htmlTab);
             this.MainTabControl.Controls.Add(this.generateTextTab);
             this.MainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainTabControl.Location = new System.Drawing.Point(252, 33);
+            this.MainTabControl.Location = new System.Drawing.Point(252, 3);
             this.MainTabControl.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.MainTabControl.Name = "MainTabControl";
             this.MainTabControl.Padding = new System.Drawing.Point(15, 10);
             this.MainTabControl.SelectedIndex = 0;
-            this.MainTabControl.Size = new System.Drawing.Size(600, 508);
+            this.MainTabControl.Size = new System.Drawing.Size(600, 538);
             this.MainTabControl.TabIndex = 0;
             // 
             // SortTab
@@ -283,7 +274,7 @@
             this.SortTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.SortTab.Name = "SortTab";
             this.SortTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.SortTab.Size = new System.Drawing.Size(592, 465);
+            this.SortTab.Size = new System.Drawing.Size(592, 495);
             this.SortTab.TabIndex = 0;
             this.SortTab.Text = "Sort";
             // 
@@ -311,7 +302,7 @@
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.SortTableLayout.Size = new System.Drawing.Size(588, 459);
+            this.SortTableLayout.Size = new System.Drawing.Size(588, 489);
             this.SortTableLayout.TabIndex = 0;
             // 
             // sortLabel2
@@ -320,7 +311,7 @@
             this.sortLabel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.sortLabel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.sortLabel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortLabel2.Location = new System.Drawing.Point(263, 405);
+            this.sortLabel2.Location = new System.Drawing.Point(263, 435);
             this.sortLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sortLabel2.Name = "sortLabel2";
             this.sortLabel2.Size = new System.Drawing.Size(257, 54);
@@ -335,7 +326,7 @@
             this.sortTextBoxLeft.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.sortTextBoxLeft.Name = "sortTextBoxLeft";
             this.SortTableLayout.SetRowSpan(this.sortTextBoxLeft, 2);
-            this.sortTextBoxLeft.Size = new System.Drawing.Size(257, 342);
+            this.sortTextBoxLeft.Size = new System.Drawing.Size(257, 372);
             this.sortTextBoxLeft.TabIndex = 0;
             this.sortTextBoxLeft.Text = "";
             this.sortTextBoxLeft.TextChanged += new System.EventHandler(this.SortTextChanged);
@@ -346,7 +337,7 @@
             this.sortLabel1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.sortLabel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.sortLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortLabel1.Location = new System.Drawing.Point(2, 405);
+            this.sortLabel1.Location = new System.Drawing.Point(2, 435);
             this.sortLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sortLabel1.Name = "sortLabel1";
             this.sortLabel1.Padding = new System.Windows.Forms.Padding(9, 10, 9, 10);
@@ -525,7 +516,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(66, 287);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(66, 317);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // SortCopyButton
@@ -605,7 +596,7 @@
             this.tableLayoutPanel2.Controls.Add(this.SortExportEnumButton, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.SortEnumOptionTableLayout, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(263, 347);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(263, 377);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
@@ -711,7 +702,7 @@
             this.sortSortedTabs.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.sortSortedTabs.Name = "sortSortedTabs";
             this.sortSortedTabs.SelectedIndex = 0;
-            this.sortSortedTabs.Size = new System.Drawing.Size(257, 281);
+            this.sortSortedTabs.Size = new System.Drawing.Size(257, 311);
             this.sortSortedTabs.TabIndex = 8;
             // 
             // sortList
@@ -720,7 +711,7 @@
             this.sortList.Location = new System.Drawing.Point(4, 28);
             this.sortList.Margin = new System.Windows.Forms.Padding(0);
             this.sortList.Name = "sortList";
-            this.sortList.Size = new System.Drawing.Size(249, 249);
+            this.sortList.Size = new System.Drawing.Size(249, 279);
             this.sortList.TabIndex = 0;
             this.sortList.Text = "List";
             this.sortList.UseVisualStyleBackColor = true;
@@ -732,7 +723,7 @@
             this.sortTextBoxRight.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.sortTextBoxRight.Name = "sortTextBoxRight";
             this.sortTextBoxRight.ReadOnly = true;
-            this.sortTextBoxRight.Size = new System.Drawing.Size(249, 249);
+            this.sortTextBoxRight.Size = new System.Drawing.Size(249, 279);
             this.sortTextBoxRight.TabIndex = 0;
             this.sortTextBoxRight.Text = "";
             // 
@@ -2452,79 +2443,6 @@
             this.generateOutputTextbox.TabIndex = 8;
             this.generateOutputTextbox.Text = "";
             // 
-            // Toolbar
-            // 
-            this.MainTableLayout.SetColumnSpan(this.Toolbar, 2);
-            this.Toolbar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Toolbar.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.Toolbar.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.Toolbar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FileDropdown,
-            this.HelpDropdown});
-            this.Toolbar.Location = new System.Drawing.Point(0, 0);
-            this.Toolbar.Name = "Toolbar";
-            this.Toolbar.Size = new System.Drawing.Size(854, 30);
-            this.Toolbar.TabIndex = 1;
-            // 
-            // FileDropdown
-            // 
-            this.FileDropdown.AutoToolTip = false;
-            this.FileDropdown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.FileDropdown.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.FileExit});
-            this.FileDropdown.Image = ((System.Drawing.Image)(resources.GetObject("FileDropdown.Image")));
-            this.FileDropdown.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.FileDropdown.Name = "FileDropdown";
-            this.FileDropdown.ShowDropDownArrow = false;
-            this.FileDropdown.Size = new System.Drawing.Size(36, 27);
-            this.FileDropdown.Text = "File";
-            // 
-            // FileExit
-            // 
-            this.FileExit.Name = "FileExit";
-            this.FileExit.ShortcutKeyDisplayString = "Ctrl+Q";
-            this.FileExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Q)));
-            this.FileExit.Size = new System.Drawing.Size(169, 26);
-            this.FileExit.Text = "Exit";
-            this.FileExit.Click += new System.EventHandler(this.FileExit_Click);
-            // 
-            // HelpDropdown
-            // 
-            this.HelpDropdown.AutoToolTip = false;
-            this.HelpDropdown.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.HelpDropdown.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.howToUseToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.helpAbout});
-            this.HelpDropdown.Image = ((System.Drawing.Image)(resources.GetObject("HelpDropdown.Image")));
-            this.HelpDropdown.Margin = new System.Windows.Forms.Padding(5, 1, 0, 2);
-            this.HelpDropdown.Name = "HelpDropdown";
-            this.HelpDropdown.ShowDropDownArrow = false;
-            this.HelpDropdown.Size = new System.Drawing.Size(45, 27);
-            this.HelpDropdown.Text = "Help";
-            // 
-            // howToUseToolStripMenuItem
-            // 
-            this.howToUseToolStripMenuItem.Image = global::ProgrammerUtils.Properties.Resources.question_mark;
-            this.howToUseToolStripMenuItem.Name = "howToUseToolStripMenuItem";
-            this.howToUseToolStripMenuItem.ShortcutKeyDisplayString = "F1";
-            this.howToUseToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.howToUseToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
-            this.howToUseToolStripMenuItem.Text = "How to use";
-            this.howToUseToolStripMenuItem.Click += new System.EventHandler(this.HowToUseToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(188, 6);
-            // 
-            // helpAbout
-            // 
-            this.helpAbout.Name = "helpAbout";
-            this.helpAbout.Size = new System.Drawing.Size(191, 26);
-            this.helpAbout.Text = "About";
-            this.helpAbout.Click += new System.EventHandler(this.HelpAbout_Click);
-            // 
             // NavigationTableLayout
             // 
             this.NavigationTableLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
@@ -2539,7 +2457,7 @@
             this.NavigationTableLayout.Controls.Add(this.navigationButton1, 0, 1);
             this.NavigationTableLayout.Controls.Add(this.NavigationBreak, 0, 6);
             this.NavigationTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NavigationTableLayout.Location = new System.Drawing.Point(0, 30);
+            this.NavigationTableLayout.Location = new System.Drawing.Point(0, 0);
             this.NavigationTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.NavigationTableLayout.Name = "NavigationTableLayout";
             this.NavigationTableLayout.RowCount = 9;
@@ -2552,7 +2470,7 @@
             this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1F));
             this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.NavigationTableLayout.Size = new System.Drawing.Size(250, 514);
+            this.NavigationTableLayout.Size = new System.Drawing.Size(250, 544);
             this.NavigationTableLayout.TabIndex = 2;
             // 
             // navigationHelpButton
@@ -2703,7 +2621,6 @@
             this.Name = "Application";
             this.Text = "ProgrammingUtils";
             this.MainTableLayout.ResumeLayout(false);
-            this.MainTableLayout.PerformLayout();
             this.MainTabControl.ResumeLayout(false);
             this.SortTab.ResumeLayout(false);
             this.SortTableLayout.ResumeLayout(false);
@@ -2775,8 +2692,6 @@
             this.generateSeedTableLayout.ResumeLayout(false);
             this.generateSeedTableLayout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generateParagraphSizeSlider)).EndInit();
-            this.Toolbar.ResumeLayout(false);
-            this.Toolbar.PerformLayout();
             this.NavigationTableLayout.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -2788,9 +2703,6 @@
         private System.Windows.Forms.TabControl MainTabControl;
         private System.Windows.Forms.TabPage SortTab;
         private System.Windows.Forms.TabPage matchCompareTab;
-        private System.Windows.Forms.ToolStrip Toolbar;
-        private System.Windows.Forms.ToolStripDropDownButton HelpDropdown;
-        private System.Windows.Forms.ToolStripMenuItem helpAbout;
         private System.Windows.Forms.TableLayoutPanel SortTableLayout;
         private System.Windows.Forms.TabPage CountTab;
         private System.Windows.Forms.TabPage htmlTab;
@@ -2929,10 +2841,6 @@
         private System.Windows.Forms.ComboBox countSortModes;
         private System.Windows.Forms.Label countSortModeLabel;
         private System.Windows.Forms.CheckBox countCaseSensitive;
-        private System.Windows.Forms.ToolStripMenuItem howToUseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripDropDownButton FileDropdown;
-        private System.Windows.Forms.ToolStripMenuItem FileExit;
         private System.Windows.Forms.TableLayoutPanel NavigationTableLayout;
         private System.Windows.Forms.Panel NavigationPicture;
         private NavigationButton navigationButton1;
