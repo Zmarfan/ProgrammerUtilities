@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,10 +13,10 @@ namespace ProgrammerUtils
 {
     public partial class SortControl : UserControl
     {
-        readonly static Color NORMAL_ACTIVE_BUTTON_COLOR = Color.LightSteelBlue;
-        readonly static Color NORMAL_NOT_ACTIVE_BUTTON_COLOR = Color.Gray;
-        readonly static Color COPY_BUTTON_COLOR = Color.LightGoldenrodYellow;
-        readonly static Color COPY_CLICKED_BUTTON_COLOR = Color.LimeGreen;
+        readonly static Color NORMAL_ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 43, 84, 134);
+        readonly static Color NORMAL_NOT_ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 73, 87, 103);
+        readonly static Color COPY_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 118);
+        readonly static Color COPY_CLICKED_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 70);
 
         Sort _sorter;
 
@@ -197,6 +198,7 @@ namespace ProgrammerUtils
             copyTimer.Stop();
         }
         #endregion
+
         #endregion
     }
 }

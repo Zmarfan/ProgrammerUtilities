@@ -56,6 +56,12 @@
     <Compile Include="Application.Designer.cs">
       <DependentUpon>Application.cs</DependentUpon>
     </Compile>
+    <Compile Include="BorderPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BorderPanel.Designer.cs">
+      <DependentUpon>BorderPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="CompareControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     <Compile Include="Timer.cs" />
     <EmbeddedResource Include="Application.resx">
       <DependentUpon>Application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorderPanel.resx">
+      <DependentUpon>BorderPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CompareControl.resx">
       <DependentUpon>CompareControl.cs</DependentUpon>
