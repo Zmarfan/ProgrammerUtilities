@@ -161,5 +161,17 @@
   <ItemGroup>
     <None Include="src\SortButton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\CompareButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\CountButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\HtmlButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\GenerateTextButton.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

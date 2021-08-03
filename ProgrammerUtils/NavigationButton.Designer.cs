@@ -61,7 +61,7 @@ namespace ProgrammerUtils
             this.ButtonLabel.Name = "ButtonLabel";
             this.ButtonLabel.Size = new System.Drawing.Size(169, 50);
             this.ButtonLabel.TabIndex = 0;
-            this.ButtonLabel.Text = "Navigation";
+            this.ButtonLabel.Text = "Text";
             this.ButtonLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Picture

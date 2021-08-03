@@ -63,9 +63,39 @@ namespace ProgrammerUtils.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CompareButton {
+            get {
+                object obj = ResourceManager.GetObject("CompareButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap copy_image {
             get {
                 object obj = ResourceManager.GetObject("copy_image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CountButton {
+            get {
+                object obj = ResourceManager.GetObject("CountButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap GenerateTextButton {
+            get {
+                object obj = ResourceManager.GetObject("GenerateTextButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +116,16 @@ namespace ProgrammerUtils.Properties {
         internal static System.Drawing.Bitmap html_Raised {
             get {
                 object obj = ResourceManager.GetObject("html_Raised", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HtmlButton {
+            get {
+                object obj = ResourceManager.GetObject("HtmlButton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

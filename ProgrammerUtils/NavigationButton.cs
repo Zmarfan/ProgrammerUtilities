@@ -47,6 +47,7 @@ namespace ProgrammerUtils
         public NavigationButton()
         {
             InitializeComponent();
+
             SubscribeToMouseEvents(ButtonLabel);
             SubscribeToMouseEvents(MainTableLayout);
             SubscribeToMouseEvents(Picture);

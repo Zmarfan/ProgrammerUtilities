@@ -177,6 +177,10 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.helpAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.NavigationTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.navigationButton5 = new ProgrammerUtils.NavigationButton();
+            this.navigationButton4 = new ProgrammerUtils.NavigationButton();
+            this.navigationButton3 = new ProgrammerUtils.NavigationButton();
+            this.navigationButton2 = new ProgrammerUtils.NavigationButton();
             this.NavigationPicture = new System.Windows.Forms.Panel();
             this.navigationButton1 = new ProgrammerUtils.NavigationButton();
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
@@ -2524,18 +2528,90 @@
             this.NavigationTableLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.NavigationTableLayout.ColumnCount = 1;
             this.NavigationTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.NavigationTableLayout.Controls.Add(this.navigationButton5, 0, 5);
+            this.NavigationTableLayout.Controls.Add(this.navigationButton4, 0, 4);
+            this.NavigationTableLayout.Controls.Add(this.navigationButton3, 0, 3);
+            this.NavigationTableLayout.Controls.Add(this.navigationButton2, 0, 2);
             this.NavigationTableLayout.Controls.Add(this.NavigationPicture, 0, 0);
             this.NavigationTableLayout.Controls.Add(this.navigationButton1, 0, 1);
             this.NavigationTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NavigationTableLayout.Location = new System.Drawing.Point(0, 30);
             this.NavigationTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.NavigationTableLayout.Name = "NavigationTableLayout";
-            this.NavigationTableLayout.RowCount = 3;
+            this.NavigationTableLayout.RowCount = 7;
             this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.NavigationTableLayout.Size = new System.Drawing.Size(250, 514);
             this.NavigationTableLayout.TabIndex = 2;
+            // 
+            // navigationButton5
+            // 
+            this.navigationButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.navigationButton5.ButtonClickColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(67)))), ((int)(((byte)(81)))));
+            this.navigationButton5.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.navigationButton5.ButtonHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(51)))));
+            this.navigationButton5.ButtonImage = global::ProgrammerUtils.Properties.Resources.GenerateTextButton;
+            this.navigationButton5.ButtonText = "Generate Text";
+            this.navigationButton5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.navigationButton5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigationButton5.Location = new System.Drawing.Point(0, 306);
+            this.navigationButton5.Margin = new System.Windows.Forms.Padding(0);
+            this.navigationButton5.Name = "navigationButton5";
+            this.navigationButton5.Size = new System.Drawing.Size(250, 50);
+            this.navigationButton5.TabIndex = 5;
+            // 
+            // navigationButton4
+            // 
+            this.navigationButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.navigationButton4.ButtonClickColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(67)))), ((int)(((byte)(81)))));
+            this.navigationButton4.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.navigationButton4.ButtonHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(51)))));
+            this.navigationButton4.ButtonImage = global::ProgrammerUtils.Properties.Resources.HtmlButton;
+            this.navigationButton4.ButtonText = "HTML:ify";
+            this.navigationButton4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.navigationButton4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigationButton4.Location = new System.Drawing.Point(0, 256);
+            this.navigationButton4.Margin = new System.Windows.Forms.Padding(0);
+            this.navigationButton4.Name = "navigationButton4";
+            this.navigationButton4.Size = new System.Drawing.Size(250, 50);
+            this.navigationButton4.TabIndex = 4;
+            // 
+            // navigationButton3
+            // 
+            this.navigationButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.navigationButton3.ButtonClickColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(67)))), ((int)(((byte)(81)))));
+            this.navigationButton3.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.navigationButton3.ButtonHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(51)))));
+            this.navigationButton3.ButtonImage = global::ProgrammerUtils.Properties.Resources.CountButton;
+            this.navigationButton3.ButtonText = "Count";
+            this.navigationButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.navigationButton3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigationButton3.Location = new System.Drawing.Point(0, 206);
+            this.navigationButton3.Margin = new System.Windows.Forms.Padding(0);
+            this.navigationButton3.Name = "navigationButton3";
+            this.navigationButton3.Size = new System.Drawing.Size(250, 50);
+            this.navigationButton3.TabIndex = 3;
+            // 
+            // navigationButton2
+            // 
+            this.navigationButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.navigationButton2.ButtonClickColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(67)))), ((int)(((byte)(81)))));
+            this.navigationButton2.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.navigationButton2.ButtonHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(51)))));
+            this.navigationButton2.ButtonImage = global::ProgrammerUtils.Properties.Resources.CompareButton;
+            this.navigationButton2.ButtonText = "Compare";
+            this.navigationButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.navigationButton2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigationButton2.Location = new System.Drawing.Point(0, 156);
+            this.navigationButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.navigationButton2.Name = "navigationButton2";
+            this.navigationButton2.Size = new System.Drawing.Size(250, 50);
+            this.navigationButton2.TabIndex = 2;
             // 
             // NavigationPicture
             // 
@@ -2827,6 +2903,10 @@
         private System.Windows.Forms.TableLayoutPanel NavigationTableLayout;
         private System.Windows.Forms.Panel NavigationPicture;
         private NavigationButton navigationButton1;
+        private NavigationButton navigationButton5;
+        private NavigationButton navigationButton4;
+        private NavigationButton navigationButton3;
+        private NavigationButton navigationButton2;
     }
 }
 
