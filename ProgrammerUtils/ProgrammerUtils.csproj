@@ -241,5 +241,11 @@
   <ItemGroup>
     <None Include="src\MenuButton.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\newIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\logo_no_text.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

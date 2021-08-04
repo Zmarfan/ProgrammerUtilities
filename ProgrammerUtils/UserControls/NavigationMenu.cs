@@ -49,12 +49,17 @@ namespace ProgrammerUtils
         private void Init()
         {
             SelectNavigationButton(NavigationButtons.SORT);
+            smallPicture.Hide();
         }
 
         public void ChangeExpansionMode()
         {
             Expanded = !Expanded;
             copyrightLabel.Text = Expanded ? EXPANDED_COPYRIGHT_TEXT : NOT_EXPANDED_COPYRIGHT_TEXT;
+            if (!Expanded)
+                smallPicture.Show();
+            else
+                smallPicture.Hide();
         }
 
         public void ChangeImageLeftMargin(float ratio)
@@ -81,8 +86,8 @@ namespace ProgrammerUtils
 
         private void NavigationTopButton_MouseEnter(object sender, EventArgs e)
         {
-            NavigationTopButton.Margin = new Padding(0, 8, 0, 0);
-            NavigationTopButton.Size = new Size(NavigationTopButton.Size.Width, 32);
+            NavigationTopButton.Margin = new Padding(0, 9, 0, 0);
+            NavigationTopButton.Size = new Size(NavigationTopButton.Size.Width, 29);
             _navigationTopButtonHover = true;
         }
 

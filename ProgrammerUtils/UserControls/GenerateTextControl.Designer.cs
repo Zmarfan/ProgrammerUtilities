@@ -31,6 +31,8 @@ namespace ProgrammerUtils
         {
             this.components = new System.ComponentModel.Container();
             this.generateTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.sortLabel1BorderPanel = new ProgrammerUtils.BorderPanel();
+            this.sortLabel1 = new System.Windows.Forms.Label();
             this.generateCopyLabel = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.generateClearButton = new System.Windows.Forms.Button();
@@ -50,9 +52,8 @@ namespace ProgrammerUtils
             this.inputTextBorderPanel = new ProgrammerUtils.BorderPanel();
             this.generateOutputTextbox = new System.Windows.Forms.RichTextBox();
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
-            this.sortLabel1BorderPanel = new ProgrammerUtils.BorderPanel();
-            this.sortLabel1 = new System.Windows.Forms.Label();
             this.generateTableLayout.SuspendLayout();
+            this.sortLabel1BorderPanel.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.generateSettingsTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generateSeed)).BeginInit();
@@ -60,7 +61,6 @@ namespace ProgrammerUtils
             this.generateSeedTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generateParagraphSizeSlider)).BeginInit();
             this.inputTextBorderPanel.SuspendLayout();
-            this.sortLabel1BorderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // generateTableLayout
@@ -84,6 +84,35 @@ namespace ProgrammerUtils
             this.generateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.generateTableLayout.Size = new System.Drawing.Size(765, 434);
             this.generateTableLayout.TabIndex = 1;
+            // 
+            // sortLabel1BorderPanel
+            // 
+            this.sortLabel1BorderPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.sortLabel1BorderPanel.BorderWidth = 2;
+            this.generateTableLayout.SetColumnSpan(this.sortLabel1BorderPanel, 2);
+            this.sortLabel1BorderPanel.Controls.Add(this.sortLabel1);
+            this.sortLabel1BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sortLabel1BorderPanel.Location = new System.Drawing.Point(4, 393);
+            this.sortLabel1BorderPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.sortLabel1BorderPanel.Name = "sortLabel1BorderPanel";
+            this.sortLabel1BorderPanel.Padding = new System.Windows.Forms.Padding(4);
+            this.sortLabel1BorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
+            this.sortLabel1BorderPanel.Size = new System.Drawing.Size(704, 37);
+            this.sortLabel1BorderPanel.TabIndex = 12;
+            // 
+            // sortLabel1
+            // 
+            this.sortLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.sortLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sortLabel1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortLabel1.Location = new System.Drawing.Point(4, 4);
+            this.sortLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.sortLabel1.Name = "sortLabel1";
+            this.sortLabel1.Padding = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.sortLabel1.Size = new System.Drawing.Size(696, 29);
+            this.sortLabel1.TabIndex = 4;
+            this.sortLabel1.Text = "Generated Text.";
+            this.sortLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // generateCopyLabel
             // 
@@ -410,35 +439,6 @@ namespace ProgrammerUtils
             this.CopyTimer.Interval = 1500;
             this.CopyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
             // 
-            // sortLabel1BorderPanel
-            // 
-            this.sortLabel1BorderPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
-            this.sortLabel1BorderPanel.BorderWidth = 2;
-            this.generateTableLayout.SetColumnSpan(this.sortLabel1BorderPanel, 2);
-            this.sortLabel1BorderPanel.Controls.Add(this.sortLabel1);
-            this.sortLabel1BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortLabel1BorderPanel.Location = new System.Drawing.Point(4, 393);
-            this.sortLabel1BorderPanel.Margin = new System.Windows.Forms.Padding(4);
-            this.sortLabel1BorderPanel.Name = "sortLabel1BorderPanel";
-            this.sortLabel1BorderPanel.Padding = new System.Windows.Forms.Padding(4);
-            this.sortLabel1BorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.sortLabel1BorderPanel.Size = new System.Drawing.Size(704, 37);
-            this.sortLabel1BorderPanel.TabIndex = 12;
-            // 
-            // sortLabel1
-            // 
-            this.sortLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.sortLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortLabel1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sortLabel1.Location = new System.Drawing.Point(4, 4);
-            this.sortLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.sortLabel1.Name = "sortLabel1";
-            this.sortLabel1.Padding = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.sortLabel1.Size = new System.Drawing.Size(696, 29);
-            this.sortLabel1.TabIndex = 4;
-            this.sortLabel1.Text = "Generated Text.";
-            this.sortLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // GenerateTextControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -452,6 +452,7 @@ namespace ProgrammerUtils
             this.Size = new System.Drawing.Size(773, 442);
             this.generateTableLayout.ResumeLayout(false);
             this.generateTableLayout.PerformLayout();
+            this.sortLabel1BorderPanel.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.generateSettingsTableLayout.ResumeLayout(false);
@@ -462,7 +463,6 @@ namespace ProgrammerUtils
             this.generateSeedTableLayout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.generateParagraphSizeSlider)).EndInit();
             this.inputTextBorderPanel.ResumeLayout(false);
-            this.sortLabel1BorderPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

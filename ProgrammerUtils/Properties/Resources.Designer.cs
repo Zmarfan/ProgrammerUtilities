@@ -143,6 +143,16 @@ namespace ProgrammerUtils.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_no_text {
+            get {
+                object obj = ResourceManager.GetObject("logo_no_text", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MenuButton {
             get {
                 object obj = ResourceManager.GetObject("MenuButton", resourceCulture);
@@ -156,6 +166,16 @@ namespace ProgrammerUtils.Properties {
         internal static System.Drawing.Bitmap MenuButton1 {
             get {
                 object obj = ResourceManager.GetObject("MenuButton1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap newIcon {
+            get {
+                object obj = ResourceManager.GetObject("newIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
