@@ -110,5 +110,11 @@ namespace ProgrammerUtils
             _tabs.TabClicked((Button)sender);
             Invalidate();
         }
+
+        public void ClearData()
+        {
+            countInputTextbox.Text = string.Empty;
+            DoCount();
+        }
     }
 }

@@ -45,7 +45,7 @@
             this.Panel.Location = new System.Drawing.Point(0, 0);
             this.Panel.Name = "Panel";
             this.Panel.Padding = new System.Windows.Forms.Padding(0, 2, 0, 2);
-            this.Panel.Size = new System.Drawing.Size(273, 37);
+            this.Panel.Size = new System.Drawing.Size(247, 37);
             this.Panel.TabIndex = 0;
             // 
             // BorderPanel
@@ -59,7 +59,7 @@
             this.BorderPanel.Name = "BorderPanel";
             this.BorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.BorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.BorderPanel.Size = new System.Drawing.Size(273, 33);
+            this.BorderPanel.Size = new System.Drawing.Size(247, 33);
             this.BorderPanel.TabIndex = 1;
             // 
             // tableLayout
@@ -76,7 +76,7 @@
             this.tableLayout.RowCount = 1;
             this.tableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayout.Size = new System.Drawing.Size(265, 25);
+            this.tableLayout.Size = new System.Drawing.Size(239, 25);
             this.tableLayout.TabIndex = 1;
             // 
             // detailLabel
@@ -87,7 +87,7 @@
             this.detailLabel.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.detailLabel.Location = new System.Drawing.Point(3, 0);
             this.detailLabel.Name = "detailLabel";
-            this.detailLabel.Size = new System.Drawing.Size(126, 25);
+            this.detailLabel.Size = new System.Drawing.Size(113, 25);
             this.detailLabel.TabIndex = 0;
             this.detailLabel.Text = "DetailLabel:";
             this.detailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -99,7 +99,7 @@
             this.valueLabel.CornerRadius = 20;
             this.valueLabel.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.valueLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.valueLabel.Location = new System.Drawing.Point(180, 2);
+            this.valueLabel.Location = new System.Drawing.Point(154, 2);
             this.valueLabel.Margin = new System.Windows.Forms.Padding(3, 0, 10, 0);
             this.valueLabel.Name = "valueLabel";
             this.valueLabel.Padding = new System.Windows.Forms.Padding(3);
@@ -119,7 +119,7 @@
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CountDetail";
-            this.Size = new System.Drawing.Size(273, 37);
+            this.Size = new System.Drawing.Size(247, 37);
             this.Panel.ResumeLayout(false);
             this.BorderPanel.ResumeLayout(false);
             this.tableLayout.ResumeLayout(false);

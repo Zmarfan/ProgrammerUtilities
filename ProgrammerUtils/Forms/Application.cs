@@ -94,6 +94,10 @@ namespace ProgrammerUtils
 
         private void GeneralNavigationButtonClicked(Control control, NavigationMenu.NavigationButtons button)
         {
+            //Speeds up performance.
+            if (button != NavigationMenu.NavigationButtons.COUNT)
+                _countControl.ClearData();
+
             HideAllContent();
             control.Show();
             navigationMenu.SelectNavigationButton(button);
