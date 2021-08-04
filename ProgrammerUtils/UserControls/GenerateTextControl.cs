@@ -12,8 +12,8 @@ namespace ProgrammerUtils
 {
     public partial class GenerateTextControl : UserControl
     {
-        readonly static Color COPY_BUTTON_COLOR = Color.LightGoldenrodYellow;
-        readonly static Color COPY_CLICKED_BUTTON_COLOR = Color.LimeGreen;
+        readonly static Color COPY_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 118);
+        readonly static Color COPY_CLICKED_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 70);
 
         GenerateText _generateText;
 
@@ -54,8 +54,6 @@ namespace ProgrammerUtils
         private void EnableSeed(bool enable)
         {
             generateSeed.Enabled = enable;
-            generateSeedLabel.Enabled = enable;
-
         }
 
         #endregion
@@ -109,7 +107,16 @@ namespace ProgrammerUtils
         }
 
         #endregion
+
         #endregion
 
+        private void GenerateParagraphType_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            int index = e.Index >= 0 ? e.Index : 0;
+            var brush = new SolidBrush(generateParagraphType.ForeColor);
+            e.DrawBackground();
+            e.Graphics.DrawString(generateParagraphType.Items[index].ToString(), e.Font, brush, e.Bounds, StringFormat.GenericDefault);
+            e.DrawFocusRectangle();
+        }
     }
 }

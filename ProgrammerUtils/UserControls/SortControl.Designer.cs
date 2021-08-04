@@ -90,7 +90,7 @@ namespace ProgrammerUtils
             this.SortTableLayout.ColumnCount = 3;
             this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.SortTableLayout.Controls.Add(this.TabsBorderPanel, 0, 1);
             this.SortTableLayout.Controls.Add(this.sortHeader, 0, 0);
             this.SortTableLayout.Controls.Add(this.tableLayoutPanel1, 2, 1);
@@ -108,7 +108,7 @@ namespace ProgrammerUtils
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
             this.SortTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.SortTableLayout.Size = new System.Drawing.Size(570, 408);
+            this.SortTableLayout.Size = new System.Drawing.Size(736, 447);
             this.SortTableLayout.TabIndex = 1;
             // 
             // TabsBorderPanel
@@ -117,12 +117,12 @@ namespace ProgrammerUtils
             this.TabsBorderPanel.BorderWidth = 2;
             this.TabsBorderPanel.Controls.Add(this.ImprovedTabsTableLayout);
             this.TabsBorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabsBorderPanel.Location = new System.Drawing.Point(262, 57);
+            this.TabsBorderPanel.Location = new System.Drawing.Point(346, 57);
             this.TabsBorderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.TabsBorderPanel.Name = "TabsBorderPanel";
             this.TabsBorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.TabsBorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.TabsBorderPanel.Size = new System.Drawing.Size(250, 245);
+            this.TabsBorderPanel.Size = new System.Drawing.Size(334, 284);
             this.TabsBorderPanel.TabIndex = 12;
             // 
             // ImprovedTabsTableLayout
@@ -138,7 +138,7 @@ namespace ProgrammerUtils
             this.ImprovedTabsTableLayout.RowCount = 2;
             this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ImprovedTabsTableLayout.Size = new System.Drawing.Size(242, 237);
+            this.ImprovedTabsTableLayout.Size = new System.Drawing.Size(326, 276);
             this.ImprovedTabsTableLayout.TabIndex = 1;
             // 
             // TabsHeader
@@ -155,7 +155,7 @@ namespace ProgrammerUtils
             this.TabsHeader.Name = "TabsHeader";
             this.TabsHeader.RowCount = 1;
             this.TabsHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TabsHeader.Size = new System.Drawing.Size(238, 24);
+            this.TabsHeader.Size = new System.Drawing.Size(322, 24);
             this.TabsHeader.TabIndex = 0;
             // 
             // EnumButton
@@ -200,7 +200,7 @@ namespace ProgrammerUtils
             this.TabsPanel.Location = new System.Drawing.Point(0, 28);
             this.TabsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.TabsPanel.Name = "TabsPanel";
-            this.TabsPanel.Size = new System.Drawing.Size(242, 209);
+            this.TabsPanel.Size = new System.Drawing.Size(326, 248);
             this.TabsPanel.TabIndex = 1;
             // 
             // sortEnumTextBoxRight
@@ -209,11 +209,11 @@ namespace ProgrammerUtils
             this.sortEnumTextBoxRight.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.sortEnumTextBoxRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.sortEnumTextBoxRight.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.sortEnumTextBoxRight.Location = new System.Drawing.Point(177, 0);
+            this.sortEnumTextBoxRight.Location = new System.Drawing.Point(261, 0);
             this.sortEnumTextBoxRight.Margin = new System.Windows.Forms.Padding(2);
             this.sortEnumTextBoxRight.Name = "sortEnumTextBoxRight";
             this.sortEnumTextBoxRight.ReadOnly = true;
-            this.sortEnumTextBoxRight.Size = new System.Drawing.Size(65, 209);
+            this.sortEnumTextBoxRight.Size = new System.Drawing.Size(65, 248);
             this.sortEnumTextBoxRight.TabIndex = 3;
             this.sortEnumTextBoxRight.Text = "";
             // 
@@ -228,7 +228,7 @@ namespace ProgrammerUtils
             this.sortTextBoxRight.Margin = new System.Windows.Forms.Padding(2);
             this.sortTextBoxRight.Name = "sortTextBoxRight";
             this.sortTextBoxRight.ReadOnly = true;
-            this.sortTextBoxRight.Size = new System.Drawing.Size(66, 209);
+            this.sortTextBoxRight.Size = new System.Drawing.Size(66, 248);
             this.sortTextBoxRight.TabIndex = 1;
             this.sortTextBoxRight.Text = "";
             // 
@@ -252,7 +252,7 @@ namespace ProgrammerUtils
             this.sortHeader.RowCount = 2;
             this.sortHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.sortHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.sortHeader.Size = new System.Drawing.Size(508, 43);
+            this.sortHeader.Size = new System.Drawing.Size(676, 43);
             this.sortHeader.TabIndex = 4;
             // 
             // SortButton
@@ -394,16 +394,16 @@ namespace ProgrammerUtils
             this.tableLayoutPanel1.Controls.Add(this.SortTextPresentationButton, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.SortChangeTextCapsButton, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(516, 53);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(684, 53);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(54, 253);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(52, 292);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // SortCopyButton
@@ -416,11 +416,11 @@ namespace ProgrammerUtils
             this.SortCopyButton.FlatAppearance.BorderSize = 0;
             this.SortCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SortCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortCopyButton.Location = new System.Drawing.Point(2, 110);
+            this.SortCopyButton.Location = new System.Drawing.Point(2, 106);
             this.SortCopyButton.Margin = new System.Windows.Forms.Padding(2);
             this.SortCopyButton.Name = "SortCopyButton";
             this.SortCopyButton.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
-            this.SortCopyButton.Size = new System.Drawing.Size(50, 50);
+            this.SortCopyButton.Size = new System.Drawing.Size(48, 48);
             this.SortCopyButton.TabIndex = 9;
             this.SortCopyButton.UseVisualStyleBackColor = false;
             this.SortCopyButton.Click += new System.EventHandler(this.SortCopyButton_Click);
@@ -434,10 +434,10 @@ namespace ProgrammerUtils
             this.SortClearButton.FlatAppearance.BorderSize = 0;
             this.SortClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SortClearButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortClearButton.Location = new System.Drawing.Point(2, 164);
+            this.SortClearButton.Location = new System.Drawing.Point(2, 158);
             this.SortClearButton.Margin = new System.Windows.Forms.Padding(2);
             this.SortClearButton.Name = "SortClearButton";
-            this.SortClearButton.Size = new System.Drawing.Size(50, 50);
+            this.SortClearButton.Size = new System.Drawing.Size(48, 48);
             this.SortClearButton.TabIndex = 10;
             this.SortClearButton.Text = "Clear";
             this.SortClearButton.UseVisualStyleBackColor = false;
@@ -451,10 +451,10 @@ namespace ProgrammerUtils
             this.SortTextPresentationButton.FlatAppearance.BorderSize = 0;
             this.SortTextPresentationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SortTextPresentationButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortTextPresentationButton.Location = new System.Drawing.Point(2, 56);
+            this.SortTextPresentationButton.Location = new System.Drawing.Point(2, 54);
             this.SortTextPresentationButton.Margin = new System.Windows.Forms.Padding(2);
             this.SortTextPresentationButton.Name = "SortTextPresentationButton";
-            this.SortTextPresentationButton.Size = new System.Drawing.Size(50, 50);
+            this.SortTextPresentationButton.Size = new System.Drawing.Size(48, 48);
             this.SortTextPresentationButton.TabIndex = 8;
             this.SortTextPresentationButton.Text = "A_B";
             this.SortTextPresentationButton.UseVisualStyleBackColor = false;
@@ -471,7 +471,7 @@ namespace ProgrammerUtils
             this.SortChangeTextCapsButton.Location = new System.Drawing.Point(2, 2);
             this.SortChangeTextCapsButton.Margin = new System.Windows.Forms.Padding(2);
             this.SortChangeTextCapsButton.Name = "SortChangeTextCapsButton";
-            this.SortChangeTextCapsButton.Size = new System.Drawing.Size(50, 50);
+            this.SortChangeTextCapsButton.Size = new System.Drawing.Size(48, 48);
             this.SortChangeTextCapsButton.TabIndex = 7;
             this.SortChangeTextCapsButton.Text = "ABC";
             this.SortChangeTextCapsButton.UseVisualStyleBackColor = false;
@@ -486,14 +486,14 @@ namespace ProgrammerUtils
             this.tableLayoutPanel2.Controls.Add(this.SortExportDropdown, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.SortExportEnumButton, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(260, 308);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(344, 347);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(254, 53);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(338, 53);
             this.tableLayoutPanel2.TabIndex = 6;
             // 
             // SortEnumOptionTableLayout
@@ -509,7 +509,7 @@ namespace ProgrammerUtils
             this.SortEnumOptionTableLayout.Name = "SortEnumOptionTableLayout";
             this.SortEnumOptionTableLayout.RowCount = 1;
             this.SortEnumOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.SortEnumOptionTableLayout.Size = new System.Drawing.Size(182, 26);
+            this.SortEnumOptionTableLayout.Size = new System.Drawing.Size(245, 26);
             this.SortEnumOptionTableLayout.TabIndex = 14;
             // 
             // classLabel
@@ -533,7 +533,7 @@ namespace ProgrammerUtils
             this.classTypePanel.Location = new System.Drawing.Point(61, 2);
             this.classTypePanel.Margin = new System.Windows.Forms.Padding(2);
             this.classTypePanel.Name = "classTypePanel";
-            this.classTypePanel.Size = new System.Drawing.Size(119, 22);
+            this.classTypePanel.Size = new System.Drawing.Size(182, 22);
             this.classTypePanel.TabIndex = 3;
             // 
             // SortEnumClassName
@@ -547,7 +547,7 @@ namespace ProgrammerUtils
             this.SortEnumClassName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 4);
             this.SortEnumClassName.MaxLength = 30;
             this.SortEnumClassName.Name = "SortEnumClassName";
-            this.SortEnumClassName.Size = new System.Drawing.Size(119, 14);
+            this.SortEnumClassName.Size = new System.Drawing.Size(182, 14);
             this.SortEnumClassName.TabIndex = 12;
             this.SortEnumClassName.TextChanged += new System.EventHandler(this.SortEnumClassName_TextChanged);
             // 
@@ -568,7 +568,7 @@ namespace ProgrammerUtils
             this.SortExportDropdown.Location = new System.Drawing.Point(2, 28);
             this.SortExportDropdown.Margin = new System.Windows.Forms.Padding(2, 2, 10, 2);
             this.SortExportDropdown.Name = "SortExportDropdown";
-            this.SortExportDropdown.Size = new System.Drawing.Size(178, 22);
+            this.SortExportDropdown.Size = new System.Drawing.Size(241, 22);
             this.SortExportDropdown.TabIndex = 12;
             this.SortExportDropdown.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.SortExportDropdown_DrawItem);
             this.SortExportDropdown.SelectedIndexChanged += new System.EventHandler(this.SortExportDropdown_SelectedIndexChanged);
@@ -581,11 +581,11 @@ namespace ProgrammerUtils
             this.SortExportEnumButton.FlatAppearance.BorderSize = 0;
             this.SortExportEnumButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SortExportEnumButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SortExportEnumButton.Location = new System.Drawing.Point(192, 2);
+            this.SortExportEnumButton.Location = new System.Drawing.Point(255, 2);
             this.SortExportEnumButton.Margin = new System.Windows.Forms.Padding(2);
             this.SortExportEnumButton.Name = "SortExportEnumButton";
             this.tableLayoutPanel2.SetRowSpan(this.SortExportEnumButton, 2);
-            this.SortExportEnumButton.Size = new System.Drawing.Size(60, 49);
+            this.SortExportEnumButton.Size = new System.Drawing.Size(81, 49);
             this.SortExportEnumButton.TabIndex = 13;
             this.SortExportEnumButton.Text = "Copy as Enum";
             this.SortExportEnumButton.UseVisualStyleBackColor = false;
@@ -597,10 +597,10 @@ namespace ProgrammerUtils
             this.SortCopyNotice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SortCopyNotice.Font = new System.Drawing.Font("Arial", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SortCopyNotice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(153)))), ((int)(((byte)(118)))));
-            this.SortCopyNotice.Location = new System.Drawing.Point(518, 0);
+            this.SortCopyNotice.Location = new System.Drawing.Point(686, 0);
             this.SortCopyNotice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SortCopyNotice.Name = "SortCopyNotice";
-            this.SortCopyNotice.Size = new System.Drawing.Size(50, 53);
+            this.SortCopyNotice.Size = new System.Drawing.Size(48, 53);
             this.SortCopyNotice.TabIndex = 7;
             this.SortCopyNotice.Text = "Copied!";
             this.SortCopyNotice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -617,7 +617,7 @@ namespace ProgrammerUtils
             this.inputTextBoxBorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.inputTextBoxBorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
             this.SortTableLayout.SetRowSpan(this.inputTextBoxBorderPanel, 2);
-            this.inputTextBoxBorderPanel.Size = new System.Drawing.Size(250, 302);
+            this.inputTextBoxBorderPanel.Size = new System.Drawing.Size(334, 341);
             this.inputTextBoxBorderPanel.TabIndex = 9;
             // 
             // sortTextBoxLeft
@@ -630,7 +630,7 @@ namespace ProgrammerUtils
             this.sortTextBoxLeft.Location = new System.Drawing.Point(4, 4);
             this.sortTextBoxLeft.Margin = new System.Windows.Forms.Padding(2);
             this.sortTextBoxLeft.Name = "sortTextBoxLeft";
-            this.sortTextBoxLeft.Size = new System.Drawing.Size(242, 294);
+            this.sortTextBoxLeft.Size = new System.Drawing.Size(326, 333);
             this.sortTextBoxLeft.TabIndex = 15;
             this.sortTextBoxLeft.Text = "";
             this.sortTextBoxLeft.TextChanged += new System.EventHandler(this.SortTextChanged);
@@ -641,12 +641,12 @@ namespace ProgrammerUtils
             this.sortLabel1BorderPanel.BorderWidth = 2;
             this.sortLabel1BorderPanel.Controls.Add(this.sortLabel1);
             this.sortLabel1BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortLabel1BorderPanel.Location = new System.Drawing.Point(4, 367);
+            this.sortLabel1BorderPanel.Location = new System.Drawing.Point(4, 406);
             this.sortLabel1BorderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.sortLabel1BorderPanel.Name = "sortLabel1BorderPanel";
             this.sortLabel1BorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.sortLabel1BorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.sortLabel1BorderPanel.Size = new System.Drawing.Size(250, 37);
+            this.sortLabel1BorderPanel.Size = new System.Drawing.Size(334, 37);
             this.sortLabel1BorderPanel.TabIndex = 10;
             // 
             // sortLabel1
@@ -658,7 +658,7 @@ namespace ProgrammerUtils
             this.sortLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sortLabel1.Name = "sortLabel1";
             this.sortLabel1.Padding = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.sortLabel1.Size = new System.Drawing.Size(242, 29);
+            this.sortLabel1.Size = new System.Drawing.Size(326, 29);
             this.sortLabel1.TabIndex = 4;
             this.sortLabel1.Text = "Items to sort. Separate entries by commas or new lines!";
             this.sortLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -669,12 +669,12 @@ namespace ProgrammerUtils
             this.label2BorderPanel.BorderWidth = 2;
             this.label2BorderPanel.Controls.Add(this.sortLabel2);
             this.label2BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2BorderPanel.Location = new System.Drawing.Point(262, 367);
+            this.label2BorderPanel.Location = new System.Drawing.Point(346, 406);
             this.label2BorderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.label2BorderPanel.Name = "label2BorderPanel";
             this.label2BorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.label2BorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.label2BorderPanel.Size = new System.Drawing.Size(250, 37);
+            this.label2BorderPanel.Size = new System.Drawing.Size(334, 37);
             this.label2BorderPanel.TabIndex = 11;
             // 
             // sortLabel2
@@ -685,7 +685,7 @@ namespace ProgrammerUtils
             this.sortLabel2.Location = new System.Drawing.Point(4, 4);
             this.sortLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sortLabel2.Name = "sortLabel2";
-            this.sortLabel2.Size = new System.Drawing.Size(242, 29);
+            this.sortLabel2.Size = new System.Drawing.Size(326, 29);
             this.sortLabel2.TabIndex = 4;
             this.sortLabel2.Text = "Sorted items.";
             this.sortLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -706,7 +706,7 @@ namespace ProgrammerUtils
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "SortControl";
             this.Padding = new System.Windows.Forms.Padding(4);
-            this.Size = new System.Drawing.Size(578, 416);
+            this.Size = new System.Drawing.Size(744, 455);
             this.SortTableLayout.ResumeLayout(false);
             this.SortTableLayout.PerformLayout();
             this.TabsBorderPanel.ResumeLayout(false);
