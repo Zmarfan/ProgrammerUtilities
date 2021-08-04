@@ -145,6 +145,7 @@ namespace ProgrammerUtils
             };
 
             parent.Controls.Add(countDetail);
+            countDetail.Anchor = AnchorStyles.None;
         }
     }
 }

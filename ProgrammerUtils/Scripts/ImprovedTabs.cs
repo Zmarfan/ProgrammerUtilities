@@ -22,9 +22,9 @@ namespace ProgrammerUtils.Scripts
             }
         }
 
-        List<TabPair> _tabButtons;
-        Color _tabButtonDefaultColor;
-        Color _tabButtonSelectedColor;
+        readonly List<TabPair> _tabButtons;
+        readonly Color _tabButtonDefaultColor;
+        readonly Color _tabButtonSelectedColor;
 
         public ImprovedTabs(List<TabPair> tabButtons, Color tabButtonDefaultColor, Color tabButtonSelectedColor)
         {

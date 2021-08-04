@@ -66,11 +66,12 @@
             // replacedTextbox
             // 
             this.replacedTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.replacedTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(240)))));
+            this.replacedTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
             this.replacedTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.replacedTextbox.Location = new System.Drawing.Point(231, 19);
+            this.replacedTextbox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.replacedTextbox.Location = new System.Drawing.Point(208, 19);
             this.replacedTextbox.Name = "replacedTextbox";
-            this.replacedTextbox.Size = new System.Drawing.Size(82, 15);
+            this.replacedTextbox.Size = new System.Drawing.Size(82, 14);
             this.replacedTextbox.TabIndex = 5;
             // 
             // label1
@@ -78,9 +79,9 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(93, 0);
+            this.label1.Location = new System.Drawing.Point(82, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 53);
+            this.label1.Size = new System.Drawing.Size(59, 53);
             this.label1.TabIndex = 1;
             this.label1.Text = "Replace: ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -88,12 +89,13 @@
             // replaceTextBox
             // 
             this.replaceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.replaceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(224)))), ((int)(((byte)(240)))));
+            this.replaceTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
             this.replaceTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.replaceTextBox.Location = new System.Drawing.Point(167, 19);
+            this.replaceTextBox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.replaceTextBox.Location = new System.Drawing.Point(147, 19);
             this.replaceTextBox.MaxLength = 1;
             this.replaceTextBox.Name = "replaceTextBox";
-            this.replaceTextBox.Size = new System.Drawing.Size(20, 15);
+            this.replaceTextBox.Size = new System.Drawing.Size(20, 14);
             this.replaceTextBox.TabIndex = 2;
             // 
             // activeCheckbox
@@ -110,7 +112,7 @@
             this.activeCheckbox.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
             this.activeCheckbox.Name = "activeCheckbox";
             this.activeCheckbox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.activeCheckbox.Size = new System.Drawing.Size(76, 37);
+            this.activeCheckbox.Size = new System.Drawing.Size(65, 37);
             this.activeCheckbox.TabIndex = 3;
             this.activeCheckbox.Text = "Active";
             this.activeCheckbox.UseVisualStyleBackColor = false;
@@ -121,9 +123,9 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(193, 0);
+            this.label2.Location = new System.Drawing.Point(173, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 53);
+            this.label2.Size = new System.Drawing.Size(29, 53);
             this.label2.TabIndex = 4;
             this.label2.Text = "with";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,7 +139,7 @@
             this.removeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.removeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.removeButton.ForeColor = System.Drawing.Color.White;
-            this.removeButton.Location = new System.Drawing.Point(325, 10);
+            this.removeButton.Location = new System.Drawing.Point(302, 10);
             this.removeButton.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
             this.removeButton.Name = "removeButton";
             this.removeButton.Size = new System.Drawing.Size(27, 33);
@@ -150,7 +152,7 @@
             // 
             // HtmlCustomRule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.mainTableLayout);
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
