@@ -24,6 +24,8 @@ namespace ProgrammerUtils
 
         public static readonly int EXPANDED_BUTTON_LEFT_MARGIN = 15;
         public static readonly int NOT_EXPANDED_BUTTON_LEFT_MARGIN = 5;
+        private static readonly string EXPANDED_COPYRIGHT_TEXT = "filippeterssoncontact@gmail.com\n© 2021 Copyright: Filip Petersson";
+        private static readonly string NOT_EXPANDED_COPYRIGHT_TEXT = string.Empty;
 
         public event NavigationButton.NavigationButtonClickedDelegate OnNavigationButtonClicked;
 
@@ -52,6 +54,7 @@ namespace ProgrammerUtils
         public void ChangeExpansionMode()
         {
             Expanded = !Expanded;
+            copyrightLabel.Text = Expanded ? EXPANDED_COPYRIGHT_TEXT : NOT_EXPANDED_COPYRIGHT_TEXT;
         }
 
         public void ChangeImageLeftMargin(float ratio)

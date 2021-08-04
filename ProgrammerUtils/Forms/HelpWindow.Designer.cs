@@ -48,8 +48,8 @@
             this.infoLabel.Name = "infoLabel";
             this.infoLabel.Size = new System.Drawing.Size(234, 150);
             this.infoLabel.TabIndex = 1;
-            this.infoLabel.Text = "Programming Utilities 1.0.0\r\nBuilt for Windows platforms.\r\nVersion 1.0.0.\r\n© 2021" +
-    " Copyright: Filip Petersson\r\n";
+            this.infoLabel.Text = "Programming Utilities 1.0.0\r\nBuilt for Windows platforms.\r\nVersion 1.0.0.\r\nfilipp" +
+    "eterssoncontact@gmail.com\r\n© 2021 Copyright: Filip Petersson";
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // logo

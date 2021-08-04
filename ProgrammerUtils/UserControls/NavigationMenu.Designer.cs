@@ -252,7 +252,7 @@ namespace ProgrammerUtils
             this.copyrightLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.copyrightLabel.Size = new System.Drawing.Size(184, 41);
             this.copyrightLabel.TabIndex = 9;
-            this.copyrightLabel.Text = "© 2021 Copyright: Filip Petersson";
+            this.copyrightLabel.Text = "filippeterssoncontact@gmail.com\r\n© 2021 Copyright: Filip Petersson";
             this.copyrightLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // NavigationMenu
