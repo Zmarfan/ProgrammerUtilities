@@ -58,13 +58,13 @@ namespace ProgrammerUtils
             this.sortTextBoxRight = new System.Windows.Forms.RichTextBox();
             this.sortEnum = new System.Windows.Forms.TabPage();
             this.sortEnumTextBoxRight = new System.Windows.Forms.RichTextBox();
-            this.copyTimer = new System.Windows.Forms.Timer(this.components);
             this.inputTextBoxBorderPanel = new ProgrammerUtils.BorderPanel();
             this.sortTextBoxLeft = new System.Windows.Forms.RichTextBox();
             this.sortLabel1BorderPanel = new ProgrammerUtils.BorderPanel();
             this.sortLabel1 = new System.Windows.Forms.Label();
             this.label2BorderPanel = new ProgrammerUtils.BorderPanel();
             this.sortLabel2 = new System.Windows.Forms.Label();
+            this.copyTimer = new System.Windows.Forms.Timer(this.components);
             this.SortTableLayout.SuspendLayout();
             this.sortHeader.SuspendLayout();
             this.sortModeTableLayout.SuspendLayout();
@@ -412,7 +412,7 @@ namespace ProgrammerUtils
             // 
             // SortEnumClassName
             // 
-            this.SortEnumClassName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.SortEnumClassName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.SortEnumClassName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
             this.SortEnumClassName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SortEnumClassName.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -537,11 +537,6 @@ namespace ProgrammerUtils
             this.sortEnumTextBoxRight.TabIndex = 0;
             this.sortEnumTextBoxRight.Text = "";
             // 
-            // copyTimer
-            // 
-            this.copyTimer.Interval = 1500;
-            this.copyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
-            // 
             // inputTextBoxBorderPanel
             // 
             this.inputTextBoxBorderPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
@@ -625,6 +620,11 @@ namespace ProgrammerUtils
             this.sortLabel2.TabIndex = 4;
             this.sortLabel2.Text = "Sorted items.";
             this.sortLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // copyTimer
+            // 
+            this.copyTimer.Interval = 1500;
+            this.copyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
             // 
             // SortControl
             // 

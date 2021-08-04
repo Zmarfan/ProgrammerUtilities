@@ -50,135 +50,135 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Application.cs">
+    <Compile Include="Forms\Application.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Application.Designer.cs">
+    <Compile Include="Forms\Application.Designer.cs">
       <DependentUpon>Application.cs</DependentUpon>
     </Compile>
-    <Compile Include="BorderPanel.cs">
+    <Compile Include="CustomControls\BorderPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BorderPanel.Designer.cs">
+    <Compile Include="CustomControls\BorderPanel.Designer.cs">
       <DependentUpon>BorderPanel.cs</DependentUpon>
     </Compile>
-    <Compile Include="CompareControl.cs">
+    <Compile Include="UserControls\CompareControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CompareControl.Designer.cs">
+    <Compile Include="UserControls\CompareControl.Designer.cs">
       <DependentUpon>CompareControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="CountControl.cs">
+    <Compile Include="UserControls\CountControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CountControl.Designer.cs">
+    <Compile Include="UserControls\CountControl.Designer.cs">
       <DependentUpon>CountControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="CountDetail.cs">
+    <Compile Include="UserControls\CountDetail.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CountDetail.Designer.cs">
+    <Compile Include="UserControls\CountDetail.Designer.cs">
       <DependentUpon>CountDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Counter.cs" />
-    <Compile Include="GenerateText.cs" />
-    <Compile Include="GenerateTextControl.cs">
+    <Compile Include="Scripts\Counter.cs" />
+    <Compile Include="Scripts\GenerateText.cs" />
+    <Compile Include="UserControls\GenerateTextControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GenerateTextControl.Designer.cs">
+    <Compile Include="UserControls\GenerateTextControl.Designer.cs">
       <DependentUpon>GenerateTextControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="HelpWindow.cs">
+    <Compile Include="Forms\HelpWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HelpWindow.Designer.cs">
+    <Compile Include="Forms\HelpWindow.Designer.cs">
       <DependentUpon>HelpWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="HtmlCenter.cs" />
-    <Compile Include="HTMLControl.cs">
+    <Compile Include="Scripts\HtmlCenter.cs" />
+    <Compile Include="UserControls\HTMLControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HTMLControl.Designer.cs">
+    <Compile Include="UserControls\HTMLControl.Designer.cs">
       <DependentUpon>HTMLControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="HtmlCustomRule.cs">
+    <Compile Include="UserControls\HtmlCustomRule.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HtmlCustomRule.Designer.cs">
+    <Compile Include="UserControls\HtmlCustomRule.Designer.cs">
       <DependentUpon>HtmlCustomRule.cs</DependentUpon>
     </Compile>
-    <Compile Include="HtmlExtraSettings.cs">
+    <Compile Include="Forms\HtmlExtraSettings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HtmlExtraSettings.Designer.cs">
+    <Compile Include="Forms\HtmlExtraSettings.Designer.cs">
       <DependentUpon>HtmlExtraSettings.cs</DependentUpon>
     </Compile>
-    <Compile Include="HtmlService.cs" />
-    <Compile Include="Matcher.cs" />
-    <Compile Include="NavigationButton.cs">
+    <Compile Include="Scripts\HtmlService.cs" />
+    <Compile Include="Scripts\Matcher.cs" />
+    <Compile Include="UserControls\NavigationButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NavigationButton.Designer.cs">
+    <Compile Include="UserControls\NavigationButton.Designer.cs">
       <DependentUpon>NavigationButton.cs</DependentUpon>
     </Compile>
-    <Compile Include="NavigationMenu.cs">
+    <Compile Include="UserControls\NavigationMenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="NavigationMenu.Designer.cs">
+    <Compile Include="UserControls\NavigationMenu.Designer.cs">
       <DependentUpon>NavigationMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="ProgrammingConverter.cs" />
+    <Compile Include="Scripts\Program.cs" />
+    <Compile Include="Scripts\ProgrammingConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RoundLabel.cs">
+    <Compile Include="CustomControls\RoundLabel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RoundLabel.Designer.cs">
+    <Compile Include="CustomControls\RoundLabel.Designer.cs">
       <DependentUpon>RoundLabel.cs</DependentUpon>
     </Compile>
-    <Compile Include="SaveService.cs" />
-    <Compile Include="Sort.cs" />
-    <Compile Include="SortControl.cs">
+    <Compile Include="Scripts\SaveService.cs" />
+    <Compile Include="Scripts\Sort.cs" />
+    <Compile Include="UserControls\SortControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SortControl.Designer.cs">
+    <Compile Include="UserControls\SortControl.Designer.cs">
       <DependentUpon>SortControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Timer.cs" />
-    <EmbeddedResource Include="Application.resx">
+    <Compile Include="Scripts\Timer.cs" />
+    <EmbeddedResource Include="Forms\Application.resx">
       <DependentUpon>Application.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BorderPanel.resx">
+    <EmbeddedResource Include="CustomControls\BorderPanel.resx">
       <DependentUpon>BorderPanel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CompareControl.resx">
+    <EmbeddedResource Include="UserControls\CompareControl.resx">
       <DependentUpon>CompareControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CountControl.resx">
+    <EmbeddedResource Include="UserControls\CountControl.resx">
       <DependentUpon>CountControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CountDetail.resx">
+    <EmbeddedResource Include="UserControls\CountDetail.resx">
       <DependentUpon>CountDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GenerateTextControl.resx">
+    <EmbeddedResource Include="UserControls\GenerateTextControl.resx">
       <DependentUpon>GenerateTextControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HelpWindow.resx">
+    <EmbeddedResource Include="Forms\HelpWindow.resx">
       <DependentUpon>HelpWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HTMLControl.resx">
+    <EmbeddedResource Include="UserControls\HTMLControl.resx">
       <DependentUpon>HTMLControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HtmlCustomRule.resx">
+    <EmbeddedResource Include="UserControls\HtmlCustomRule.resx">
       <DependentUpon>HtmlCustomRule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HtmlExtraSettings.resx">
+    <EmbeddedResource Include="Forms\HtmlExtraSettings.resx">
       <DependentUpon>HtmlExtraSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NavigationButton.resx">
+    <EmbeddedResource Include="UserControls\NavigationButton.resx">
       <DependentUpon>NavigationButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NavigationMenu.resx">
+    <EmbeddedResource Include="UserControls\NavigationMenu.resx">
       <DependentUpon>NavigationMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -191,7 +191,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SortControl.resx">
+    <EmbeddedResource Include="UserControls\SortControl.resx">
       <DependentUpon>SortControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
