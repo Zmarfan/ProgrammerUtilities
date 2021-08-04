@@ -53,18 +53,21 @@ namespace ProgrammerUtils
             this.SortExportDropdown = new System.Windows.Forms.ComboBox();
             this.SortExportEnumButton = new System.Windows.Forms.Button();
             this.SortCopyNotice = new System.Windows.Forms.Label();
-            this.sortSortedTabs = new System.Windows.Forms.TabControl();
-            this.sortList = new System.Windows.Forms.TabPage();
-            this.sortTextBoxRight = new System.Windows.Forms.RichTextBox();
-            this.sortEnum = new System.Windows.Forms.TabPage();
+            this.copyTimer = new System.Windows.Forms.Timer(this.components);
+            this.TabsBorderPanel = new ProgrammerUtils.BorderPanel();
+            this.ImprovedTabsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.TabsHeader = new System.Windows.Forms.TableLayoutPanel();
+            this.EnumButton = new System.Windows.Forms.Button();
+            this.ListButton = new System.Windows.Forms.Button();
+            this.TabsPanel = new System.Windows.Forms.Panel();
             this.sortEnumTextBoxRight = new System.Windows.Forms.RichTextBox();
+            this.sortTextBoxRight = new System.Windows.Forms.RichTextBox();
             this.inputTextBoxBorderPanel = new ProgrammerUtils.BorderPanel();
             this.sortTextBoxLeft = new System.Windows.Forms.RichTextBox();
             this.sortLabel1BorderPanel = new ProgrammerUtils.BorderPanel();
             this.sortLabel1 = new System.Windows.Forms.Label();
             this.label2BorderPanel = new ProgrammerUtils.BorderPanel();
             this.sortLabel2 = new System.Windows.Forms.Label();
-            this.copyTimer = new System.Windows.Forms.Timer(this.components);
             this.SortTableLayout.SuspendLayout();
             this.sortHeader.SuspendLayout();
             this.sortModeTableLayout.SuspendLayout();
@@ -73,9 +76,10 @@ namespace ProgrammerUtils
             this.tableLayoutPanel2.SuspendLayout();
             this.SortEnumOptionTableLayout.SuspendLayout();
             this.classTypePanel.SuspendLayout();
-            this.sortSortedTabs.SuspendLayout();
-            this.sortList.SuspendLayout();
-            this.sortEnum.SuspendLayout();
+            this.TabsBorderPanel.SuspendLayout();
+            this.ImprovedTabsTableLayout.SuspendLayout();
+            this.TabsHeader.SuspendLayout();
+            this.TabsPanel.SuspendLayout();
             this.inputTextBoxBorderPanel.SuspendLayout();
             this.sortLabel1BorderPanel.SuspendLayout();
             this.label2BorderPanel.SuspendLayout();
@@ -87,11 +91,11 @@ namespace ProgrammerUtils
             this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SortTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 72F));
+            this.SortTableLayout.Controls.Add(this.TabsBorderPanel, 0, 1);
             this.SortTableLayout.Controls.Add(this.sortHeader, 0, 0);
             this.SortTableLayout.Controls.Add(this.tableLayoutPanel1, 2, 1);
             this.SortTableLayout.Controls.Add(this.tableLayoutPanel2, 1, 2);
             this.SortTableLayout.Controls.Add(this.SortCopyNotice, 2, 0);
-            this.SortTableLayout.Controls.Add(this.sortSortedTabs, 1, 1);
             this.SortTableLayout.Controls.Add(this.inputTextBoxBorderPanel, 0, 1);
             this.SortTableLayout.Controls.Add(this.sortLabel1BorderPanel, 0, 3);
             this.SortTableLayout.Controls.Add(this.label2BorderPanel, 1, 3);
@@ -380,11 +384,11 @@ namespace ProgrammerUtils
             this.SortEnumOptionTableLayout.Controls.Add(this.classTypePanel, 1, 0);
             this.SortEnumOptionTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SortEnumOptionTableLayout.Location = new System.Drawing.Point(0, 0);
-            this.SortEnumOptionTableLayout.Margin = new System.Windows.Forms.Padding(0);
+            this.SortEnumOptionTableLayout.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.SortEnumOptionTableLayout.Name = "SortEnumOptionTableLayout";
             this.SortEnumOptionTableLayout.RowCount = 1;
             this.SortEnumOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.SortEnumOptionTableLayout.Size = new System.Drawing.Size(255, 32);
+            this.SortEnumOptionTableLayout.Size = new System.Drawing.Size(245, 32);
             this.SortEnumOptionTableLayout.TabIndex = 14;
             // 
             // classLabel
@@ -407,7 +411,7 @@ namespace ProgrammerUtils
             this.classTypePanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.classTypePanel.Location = new System.Drawing.Point(82, 3);
             this.classTypePanel.Name = "classTypePanel";
-            this.classTypePanel.Size = new System.Drawing.Size(170, 26);
+            this.classTypePanel.Size = new System.Drawing.Size(160, 26);
             this.classTypePanel.TabIndex = 3;
             // 
             // SortEnumClassName
@@ -421,7 +425,7 @@ namespace ProgrammerUtils
             this.SortEnumClassName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 5);
             this.SortEnumClassName.MaxLength = 30;
             this.SortEnumClassName.Name = "SortEnumClassName";
-            this.SortEnumClassName.Size = new System.Drawing.Size(170, 15);
+            this.SortEnumClassName.Size = new System.Drawing.Size(160, 15);
             this.SortEnumClassName.TabIndex = 12;
             // 
             // SortExportDropdown
@@ -439,9 +443,9 @@ namespace ProgrammerUtils
             "C#",
             "Typescript"});
             this.SortExportDropdown.Location = new System.Drawing.Point(2, 35);
-            this.SortExportDropdown.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.SortExportDropdown.Margin = new System.Windows.Forms.Padding(2, 3, 13, 3);
             this.SortExportDropdown.Name = "SortExportDropdown";
-            this.SortExportDropdown.Size = new System.Drawing.Size(251, 23);
+            this.SortExportDropdown.Size = new System.Drawing.Size(240, 23);
             this.SortExportDropdown.TabIndex = 12;
             this.SortExportDropdown.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.SortExportDropdown_DrawItem);
             this.SortExportDropdown.SelectedIndexChanged += new System.EventHandler(this.SortExportDropdown_SelectedIndexChanged);
@@ -478,64 +482,127 @@ namespace ProgrammerUtils
             this.SortCopyNotice.Text = "Copied!";
             this.SortCopyNotice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // sortSortedTabs
+            // copyTimer
             // 
-            this.sortSortedTabs.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.sortSortedTabs.Controls.Add(this.sortList);
-            this.sortSortedTabs.Controls.Add(this.sortEnum);
-            this.sortSortedTabs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortSortedTabs.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sortSortedTabs.Location = new System.Drawing.Point(346, 68);
-            this.sortSortedTabs.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.sortSortedTabs.Name = "sortSortedTabs";
-            this.sortSortedTabs.SelectedIndex = 0;
-            this.sortSortedTabs.Size = new System.Drawing.Size(340, 306);
-            this.sortSortedTabs.TabIndex = 8;
+            this.copyTimer.Interval = 1500;
+            this.copyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
             // 
-            // sortList
+            // TabsBorderPanel
             // 
-            this.sortList.Controls.Add(this.sortTextBoxRight);
-            this.sortList.Location = new System.Drawing.Point(4, 28);
-            this.sortList.Margin = new System.Windows.Forms.Padding(0);
-            this.sortList.Name = "sortList";
-            this.sortList.Size = new System.Drawing.Size(332, 274);
-            this.sortList.TabIndex = 0;
-            this.sortList.Text = "List";
-            this.sortList.UseVisualStyleBackColor = true;
+            this.TabsBorderPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
+            this.TabsBorderPanel.BorderWidth = 2;
+            this.TabsBorderPanel.Controls.Add(this.ImprovedTabsTableLayout);
+            this.TabsBorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabsBorderPanel.Location = new System.Drawing.Point(349, 70);
+            this.TabsBorderPanel.Margin = new System.Windows.Forms.Padding(5);
+            this.TabsBorderPanel.Name = "TabsBorderPanel";
+            this.TabsBorderPanel.Padding = new System.Windows.Forms.Padding(5);
+            this.TabsBorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
+            this.TabsBorderPanel.Size = new System.Drawing.Size(334, 302);
+            this.TabsBorderPanel.TabIndex = 12;
+            // 
+            // ImprovedTabsTableLayout
+            // 
+            this.ImprovedTabsTableLayout.ColumnCount = 1;
+            this.ImprovedTabsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ImprovedTabsTableLayout.Controls.Add(this.TabsHeader, 0, 0);
+            this.ImprovedTabsTableLayout.Controls.Add(this.TabsPanel, 0, 1);
+            this.ImprovedTabsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ImprovedTabsTableLayout.Location = new System.Drawing.Point(5, 5);
+            this.ImprovedTabsTableLayout.Name = "ImprovedTabsTableLayout";
+            this.ImprovedTabsTableLayout.RowCount = 2;
+            this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.ImprovedTabsTableLayout.Size = new System.Drawing.Size(324, 292);
+            this.ImprovedTabsTableLayout.TabIndex = 1;
+            // 
+            // TabsHeader
+            // 
+            this.TabsHeader.ColumnCount = 3;
+            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TabsHeader.Controls.Add(this.EnumButton, 1, 0);
+            this.TabsHeader.Controls.Add(this.ListButton, 0, 0);
+            this.TabsHeader.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabsHeader.Location = new System.Drawing.Point(3, 3);
+            this.TabsHeader.Name = "TabsHeader";
+            this.TabsHeader.RowCount = 1;
+            this.TabsHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TabsHeader.Size = new System.Drawing.Size(318, 29);
+            this.TabsHeader.TabIndex = 0;
+            // 
+            // EnumButton
+            // 
+            this.EnumButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
+            this.EnumButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EnumButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EnumButton.FlatAppearance.BorderSize = 0;
+            this.EnumButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EnumButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.EnumButton.Location = new System.Drawing.Point(78, 3);
+            this.EnumButton.Name = "EnumButton";
+            this.EnumButton.Size = new System.Drawing.Size(69, 23);
+            this.EnumButton.TabIndex = 1;
+            this.EnumButton.Text = "Enum";
+            this.EnumButton.UseVisualStyleBackColor = false;
+            this.EnumButton.Click += new System.EventHandler(this.TabButton_Clicked);
+            // 
+            // ListButton
+            // 
+            this.ListButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
+            this.ListButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ListButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ListButton.FlatAppearance.BorderSize = 0;
+            this.ListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ListButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ListButton.Location = new System.Drawing.Point(3, 3);
+            this.ListButton.Name = "ListButton";
+            this.ListButton.Size = new System.Drawing.Size(69, 23);
+            this.ListButton.TabIndex = 0;
+            this.ListButton.Text = "List";
+            this.ListButton.UseVisualStyleBackColor = false;
+            this.ListButton.Click += new System.EventHandler(this.TabButton_Clicked);
+            // 
+            // TabsPanel
+            // 
+            this.TabsPanel.Controls.Add(this.sortEnumTextBoxRight);
+            this.TabsPanel.Controls.Add(this.sortTextBoxRight);
+            this.TabsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabsPanel.Location = new System.Drawing.Point(0, 35);
+            this.TabsPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.TabsPanel.Name = "TabsPanel";
+            this.TabsPanel.Size = new System.Drawing.Size(324, 257);
+            this.TabsPanel.TabIndex = 1;
+            // 
+            // sortEnumTextBoxRight
+            // 
+            this.sortEnumTextBoxRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
+            this.sortEnumTextBoxRight.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sortEnumTextBoxRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.sortEnumTextBoxRight.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.sortEnumTextBoxRight.Location = new System.Drawing.Point(237, 0);
+            this.sortEnumTextBoxRight.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.sortEnumTextBoxRight.Name = "sortEnumTextBoxRight";
+            this.sortEnumTextBoxRight.ReadOnly = true;
+            this.sortEnumTextBoxRight.Size = new System.Drawing.Size(87, 257);
+            this.sortEnumTextBoxRight.TabIndex = 3;
+            this.sortEnumTextBoxRight.Text = "";
             // 
             // sortTextBoxRight
             // 
-            this.sortTextBoxRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sortTextBoxRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
+            this.sortTextBoxRight.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.sortTextBoxRight.Dock = System.Windows.Forms.DockStyle.Left;
             this.sortTextBoxRight.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sortTextBoxRight.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.sortTextBoxRight.Location = new System.Drawing.Point(0, 0);
             this.sortTextBoxRight.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.sortTextBoxRight.Name = "sortTextBoxRight";
             this.sortTextBoxRight.ReadOnly = true;
-            this.sortTextBoxRight.Size = new System.Drawing.Size(332, 274);
-            this.sortTextBoxRight.TabIndex = 0;
+            this.sortTextBoxRight.Size = new System.Drawing.Size(88, 257);
+            this.sortTextBoxRight.TabIndex = 1;
             this.sortTextBoxRight.Text = "";
-            // 
-            // sortEnum
-            // 
-            this.sortEnum.Controls.Add(this.sortEnumTextBoxRight);
-            this.sortEnum.Location = new System.Drawing.Point(4, 28);
-            this.sortEnum.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.sortEnum.Name = "sortEnum";
-            this.sortEnum.Size = new System.Drawing.Size(332, 274);
-            this.sortEnum.TabIndex = 1;
-            this.sortEnum.Text = "Enum";
-            this.sortEnum.UseVisualStyleBackColor = true;
-            // 
-            // sortEnumTextBoxRight
-            // 
-            this.sortEnumTextBoxRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sortEnumTextBoxRight.Location = new System.Drawing.Point(0, 0);
-            this.sortEnumTextBoxRight.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.sortEnumTextBoxRight.Name = "sortEnumTextBoxRight";
-            this.sortEnumTextBoxRight.ReadOnly = true;
-            this.sortEnumTextBoxRight.Size = new System.Drawing.Size(332, 274);
-            this.sortEnumTextBoxRight.TabIndex = 0;
-            this.sortEnumTextBoxRight.Text = "";
             // 
             // inputTextBoxBorderPanel
             // 
@@ -565,6 +632,7 @@ namespace ProgrammerUtils
             this.sortTextBoxLeft.Size = new System.Drawing.Size(324, 362);
             this.sortTextBoxLeft.TabIndex = 15;
             this.sortTextBoxLeft.Text = "";
+            this.sortTextBoxLeft.TextChanged += new System.EventHandler(this.SortTextChanged);
             // 
             // sortLabel1BorderPanel
             // 
@@ -621,11 +689,6 @@ namespace ProgrammerUtils
             this.sortLabel2.Text = "Sorted items.";
             this.sortLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // copyTimer
-            // 
-            this.copyTimer.Interval = 1500;
-            this.copyTimer.Tick += new System.EventHandler(this.CopyTimer_Tick);
-            // 
             // SortControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -652,9 +715,10 @@ namespace ProgrammerUtils
             this.SortEnumOptionTableLayout.ResumeLayout(false);
             this.classTypePanel.ResumeLayout(false);
             this.classTypePanel.PerformLayout();
-            this.sortSortedTabs.ResumeLayout(false);
-            this.sortList.ResumeLayout(false);
-            this.sortEnum.ResumeLayout(false);
+            this.TabsBorderPanel.ResumeLayout(false);
+            this.ImprovedTabsTableLayout.ResumeLayout(false);
+            this.TabsHeader.ResumeLayout(false);
+            this.TabsPanel.ResumeLayout(false);
             this.inputTextBoxBorderPanel.ResumeLayout(false);
             this.sortLabel1BorderPanel.ResumeLayout(false);
             this.label2BorderPanel.ResumeLayout(false);
@@ -683,11 +747,6 @@ namespace ProgrammerUtils
         private System.Windows.Forms.ComboBox SortExportDropdown;
         private System.Windows.Forms.Button SortExportEnumButton;
         private System.Windows.Forms.Label SortCopyNotice;
-        private System.Windows.Forms.TabControl sortSortedTabs;
-        private System.Windows.Forms.TabPage sortList;
-        private System.Windows.Forms.RichTextBox sortTextBoxRight;
-        private System.Windows.Forms.TabPage sortEnum;
-        private System.Windows.Forms.RichTextBox sortEnumTextBoxRight;
         private System.Windows.Forms.Timer copyTimer;
         private BorderPanel inputTextBoxBorderPanel;
         private System.Windows.Forms.RichTextBox sortTextBoxLeft;
@@ -699,5 +758,13 @@ namespace ProgrammerUtils
         private System.Windows.Forms.Label classLabel;
         private System.Windows.Forms.Panel classTypePanel;
         private System.Windows.Forms.TextBox SortEnumClassName;
+        private BorderPanel TabsBorderPanel;
+        private System.Windows.Forms.TableLayoutPanel ImprovedTabsTableLayout;
+        private System.Windows.Forms.TableLayoutPanel TabsHeader;
+        private System.Windows.Forms.Button EnumButton;
+        private System.Windows.Forms.Button ListButton;
+        private System.Windows.Forms.Panel TabsPanel;
+        private System.Windows.Forms.RichTextBox sortEnumTextBoxRight;
+        private System.Windows.Forms.RichTextBox sortTextBoxRight;
     }
 }

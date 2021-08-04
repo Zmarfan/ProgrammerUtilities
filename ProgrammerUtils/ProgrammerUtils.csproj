@@ -62,6 +62,7 @@
     <Compile Include="CustomControls\BorderPanel.Designer.cs">
       <DependentUpon>BorderPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Scripts\ImprovedTabs.cs" />
     <Compile Include="UserControls\CompareControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

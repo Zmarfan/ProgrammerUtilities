@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProgrammerUtils.Scripts;
 
 namespace ProgrammerUtils
 {
@@ -19,6 +20,7 @@ namespace ProgrammerUtils
         readonly static Color COPY_CLICKED_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 70);
 
         Sort _sorter;
+        ImprovedTabs _tabs;
 
         public SortControl()
         {
@@ -37,6 +39,12 @@ namespace ProgrammerUtils
             SortCopyNotice.Text = string.Empty;
             SetChangeTextStyleButton();
             SetChangeTextPresentationButton();
+
+            _tabs = new ImprovedTabs(new List<ImprovedTabs.TabPair>()
+            {
+                new ImprovedTabs.TabPair(ListButton, sortTextBoxRight),
+                new ImprovedTabs.TabPair(EnumButton, sortEnumTextBoxRight),
+            }, BackColor, NORMAL_ACTIVE_BUTTON_COLOR);
         }
 
         #region Sort
@@ -197,9 +205,6 @@ namespace ProgrammerUtils
             SortCopyNotice.Text = string.Empty;
             copyTimer.Stop();
         }
-        #endregion
-
-        #endregion
 
         private void SortExportDropdown_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -209,5 +214,14 @@ namespace ProgrammerUtils
             e.Graphics.DrawString(SortExportDropdown.Items[index].ToString(), e.Font, brush, e.Bounds, StringFormat.GenericDefault);
             e.DrawFocusRectangle();
         }
+
+        private void TabButton_Clicked(object sender, EventArgs e)
+        {
+            _tabs.TabClicked((Button)sender);
+        }
+
+        #endregion
+
+        #endregion
     }
 }
