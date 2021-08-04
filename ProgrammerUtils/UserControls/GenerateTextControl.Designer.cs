@@ -63,7 +63,7 @@ namespace ProgrammerUtils
             this.generateTableLayout.ColumnCount = 3;
             this.generateTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.generateTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.generateTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
+            this.generateTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.generateTableLayout.Controls.Add(this.generateCopyLabel, 0, 0);
             this.generateTableLayout.Controls.Add(this.tableLayoutPanel3, 0, 1);
             this.generateTableLayout.Controls.Add(this.generateSettingsTableLayout, 0, 0);
@@ -73,9 +73,9 @@ namespace ProgrammerUtils
             this.generateTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.generateTableLayout.Name = "generateTableLayout";
             this.generateTableLayout.RowCount = 2;
-            this.generateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.generateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 46F));
             this.generateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.generateTableLayout.Size = new System.Drawing.Size(1031, 480);
+            this.generateTableLayout.Size = new System.Drawing.Size(773, 390);
             this.generateTableLayout.TabIndex = 1;
             // 
             // generateCopyLabel
@@ -84,10 +84,10 @@ namespace ProgrammerUtils
             this.generateCopyLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.generateCopyLabel.Font = new System.Drawing.Font("Arial", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generateCopyLabel.ForeColor = System.Drawing.Color.Green;
-            this.generateCopyLabel.Location = new System.Drawing.Point(966, 0);
+            this.generateCopyLabel.Location = new System.Drawing.Point(724, 0);
             this.generateCopyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.generateCopyLabel.Name = "generateCopyLabel";
-            this.generateCopyLabel.Size = new System.Drawing.Size(63, 57);
+            this.generateCopyLabel.Size = new System.Drawing.Size(47, 46);
             this.generateCopyLabel.TabIndex = 10;
             this.generateCopyLabel.Text = "Copied!";
             this.generateCopyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -99,15 +99,15 @@ namespace ProgrammerUtils
             this.tableLayoutPanel3.Controls.Add(this.generateClearButton, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.generateCopyButton, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(964, 57);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(722, 46);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 4;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 66F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(67, 423);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(51, 344);
             this.tableLayoutPanel3.TabIndex = 9;
             // 
             // generateClearButton
@@ -118,10 +118,10 @@ namespace ProgrammerUtils
             this.generateClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.generateClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.generateClearButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generateClearButton.Location = new System.Drawing.Point(2, 69);
-            this.generateClearButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.generateClearButton.Location = new System.Drawing.Point(2, 56);
+            this.generateClearButton.Margin = new System.Windows.Forms.Padding(2);
             this.generateClearButton.Name = "generateClearButton";
-            this.generateClearButton.Size = new System.Drawing.Size(63, 60);
+            this.generateClearButton.Size = new System.Drawing.Size(47, 50);
             this.generateClearButton.TabIndex = 18;
             this.generateClearButton.Text = "Clear";
             this.generateClearButton.UseVisualStyleBackColor = false;
@@ -136,11 +136,11 @@ namespace ProgrammerUtils
             this.generateCopyButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.generateCopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.generateCopyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generateCopyButton.Location = new System.Drawing.Point(2, 3);
-            this.generateCopyButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.generateCopyButton.Location = new System.Drawing.Point(2, 2);
+            this.generateCopyButton.Margin = new System.Windows.Forms.Padding(2);
             this.generateCopyButton.Name = "generateCopyButton";
-            this.generateCopyButton.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
-            this.generateCopyButton.Size = new System.Drawing.Size(63, 60);
+            this.generateCopyButton.Padding = new System.Windows.Forms.Padding(33, 0, 0, 0);
+            this.generateCopyButton.Size = new System.Drawing.Size(47, 50);
             this.generateCopyButton.TabIndex = 17;
             this.generateCopyButton.UseVisualStyleBackColor = false;
             this.generateCopyButton.Click += new System.EventHandler(this.GenerateCopyButton_Click);
@@ -149,7 +149,7 @@ namespace ProgrammerUtils
             // 
             this.generateSettingsTableLayout.ColumnCount = 6;
             this.generateTableLayout.SetColumnSpan(this.generateSettingsTableLayout, 2);
-            this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
+            this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.generateSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
@@ -171,7 +171,7 @@ namespace ProgrammerUtils
             this.generateSettingsTableLayout.RowCount = 2;
             this.generateSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.generateSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.generateSettingsTableLayout.Size = new System.Drawing.Size(964, 57);
+            this.generateSettingsTableLayout.Size = new System.Drawing.Size(722, 46);
             this.generateSettingsTableLayout.TabIndex = 7;
             // 
             // generateSeed
@@ -183,8 +183,8 @@ namespace ProgrammerUtils
             0,
             0,
             0});
-            this.generateSeed.Location = new System.Drawing.Point(540, 31);
-            this.generateSeed.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.generateSeed.Location = new System.Drawing.Point(408, 25);
+            this.generateSeed.Margin = new System.Windows.Forms.Padding(2);
             this.generateSeed.Maximum = new decimal(new int[] {
             2147483647,
             0,
@@ -196,17 +196,17 @@ namespace ProgrammerUtils
             0,
             -2147483648});
             this.generateSeed.Name = "generateSeed";
-            this.generateSeed.Size = new System.Drawing.Size(145, 22);
+            this.generateSeed.Size = new System.Drawing.Size(109, 20);
             this.generateSeed.TabIndex = 5;
             // 
             // generateAmountOfWordsLabel
             // 
             this.generateAmountOfWordsLabel.AutoSize = true;
             this.generateAmountOfWordsLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateAmountOfWordsLabel.Location = new System.Drawing.Point(177, 0);
+            this.generateAmountOfWordsLabel.Location = new System.Drawing.Point(133, 0);
             this.generateAmountOfWordsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.generateAmountOfWordsLabel.Name = "generateAmountOfWordsLabel";
-            this.generateAmountOfWordsLabel.Size = new System.Drawing.Size(116, 28);
+            this.generateAmountOfWordsLabel.Size = new System.Drawing.Size(87, 23);
             this.generateAmountOfWordsLabel.TabIndex = 4;
             this.generateAmountOfWordsLabel.Text = "Amount of words";
             this.generateAmountOfWordsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -218,11 +218,11 @@ namespace ProgrammerUtils
             this.generateGenerateButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.generateGenerateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.generateGenerateButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.generateGenerateButton.Location = new System.Drawing.Point(2, 3);
-            this.generateGenerateButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.generateGenerateButton.Location = new System.Drawing.Point(2, 2);
+            this.generateGenerateButton.Margin = new System.Windows.Forms.Padding(2);
             this.generateGenerateButton.Name = "generateGenerateButton";
             this.generateSettingsTableLayout.SetRowSpan(this.generateGenerateButton, 2);
-            this.generateGenerateButton.Size = new System.Drawing.Size(171, 51);
+            this.generateGenerateButton.Size = new System.Drawing.Size(127, 42);
             this.generateGenerateButton.TabIndex = 0;
             this.generateGenerateButton.Text = "Generate Text";
             this.generateGenerateButton.UseVisualStyleBackColor = false;
@@ -237,10 +237,10 @@ namespace ProgrammerUtils
             "Blank row",
             "Indent",
             "No paragraphs"});
-            this.generateParagraphType.Location = new System.Drawing.Point(297, 31);
-            this.generateParagraphType.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.generateParagraphType.Location = new System.Drawing.Point(224, 25);
+            this.generateParagraphType.Margin = new System.Windows.Forms.Padding(2);
             this.generateParagraphType.Name = "generateParagraphType";
-            this.generateParagraphType.Size = new System.Drawing.Size(107, 24);
+            this.generateParagraphType.Size = new System.Drawing.Size(81, 21);
             this.generateParagraphType.TabIndex = 1;
             this.generateParagraphType.SelectedIndexChanged += new System.EventHandler(this.GenerateParagraphType_SelectedIndexChanged);
             // 
@@ -248,10 +248,10 @@ namespace ProgrammerUtils
             // 
             this.generateParagraphTypeLabel.AutoSize = true;
             this.generateParagraphTypeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateParagraphTypeLabel.Location = new System.Drawing.Point(297, 0);
+            this.generateParagraphTypeLabel.Location = new System.Drawing.Point(224, 0);
             this.generateParagraphTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.generateParagraphTypeLabel.Name = "generateParagraphTypeLabel";
-            this.generateParagraphTypeLabel.Size = new System.Drawing.Size(107, 28);
+            this.generateParagraphTypeLabel.Size = new System.Drawing.Size(81, 23);
             this.generateParagraphTypeLabel.TabIndex = 2;
             this.generateParagraphTypeLabel.Text = "Paragraph type";
             this.generateParagraphTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,8 +264,8 @@ namespace ProgrammerUtils
             0,
             0,
             0});
-            this.generateNumberOfWords.Location = new System.Drawing.Point(177, 31);
-            this.generateNumberOfWords.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.generateNumberOfWords.Location = new System.Drawing.Point(133, 25);
+            this.generateNumberOfWords.Margin = new System.Windows.Forms.Padding(2);
             this.generateNumberOfWords.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -277,7 +277,7 @@ namespace ProgrammerUtils
             0,
             0});
             this.generateNumberOfWords.Name = "generateNumberOfWords";
-            this.generateNumberOfWords.Size = new System.Drawing.Size(116, 22);
+            this.generateNumberOfWords.Size = new System.Drawing.Size(87, 20);
             this.generateNumberOfWords.TabIndex = 3;
             this.generateNumberOfWords.Value = new decimal(new int[] {
             50,
@@ -293,12 +293,12 @@ namespace ProgrammerUtils
             this.generateSeedTableLayout.Controls.Add(this.generateSeedLabel, 0, 0);
             this.generateSeedTableLayout.Controls.Add(this.generateCustomSeed, 1, 0);
             this.generateSeedTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateSeedTableLayout.Location = new System.Drawing.Point(538, 0);
+            this.generateSeedTableLayout.Location = new System.Drawing.Point(406, 0);
             this.generateSeedTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.generateSeedTableLayout.Name = "generateSeedTableLayout";
             this.generateSeedTableLayout.RowCount = 1;
             this.generateSeedTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.generateSeedTableLayout.Size = new System.Drawing.Size(149, 28);
+            this.generateSeedTableLayout.Size = new System.Drawing.Size(113, 23);
             this.generateSeedTableLayout.TabIndex = 7;
             // 
             // generateSeedLabel
@@ -309,7 +309,7 @@ namespace ProgrammerUtils
             this.generateSeedLabel.Location = new System.Drawing.Point(2, 0);
             this.generateSeedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.generateSeedLabel.Name = "generateSeedLabel";
-            this.generateSeedLabel.Size = new System.Drawing.Size(41, 28);
+            this.generateSeedLabel.Size = new System.Drawing.Size(32, 23);
             this.generateSeedLabel.TabIndex = 7;
             this.generateSeedLabel.Text = "Seed";
             this.generateSeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -319,10 +319,10 @@ namespace ProgrammerUtils
             this.generateCustomSeed.AutoSize = true;
             this.generateCustomSeed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.generateCustomSeed.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateCustomSeed.Location = new System.Drawing.Point(47, 3);
-            this.generateCustomSeed.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.generateCustomSeed.Location = new System.Drawing.Point(38, 2);
+            this.generateCustomSeed.Margin = new System.Windows.Forms.Padding(2);
             this.generateCustomSeed.Name = "generateCustomSeed";
-            this.generateCustomSeed.Size = new System.Drawing.Size(100, 22);
+            this.generateCustomSeed.Size = new System.Drawing.Size(73, 19);
             this.generateCustomSeed.TabIndex = 8;
             this.generateCustomSeed.Text = "Custom Seed";
             this.generateCustomSeed.UseVisualStyleBackColor = true;
@@ -332,12 +332,12 @@ namespace ProgrammerUtils
             // 
             this.generateParagraphSizeSlider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.generateParagraphSizeSlider.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateParagraphSizeSlider.Location = new System.Drawing.Point(406, 28);
+            this.generateParagraphSizeSlider.Location = new System.Drawing.Point(307, 23);
             this.generateParagraphSizeSlider.Margin = new System.Windows.Forms.Padding(0);
             this.generateParagraphSizeSlider.Maximum = 200;
             this.generateParagraphSizeSlider.Name = "generateParagraphSizeSlider";
             this.generateParagraphSizeSlider.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.generateParagraphSizeSlider.Size = new System.Drawing.Size(132, 29);
+            this.generateParagraphSizeSlider.Size = new System.Drawing.Size(99, 23);
             this.generateParagraphSizeSlider.TabIndex = 8;
             this.generateParagraphSizeSlider.TickFrequency = 75;
             this.generateParagraphSizeSlider.Value = 75;
@@ -347,10 +347,10 @@ namespace ProgrammerUtils
             // 
             this.generateParagraphSizeLabel.AutoSize = true;
             this.generateParagraphSizeLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateParagraphSizeLabel.Location = new System.Drawing.Point(408, 0);
+            this.generateParagraphSizeLabel.Location = new System.Drawing.Point(309, 0);
             this.generateParagraphSizeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.generateParagraphSizeLabel.Name = "generateParagraphSizeLabel";
-            this.generateParagraphSizeLabel.Size = new System.Drawing.Size(128, 28);
+            this.generateParagraphSizeLabel.Size = new System.Drawing.Size(95, 23);
             this.generateParagraphSizeLabel.TabIndex = 9;
             this.generateParagraphSizeLabel.Text = "Paragraph sizes";
             this.generateParagraphSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -359,11 +359,11 @@ namespace ProgrammerUtils
             // 
             this.generateTableLayout.SetColumnSpan(this.generateOutputTextbox, 2);
             this.generateOutputTextbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.generateOutputTextbox.Location = new System.Drawing.Point(2, 60);
-            this.generateOutputTextbox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.generateOutputTextbox.Location = new System.Drawing.Point(2, 48);
+            this.generateOutputTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.generateOutputTextbox.Name = "generateOutputTextbox";
             this.generateOutputTextbox.ReadOnly = true;
-            this.generateOutputTextbox.Size = new System.Drawing.Size(960, 417);
+            this.generateOutputTextbox.Size = new System.Drawing.Size(718, 340);
             this.generateOutputTextbox.TabIndex = 8;
             this.generateOutputTextbox.Text = "";
             // 
@@ -374,12 +374,12 @@ namespace ProgrammerUtils
             // 
             // GenerateTextControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.generateTableLayout);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "GenerateTextControl";
-            this.Size = new System.Drawing.Size(1031, 480);
+            this.Size = new System.Drawing.Size(773, 390);
             this.generateTableLayout.ResumeLayout(false);
             this.generateTableLayout.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);

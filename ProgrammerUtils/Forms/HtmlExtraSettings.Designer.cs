@@ -173,7 +173,7 @@
             this.SavingInfoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(153)))), ((int)(((byte)(118)))));
             this.SavingInfoLabel.Location = new System.Drawing.Point(7, 205);
             this.SavingInfoLabel.Name = "SavingInfoLabel";
-            this.SavingInfoLabel.Size = new System.Drawing.Size(100, 15);
+            this.SavingInfoLabel.Size = new System.Drawing.Size(100, 13);
             this.SavingInfoLabel.TabIndex = 3;
             this.SavingInfoLabel.Text = "Saving info Text";
             this.SavingInfoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,7 +185,7 @@
             // 
             // HtmlExtraSettings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 356);
             this.Controls.Add(this.mainTableLayout);
