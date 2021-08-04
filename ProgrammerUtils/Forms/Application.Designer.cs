@@ -53,7 +53,7 @@
             this.MainTableLayout.RowCount = 1;
             this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 544F));
-            this.MainTableLayout.Size = new System.Drawing.Size(950, 544);
+            this.MainTableLayout.Size = new System.Drawing.Size(1005, 544);
             this.MainTableLayout.TabIndex = 0;
             // 
             // PlayAreaPanel
@@ -64,7 +64,7 @@
             this.PlayAreaPanel.Margin = new System.Windows.Forms.Padding(0);
             this.PlayAreaPanel.Name = "PlayAreaPanel";
             this.PlayAreaPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.PlayAreaPanel.Size = new System.Drawing.Size(700, 544);
+            this.PlayAreaPanel.Size = new System.Drawing.Size(755, 544);
             this.PlayAreaPanel.TabIndex = 2;
             // 
             // CopyTimer
@@ -96,14 +96,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(950, 544);
+            this.ClientSize = new System.Drawing.Size(1005, 544);
             this.Controls.Add(this.MainTableLayout);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.MinimumSize = new System.Drawing.Size(783, 528);
+            this.MinimumSize = new System.Drawing.Size(1023, 588);
             this.Name = "Application";
             this.Text = "ProgrammingUtils";
             this.MainTableLayout.ResumeLayout(false);

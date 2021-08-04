@@ -12,8 +12,8 @@ namespace ProgrammerUtils
 {
     public partial class HTMLControl : UserControl
     {
-        readonly static Color COPY_BUTTON_COLOR = Color.LightGoldenrodYellow;
-        readonly static Color COPY_CLICKED_BUTTON_COLOR = Color.LimeGreen;
+        readonly static Color COPY_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 118);
+        readonly static Color COPY_CLICKED_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 70);
 
         private HtmlCenter _html;
         private HtmlExtraSettings _htmlExtraSettingsWindow;
