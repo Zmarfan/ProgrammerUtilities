@@ -4,11 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace ProgrammerUtils
 {
     public class Counter
     {
+        public struct RichTextBoxCharacter
+        {
+            public char Character { get; set; }
+            public FontStyle FontStyle { get; set; }
+            public Color Color { get; set; }
+            public RichTextBoxCharacter(char character, FontStyle fontStyle, Color color)
+            {
+                Character = character;
+                FontStyle = fontStyle;
+                Color = color;
+            }
+        }
+
         public enum SortMode
         {
             ALPHABETICAL,
@@ -27,7 +41,12 @@ namespace ProgrammerUtils
         private readonly CountDetail _sentencesCountDetail;
         private readonly CountDetail _paragraphsCountDetail;
 
+        private readonly Font _standardFont;
+        private readonly Color _defaultTextColor;
+        private readonly Color _importantTextColor = Color.FromArgb(255, 152, 196, 58);
+
         public Counter(
+            Color foreColor,
             RichTextBox wordFrequencyTextbox,
             RichTextBox wordDensityTextbox,
             RichTextBox uniqueWordsFlowLayoutTextbox,
@@ -40,6 +59,8 @@ namespace ProgrammerUtils
             CountDetail paragraphsCountDetail
             )
         {
+            _defaultTextColor = foreColor;
+
             _wordFrequencyTextbox = wordFrequencyTextbox;
             _wordDensityTextbox = wordDensityTextbox;
             _uniqueWordsTextbox = uniqueWordsFlowLayoutTextbox;
@@ -50,6 +71,8 @@ namespace ProgrammerUtils
             _charactersCountDetail = charactersCountDetail;
             _sentencesCountDetail = sentencesCountDetail;
             _paragraphsCountDetail = paragraphsCountDetail;
+
+            _standardFont = _wordFrequencyTextbox.Font;
         }
 
         public void Execute(SortMode sortMode, bool caseSensitive)
@@ -122,34 +145,33 @@ namespace ProgrammerUtils
 
         private void WriteToFrequencyTextbox(int totalAmountOfWords, List<KeyValuePair<string, int>> sortedWords)
         {
-            StringBuilder builder = new StringBuilder();
+            List<RichTextBoxCharacter> builder = new List<RichTextBoxCharacter>();
 
             for (int i = 0; i < sortedWords.Count; i++)
             {
-                builder.Append(sortedWords[i].Key);
-                builder.Append(" - ");
-                builder.Append((sortedWords[i].Value / (float)totalAmountOfWords * 100).ToString("0.00"));
-                builder.Append("%");
+                builder.AddRange(CreateRichText(sortedWords[i].Key, _importantTextColor, FontStyle.Bold));
+                builder.AddRange(CreateRichText(": ", _defaultTextColor, FontStyle.Regular));
+                builder.AddRange(CreateRichText((sortedWords[i].Value / (float)totalAmountOfWords * 100).ToString("0.00"), _defaultTextColor, FontStyle.Regular));
+                builder.AddRange(CreateRichText("%", _defaultTextColor, FontStyle.Regular));
                 if (i != sortedWords.Count - 1)
-                    builder.Append("\n");
+                    builder.AddRange(CreateRichText("\n", _defaultTextColor, FontStyle.Regular));
             }
-            _wordFrequencyTextbox.Text = builder.ToString();
+            SetRichTextBoxText(builder, _wordFrequencyTextbox);
         }
 
         private void WriteToDensityTextbox(List<KeyValuePair<string, int>> sortedWords)
         {
-            StringBuilder builder = new StringBuilder();
+            List<RichTextBoxCharacter> builder = new List<RichTextBoxCharacter>();
 
             for (int i = 0; i < sortedWords.Count; i++)
             {
-                builder.Append(sortedWords[i].Key);
-                builder.Append(" - ");
-                builder.Append("#");
-                builder.Append(sortedWords[i].Value);
+                builder.AddRange(CreateRichText(sortedWords[i].Key, _importantTextColor, FontStyle.Bold));
+                builder.AddRange(CreateRichText(": ", _defaultTextColor, FontStyle.Regular));
+                builder.AddRange(CreateRichText(sortedWords[i].Value.ToString(), _defaultTextColor, FontStyle.Regular));
                 if (i != sortedWords.Count - 1)
-                    builder.Append("\n");
+                    builder.AddRange(CreateRichText("\n", _defaultTextColor, FontStyle.Regular));
             }
-            _wordDensityTextbox.Text = builder.ToString();
+            SetRichTextBoxText(builder, _wordDensityTextbox);
         }
 
         private void WriteToUniqueTextbox(List<KeyValuePair<string, int>> sortedWords, SortMode sortMode)
@@ -158,15 +180,40 @@ namespace ProgrammerUtils
             if (sortMode != SortMode.ALPHABETICAL)
                 uniqueWords.Sort((entry1, entry2) => entry1.Key.CompareTo(entry2.Key));
 
-            StringBuilder builder = new StringBuilder();
+            List<RichTextBoxCharacter> builder = new List<RichTextBoxCharacter>();
 
             for (int i = 0; i < uniqueWords.Count; i++)
             {
-                builder.Append(uniqueWords[i].Key);
+                builder.AddRange(CreateRichText(uniqueWords[i].Key, _importantTextColor, FontStyle.Bold));
                 if (i != uniqueWords.Count - 1)
-                    builder.Append("\n");
+                    builder.AddRange(CreateRichText("\n", _defaultTextColor, FontStyle.Regular));
             }
-            _uniqueWordsTextbox.Text = builder.ToString();
+
+            SetRichTextBoxText(builder, _uniqueWordsTextbox);
+        }
+
+        private List<RichTextBoxCharacter> CreateRichText(string text, Color color, FontStyle fontStyle = FontStyle.Regular)
+        {
+            return text.Select(character => new RichTextBoxCharacter(character, fontStyle, color)).ToList();
+        }
+
+        private void SetRichTextBoxText(List<RichTextBoxCharacter> list, RichTextBox textBox)
+        {
+            textBox.Text = new string(list.Select(character => character.Character).ToArray());
+
+            for (int i = 0; i < textBox.Text.Length; i++)
+            {
+                textBox.SelectionStart = i;
+                textBox.SelectionLength = 1;
+
+                textBox.SelectionFont = AppendFontStyle(_standardFont, list[i].FontStyle);
+                textBox.SelectionColor = list[i].Color;
+            }
+        }
+
+        private Font AppendFontStyle(Font oldFont, FontStyle fontStyle)
+        {
+            return new Font(oldFont, oldFont.Style | fontStyle);
         }
     }
 }

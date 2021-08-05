@@ -37,6 +37,9 @@ namespace ProgrammerUtils
             this.DensityButton = new System.Windows.Forms.Button();
             this.FrequencyButton = new System.Windows.Forms.Button();
             this.TabsPanel = new System.Windows.Forms.Panel();
+            this.uniqueTextbox = new System.Windows.Forms.RichTextBox();
+            this.densityTextbox = new System.Windows.Forms.RichTextBox();
+            this.frequencyTextBox = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.countClearButton = new System.Windows.Forms.Button();
             this.countButton = new System.Windows.Forms.Button();
@@ -58,9 +61,6 @@ namespace ProgrammerUtils
             this.countDetailCharacters = new ProgrammerUtils.CountDetail();
             this.countDetailSentences = new ProgrammerUtils.CountDetail();
             this.countDetailParagraphs = new ProgrammerUtils.CountDetail();
-            this.frequencyTextBox = new System.Windows.Forms.RichTextBox();
-            this.densityTextbox = new System.Windows.Forms.RichTextBox();
-            this.uniqueTextbox = new System.Windows.Forms.RichTextBox();
             this.countTableLayout.SuspendLayout();
             this.TabsBorderPanel.SuspendLayout();
             this.ImprovedTabsTableLayout.SuspendLayout();
@@ -80,7 +80,7 @@ namespace ProgrammerUtils
             this.countTableLayout.ColumnCount = 3;
             this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
-            this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 250F));
+            this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.countTableLayout.Controls.Add(this.TabsBorderPanel, 2, 1);
             this.countTableLayout.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.countTableLayout.Controls.Add(this.countInputTableLayout, 0, 1);
@@ -101,12 +101,12 @@ namespace ProgrammerUtils
             this.TabsBorderPanel.BorderWidth = 2;
             this.TabsBorderPanel.Controls.Add(this.ImprovedTabsTableLayout);
             this.TabsBorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabsBorderPanel.Location = new System.Drawing.Point(462, 50);
+            this.TabsBorderPanel.Location = new System.Drawing.Point(562, 50);
             this.TabsBorderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.TabsBorderPanel.Name = "TabsBorderPanel";
             this.TabsBorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.TabsBorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.TabsBorderPanel.Size = new System.Drawing.Size(242, 358);
+            this.TabsBorderPanel.Size = new System.Drawing.Size(142, 358);
             this.TabsBorderPanel.TabIndex = 14;
             // 
             // ImprovedTabsTableLayout
@@ -120,42 +120,45 @@ namespace ProgrammerUtils
             this.ImprovedTabsTableLayout.Margin = new System.Windows.Forms.Padding(2);
             this.ImprovedTabsTableLayout.Name = "ImprovedTabsTableLayout";
             this.ImprovedTabsTableLayout.RowCount = 2;
-            this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ImprovedTabsTableLayout.Size = new System.Drawing.Size(234, 350);
+            this.ImprovedTabsTableLayout.Size = new System.Drawing.Size(134, 350);
             this.ImprovedTabsTableLayout.TabIndex = 1;
             // 
             // TabsHeader
             // 
-            this.TabsHeader.ColumnCount = 4;
+            this.TabsHeader.ColumnCount = 3;
             this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
             this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
             this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TabsHeader.Controls.Add(this.UniqueButton, 2, 0);
+            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TabsHeader.Controls.Add(this.UniqueButton, 0, 1);
             this.TabsHeader.Controls.Add(this.DensityButton, 1, 0);
             this.TabsHeader.Controls.Add(this.FrequencyButton, 0, 0);
             this.TabsHeader.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabsHeader.Location = new System.Drawing.Point(2, 2);
             this.TabsHeader.Margin = new System.Windows.Forms.Padding(2);
             this.TabsHeader.Name = "TabsHeader";
-            this.TabsHeader.RowCount = 1;
-            this.TabsHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TabsHeader.Size = new System.Drawing.Size(230, 24);
+            this.TabsHeader.RowCount = 2;
+            this.TabsHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.TabsHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.TabsHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TabsHeader.Size = new System.Drawing.Size(130, 52);
             this.TabsHeader.TabIndex = 0;
             // 
             // UniqueButton
             // 
             this.UniqueButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
+            this.TabsHeader.SetColumnSpan(this.UniqueButton, 2);
             this.UniqueButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.UniqueButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UniqueButton.FlatAppearance.BorderSize = 0;
             this.UniqueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UniqueButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.UniqueButton.Location = new System.Drawing.Point(134, 2);
+            this.UniqueButton.Location = new System.Drawing.Point(2, 30);
             this.UniqueButton.Margin = new System.Windows.Forms.Padding(2);
             this.UniqueButton.Name = "UniqueButton";
-            this.UniqueButton.Size = new System.Drawing.Size(92, 20);
+            this.UniqueButton.Size = new System.Drawing.Size(128, 24);
             this.UniqueButton.TabIndex = 2;
             this.UniqueButton.Text = "Unique Words";
             this.UniqueButton.UseVisualStyleBackColor = false;
@@ -172,7 +175,7 @@ namespace ProgrammerUtils
             this.DensityButton.Location = new System.Drawing.Point(78, 2);
             this.DensityButton.Margin = new System.Windows.Forms.Padding(2);
             this.DensityButton.Name = "DensityButton";
-            this.DensityButton.Size = new System.Drawing.Size(52, 20);
+            this.DensityButton.Size = new System.Drawing.Size(52, 24);
             this.DensityButton.TabIndex = 1;
             this.DensityButton.Text = "Density";
             this.DensityButton.UseVisualStyleBackColor = false;
@@ -189,7 +192,7 @@ namespace ProgrammerUtils
             this.FrequencyButton.Location = new System.Drawing.Point(2, 2);
             this.FrequencyButton.Margin = new System.Windows.Forms.Padding(2);
             this.FrequencyButton.Name = "FrequencyButton";
-            this.FrequencyButton.Size = new System.Drawing.Size(72, 20);
+            this.FrequencyButton.Size = new System.Drawing.Size(72, 24);
             this.FrequencyButton.TabIndex = 0;
             this.FrequencyButton.Text = "Frequency";
             this.FrequencyButton.UseVisualStyleBackColor = false;
@@ -201,11 +204,56 @@ namespace ProgrammerUtils
             this.TabsPanel.Controls.Add(this.densityTextbox);
             this.TabsPanel.Controls.Add(this.frequencyTextBox);
             this.TabsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabsPanel.Location = new System.Drawing.Point(0, 28);
+            this.TabsPanel.Location = new System.Drawing.Point(0, 56);
             this.TabsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.TabsPanel.Name = "TabsPanel";
-            this.TabsPanel.Size = new System.Drawing.Size(234, 322);
+            this.TabsPanel.Size = new System.Drawing.Size(134, 294);
             this.TabsPanel.TabIndex = 1;
+            // 
+            // uniqueTextbox
+            // 
+            this.uniqueTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
+            this.uniqueTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.uniqueTextbox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.uniqueTextbox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uniqueTextbox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.uniqueTextbox.Location = new System.Drawing.Point(108, 0);
+            this.uniqueTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.uniqueTextbox.Name = "uniqueTextbox";
+            this.uniqueTextbox.ReadOnly = true;
+            this.uniqueTextbox.Size = new System.Drawing.Size(54, 294);
+            this.uniqueTextbox.TabIndex = 8;
+            this.uniqueTextbox.Text = "";
+            // 
+            // densityTextbox
+            // 
+            this.densityTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
+            this.densityTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.densityTextbox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.densityTextbox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.densityTextbox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.densityTextbox.Location = new System.Drawing.Point(54, 0);
+            this.densityTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.densityTextbox.Name = "densityTextbox";
+            this.densityTextbox.ReadOnly = true;
+            this.densityTextbox.Size = new System.Drawing.Size(54, 294);
+            this.densityTextbox.TabIndex = 7;
+            this.densityTextbox.Text = "";
+            // 
+            // frequencyTextBox
+            // 
+            this.frequencyTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
+            this.frequencyTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.frequencyTextBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.frequencyTextBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frequencyTextBox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.frequencyTextBox.Location = new System.Drawing.Point(0, 0);
+            this.frequencyTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.frequencyTextBox.Name = "frequencyTextBox";
+            this.frequencyTextBox.ReadOnly = true;
+            this.frequencyTextBox.Size = new System.Drawing.Size(54, 294);
+            this.frequencyTextBox.TabIndex = 6;
+            this.frequencyTextBox.Text = "";
             // 
             // tableLayoutPanel5
             // 
@@ -331,7 +379,7 @@ namespace ProgrammerUtils
             this.countInputTableLayout.RowCount = 2;
             this.countInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.countInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.countInputTableLayout.Size = new System.Drawing.Size(262, 366);
+            this.countInputTableLayout.Size = new System.Drawing.Size(362, 366);
             this.countInputTableLayout.TabIndex = 3;
             // 
             // label1BorderPanel
@@ -345,7 +393,7 @@ namespace ProgrammerUtils
             this.label1BorderPanel.Name = "label1BorderPanel";
             this.label1BorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.label1BorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.label1BorderPanel.Size = new System.Drawing.Size(254, 44);
+            this.label1BorderPanel.Size = new System.Drawing.Size(354, 44);
             this.label1BorderPanel.TabIndex = 11;
             // 
             // countLabel1
@@ -357,7 +405,7 @@ namespace ProgrammerUtils
             this.countLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.countLabel1.Name = "countLabel1";
             this.countLabel1.Padding = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.countLabel1.Size = new System.Drawing.Size(246, 36);
+            this.countLabel1.Size = new System.Drawing.Size(346, 36);
             this.countLabel1.TabIndex = 4;
             this.countLabel1.Text = "Text that should be analyzed.";
             this.countLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -373,7 +421,7 @@ namespace ProgrammerUtils
             this.inputBorderPanel.Name = "inputBorderPanel";
             this.inputBorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.inputBorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.inputBorderPanel.Size = new System.Drawing.Size(254, 306);
+            this.inputBorderPanel.Size = new System.Drawing.Size(354, 306);
             this.inputBorderPanel.TabIndex = 12;
             // 
             // countInputTextbox
@@ -386,7 +434,7 @@ namespace ProgrammerUtils
             this.countInputTextbox.Location = new System.Drawing.Point(4, 4);
             this.countInputTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.countInputTextbox.Name = "countInputTextbox";
-            this.countInputTextbox.Size = new System.Drawing.Size(246, 298);
+            this.countInputTextbox.Size = new System.Drawing.Size(346, 298);
             this.countInputTextbox.TabIndex = 5;
             this.countInputTextbox.Text = "";
             // 
@@ -397,7 +445,7 @@ namespace ProgrammerUtils
             this.countInfoTableLayout.Controls.Add(this.borderPanel1, 0, 1);
             this.countInfoTableLayout.Controls.Add(this.countInfoFlowLayoutPanel, 0, 0);
             this.countInfoTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.countInfoTableLayout.Location = new System.Drawing.Point(262, 46);
+            this.countInfoTableLayout.Location = new System.Drawing.Point(362, 46);
             this.countInfoTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.countInfoTableLayout.Name = "countInfoTableLayout";
             this.countInfoTableLayout.RowCount = 2;
@@ -531,51 +579,6 @@ namespace ProgrammerUtils
             this.countDetailParagraphs.TabIndex = 3;
             this.countDetailParagraphs.ValueText = "0";
             // 
-            // frequencyTextBox
-            // 
-            this.frequencyTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
-            this.frequencyTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.frequencyTextBox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.frequencyTextBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.frequencyTextBox.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.frequencyTextBox.Location = new System.Drawing.Point(0, 0);
-            this.frequencyTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.frequencyTextBox.Name = "frequencyTextBox";
-            this.frequencyTextBox.ReadOnly = true;
-            this.frequencyTextBox.Size = new System.Drawing.Size(54, 322);
-            this.frequencyTextBox.TabIndex = 6;
-            this.frequencyTextBox.Text = "";
-            // 
-            // densityTextbox
-            // 
-            this.densityTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
-            this.densityTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.densityTextbox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.densityTextbox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.densityTextbox.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.densityTextbox.Location = new System.Drawing.Point(54, 0);
-            this.densityTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this.densityTextbox.Name = "densityTextbox";
-            this.densityTextbox.ReadOnly = true;
-            this.densityTextbox.Size = new System.Drawing.Size(54, 322);
-            this.densityTextbox.TabIndex = 7;
-            this.densityTextbox.Text = "";
-            // 
-            // uniqueTextbox
-            // 
-            this.uniqueTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
-            this.uniqueTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.uniqueTextbox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.uniqueTextbox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.uniqueTextbox.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.uniqueTextbox.Location = new System.Drawing.Point(108, 0);
-            this.uniqueTextbox.Margin = new System.Windows.Forms.Padding(2);
-            this.uniqueTextbox.Name = "uniqueTextbox";
-            this.uniqueTextbox.ReadOnly = true;
-            this.uniqueTextbox.Size = new System.Drawing.Size(54, 322);
-            this.uniqueTextbox.TabIndex = 8;
-            this.uniqueTextbox.Text = "";
-            // 
             // CountControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -630,12 +633,12 @@ namespace ProgrammerUtils
         private BorderPanel TabsBorderPanel;
         private System.Windows.Forms.TableLayoutPanel ImprovedTabsTableLayout;
         private System.Windows.Forms.TableLayoutPanel TabsHeader;
-        private System.Windows.Forms.Button UniqueButton;
         private System.Windows.Forms.Button DensityButton;
         private System.Windows.Forms.Button FrequencyButton;
         private System.Windows.Forms.Panel TabsPanel;
         private System.Windows.Forms.RichTextBox uniqueTextbox;
         private System.Windows.Forms.RichTextBox densityTextbox;
         private System.Windows.Forms.RichTextBox frequencyTextBox;
+        private System.Windows.Forms.Button UniqueButton;
     }
 }

@@ -29,6 +29,7 @@ namespace ProgrammerUtils
             countSortModes.SelectedIndex = 0;
 
             _counter = new Counter(
+                ForeColor,
                 frequencyTextBox,
                 densityTextbox,
                 uniqueTextbox,
