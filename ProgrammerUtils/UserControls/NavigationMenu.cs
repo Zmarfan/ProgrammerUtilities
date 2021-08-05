@@ -148,5 +148,10 @@ namespace ProgrammerUtils
         {
             OnNavigationButtonClicked?.Invoke();
         }
+
+        private void CopyrightLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("mailto:filippeterssoncontact@gmail.com");
+        }
     }
 }

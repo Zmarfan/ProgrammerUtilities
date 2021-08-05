@@ -30,22 +30,22 @@ namespace ProgrammerUtils
         private void InitializeComponent()
         {
             this.NavigationTopTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.NavigationPicture = new System.Windows.Forms.Panel();
+            this.NavigationTopTopTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.smallPicture = new System.Windows.Forms.Panel();
+            this.NavigationTopButton = new System.Windows.Forms.Button();
             this.NavigationBreak = new System.Windows.Forms.Panel();
             this.NavigationTableLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.copyrightLabel = new System.Windows.Forms.Label();
-            this.NavigationTopTopTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.navigationHelpButton = new ProgrammerUtils.NavigationButton();
             this.navigationGenerateTextButton = new ProgrammerUtils.NavigationButton();
             this.navigationHTMLButton = new ProgrammerUtils.NavigationButton();
             this.navigationCountButton = new ProgrammerUtils.NavigationButton();
             this.navigationCompareButton = new ProgrammerUtils.NavigationButton();
             this.navigationSortButton = new ProgrammerUtils.NavigationButton();
-            this.NavigationPicture = new System.Windows.Forms.Panel();
-            this.smallPicture = new System.Windows.Forms.Panel();
-            this.NavigationTopButton = new System.Windows.Forms.Button();
+            this.copyrightLabel = new System.Windows.Forms.LinkLabel();
             this.NavigationTopTableLayout.SuspendLayout();
-            this.NavigationTableLayout.SuspendLayout();
             this.NavigationTopTopTableLayout.SuspendLayout();
+            this.NavigationTableLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // NavigationTopTableLayout
@@ -65,6 +65,68 @@ namespace ProgrammerUtils
             this.NavigationTopTableLayout.Size = new System.Drawing.Size(190, 81);
             this.NavigationTopTableLayout.TabIndex = 8;
             // 
+            // NavigationPicture
+            // 
+            this.NavigationPicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.NavigationPicture.BackgroundImage = global::ProgrammerUtils.Properties.Resources.logo;
+            this.NavigationPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.NavigationPicture.Location = new System.Drawing.Point(2, 2);
+            this.NavigationPicture.Margin = new System.Windows.Forms.Padding(2);
+            this.NavigationPicture.Name = "NavigationPicture";
+            this.NavigationPicture.Size = new System.Drawing.Size(146, 76);
+            this.NavigationPicture.TabIndex = 3;
+            // 
+            // NavigationTopTopTableLayout
+            // 
+            this.NavigationTopTopTableLayout.ColumnCount = 1;
+            this.NavigationTopTopTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.NavigationTopTopTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.NavigationTopTopTableLayout.Controls.Add(this.smallPicture, 0, 1);
+            this.NavigationTopTopTableLayout.Controls.Add(this.NavigationTopButton, 0, 0);
+            this.NavigationTopTopTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NavigationTopTopTableLayout.Location = new System.Drawing.Point(155, 3);
+            this.NavigationTopTopTableLayout.Name = "NavigationTopTopTableLayout";
+            this.NavigationTopTopTableLayout.RowCount = 2;
+            this.NavigationTopTopTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.NavigationTopTopTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.NavigationTopTopTableLayout.Size = new System.Drawing.Size(32, 75);
+            this.NavigationTopTopTableLayout.TabIndex = 4;
+            // 
+            // smallPicture
+            // 
+            this.smallPicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
+            this.smallPicture.BackgroundImage = global::ProgrammerUtils.Properties.Resources.newIcon;
+            this.smallPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.smallPicture.Location = new System.Drawing.Point(7, 44);
+            this.smallPicture.Margin = new System.Windows.Forms.Padding(7);
+            this.smallPicture.Name = "smallPicture";
+            this.smallPicture.Size = new System.Drawing.Size(18, 24);
+            this.smallPicture.TabIndex = 6;
+            // 
+            // NavigationTopButton
+            // 
+            this.NavigationTopButton.BackColor = System.Drawing.Color.Transparent;
+            this.NavigationTopButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.MenuButton1;
+            this.NavigationTopButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.NavigationTopButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NavigationTopButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NavigationTopButton.FlatAppearance.BorderSize = 0;
+            this.NavigationTopButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.NavigationTopButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.NavigationTopButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NavigationTopButton.ForeColor = System.Drawing.Color.Transparent;
+            this.NavigationTopButton.Location = new System.Drawing.Point(0, 10);
+            this.NavigationTopButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.NavigationTopButton.Name = "NavigationTopButton";
+            this.NavigationTopButton.Size = new System.Drawing.Size(32, 22);
+            this.NavigationTopButton.TabIndex = 5;
+            this.NavigationTopButton.UseVisualStyleBackColor = false;
+            this.NavigationTopButton.Click += new System.EventHandler(this.NavigationTopButton_Click);
+            this.NavigationTopButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NavigationTopButton_MouseDown);
+            this.NavigationTopButton.MouseEnter += new System.EventHandler(this.NavigationTopButton_MouseEnter);
+            this.NavigationTopButton.MouseLeave += new System.EventHandler(this.NavigationTopButton_MouseLeave);
+            this.NavigationTopButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.NavigationTopButton_MouseUp);
+            // 
             // NavigationBreak
             // 
             this.NavigationBreak.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
@@ -80,6 +142,7 @@ namespace ProgrammerUtils
             this.NavigationTableLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.NavigationTableLayout.ColumnCount = 1;
             this.NavigationTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.NavigationTableLayout.Controls.Add(this.copyrightLabel, 0, 9);
             this.NavigationTableLayout.Controls.Add(this.navigationHelpButton, 0, 7);
             this.NavigationTableLayout.Controls.Add(this.navigationGenerateTextButton, 0, 5);
             this.NavigationTableLayout.Controls.Add(this.navigationHTMLButton, 0, 4);
@@ -88,7 +151,6 @@ namespace ProgrammerUtils
             this.NavigationTableLayout.Controls.Add(this.navigationSortButton, 0, 1);
             this.NavigationTableLayout.Controls.Add(this.NavigationBreak, 0, 6);
             this.NavigationTableLayout.Controls.Add(this.NavigationTopTableLayout, 0, 0);
-            this.NavigationTableLayout.Controls.Add(this.copyrightLabel, 0, 9);
             this.NavigationTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NavigationTableLayout.Location = new System.Drawing.Point(0, 0);
             this.NavigationTableLayout.Margin = new System.Windows.Forms.Padding(0);
@@ -106,36 +168,6 @@ namespace ProgrammerUtils
             this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.NavigationTableLayout.Size = new System.Drawing.Size(190, 465);
             this.NavigationTableLayout.TabIndex = 3;
-            // 
-            // copyrightLabel
-            // 
-            this.copyrightLabel.AutoSize = true;
-            this.copyrightLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.copyrightLabel.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.copyrightLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.copyrightLabel.Location = new System.Drawing.Point(3, 424);
-            this.copyrightLabel.Name = "copyrightLabel";
-            this.copyrightLabel.Padding = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.copyrightLabel.Size = new System.Drawing.Size(184, 41);
-            this.copyrightLabel.TabIndex = 9;
-            this.copyrightLabel.Text = "filippeterssoncontact@gmail.com\r\n© 2021 Copyright: Filip Petersson";
-            this.copyrightLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            // 
-            // NavigationTopTopTableLayout
-            // 
-            this.NavigationTopTopTableLayout.ColumnCount = 1;
-            this.NavigationTopTopTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.NavigationTopTopTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.NavigationTopTopTableLayout.Controls.Add(this.smallPicture, 0, 1);
-            this.NavigationTopTopTableLayout.Controls.Add(this.NavigationTopButton, 0, 0);
-            this.NavigationTopTopTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NavigationTopTopTableLayout.Location = new System.Drawing.Point(155, 3);
-            this.NavigationTopTopTableLayout.Name = "NavigationTopTopTableLayout";
-            this.NavigationTopTopTableLayout.RowCount = 2;
-            this.NavigationTopTopTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.NavigationTopTopTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.NavigationTopTopTableLayout.Size = new System.Drawing.Size(32, 75);
-            this.NavigationTopTopTableLayout.TabIndex = 4;
             // 
             // navigationHelpButton
             // 
@@ -239,51 +271,24 @@ namespace ProgrammerUtils
             this.navigationSortButton.TabIndex = 1;
             this.navigationSortButton.OnButtonClicked += new ProgrammerUtils.NavigationButton.NavigationButtonClickedDelegate(this.NavigationSortButton_OnButtonClicked);
             // 
-            // NavigationPicture
+            // copyrightLabel
             // 
-            this.NavigationPicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.NavigationPicture.BackgroundImage = global::ProgrammerUtils.Properties.Resources.logo;
-            this.NavigationPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.NavigationPicture.Location = new System.Drawing.Point(2, 2);
-            this.NavigationPicture.Margin = new System.Windows.Forms.Padding(2);
-            this.NavigationPicture.Name = "NavigationPicture";
-            this.NavigationPicture.Size = new System.Drawing.Size(146, 76);
-            this.NavigationPicture.TabIndex = 3;
-            // 
-            // smallPicture
-            // 
-            this.smallPicture.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
-            this.smallPicture.BackgroundImage = global::ProgrammerUtils.Properties.Resources.newIcon;
-            this.smallPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.smallPicture.Location = new System.Drawing.Point(7, 44);
-            this.smallPicture.Margin = new System.Windows.Forms.Padding(7);
-            this.smallPicture.Name = "smallPicture";
-            this.smallPicture.Size = new System.Drawing.Size(18, 24);
-            this.smallPicture.TabIndex = 6;
-            // 
-            // NavigationTopButton
-            // 
-            this.NavigationTopButton.BackColor = System.Drawing.Color.Transparent;
-            this.NavigationTopButton.BackgroundImage = global::ProgrammerUtils.Properties.Resources.MenuButton1;
-            this.NavigationTopButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.NavigationTopButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NavigationTopButton.Dock = System.Windows.Forms.DockStyle.Top;
-            this.NavigationTopButton.FlatAppearance.BorderSize = 0;
-            this.NavigationTopButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.NavigationTopButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.NavigationTopButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NavigationTopButton.ForeColor = System.Drawing.Color.Transparent;
-            this.NavigationTopButton.Location = new System.Drawing.Point(0, 10);
-            this.NavigationTopButton.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.NavigationTopButton.Name = "NavigationTopButton";
-            this.NavigationTopButton.Size = new System.Drawing.Size(32, 22);
-            this.NavigationTopButton.TabIndex = 5;
-            this.NavigationTopButton.UseVisualStyleBackColor = false;
-            this.NavigationTopButton.Click += new System.EventHandler(this.NavigationTopButton_Click);
-            this.NavigationTopButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.NavigationTopButton_MouseDown);
-            this.NavigationTopButton.MouseEnter += new System.EventHandler(this.NavigationTopButton_MouseEnter);
-            this.NavigationTopButton.MouseLeave += new System.EventHandler(this.NavigationTopButton_MouseLeave);
-            this.NavigationTopButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.NavigationTopButton_MouseUp);
+            this.copyrightLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
+            this.copyrightLabel.AutoSize = true;
+            this.copyrightLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.copyrightLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.copyrightLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.copyrightLabel.LinkArea = new System.Windows.Forms.LinkArea(0, 31);
+            this.copyrightLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
+            this.copyrightLabel.Location = new System.Drawing.Point(3, 424);
+            this.copyrightLabel.Name = "copyrightLabel";
+            this.copyrightLabel.Size = new System.Drawing.Size(184, 41);
+            this.copyrightLabel.TabIndex = 9;
+            this.copyrightLabel.TabStop = true;
+            this.copyrightLabel.Text = "filippeterssoncontact@gmail.com\r\n© 2021 Copyright: Filip Petersson";
+            this.copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.copyrightLabel.UseCompatibleTextRendering = true;
+            this.copyrightLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CopyrightLabel_LinkClicked);
             // 
             // NavigationMenu
             // 
@@ -295,9 +300,9 @@ namespace ProgrammerUtils
             this.Name = "NavigationMenu";
             this.Size = new System.Drawing.Size(190, 465);
             this.NavigationTopTableLayout.ResumeLayout(false);
+            this.NavigationTopTopTableLayout.ResumeLayout(false);
             this.NavigationTableLayout.ResumeLayout(false);
             this.NavigationTableLayout.PerformLayout();
-            this.NavigationTopTopTableLayout.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -314,9 +319,9 @@ namespace ProgrammerUtils
         private NavigationButton navigationGenerateTextButton;
         private NavigationButton navigationHelpButton;
         private System.Windows.Forms.TableLayoutPanel NavigationTableLayout;
-        private System.Windows.Forms.Label copyrightLabel;
         private System.Windows.Forms.TableLayoutPanel NavigationTopTopTableLayout;
         private System.Windows.Forms.Panel smallPicture;
         private System.Windows.Forms.Button NavigationTopButton;
+        private System.Windows.Forms.LinkLabel copyrightLabel;
     }
 }
