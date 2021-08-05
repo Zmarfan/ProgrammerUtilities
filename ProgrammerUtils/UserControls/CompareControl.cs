@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProgrammerUtils.Scripts;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,11 @@ namespace ProgrammerUtils
 {
     public partial class CompareControl : UserControl
     {
-        readonly static Color NORMAL_ACTIVE_BUTTON_COLOR = Color.LightSteelBlue;
-        readonly static Color NORMAL_NOT_ACTIVE_BUTTON_COLOR = Color.Gray;
+        readonly static Color NORMAL_ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 43, 84, 134);
+        readonly static Color NORMAL_NOT_ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 73, 87, 103);
 
         Matcher _matcher;
+        ImprovedTabs _tabs;
 
         public CompareControl()
         {
@@ -27,15 +29,24 @@ namespace ProgrammerUtils
         {
             MatchCombinedShowModeDropdown.SelectedIndex = 0;
 
-            _matcher = new Matcher(MatchLeftText1,
+            _matcher = new Matcher(
+                MatchLeftText1,
                 MatchLeftText2,
                 matchRightText1,
                 matchRightText2,
                 matchResultCombinedTextBox,
                 matchRightText1Label,
                 matchRightText2Label,
-                matchResultTabCombinedLabel
+                matchResultCombinedLabel,
+                matchResultCombinedTextBox.ForeColor,
+                matchResultCombinedTextBox.BackColor
                 );
+
+            _tabs = new ImprovedTabs(new List<ImprovedTabs.TabPair>()
+            {
+                new ImprovedTabs.TabPair(SeparateButton, SeparateTableLayout),
+                new ImprovedTabs.TabPair(CombinedButton, combinedTableLayout),
+            }, BackColor, NORMAL_ACTIVE_BUTTON_COLOR);
 
             SetButtonStatus(matchMatchButton, !matchAutoCompare.Checked);
             DoMatch();
@@ -51,7 +62,8 @@ namespace ProgrammerUtils
 
         private void DoMatch()
         {
-            _matcher.DoMatch(matchCaseSensitive.Checked, MatchRemoveExtraWhiteSpace.Checked, GetCombinedDisplayMode());
+            _matcher.DoMatch(!matchCaseSensitive.Checked, MatchRemoveExtraWhiteSpace.Checked, GetCombinedDisplayMode());
+            Invalidate();
         }
 
         private Matcher.CombinedDisplayMode GetCombinedDisplayMode()
@@ -107,6 +119,21 @@ namespace ProgrammerUtils
         }
 
         #endregion
+
         #endregion
+
+        private void MatchCombinedShowModeDropdown_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            int index = e.Index >= 0 ? e.Index : 0;
+            var brush = new SolidBrush(MatchCombinedShowModeDropdown.ForeColor);
+            e.DrawBackground();
+            e.Graphics.DrawString(MatchCombinedShowModeDropdown.Items[index].ToString(), e.Font, brush, e.Bounds, StringFormat.GenericDefault);
+            e.DrawFocusRectangle();
+        }
+
+        private void TabButton_Clicked(object sender, EventArgs e)
+        {
+            _tabs.TabClicked((Button)sender);
+        }
     }
 }

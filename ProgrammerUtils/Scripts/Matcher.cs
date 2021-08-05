@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,6 +66,15 @@ namespace ProgrammerUtils
             }
         }
 
+        private static readonly Color TEXT_NOT_MATCH_FONT_COLOR = Color.FromArgb(255, 255, 178, 178);
+        private static readonly Color TEXT_MATCH_FONT_COLOR = Color.FromArgb(255, 91, 186, 159);
+        private static readonly Color TEXT_NOTHING_TO_MATCH_FONT_COLOR = Color.FromArgb(255, 147, 179, 216);
+
+        private static readonly Color COMPARE_TEXT_ONE_COLOR = Color.FromArgb(255, 154, 18, 18);
+        private static readonly Color COMPARE_TEXT_TWO_COLOR = Color.FromArgb(255, 0, 119, 84);
+        private static readonly Color SEPARATE_DIFFERENCE_FORECOLOR = Color.Red;
+        private static readonly Color SEPARATE_DIFFERENCE_BACKCOLOR = Color.Yellow;
+
         private static readonly string ADDED_NEW_LINE = "->\n";
         private static readonly string REMOVED_NEW_LINE = "<-\n";
 
@@ -77,6 +87,9 @@ namespace ProgrammerUtils
         private readonly Label _finalLabel2;
         private readonly Label _finalLabel3;
 
+        private readonly Color _foreColor;
+        private readonly Color _backColor;
+
         public Matcher(
             RichTextBox introTextBox1,
             RichTextBox introTextBox2,
@@ -85,7 +98,9 @@ namespace ProgrammerUtils
             RichTextBox finalTextBox3,
             Label finalLabel1,
             Label finalLabel2,
-            Label finalLabel3
+            Label finalLabel3,
+            Color textForeColor,
+            Color textBackColor
             )
         {
             _introTextBox1 = introTextBox1;
@@ -96,6 +111,9 @@ namespace ProgrammerUtils
             _finalLabel1 = finalLabel1;
             _finalLabel2 = finalLabel2;
             _finalLabel3 = finalLabel3;
+
+            _foreColor = textForeColor;
+            _backColor = textBackColor;
         }
 
         public void DoMatch(bool caseSensitive, bool removeExtraWhiteSpaces, CombinedDisplayMode displayMode)
@@ -152,7 +170,7 @@ namespace ProgrammerUtils
         {
             textBox.Text = string.Empty;
 
-            label.ForeColor = System.Drawing.Color.Blue;
+            label.ForeColor = TEXT_NOTHING_TO_MATCH_FONT_COLOR;
             label.Text = "There is currently no text to compare with...";
         }
 
@@ -160,13 +178,13 @@ namespace ProgrammerUtils
         {
             textBox.Text = string.Empty;
 
-            label.ForeColor = System.Drawing.Color.Green;
+            label.ForeColor = TEXT_MATCH_FONT_COLOR;
             label.Text = "The texts match!";
         }
 
         private void TextsDoNotMatch(Label label)
         {
-            label.ForeColor = System.Drawing.Color.Red;
+            label.ForeColor = TEXT_NOT_MATCH_FONT_COLOR;
             label.Text = "The texts do not match!";
         }
 
@@ -293,13 +311,13 @@ namespace ProgrammerUtils
                 switch (finalText[i].Type)
                 {
                     case CharacterType.COMBINED:
-                        SetTextAreaColors(finalTextBox, System.Drawing.Color.FromArgb(255, 10, 13, 20), System.Drawing.Color.Transparent);
+                        SetTextAreaColors(finalTextBox, _foreColor, _backColor);
                         break;
                     case CharacterType.TEXT1:
-                        SetTextAreaColors(finalTextBox, System.Drawing.Color.FromArgb(255, 10, 13, 20), System.Drawing.Color.Pink);
+                        SetTextAreaColors(finalTextBox, _foreColor, COMPARE_TEXT_ONE_COLOR);
                         break;
                     case CharacterType.TEXT2:
-                        SetTextAreaColors(finalTextBox, System.Drawing.Color.FromArgb(255, 10, 13, 20), System.Drawing.Color.PaleGreen);
+                        SetTextAreaColors(finalTextBox, _foreColor, COMPARE_TEXT_TWO_COLOR);
                         break;
                     default:
                         throw new Exception($"No implementation for type: {finalText[i].Type}");
@@ -363,9 +381,9 @@ namespace ProgrammerUtils
                 finalTextBox.SelectionLength = 1;
 
                 if (!lcsHashSet.Contains(i))
-                    SetTextAreaColors(finalTextBox, System.Drawing.Color.Red, System.Drawing.Color.Yellow);
+                    SetTextAreaColors(finalTextBox, SEPARATE_DIFFERENCE_FORECOLOR, SEPARATE_DIFFERENCE_BACKCOLOR);
                 else
-                    SetTextAreaColors(finalTextBox, System.Drawing.Color.FromArgb(255, 10, 13, 20), System.Drawing.Color.Transparent);
+                    SetTextAreaColors(finalTextBox, _foreColor, _backColor);
             }
         }
 

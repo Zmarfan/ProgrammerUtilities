@@ -165,6 +165,7 @@ namespace ProgrammerUtils
             this.EnumButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EnumButton.FlatAppearance.BorderSize = 0;
             this.EnumButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EnumButton.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EnumButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.EnumButton.Location = new System.Drawing.Point(58, 2);
             this.EnumButton.Margin = new System.Windows.Forms.Padding(2);
@@ -182,6 +183,7 @@ namespace ProgrammerUtils
             this.ListButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListButton.FlatAppearance.BorderSize = 0;
             this.ListButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ListButton.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.ListButton.Location = new System.Drawing.Point(2, 2);
             this.ListButton.Margin = new System.Windows.Forms.Padding(2);

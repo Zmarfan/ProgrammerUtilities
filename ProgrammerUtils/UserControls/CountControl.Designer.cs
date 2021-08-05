@@ -80,7 +80,7 @@ namespace ProgrammerUtils
             this.countTableLayout.ColumnCount = 3;
             this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
-            this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
+            this.countTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
             this.countTableLayout.Controls.Add(this.TabsBorderPanel, 2, 1);
             this.countTableLayout.Controls.Add(this.tableLayoutPanel5, 0, 0);
             this.countTableLayout.Controls.Add(this.countInputTableLayout, 0, 1);
@@ -101,12 +101,12 @@ namespace ProgrammerUtils
             this.TabsBorderPanel.BorderWidth = 2;
             this.TabsBorderPanel.Controls.Add(this.ImprovedTabsTableLayout);
             this.TabsBorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabsBorderPanel.Location = new System.Drawing.Point(562, 50);
+            this.TabsBorderPanel.Location = new System.Drawing.Point(537, 50);
             this.TabsBorderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.TabsBorderPanel.Name = "TabsBorderPanel";
             this.TabsBorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.TabsBorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.TabsBorderPanel.Size = new System.Drawing.Size(142, 358);
+            this.TabsBorderPanel.Size = new System.Drawing.Size(167, 358);
             this.TabsBorderPanel.TabIndex = 14;
             // 
             // ImprovedTabsTableLayout
@@ -122,15 +122,14 @@ namespace ProgrammerUtils
             this.ImprovedTabsTableLayout.RowCount = 2;
             this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
             this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ImprovedTabsTableLayout.Size = new System.Drawing.Size(134, 350);
+            this.ImprovedTabsTableLayout.Size = new System.Drawing.Size(159, 350);
             this.ImprovedTabsTableLayout.TabIndex = 1;
             // 
             // TabsHeader
             // 
-            this.TabsHeader.ColumnCount = 3;
-            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 76F));
-            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TabsHeader.ColumnCount = 2;
+            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.TabsHeader.Controls.Add(this.UniqueButton, 0, 1);
             this.TabsHeader.Controls.Add(this.DensityButton, 1, 0);
@@ -142,8 +141,7 @@ namespace ProgrammerUtils
             this.TabsHeader.RowCount = 2;
             this.TabsHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
             this.TabsHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.TabsHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TabsHeader.Size = new System.Drawing.Size(130, 52);
+            this.TabsHeader.Size = new System.Drawing.Size(155, 52);
             this.TabsHeader.TabIndex = 0;
             // 
             // UniqueButton
@@ -154,11 +152,12 @@ namespace ProgrammerUtils
             this.UniqueButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.UniqueButton.FlatAppearance.BorderSize = 0;
             this.UniqueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UniqueButton.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UniqueButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.UniqueButton.Location = new System.Drawing.Point(2, 30);
             this.UniqueButton.Margin = new System.Windows.Forms.Padding(2);
             this.UniqueButton.Name = "UniqueButton";
-            this.UniqueButton.Size = new System.Drawing.Size(128, 24);
+            this.UniqueButton.Size = new System.Drawing.Size(151, 24);
             this.UniqueButton.TabIndex = 2;
             this.UniqueButton.Text = "Unique Words";
             this.UniqueButton.UseVisualStyleBackColor = false;
@@ -171,11 +170,12 @@ namespace ProgrammerUtils
             this.DensityButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DensityButton.FlatAppearance.BorderSize = 0;
             this.DensityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DensityButton.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DensityButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.DensityButton.Location = new System.Drawing.Point(78, 2);
             this.DensityButton.Margin = new System.Windows.Forms.Padding(2);
             this.DensityButton.Name = "DensityButton";
-            this.DensityButton.Size = new System.Drawing.Size(52, 24);
+            this.DensityButton.Size = new System.Drawing.Size(75, 24);
             this.DensityButton.TabIndex = 1;
             this.DensityButton.Text = "Density";
             this.DensityButton.UseVisualStyleBackColor = false;
@@ -188,6 +188,7 @@ namespace ProgrammerUtils
             this.FrequencyButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FrequencyButton.FlatAppearance.BorderSize = 0;
             this.FrequencyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FrequencyButton.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FrequencyButton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.FrequencyButton.Location = new System.Drawing.Point(2, 2);
             this.FrequencyButton.Margin = new System.Windows.Forms.Padding(2);
@@ -207,7 +208,7 @@ namespace ProgrammerUtils
             this.TabsPanel.Location = new System.Drawing.Point(0, 56);
             this.TabsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.TabsPanel.Name = "TabsPanel";
-            this.TabsPanel.Size = new System.Drawing.Size(134, 294);
+            this.TabsPanel.Size = new System.Drawing.Size(159, 294);
             this.TabsPanel.TabIndex = 1;
             // 
             // uniqueTextbox
@@ -379,7 +380,7 @@ namespace ProgrammerUtils
             this.countInputTableLayout.RowCount = 2;
             this.countInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.countInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.countInputTableLayout.Size = new System.Drawing.Size(362, 366);
+            this.countInputTableLayout.Size = new System.Drawing.Size(337, 366);
             this.countInputTableLayout.TabIndex = 3;
             // 
             // label1BorderPanel
@@ -393,7 +394,7 @@ namespace ProgrammerUtils
             this.label1BorderPanel.Name = "label1BorderPanel";
             this.label1BorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.label1BorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.label1BorderPanel.Size = new System.Drawing.Size(354, 44);
+            this.label1BorderPanel.Size = new System.Drawing.Size(329, 44);
             this.label1BorderPanel.TabIndex = 11;
             // 
             // countLabel1
@@ -405,7 +406,7 @@ namespace ProgrammerUtils
             this.countLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.countLabel1.Name = "countLabel1";
             this.countLabel1.Padding = new System.Windows.Forms.Padding(7, 8, 7, 8);
-            this.countLabel1.Size = new System.Drawing.Size(346, 36);
+            this.countLabel1.Size = new System.Drawing.Size(321, 36);
             this.countLabel1.TabIndex = 4;
             this.countLabel1.Text = "Text that should be analyzed.";
             this.countLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -421,7 +422,7 @@ namespace ProgrammerUtils
             this.inputBorderPanel.Name = "inputBorderPanel";
             this.inputBorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.inputBorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.inputBorderPanel.Size = new System.Drawing.Size(354, 306);
+            this.inputBorderPanel.Size = new System.Drawing.Size(329, 306);
             this.inputBorderPanel.TabIndex = 12;
             // 
             // countInputTextbox
@@ -434,7 +435,7 @@ namespace ProgrammerUtils
             this.countInputTextbox.Location = new System.Drawing.Point(4, 4);
             this.countInputTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.countInputTextbox.Name = "countInputTextbox";
-            this.countInputTextbox.Size = new System.Drawing.Size(346, 298);
+            this.countInputTextbox.Size = new System.Drawing.Size(321, 298);
             this.countInputTextbox.TabIndex = 5;
             this.countInputTextbox.Text = "";
             // 
@@ -445,7 +446,7 @@ namespace ProgrammerUtils
             this.countInfoTableLayout.Controls.Add(this.borderPanel1, 0, 1);
             this.countInfoTableLayout.Controls.Add(this.countInfoFlowLayoutPanel, 0, 0);
             this.countInfoTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.countInfoTableLayout.Location = new System.Drawing.Point(362, 46);
+            this.countInfoTableLayout.Location = new System.Drawing.Point(337, 46);
             this.countInfoTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.countInfoTableLayout.Name = "countInfoTableLayout";
             this.countInfoTableLayout.RowCount = 2;
