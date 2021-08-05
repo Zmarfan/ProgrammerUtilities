@@ -27,6 +27,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_51224A2188804CDA8CA040502F70314F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_C5C351B2C25C4877BE0F2B06549B8CCD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -163,6 +169,26 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_51224A2188804CDA8CA040502F70314F"
+            {
+            "SourcePath" = "8:src\\FullLogo.jpg"
+            "TargetName" = "8:FullLogo.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_CD4020C953314046A498A9BEAF83B4C4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F76C2F427B4F471AB39557C305432922"
             {
             "SourcePath" = "8:src\\NewIcon.ico"
@@ -240,7 +266,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ProgrammerUtilities"
         "ProductCode" = "8:{A180BC6E-3C64-4F45-A5B7-1555D23F0EAB}"
-        "PackageCode" = "8:{8E0ED04C-A48F-4FE2-AEAB-644C91DC3462}"
+        "PackageCode" = "8:{E9A662E8-E774-4519-8781-614FF41E44CE}"
         "UpgradeCode" = "8:{AC0CF763-869E-4357-AF8D-5765853F0D26}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -252,12 +278,12 @@
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:ProgrammerUtilitiesInstaller"
-        "Subject" = "8:"
+        "Subject" = "8:Utility tool for programmers."
         "ARPCONTACT" = "8:Filip Petersson"
         "Keywords" = "8:PRUT"
         "ARPCOMMENTS" = "8:Programming Utilities is an open source, freeware utility tool aimed towards software developers developed by Filip Petersson. This tool allows software developers to speed up their work process by performing tasks not strictly programming related in one place."
         "ARPURLINFOABOUT" = "8:https://zmarfan.github.io./index.html"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_F76C2F427B4F471AB39557C305432922"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -528,7 +554,7 @@
                 {
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_B53A843AADA74468968D89AC95224A0C"
                     {
-                    "Sequence" = "3:100"
+                    "Sequence" = "3:110"
                     "DisplayName" = "8:Welcome"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
@@ -568,8 +594,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1203"
+                            "Setting" = "3:2"
+                            "Value" = "8:Programming Utilities is an open source, freeware utility tool aimed towards software developers developed by Filip Petersson. This tool allows software developers to speed up their work process by performing tasks not strictly programming related in one place. The installer will guide you through the steps required to install [ProductName] on your computer."
                             "DefaultValue" = "8:#1203"
                             "UsePlugInResources" = "11:TRUE"
                             }
@@ -638,7 +664,7 @@
                 {
                     "{688940B3-5CA9-4162-8DEE-2993FA9D8CBC}:_716F85C53F5A4EC49582D2628F245C21"
                     {
-                    "Sequence" = "3:100"
+                    "Sequence" = "3:110"
                     "DisplayName" = "8:Welcome"
                     "UseDynamicProperties" = "11:TRUE"
                     "IsDependency" = "11:FALSE"
@@ -678,8 +704,8 @@
                             "Type" = "3:3"
                             "ContextData" = "8:"
                             "Attributes" = "3:0"
-                            "Setting" = "3:1"
-                            "Value" = "8:#1203"
+                            "Setting" = "3:2"
+                            "Value" = "8:Programming Utilities is an open source, freeware utility tool aimed towards software developers developed by Filip Petersson. This tool allows software developers to speed up their work process by performing tasks not strictly programming related in one place. The installer will guide you through the steps required to install [ProductName] on your computer."
                             "DefaultValue" = "8:#1203"
                             "UsePlugInResources" = "11:TRUE"
                             }
