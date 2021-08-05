@@ -29,9 +29,9 @@ namespace ProgrammerUtils
             countSortModes.SelectedIndex = 0;
 
             _counter = new Counter(
-                frequencyLayout,
-                densityLayout,
-                uniqueLayout,
+                frequencyTextBox,
+                densityTextbox,
+                uniqueTextbox,
                 countInputTextbox,
                 countDetailWords,
                 countDetailUniqueWords,
@@ -43,9 +43,9 @@ namespace ProgrammerUtils
 
             _tabs = new ImprovedTabs(new List<ImprovedTabs.TabPair>()
             {
-                new ImprovedTabs.TabPair(FrequencyButton, frequencyLayout),
-                new ImprovedTabs.TabPair(DensityButton, densityLayout),
-                new ImprovedTabs.TabPair(UniqueButton, uniqueLayout)
+                new ImprovedTabs.TabPair(FrequencyButton, frequencyTextBox),
+                new ImprovedTabs.TabPair(DensityButton, densityTextbox),
+                new ImprovedTabs.TabPair(UniqueButton, uniqueTextbox)
             }, BackColor, NORMAL_ACTIVE_BUTTON_COLOR);
         }
 

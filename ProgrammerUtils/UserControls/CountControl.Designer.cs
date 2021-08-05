@@ -58,9 +58,9 @@ namespace ProgrammerUtils
             this.countDetailCharacters = new ProgrammerUtils.CountDetail();
             this.countDetailSentences = new ProgrammerUtils.CountDetail();
             this.countDetailParagraphs = new ProgrammerUtils.CountDetail();
-            this.frequencyLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.densityLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.uniqueLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.frequencyTextBox = new System.Windows.Forms.RichTextBox();
+            this.densityTextbox = new System.Windows.Forms.RichTextBox();
+            this.uniqueTextbox = new System.Windows.Forms.RichTextBox();
             this.countTableLayout.SuspendLayout();
             this.TabsBorderPanel.SuspendLayout();
             this.ImprovedTabsTableLayout.SuspendLayout();
@@ -197,9 +197,9 @@ namespace ProgrammerUtils
             // 
             // TabsPanel
             // 
-            this.TabsPanel.Controls.Add(this.uniqueLayout);
-            this.TabsPanel.Controls.Add(this.densityLayout);
-            this.TabsPanel.Controls.Add(this.frequencyLayout);
+            this.TabsPanel.Controls.Add(this.uniqueTextbox);
+            this.TabsPanel.Controls.Add(this.densityTextbox);
+            this.TabsPanel.Controls.Add(this.frequencyTextBox);
             this.TabsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TabsPanel.Location = new System.Drawing.Point(0, 28);
             this.TabsPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -531,41 +531,50 @@ namespace ProgrammerUtils
             this.countDetailParagraphs.TabIndex = 3;
             this.countDetailParagraphs.ValueText = "0";
             // 
-            // frequencyLayout
+            // frequencyTextBox
             // 
-            this.frequencyLayout.AutoScroll = true;
-            this.frequencyLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
-            this.frequencyLayout.Dock = System.Windows.Forms.DockStyle.Left;
-            this.frequencyLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.frequencyLayout.Location = new System.Drawing.Point(0, 0);
-            this.frequencyLayout.Name = "frequencyLayout";
-            this.frequencyLayout.Size = new System.Drawing.Size(102, 322);
-            this.frequencyLayout.TabIndex = 0;
-            this.frequencyLayout.WrapContents = false;
+            this.frequencyTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
+            this.frequencyTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.frequencyTextBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.frequencyTextBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.frequencyTextBox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.frequencyTextBox.Location = new System.Drawing.Point(0, 0);
+            this.frequencyTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.frequencyTextBox.Name = "frequencyTextBox";
+            this.frequencyTextBox.ReadOnly = true;
+            this.frequencyTextBox.Size = new System.Drawing.Size(54, 322);
+            this.frequencyTextBox.TabIndex = 6;
+            this.frequencyTextBox.Text = "";
             // 
-            // densityLayout
+            // densityTextbox
             // 
-            this.densityLayout.AutoScroll = true;
-            this.densityLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
-            this.densityLayout.Dock = System.Windows.Forms.DockStyle.Left;
-            this.densityLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.densityLayout.Location = new System.Drawing.Point(102, 0);
-            this.densityLayout.Name = "densityLayout";
-            this.densityLayout.Size = new System.Drawing.Size(57, 322);
-            this.densityLayout.TabIndex = 1;
-            this.densityLayout.WrapContents = false;
+            this.densityTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
+            this.densityTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.densityTextbox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.densityTextbox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.densityTextbox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.densityTextbox.Location = new System.Drawing.Point(54, 0);
+            this.densityTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.densityTextbox.Name = "densityTextbox";
+            this.densityTextbox.ReadOnly = true;
+            this.densityTextbox.Size = new System.Drawing.Size(54, 322);
+            this.densityTextbox.TabIndex = 7;
+            this.densityTextbox.Text = "";
             // 
-            // uniqueLayout
+            // uniqueTextbox
             // 
-            this.uniqueLayout.AutoScroll = true;
-            this.uniqueLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
-            this.uniqueLayout.Dock = System.Windows.Forms.DockStyle.Left;
-            this.uniqueLayout.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.uniqueLayout.Location = new System.Drawing.Point(159, 0);
-            this.uniqueLayout.Name = "uniqueLayout";
-            this.uniqueLayout.Size = new System.Drawing.Size(57, 322);
-            this.uniqueLayout.TabIndex = 2;
-            this.uniqueLayout.WrapContents = false;
+            this.uniqueTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
+            this.uniqueTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.uniqueTextbox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.uniqueTextbox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uniqueTextbox.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.uniqueTextbox.Location = new System.Drawing.Point(108, 0);
+            this.uniqueTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.uniqueTextbox.Name = "uniqueTextbox";
+            this.uniqueTextbox.ReadOnly = true;
+            this.uniqueTextbox.Size = new System.Drawing.Size(54, 322);
+            this.uniqueTextbox.TabIndex = 8;
+            this.uniqueTextbox.Text = "";
             // 
             // CountControl
             // 
@@ -625,8 +634,8 @@ namespace ProgrammerUtils
         private System.Windows.Forms.Button DensityButton;
         private System.Windows.Forms.Button FrequencyButton;
         private System.Windows.Forms.Panel TabsPanel;
-        private System.Windows.Forms.FlowLayoutPanel uniqueLayout;
-        private System.Windows.Forms.FlowLayoutPanel densityLayout;
-        private System.Windows.Forms.FlowLayoutPanel frequencyLayout;
+        private System.Windows.Forms.RichTextBox uniqueTextbox;
+        private System.Windows.Forms.RichTextBox densityTextbox;
+        private System.Windows.Forms.RichTextBox frequencyTextBox;
     }
 }

@@ -15,9 +15,9 @@ namespace ProgrammerUtils
             AMOUNT
         }
 
-        private readonly FlowLayoutPanel _wordFrequencyParent;
-        private readonly FlowLayoutPanel _wordDensityParent;
-        private readonly FlowLayoutPanel _uniqueWordsFlowLayoutPanel;
+        private readonly RichTextBox _wordFrequencyTextbox;
+        private readonly RichTextBox _wordDensityTextbox;
+        private readonly RichTextBox _uniqueWordsTextbox;
 
         private readonly RichTextBox _inputTextbox;
         private readonly CountDetail _wordsCountDetail;
@@ -28,9 +28,9 @@ namespace ProgrammerUtils
         private readonly CountDetail _paragraphsCountDetail;
 
         public Counter(
-            FlowLayoutPanel wordFrequencyParent,
-            FlowLayoutPanel wordDensityParent,
-            FlowLayoutPanel uniqueWordsFlowLayoutPanel,
+            RichTextBox wordFrequencyTextbox,
+            RichTextBox wordDensityTextbox,
+            RichTextBox uniqueWordsFlowLayoutTextbox,
             RichTextBox inputTextbox,
             CountDetail wordsCountDetail,
             CountDetail uniqueWordsCountDetail,
@@ -40,9 +40,9 @@ namespace ProgrammerUtils
             CountDetail paragraphsCountDetail
             )
         {
-            _wordFrequencyParent = wordFrequencyParent;
-            _wordDensityParent = wordDensityParent;
-            _uniqueWordsFlowLayoutPanel = uniqueWordsFlowLayoutPanel;
+            _wordFrequencyTextbox = wordFrequencyTextbox;
+            _wordDensityTextbox = wordDensityTextbox;
+            _uniqueWordsTextbox = uniqueWordsFlowLayoutTextbox;
             _inputTextbox = inputTextbox;
             _wordsCountDetail = wordsCountDetail;
             _uniqueWordsCountDetail = uniqueWordsCountDetail;
@@ -82,15 +82,9 @@ namespace ProgrammerUtils
 
         private void RemoveOldData()
         {
-            ClearFlowLayoutPanel(_wordFrequencyParent);
-            ClearFlowLayoutPanel(_wordDensityParent);
-            ClearFlowLayoutPanel(_uniqueWordsFlowLayoutPanel);
-        }
-
-        private void ClearFlowLayoutPanel(FlowLayoutPanel flowLayoutPanel)
-        {
-            for (int i = flowLayoutPanel.Controls.Count - 1; i >= 0; i--)
-                flowLayoutPanel.Controls.RemoveAt(i);
+            _wordFrequencyTextbox.Text = string.Empty;
+            _wordDensityTextbox.Text = string.Empty;
+            _uniqueWordsTextbox.Text = string.Empty;
         }
 
         private Dictionary<string, int> CalculateWords(List<string> allWords)
@@ -120,32 +114,59 @@ namespace ProgrammerUtils
                 case SortMode.AMOUNT: sortedWords.Sort((entry1, entry2) => entry2.Value.CompareTo(entry1.Value)); break;
                 default: throw new Exception($"There exist no sortMode for {sortMode}");
             }
-            
 
-            foreach (KeyValuePair<string, int> entry in sortedWords)
-                SpawnCountDetail(entry.Key, $"#{entry.Value.ToString()}", _wordDensityParent);
+            WriteToFrequencyTextbox(totalAmountOfWords, sortedWords);
+            WriteToDensityTextbox(sortedWords);
+            WriteToUniqueTextbox(sortedWords, sortMode);
+        }
 
-            foreach (KeyValuePair<string, int> entry in sortedWords)
-                SpawnCountDetail(entry.Key, ((entry.Value / (float)totalAmountOfWords) * 100).ToString("0.00") + "%", _wordFrequencyParent);
+        private void WriteToFrequencyTextbox(int totalAmountOfWords, List<KeyValuePair<string, int>> sortedWords)
+        {
+            StringBuilder builder = new StringBuilder();
 
+            for (int i = 0; i < sortedWords.Count; i++)
+            {
+                builder.Append(sortedWords[i].Key);
+                builder.Append(" - ");
+                builder.Append((sortedWords[i].Value / (float)totalAmountOfWords * 100).ToString("0.00"));
+                builder.Append("%");
+                if (i != sortedWords.Count - 1)
+                    builder.Append("\n");
+            }
+            _wordFrequencyTextbox.Text = builder.ToString();
+        }
+
+        private void WriteToDensityTextbox(List<KeyValuePair<string, int>> sortedWords)
+        {
+            StringBuilder builder = new StringBuilder();
+
+            for (int i = 0; i < sortedWords.Count; i++)
+            {
+                builder.Append(sortedWords[i].Key);
+                builder.Append(" - ");
+                builder.Append("#");
+                builder.Append(sortedWords[i].Value);
+                if (i != sortedWords.Count - 1)
+                    builder.Append("\n");
+            }
+            _wordDensityTextbox.Text = builder.ToString();
+        }
+
+        private void WriteToUniqueTextbox(List<KeyValuePair<string, int>> sortedWords, SortMode sortMode)
+        {
             List<KeyValuePair<string, int>> uniqueWords = sortedWords.Where(e => e.Value == 1).ToList();
             if (sortMode != SortMode.ALPHABETICAL)
                 uniqueWords.Sort((entry1, entry2) => entry1.Key.CompareTo(entry2.Key));
 
-            foreach (KeyValuePair<string, int> entry in uniqueWords)
-                SpawnCountDetail(entry.Key, "Unique", _uniqueWordsFlowLayoutPanel);
-        }
+            StringBuilder builder = new StringBuilder();
 
-        private void SpawnCountDetail(string detailText, string valueText, FlowLayoutPanel parent)
-        {
-            CountDetail countDetail = new CountDetail
+            for (int i = 0; i < uniqueWords.Count; i++)
             {
-                DetailText = detailText,
-                ValueText = valueText
-            };
-
-            parent.Controls.Add(countDetail);
-            countDetail.Anchor = AnchorStyles.None;
+                builder.Append(uniqueWords[i].Key);
+                if (i != uniqueWords.Count - 1)
+                    builder.Append("\n");
+            }
+            _uniqueWordsTextbox.Text = builder.ToString();
         }
     }
 }
