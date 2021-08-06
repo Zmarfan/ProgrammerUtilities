@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Application));
             this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.navigationMenu = new ProgrammerUtils.NavigationMenu();
             this.PlayAreaPanel = new System.Windows.Forms.Panel();
             this.CopyTimer = new System.Windows.Forms.Timer(this.components);
             this.htmlColorTagPicker = new System.Windows.Forms.ColorDialog();
             this.FrameTimer = new System.Windows.Forms.Timer(this.components);
-            this.navigationMenu = new ProgrammerUtils.NavigationMenu();
             this.MainTableLayout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,8 +53,17 @@
             this.MainTableLayout.RowCount = 1;
             this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.MainTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 544F));
-            this.MainTableLayout.Size = new System.Drawing.Size(1005, 544);
+            this.MainTableLayout.Size = new System.Drawing.Size(1034, 544);
             this.MainTableLayout.TabIndex = 0;
+            // 
+            // navigationMenu
+            // 
+            this.navigationMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.navigationMenu.Location = new System.Drawing.Point(0, 0);
+            this.navigationMenu.Margin = new System.Windows.Forms.Padding(0);
+            this.navigationMenu.Name = "navigationMenu";
+            this.navigationMenu.Size = new System.Drawing.Size(250, 544);
+            this.navigationMenu.TabIndex = 1;
             // 
             // PlayAreaPanel
             // 
@@ -64,7 +73,7 @@
             this.PlayAreaPanel.Margin = new System.Windows.Forms.Padding(0);
             this.PlayAreaPanel.Name = "PlayAreaPanel";
             this.PlayAreaPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.PlayAreaPanel.Size = new System.Drawing.Size(755, 544);
+            this.PlayAreaPanel.Size = new System.Drawing.Size(784, 544);
             this.PlayAreaPanel.TabIndex = 2;
             // 
             // CopyTimer
@@ -81,29 +90,20 @@
             this.FrameTimer.Interval = 20;
             this.FrameTimer.Tick += new System.EventHandler(this.FrameTimer_Tick);
             // 
-            // navigationMenu
-            // 
-            this.navigationMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.navigationMenu.Location = new System.Drawing.Point(0, 0);
-            this.navigationMenu.Margin = new System.Windows.Forms.Padding(0);
-            this.navigationMenu.Name = "navigationMenu";
-            this.navigationMenu.Size = new System.Drawing.Size(250, 544);
-            this.navigationMenu.TabIndex = 1;
-            // 
             // Application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(1005, 544);
+            this.ClientSize = new System.Drawing.Size(1034, 544);
             this.Controls.Add(this.MainTableLayout);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(13)))), ((int)(((byte)(20)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.MinimumSize = new System.Drawing.Size(1023, 588);
+            this.MinimumSize = new System.Drawing.Size(1052, 588);
             this.Name = "Application";
             this.Text = "ProgrammingUtils";
             this.MainTableLayout.ResumeLayout(false);
