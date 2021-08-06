@@ -57,3 +57,5 @@ Html:ify will turn regular text into HTML text. Enter the text you want to conve
 ### Generate Text
 
 Enter how many words to generate, which paragraph type the text should have and paragraph size on the top part of the window. Then press the *Generate Text* button to generate the text. The generated text will be displayed in the textbox. Copy this text using the *Copy* button to the right. Clear all information using the *Clear* button to the right. If you want you can enter a custom seed which always will generate the same text for every seed.
+
+![pic-5](https://github.com/Zmarfan/ProgrammerUtils/blob/main/ReadmeScreenshots/Generate1.jpg?raw=true)
