@@ -36,13 +36,14 @@ namespace ProgrammerUtils
             this.NavigationTopButton = new System.Windows.Forms.Button();
             this.NavigationBreak = new System.Windows.Forms.Panel();
             this.NavigationTableLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.copyrightLabel = new System.Windows.Forms.LinkLabel();
+            this.contactLabel = new System.Windows.Forms.LinkLabel();
             this.navigationHelpButton = new ProgrammerUtils.NavigationButton();
             this.navigationGenerateTextButton = new ProgrammerUtils.NavigationButton();
             this.navigationHTMLButton = new ProgrammerUtils.NavigationButton();
             this.navigationCountButton = new ProgrammerUtils.NavigationButton();
             this.navigationCompareButton = new ProgrammerUtils.NavigationButton();
             this.navigationSortButton = new ProgrammerUtils.NavigationButton();
+            this.copyrightLabel = new System.Windows.Forms.Label();
             this.NavigationTopTableLayout.SuspendLayout();
             this.NavigationTopTopTableLayout.SuspendLayout();
             this.NavigationTableLayout.SuspendLayout();
@@ -142,7 +143,7 @@ namespace ProgrammerUtils
             this.NavigationTableLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.NavigationTableLayout.ColumnCount = 1;
             this.NavigationTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.NavigationTableLayout.Controls.Add(this.copyrightLabel, 0, 9);
+            this.NavigationTableLayout.Controls.Add(this.contactLabel, 0, 9);
             this.NavigationTableLayout.Controls.Add(this.navigationHelpButton, 0, 7);
             this.NavigationTableLayout.Controls.Add(this.navigationGenerateTextButton, 0, 5);
             this.NavigationTableLayout.Controls.Add(this.navigationHTMLButton, 0, 4);
@@ -151,11 +152,12 @@ namespace ProgrammerUtils
             this.NavigationTableLayout.Controls.Add(this.navigationSortButton, 0, 1);
             this.NavigationTableLayout.Controls.Add(this.NavigationBreak, 0, 6);
             this.NavigationTableLayout.Controls.Add(this.NavigationTopTableLayout, 0, 0);
+            this.NavigationTableLayout.Controls.Add(this.copyrightLabel, 0, 10);
             this.NavigationTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NavigationTableLayout.Location = new System.Drawing.Point(0, 0);
             this.NavigationTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.NavigationTableLayout.Name = "NavigationTableLayout";
-            this.NavigationTableLayout.RowCount = 10;
+            this.NavigationTableLayout.RowCount = 11;
             this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
@@ -165,28 +167,28 @@ namespace ProgrammerUtils
             this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 1F));
             this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.NavigationTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.NavigationTableLayout.Size = new System.Drawing.Size(190, 465);
             this.NavigationTableLayout.TabIndex = 3;
             // 
-            // copyrightLabel
+            // contactLabel
             // 
-            this.copyrightLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
-            this.copyrightLabel.AutoSize = true;
-            this.copyrightLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.copyrightLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.copyrightLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.copyrightLabel.LinkArea = new System.Windows.Forms.LinkArea(0, 31);
-            this.copyrightLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
-            this.copyrightLabel.Location = new System.Drawing.Point(3, 424);
-            this.copyrightLabel.Name = "copyrightLabel";
-            this.copyrightLabel.Size = new System.Drawing.Size(184, 41);
-            this.copyrightLabel.TabIndex = 9;
-            this.copyrightLabel.TabStop = true;
-            this.copyrightLabel.Text = "filippeterssoncontact@gmail.com\r\n© 2021 Copyright: Filip Petersson";
-            this.copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.copyrightLabel.UseCompatibleTextRendering = true;
-            this.copyrightLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CopyrightLabel_LinkClicked);
+            this.contactLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
+            this.contactLabel.AutoSize = true;
+            this.contactLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.contactLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contactLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.contactLabel.LinkArea = new System.Windows.Forms.LinkArea(0, 31);
+            this.contactLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
+            this.contactLabel.Location = new System.Drawing.Point(3, 429);
+            this.contactLabel.Name = "contactLabel";
+            this.contactLabel.Size = new System.Drawing.Size(184, 13);
+            this.contactLabel.TabIndex = 9;
+            this.contactLabel.TabStop = true;
+            this.contactLabel.Text = "filippeterssoncontact@gmail.com";
+            this.contactLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.contactLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CopyrightLabel_LinkClicked);
             // 
             // navigationHelpButton
             // 
@@ -290,6 +292,19 @@ namespace ProgrammerUtils
             this.navigationSortButton.TabIndex = 1;
             this.navigationSortButton.OnButtonClicked += new ProgrammerUtils.NavigationButton.NavigationButtonClickedDelegate(this.NavigationSortButton_OnButtonClicked);
             // 
+            // copyrightLabel
+            // 
+            this.copyrightLabel.AutoSize = true;
+            this.copyrightLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.copyrightLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.copyrightLabel.Location = new System.Drawing.Point(3, 447);
+            this.copyrightLabel.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.copyrightLabel.Name = "copyrightLabel";
+            this.copyrightLabel.Size = new System.Drawing.Size(184, 13);
+            this.copyrightLabel.TabIndex = 10;
+            this.copyrightLabel.Text = "© 2021 Copyright: Filip Petersson";
+            this.copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // NavigationMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(110F, 110F);
@@ -322,6 +337,7 @@ namespace ProgrammerUtils
         private System.Windows.Forms.TableLayoutPanel NavigationTopTopTableLayout;
         private System.Windows.Forms.Panel smallPicture;
         private System.Windows.Forms.Button NavigationTopButton;
-        private System.Windows.Forms.LinkLabel copyrightLabel;
+        private System.Windows.Forms.LinkLabel contactLabel;
+        private System.Windows.Forms.Label copyrightLabel;
     }
 }

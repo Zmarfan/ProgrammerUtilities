@@ -57,11 +57,13 @@ namespace ProgrammerUtils
             {
                 smallPicture.Show();
                 copyrightLabel.Hide();
+                contactLabel.Hide();
             }
             else
             {
                 smallPicture.Hide();
                 copyrightLabel.Show();
+                contactLabel.Show();
             }
         }
 
