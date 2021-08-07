@@ -710,7 +710,7 @@ namespace ProgrammerUtils
             this.htmlOpenAllTags.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlOpenAllTags.FlatAppearance.BorderSize = 0;
             this.htmlOpenAllTags.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.htmlOpenAllTags.Font = new System.Drawing.Font("Arial", 6.6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlOpenAllTags.Font = new System.Drawing.Font("Arial", 5.7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.htmlOpenAllTags.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.htmlOpenAllTags.Location = new System.Drawing.Point(2, 2);
             this.htmlOpenAllTags.Margin = new System.Windows.Forms.Padding(2);
@@ -788,8 +788,8 @@ namespace ProgrammerUtils
             // 
             // HTMLControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(110F, 110F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
             this.Controls.Add(this.htmlTableLayout);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;

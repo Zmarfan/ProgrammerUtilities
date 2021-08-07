@@ -32,10 +32,10 @@
             this.infoLabel = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
             this.MainTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.closeButton = new System.Windows.Forms.Button();
             this.linkPortfolio = new System.Windows.Forms.LinkLabel();
             this.linkGithub = new System.Windows.Forms.LinkLabel();
             this.info2Label = new System.Windows.Forms.Label();
-            this.closeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.MainTableLayout.SuspendLayout();
             this.SuspendLayout();
@@ -88,6 +88,21 @@
             this.MainTableLayout.Size = new System.Drawing.Size(480, 338);
             this.MainTableLayout.TabIndex = 6;
             // 
+            // closeButton
+            // 
+            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
+            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.closeButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.closeButton.FlatAppearance.BorderSize = 0;
+            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeButton.Location = new System.Drawing.Point(243, 291);
+            this.closeButton.Name = "closeButton";
+            this.closeButton.Size = new System.Drawing.Size(234, 44);
+            this.closeButton.TabIndex = 8;
+            this.closeButton.Text = "Close";
+            this.closeButton.UseVisualStyleBackColor = false;
+            this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // linkPortfolio
             // 
             this.linkPortfolio.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
@@ -134,25 +149,10 @@
             this.info2Label.TabIndex = 3;
             this.info2Label.Text = resources.GetString("info2Label.Text");
             // 
-            // closeButton
-            // 
-            this.closeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
-            this.closeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.closeButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.closeButton.FlatAppearance.BorderSize = 0;
-            this.closeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.closeButton.Location = new System.Drawing.Point(243, 291);
-            this.closeButton.Name = "closeButton";
-            this.closeButton.Size = new System.Drawing.Size(234, 44);
-            this.closeButton.TabIndex = 8;
-            this.closeButton.Text = "Close";
-            this.closeButton.UseVisualStyleBackColor = false;
-            this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
-            // 
             // HelpWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(110F, 110F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(480, 338);
             this.Controls.Add(this.MainTableLayout);

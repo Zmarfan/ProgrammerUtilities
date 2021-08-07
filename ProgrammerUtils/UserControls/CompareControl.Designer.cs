@@ -30,14 +30,6 @@ namespace ProgrammerUtils
         private void InitializeComponent()
         {
             this.matchTableLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.matchSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.matchMatchButton = new System.Windows.Forms.Button();
-            this.matchAutoCompare = new System.Windows.Forms.CheckBox();
-            this.matchCaseSensitive = new System.Windows.Forms.CheckBox();
-            this.MatchRemoveExtraWhiteSpace = new System.Windows.Forms.CheckBox();
-            this.matchClearButton = new System.Windows.Forms.Button();
-            this.MatchCombinedShowModeDropdown = new System.Windows.Forms.ComboBox();
-            this.matchCombineStateLabel = new System.Windows.Forms.Label();
             this.TabsBorderPanel = new ProgrammerUtils.BorderPanel();
             this.ImprovedTabsTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.TabsHeader = new System.Windows.Forms.TableLayoutPanel();
@@ -62,12 +54,19 @@ namespace ProgrammerUtils
             this.label1 = new System.Windows.Forms.Label();
             this.inputLabel1BorderPanel = new ProgrammerUtils.BorderPanel();
             this.inputLabel1 = new System.Windows.Forms.Label();
+            this.matchSettingsTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.matchMatchButton = new System.Windows.Forms.Button();
+            this.matchAutoCompare = new System.Windows.Forms.CheckBox();
+            this.matchCaseSensitive = new System.Windows.Forms.CheckBox();
+            this.MatchRemoveExtraWhiteSpace = new System.Windows.Forms.CheckBox();
+            this.matchClearButton = new System.Windows.Forms.Button();
+            this.MatchCombinedShowModeDropdown = new System.Windows.Forms.ComboBox();
+            this.matchCombineStateLabel = new System.Windows.Forms.Label();
             this.inputTextBox1BorderPanel = new ProgrammerUtils.BorderPanel();
             this.MatchLeftText1 = new System.Windows.Forms.RichTextBox();
             this.inputTextbox2BorderPanel = new ProgrammerUtils.BorderPanel();
             this.MatchLeftText2 = new System.Windows.Forms.RichTextBox();
             this.matchTableLayout.SuspendLayout();
-            this.matchSettingsTableLayout.SuspendLayout();
             this.TabsBorderPanel.SuspendLayout();
             this.ImprovedTabsTableLayout.SuspendLayout();
             this.TabsHeader.SuspendLayout();
@@ -82,6 +81,7 @@ namespace ProgrammerUtils
             this.borderPanel3.SuspendLayout();
             this.borderPanel1.SuspendLayout();
             this.inputLabel1BorderPanel.SuspendLayout();
+            this.matchSettingsTableLayout.SuspendLayout();
             this.inputTextBox1BorderPanel.SuspendLayout();
             this.inputTextbox2BorderPanel.SuspendLayout();
             this.SuspendLayout();
@@ -111,150 +111,6 @@ namespace ProgrammerUtils
             this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.matchTableLayout.Size = new System.Drawing.Size(736, 414);
             this.matchTableLayout.TabIndex = 1;
-            // 
-            // matchSettingsTableLayout
-            // 
-            this.matchSettingsTableLayout.ColumnCount = 6;
-            this.matchTableLayout.SetColumnSpan(this.matchSettingsTableLayout, 2);
-            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
-            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
-            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
-            this.matchSettingsTableLayout.Controls.Add(this.matchMatchButton, 0, 0);
-            this.matchSettingsTableLayout.Controls.Add(this.matchAutoCompare, 1, 0);
-            this.matchSettingsTableLayout.Controls.Add(this.matchCaseSensitive, 2, 0);
-            this.matchSettingsTableLayout.Controls.Add(this.MatchRemoveExtraWhiteSpace, 2, 1);
-            this.matchSettingsTableLayout.Controls.Add(this.matchClearButton, 5, 0);
-            this.matchSettingsTableLayout.Controls.Add(this.MatchCombinedShowModeDropdown, 3, 1);
-            this.matchSettingsTableLayout.Controls.Add(this.matchCombineStateLabel, 3, 0);
-            this.matchSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchSettingsTableLayout.Location = new System.Drawing.Point(4, 5);
-            this.matchSettingsTableLayout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.matchSettingsTableLayout.Name = "matchSettingsTableLayout";
-            this.matchSettingsTableLayout.RowCount = 2;
-            this.matchSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.matchSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.matchSettingsTableLayout.Size = new System.Drawing.Size(728, 43);
-            this.matchSettingsTableLayout.TabIndex = 6;
-            // 
-            // matchMatchButton
-            // 
-            this.matchMatchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
-            this.matchMatchButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.matchMatchButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchMatchButton.FlatAppearance.BorderSize = 0;
-            this.matchMatchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.matchMatchButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matchMatchButton.Location = new System.Drawing.Point(2, 2);
-            this.matchMatchButton.Margin = new System.Windows.Forms.Padding(2);
-            this.matchMatchButton.Name = "matchMatchButton";
-            this.matchSettingsTableLayout.SetRowSpan(this.matchMatchButton, 2);
-            this.matchMatchButton.Size = new System.Drawing.Size(127, 39);
-            this.matchMatchButton.TabIndex = 0;
-            this.matchMatchButton.Text = "Compare";
-            this.matchMatchButton.UseVisualStyleBackColor = false;
-            this.matchMatchButton.Click += new System.EventHandler(this.MatchMatchButton_Click);
-            // 
-            // matchAutoCompare
-            // 
-            this.matchAutoCompare.AutoSize = true;
-            this.matchAutoCompare.Checked = true;
-            this.matchAutoCompare.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.matchAutoCompare.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.matchAutoCompare.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchAutoCompare.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matchAutoCompare.Location = new System.Drawing.Point(133, 2);
-            this.matchAutoCompare.Margin = new System.Windows.Forms.Padding(2);
-            this.matchAutoCompare.Name = "matchAutoCompare";
-            this.matchSettingsTableLayout.SetRowSpan(this.matchAutoCompare, 2);
-            this.matchAutoCompare.Size = new System.Drawing.Size(95, 39);
-            this.matchAutoCompare.TabIndex = 1;
-            this.matchAutoCompare.Text = "Auto Compare";
-            this.matchAutoCompare.UseVisualStyleBackColor = true;
-            this.matchAutoCompare.CheckedChanged += new System.EventHandler(this.MatchAutoCompare_CheckedChanged);
-            // 
-            // matchCaseSensitive
-            // 
-            this.matchCaseSensitive.AutoSize = true;
-            this.matchCaseSensitive.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.matchCaseSensitive.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchCaseSensitive.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matchCaseSensitive.Location = new System.Drawing.Point(232, 2);
-            this.matchCaseSensitive.Margin = new System.Windows.Forms.Padding(2);
-            this.matchCaseSensitive.Name = "matchCaseSensitive";
-            this.matchCaseSensitive.Size = new System.Drawing.Size(159, 17);
-            this.matchCaseSensitive.TabIndex = 2;
-            this.matchCaseSensitive.Text = "Case Sensitive";
-            this.matchCaseSensitive.UseVisualStyleBackColor = true;
-            this.matchCaseSensitive.CheckedChanged += new System.EventHandler(this.MatchCheckboxChecked);
-            // 
-            // MatchRemoveExtraWhiteSpace
-            // 
-            this.MatchRemoveExtraWhiteSpace.AutoSize = true;
-            this.MatchRemoveExtraWhiteSpace.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MatchRemoveExtraWhiteSpace.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MatchRemoveExtraWhiteSpace.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MatchRemoveExtraWhiteSpace.Location = new System.Drawing.Point(232, 23);
-            this.MatchRemoveExtraWhiteSpace.Margin = new System.Windows.Forms.Padding(2);
-            this.MatchRemoveExtraWhiteSpace.Name = "MatchRemoveExtraWhiteSpace";
-            this.MatchRemoveExtraWhiteSpace.Size = new System.Drawing.Size(159, 18);
-            this.MatchRemoveExtraWhiteSpace.TabIndex = 3;
-            this.MatchRemoveExtraWhiteSpace.Text = "Remove Extra Whitespaces";
-            this.MatchRemoveExtraWhiteSpace.UseVisualStyleBackColor = true;
-            this.MatchRemoveExtraWhiteSpace.CheckedChanged += new System.EventHandler(this.MatchCheckboxChecked);
-            // 
-            // matchClearButton
-            // 
-            this.matchClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.matchClearButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.matchClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchClearButton.FlatAppearance.BorderSize = 0;
-            this.matchClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.matchClearButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matchClearButton.Location = new System.Drawing.Point(648, 2);
-            this.matchClearButton.Margin = new System.Windows.Forms.Padding(2);
-            this.matchClearButton.Name = "matchClearButton";
-            this.matchSettingsTableLayout.SetRowSpan(this.matchClearButton, 2);
-            this.matchClearButton.Size = new System.Drawing.Size(78, 39);
-            this.matchClearButton.TabIndex = 4;
-            this.matchClearButton.Text = "Clear";
-            this.matchClearButton.UseVisualStyleBackColor = false;
-            this.matchClearButton.Click += new System.EventHandler(this.MatchClearButton_Click);
-            // 
-            // MatchCombinedShowModeDropdown
-            // 
-            this.MatchCombinedShowModeDropdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
-            this.MatchCombinedShowModeDropdown.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MatchCombinedShowModeDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.MatchCombinedShowModeDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.MatchCombinedShowModeDropdown.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MatchCombinedShowModeDropdown.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.MatchCombinedShowModeDropdown.FormattingEnabled = true;
-            this.MatchCombinedShowModeDropdown.Items.AddRange(new object[] {
-            "Every line",
-            "Every word"});
-            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(395, 23);
-            this.MatchCombinedShowModeDropdown.Margin = new System.Windows.Forms.Padding(2);
-            this.MatchCombinedShowModeDropdown.Name = "MatchCombinedShowModeDropdown";
-            this.MatchCombinedShowModeDropdown.Size = new System.Drawing.Size(108, 21);
-            this.MatchCombinedShowModeDropdown.TabIndex = 5;
-            this.MatchCombinedShowModeDropdown.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.MatchCombinedShowModeDropdown_DrawItem);
-            this.MatchCombinedShowModeDropdown.SelectedIndexChanged += new System.EventHandler(this.MatchCombinedShowModeDropdown_SelectedIndexChanged);
-            // 
-            // matchCombineStateLabel
-            // 
-            this.matchCombineStateLabel.AutoSize = true;
-            this.matchCombineStateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchCombineStateLabel.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matchCombineStateLabel.Location = new System.Drawing.Point(395, 0);
-            this.matchCombineStateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.matchCombineStateLabel.Name = "matchCombineStateLabel";
-            this.matchCombineStateLabel.Size = new System.Drawing.Size(108, 21);
-            this.matchCombineStateLabel.TabIndex = 6;
-            this.matchCombineStateLabel.Text = "Compare mode";
-            this.matchCombineStateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // TabsBorderPanel
             // 
@@ -612,6 +468,150 @@ namespace ProgrammerUtils
             this.inputLabel1.Text = "Text one";
             this.inputLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // matchSettingsTableLayout
+            // 
+            this.matchSettingsTableLayout.ColumnCount = 6;
+            this.matchTableLayout.SetColumnSpan(this.matchSettingsTableLayout, 2);
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.matchSettingsTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
+            this.matchSettingsTableLayout.Controls.Add(this.matchMatchButton, 0, 0);
+            this.matchSettingsTableLayout.Controls.Add(this.matchAutoCompare, 1, 0);
+            this.matchSettingsTableLayout.Controls.Add(this.matchCaseSensitive, 2, 0);
+            this.matchSettingsTableLayout.Controls.Add(this.MatchRemoveExtraWhiteSpace, 2, 1);
+            this.matchSettingsTableLayout.Controls.Add(this.matchClearButton, 5, 0);
+            this.matchSettingsTableLayout.Controls.Add(this.MatchCombinedShowModeDropdown, 3, 1);
+            this.matchSettingsTableLayout.Controls.Add(this.matchCombineStateLabel, 3, 0);
+            this.matchSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchSettingsTableLayout.Location = new System.Drawing.Point(4, 5);
+            this.matchSettingsTableLayout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.matchSettingsTableLayout.Name = "matchSettingsTableLayout";
+            this.matchSettingsTableLayout.RowCount = 2;
+            this.matchSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.matchSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.matchSettingsTableLayout.Size = new System.Drawing.Size(728, 43);
+            this.matchSettingsTableLayout.TabIndex = 6;
+            // 
+            // matchMatchButton
+            // 
+            this.matchMatchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
+            this.matchMatchButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.matchMatchButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchMatchButton.FlatAppearance.BorderSize = 0;
+            this.matchMatchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.matchMatchButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matchMatchButton.Location = new System.Drawing.Point(2, 2);
+            this.matchMatchButton.Margin = new System.Windows.Forms.Padding(2);
+            this.matchMatchButton.Name = "matchMatchButton";
+            this.matchSettingsTableLayout.SetRowSpan(this.matchMatchButton, 2);
+            this.matchMatchButton.Size = new System.Drawing.Size(127, 39);
+            this.matchMatchButton.TabIndex = 0;
+            this.matchMatchButton.Text = "Compare";
+            this.matchMatchButton.UseVisualStyleBackColor = false;
+            this.matchMatchButton.Click += new System.EventHandler(this.MatchMatchButton_Click);
+            // 
+            // matchAutoCompare
+            // 
+            this.matchAutoCompare.AutoSize = true;
+            this.matchAutoCompare.Checked = true;
+            this.matchAutoCompare.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.matchAutoCompare.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.matchAutoCompare.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchAutoCompare.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matchAutoCompare.Location = new System.Drawing.Point(133, 2);
+            this.matchAutoCompare.Margin = new System.Windows.Forms.Padding(2);
+            this.matchAutoCompare.Name = "matchAutoCompare";
+            this.matchSettingsTableLayout.SetRowSpan(this.matchAutoCompare, 2);
+            this.matchAutoCompare.Size = new System.Drawing.Size(95, 39);
+            this.matchAutoCompare.TabIndex = 1;
+            this.matchAutoCompare.Text = "Auto Compare";
+            this.matchAutoCompare.UseVisualStyleBackColor = true;
+            this.matchAutoCompare.CheckedChanged += new System.EventHandler(this.MatchAutoCompare_CheckedChanged);
+            // 
+            // matchCaseSensitive
+            // 
+            this.matchCaseSensitive.AutoSize = true;
+            this.matchCaseSensitive.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.matchCaseSensitive.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchCaseSensitive.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matchCaseSensitive.Location = new System.Drawing.Point(232, 2);
+            this.matchCaseSensitive.Margin = new System.Windows.Forms.Padding(2);
+            this.matchCaseSensitive.Name = "matchCaseSensitive";
+            this.matchCaseSensitive.Size = new System.Drawing.Size(159, 17);
+            this.matchCaseSensitive.TabIndex = 2;
+            this.matchCaseSensitive.Text = "Case Sensitive";
+            this.matchCaseSensitive.UseVisualStyleBackColor = true;
+            this.matchCaseSensitive.CheckedChanged += new System.EventHandler(this.MatchCheckboxChecked);
+            // 
+            // MatchRemoveExtraWhiteSpace
+            // 
+            this.MatchRemoveExtraWhiteSpace.AutoSize = true;
+            this.MatchRemoveExtraWhiteSpace.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MatchRemoveExtraWhiteSpace.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MatchRemoveExtraWhiteSpace.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MatchRemoveExtraWhiteSpace.Location = new System.Drawing.Point(232, 23);
+            this.MatchRemoveExtraWhiteSpace.Margin = new System.Windows.Forms.Padding(2);
+            this.MatchRemoveExtraWhiteSpace.Name = "MatchRemoveExtraWhiteSpace";
+            this.MatchRemoveExtraWhiteSpace.Size = new System.Drawing.Size(159, 18);
+            this.MatchRemoveExtraWhiteSpace.TabIndex = 3;
+            this.MatchRemoveExtraWhiteSpace.Text = "Remove Extra Whitespaces";
+            this.MatchRemoveExtraWhiteSpace.UseVisualStyleBackColor = true;
+            this.MatchRemoveExtraWhiteSpace.CheckedChanged += new System.EventHandler(this.MatchCheckboxChecked);
+            // 
+            // matchClearButton
+            // 
+            this.matchClearButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.matchClearButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.matchClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchClearButton.FlatAppearance.BorderSize = 0;
+            this.matchClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.matchClearButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matchClearButton.Location = new System.Drawing.Point(648, 2);
+            this.matchClearButton.Margin = new System.Windows.Forms.Padding(2);
+            this.matchClearButton.Name = "matchClearButton";
+            this.matchSettingsTableLayout.SetRowSpan(this.matchClearButton, 2);
+            this.matchClearButton.Size = new System.Drawing.Size(78, 39);
+            this.matchClearButton.TabIndex = 4;
+            this.matchClearButton.Text = "Clear";
+            this.matchClearButton.UseVisualStyleBackColor = false;
+            this.matchClearButton.Click += new System.EventHandler(this.MatchClearButton_Click);
+            // 
+            // MatchCombinedShowModeDropdown
+            // 
+            this.MatchCombinedShowModeDropdown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(57)))), ((int)(((byte)(76)))));
+            this.MatchCombinedShowModeDropdown.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MatchCombinedShowModeDropdown.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.MatchCombinedShowModeDropdown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MatchCombinedShowModeDropdown.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MatchCombinedShowModeDropdown.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.MatchCombinedShowModeDropdown.FormattingEnabled = true;
+            this.MatchCombinedShowModeDropdown.Items.AddRange(new object[] {
+            "Every line",
+            "Every word"});
+            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(395, 23);
+            this.MatchCombinedShowModeDropdown.Margin = new System.Windows.Forms.Padding(2);
+            this.MatchCombinedShowModeDropdown.Name = "MatchCombinedShowModeDropdown";
+            this.MatchCombinedShowModeDropdown.Size = new System.Drawing.Size(108, 21);
+            this.MatchCombinedShowModeDropdown.TabIndex = 5;
+            this.MatchCombinedShowModeDropdown.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.MatchCombinedShowModeDropdown_DrawItem);
+            this.MatchCombinedShowModeDropdown.SelectedIndexChanged += new System.EventHandler(this.MatchCombinedShowModeDropdown_SelectedIndexChanged);
+            // 
+            // matchCombineStateLabel
+            // 
+            this.matchCombineStateLabel.AutoSize = true;
+            this.matchCombineStateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.matchCombineStateLabel.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matchCombineStateLabel.Location = new System.Drawing.Point(395, 0);
+            this.matchCombineStateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.matchCombineStateLabel.Name = "matchCombineStateLabel";
+            this.matchCombineStateLabel.Size = new System.Drawing.Size(108, 21);
+            this.matchCombineStateLabel.TabIndex = 6;
+            this.matchCombineStateLabel.Text = "Compare mode";
+            this.matchCombineStateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // inputTextBox1BorderPanel
             // 
             this.inputTextBox1BorderPanel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(196)))), ((int)(((byte)(58)))));
@@ -672,8 +672,8 @@ namespace ProgrammerUtils
             // 
             // CompareControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(110F, 110F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
             this.Controls.Add(this.matchTableLayout);
             this.DoubleBuffered = true;
@@ -683,8 +683,6 @@ namespace ProgrammerUtils
             this.Padding = new System.Windows.Forms.Padding(4);
             this.Size = new System.Drawing.Size(744, 422);
             this.matchTableLayout.ResumeLayout(false);
-            this.matchSettingsTableLayout.ResumeLayout(false);
-            this.matchSettingsTableLayout.PerformLayout();
             this.TabsBorderPanel.ResumeLayout(false);
             this.ImprovedTabsTableLayout.ResumeLayout(false);
             this.TabsHeader.ResumeLayout(false);
@@ -699,6 +697,8 @@ namespace ProgrammerUtils
             this.borderPanel3.ResumeLayout(false);
             this.borderPanel1.ResumeLayout(false);
             this.inputLabel1BorderPanel.ResumeLayout(false);
+            this.matchSettingsTableLayout.ResumeLayout(false);
+            this.matchSettingsTableLayout.PerformLayout();
             this.inputTextBox1BorderPanel.ResumeLayout(false);
             this.inputTextbox2BorderPanel.ResumeLayout(false);
             this.ResumeLayout(false);

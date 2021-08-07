@@ -36,13 +36,13 @@ namespace ProgrammerUtils
             this.NavigationTopButton = new System.Windows.Forms.Button();
             this.NavigationBreak = new System.Windows.Forms.Panel();
             this.NavigationTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.copyrightLabel = new System.Windows.Forms.LinkLabel();
             this.navigationHelpButton = new ProgrammerUtils.NavigationButton();
             this.navigationGenerateTextButton = new ProgrammerUtils.NavigationButton();
             this.navigationHTMLButton = new ProgrammerUtils.NavigationButton();
             this.navigationCountButton = new ProgrammerUtils.NavigationButton();
             this.navigationCompareButton = new ProgrammerUtils.NavigationButton();
             this.navigationSortButton = new ProgrammerUtils.NavigationButton();
-            this.copyrightLabel = new System.Windows.Forms.LinkLabel();
             this.NavigationTopTableLayout.SuspendLayout();
             this.NavigationTopTopTableLayout.SuspendLayout();
             this.NavigationTableLayout.SuspendLayout();
@@ -169,6 +169,25 @@ namespace ProgrammerUtils
             this.NavigationTableLayout.Size = new System.Drawing.Size(190, 465);
             this.NavigationTableLayout.TabIndex = 3;
             // 
+            // copyrightLabel
+            // 
+            this.copyrightLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
+            this.copyrightLabel.AutoSize = true;
+            this.copyrightLabel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.copyrightLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.copyrightLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.copyrightLabel.LinkArea = new System.Windows.Forms.LinkArea(0, 31);
+            this.copyrightLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
+            this.copyrightLabel.Location = new System.Drawing.Point(3, 424);
+            this.copyrightLabel.Name = "copyrightLabel";
+            this.copyrightLabel.Size = new System.Drawing.Size(184, 41);
+            this.copyrightLabel.TabIndex = 9;
+            this.copyrightLabel.TabStop = true;
+            this.copyrightLabel.Text = "filippeterssoncontact@gmail.com\r\n© 2021 Copyright: Filip Petersson";
+            this.copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.copyrightLabel.UseCompatibleTextRendering = true;
+            this.copyrightLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CopyrightLabel_LinkClicked);
+            // 
             // navigationHelpButton
             // 
             this.navigationHelpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
@@ -271,29 +290,10 @@ namespace ProgrammerUtils
             this.navigationSortButton.TabIndex = 1;
             this.navigationSortButton.OnButtonClicked += new ProgrammerUtils.NavigationButton.NavigationButtonClickedDelegate(this.NavigationSortButton_OnButtonClicked);
             // 
-            // copyrightLabel
-            // 
-            this.copyrightLabel.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(84)))), ((int)(((byte)(134)))));
-            this.copyrightLabel.AutoSize = true;
-            this.copyrightLabel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.copyrightLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.copyrightLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.copyrightLabel.LinkArea = new System.Windows.Forms.LinkArea(0, 31);
-            this.copyrightLabel.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(175)))), ((int)(((byte)(218)))));
-            this.copyrightLabel.Location = new System.Drawing.Point(3, 424);
-            this.copyrightLabel.Name = "copyrightLabel";
-            this.copyrightLabel.Size = new System.Drawing.Size(184, 41);
-            this.copyrightLabel.TabIndex = 9;
-            this.copyrightLabel.TabStop = true;
-            this.copyrightLabel.Text = "filippeterssoncontact@gmail.com\r\n© 2021 Copyright: Filip Petersson";
-            this.copyrightLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.copyrightLabel.UseCompatibleTextRendering = true;
-            this.copyrightLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CopyrightLabel_LinkClicked);
-            // 
             // NavigationMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(110F, 110F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.NavigationTableLayout);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(0);
