@@ -2,7 +2,7 @@
 
 Programming Utilities is an open source, freeware utility tool aimed towards software developers developed by Filip Petersson. This tool allows software developers to speed up their work process by performing tasks not strictly programming related in one place.
 
-* Programming Utilities 1.0.0
+* Programming Utilities 1.0.1
 * Built for Windows platforms.
 * Version 1.0.0.
 * [filippeterssoncontact@gmail.com](mailto:filippeterssoncontact@gmail.com)
