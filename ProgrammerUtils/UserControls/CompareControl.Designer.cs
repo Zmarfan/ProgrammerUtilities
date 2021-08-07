@@ -102,13 +102,12 @@ namespace ProgrammerUtils
             this.matchTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.matchTableLayout.Name = "matchTableLayout";
             this.matchTableLayout.RowCount = 6;
-            this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.matchTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.matchTableLayout.Size = new System.Drawing.Size(736, 414);
             this.matchTableLayout.TabIndex = 1;
             // 
@@ -118,12 +117,12 @@ namespace ProgrammerUtils
             this.TabsBorderPanel.BorderWidth = 0;
             this.TabsBorderPanel.Controls.Add(this.ImprovedTabsTableLayout);
             this.TabsBorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabsBorderPanel.Location = new System.Drawing.Point(368, 53);
+            this.TabsBorderPanel.Location = new System.Drawing.Point(368, 60);
             this.TabsBorderPanel.Margin = new System.Windows.Forms.Padding(0);
             this.TabsBorderPanel.Name = "TabsBorderPanel";
             this.TabsBorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
             this.matchTableLayout.SetRowSpan(this.TabsBorderPanel, 5);
-            this.TabsBorderPanel.Size = new System.Drawing.Size(368, 361);
+            this.TabsBorderPanel.Size = new System.Drawing.Size(368, 354);
             this.TabsBorderPanel.TabIndex = 15;
             // 
             // ImprovedTabsTableLayout
@@ -139,7 +138,7 @@ namespace ProgrammerUtils
             this.ImprovedTabsTableLayout.RowCount = 2;
             this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ImprovedTabsTableLayout.Size = new System.Drawing.Size(368, 361);
+            this.ImprovedTabsTableLayout.Size = new System.Drawing.Size(368, 354);
             this.ImprovedTabsTableLayout.TabIndex = 1;
             // 
             // TabsHeader
@@ -203,7 +202,7 @@ namespace ProgrammerUtils
             this.TabsPanel.Location = new System.Drawing.Point(0, 30);
             this.TabsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.TabsPanel.Name = "TabsPanel";
-            this.TabsPanel.Size = new System.Drawing.Size(368, 331);
+            this.TabsPanel.Size = new System.Drawing.Size(368, 324);
             this.TabsPanel.TabIndex = 1;
             // 
             // combinedTableLayout
@@ -219,7 +218,7 @@ namespace ProgrammerUtils
             this.combinedTableLayout.RowCount = 2;
             this.combinedTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.combinedTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.combinedTableLayout.Size = new System.Drawing.Size(57, 331);
+            this.combinedTableLayout.Size = new System.Drawing.Size(57, 324);
             this.combinedTableLayout.TabIndex = 2;
             // 
             // borderPanel5
@@ -240,7 +239,7 @@ namespace ProgrammerUtils
             // 
             this.matchResultCombinedLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.matchResultCombinedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchResultCombinedLabel.Font = new System.Drawing.Font("Arial", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matchResultCombinedLabel.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.matchResultCombinedLabel.Location = new System.Drawing.Point(4, 4);
             this.matchResultCombinedLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.matchResultCombinedLabel.Name = "matchResultCombinedLabel";
@@ -260,7 +259,7 @@ namespace ProgrammerUtils
             this.borderPanel4.Name = "borderPanel4";
             this.borderPanel4.Padding = new System.Windows.Forms.Padding(4);
             this.borderPanel4.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.borderPanel4.Size = new System.Drawing.Size(49, 271);
+            this.borderPanel4.Size = new System.Drawing.Size(49, 264);
             this.borderPanel4.TabIndex = 4;
             // 
             // matchResultCombinedTextBox
@@ -274,7 +273,7 @@ namespace ProgrammerUtils
             this.matchResultCombinedTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.matchResultCombinedTextBox.Name = "matchResultCombinedTextBox";
             this.matchResultCombinedTextBox.ReadOnly = true;
-            this.matchResultCombinedTextBox.Size = new System.Drawing.Size(41, 263);
+            this.matchResultCombinedTextBox.Size = new System.Drawing.Size(41, 256);
             this.matchResultCombinedTextBox.TabIndex = 11;
             this.matchResultCombinedTextBox.Text = "";
             // 
@@ -295,7 +294,7 @@ namespace ProgrammerUtils
             this.SeparateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.SeparateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.SeparateTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.SeparateTableLayout.Size = new System.Drawing.Size(75, 331);
+            this.SeparateTableLayout.Size = new System.Drawing.Size(75, 324);
             this.SeparateTableLayout.TabIndex = 1;
             // 
             // rightInputLabel2BorderPanel
@@ -304,7 +303,7 @@ namespace ProgrammerUtils
             this.rightInputLabel2BorderPanel.BorderWidth = 2;
             this.rightInputLabel2BorderPanel.Controls.Add(this.matchRightText2Label);
             this.rightInputLabel2BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rightInputLabel2BorderPanel.Location = new System.Drawing.Point(4, 169);
+            this.rightInputLabel2BorderPanel.Location = new System.Drawing.Point(4, 166);
             this.rightInputLabel2BorderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.rightInputLabel2BorderPanel.Name = "rightInputLabel2BorderPanel";
             this.rightInputLabel2BorderPanel.Padding = new System.Windows.Forms.Padding(4);
@@ -316,7 +315,7 @@ namespace ProgrammerUtils
             // 
             this.matchRightText2Label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.matchRightText2Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchRightText2Label.Font = new System.Drawing.Font("Arial", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matchRightText2Label.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.matchRightText2Label.Location = new System.Drawing.Point(4, 4);
             this.matchRightText2Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.matchRightText2Label.Name = "matchRightText2Label";
@@ -343,7 +342,7 @@ namespace ProgrammerUtils
             // 
             this.matchRightText1Label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.matchRightText1Label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.matchRightText1Label.Font = new System.Drawing.Font("Arial", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matchRightText1Label.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.matchRightText1Label.Location = new System.Drawing.Point(4, 4);
             this.matchRightText1Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.matchRightText1Label.Name = "matchRightText1Label";
@@ -363,7 +362,7 @@ namespace ProgrammerUtils
             this.borderPanel2.Name = "borderPanel2";
             this.borderPanel2.Padding = new System.Windows.Forms.Padding(4);
             this.borderPanel2.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.borderPanel2.Size = new System.Drawing.Size(67, 105);
+            this.borderPanel2.Size = new System.Drawing.Size(67, 102);
             this.borderPanel2.TabIndex = 15;
             // 
             // matchRightText1
@@ -377,7 +376,7 @@ namespace ProgrammerUtils
             this.matchRightText1.Margin = new System.Windows.Forms.Padding(2);
             this.matchRightText1.Name = "matchRightText1";
             this.matchRightText1.ReadOnly = true;
-            this.matchRightText1.Size = new System.Drawing.Size(59, 97);
+            this.matchRightText1.Size = new System.Drawing.Size(59, 94);
             this.matchRightText1.TabIndex = 10;
             this.matchRightText1.Text = "";
             // 
@@ -387,12 +386,12 @@ namespace ProgrammerUtils
             this.borderPanel3.BorderWidth = 2;
             this.borderPanel3.Controls.Add(this.matchRightText2);
             this.borderPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.borderPanel3.Location = new System.Drawing.Point(4, 221);
+            this.borderPanel3.Location = new System.Drawing.Point(4, 218);
             this.borderPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.borderPanel3.Name = "borderPanel3";
             this.borderPanel3.Padding = new System.Windows.Forms.Padding(4);
             this.borderPanel3.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.borderPanel3.Size = new System.Drawing.Size(67, 106);
+            this.borderPanel3.Size = new System.Drawing.Size(67, 102);
             this.borderPanel3.TabIndex = 16;
             // 
             // matchRightText2
@@ -406,7 +405,7 @@ namespace ProgrammerUtils
             this.matchRightText2.Margin = new System.Windows.Forms.Padding(2);
             this.matchRightText2.Name = "matchRightText2";
             this.matchRightText2.ReadOnly = true;
-            this.matchRightText2.Size = new System.Drawing.Size(59, 98);
+            this.matchRightText2.Size = new System.Drawing.Size(59, 94);
             this.matchRightText2.TabIndex = 11;
             this.matchRightText2.Text = "";
             // 
@@ -416,7 +415,7 @@ namespace ProgrammerUtils
             this.borderPanel1.BorderWidth = 2;
             this.borderPanel1.Controls.Add(this.label1);
             this.borderPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.borderPanel1.Location = new System.Drawing.Point(4, 252);
+            this.borderPanel1.Location = new System.Drawing.Point(4, 256);
             this.borderPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.borderPanel1.Name = "borderPanel1";
             this.borderPanel1.Padding = new System.Windows.Forms.Padding(4);
@@ -428,7 +427,7 @@ namespace ProgrammerUtils
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Arial", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(186)))), ((int)(((byte)(159)))));
             this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -445,7 +444,7 @@ namespace ProgrammerUtils
             this.inputLabel1BorderPanel.BorderWidth = 2;
             this.inputLabel1BorderPanel.Controls.Add(this.inputLabel1);
             this.inputLabel1BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inputLabel1BorderPanel.Location = new System.Drawing.Point(4, 87);
+            this.inputLabel1BorderPanel.Location = new System.Drawing.Point(4, 94);
             this.inputLabel1BorderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.inputLabel1BorderPanel.Name = "inputLabel1BorderPanel";
             this.inputLabel1BorderPanel.Padding = new System.Windows.Forms.Padding(4);
@@ -457,7 +456,7 @@ namespace ProgrammerUtils
             // 
             this.inputLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.inputLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inputLabel1.Font = new System.Drawing.Font("Arial", 7.854546F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputLabel1.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(178)))));
             this.inputLabel1.Location = new System.Drawing.Point(4, 4);
             this.inputLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -492,7 +491,7 @@ namespace ProgrammerUtils
             this.matchSettingsTableLayout.RowCount = 2;
             this.matchSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.matchSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.matchSettingsTableLayout.Size = new System.Drawing.Size(728, 43);
+            this.matchSettingsTableLayout.Size = new System.Drawing.Size(728, 50);
             this.matchSettingsTableLayout.TabIndex = 6;
             // 
             // matchMatchButton
@@ -507,7 +506,7 @@ namespace ProgrammerUtils
             this.matchMatchButton.Margin = new System.Windows.Forms.Padding(2);
             this.matchMatchButton.Name = "matchMatchButton";
             this.matchSettingsTableLayout.SetRowSpan(this.matchMatchButton, 2);
-            this.matchMatchButton.Size = new System.Drawing.Size(127, 39);
+            this.matchMatchButton.Size = new System.Drawing.Size(127, 46);
             this.matchMatchButton.TabIndex = 0;
             this.matchMatchButton.Text = "Compare";
             this.matchMatchButton.UseVisualStyleBackColor = false;
@@ -525,7 +524,7 @@ namespace ProgrammerUtils
             this.matchAutoCompare.Margin = new System.Windows.Forms.Padding(2);
             this.matchAutoCompare.Name = "matchAutoCompare";
             this.matchSettingsTableLayout.SetRowSpan(this.matchAutoCompare, 2);
-            this.matchAutoCompare.Size = new System.Drawing.Size(94, 39);
+            this.matchAutoCompare.Size = new System.Drawing.Size(94, 46);
             this.matchAutoCompare.TabIndex = 1;
             this.matchAutoCompare.Text = "Auto Compare";
             this.matchAutoCompare.UseVisualStyleBackColor = true;
@@ -540,7 +539,7 @@ namespace ProgrammerUtils
             this.matchCaseSensitive.Location = new System.Drawing.Point(231, 2);
             this.matchCaseSensitive.Margin = new System.Windows.Forms.Padding(2);
             this.matchCaseSensitive.Name = "matchCaseSensitive";
-            this.matchCaseSensitive.Size = new System.Drawing.Size(153, 17);
+            this.matchCaseSensitive.Size = new System.Drawing.Size(153, 21);
             this.matchCaseSensitive.TabIndex = 2;
             this.matchCaseSensitive.Text = "Case Sensitive";
             this.matchCaseSensitive.UseVisualStyleBackColor = true;
@@ -552,10 +551,10 @@ namespace ProgrammerUtils
             this.MatchRemoveExtraWhiteSpace.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MatchRemoveExtraWhiteSpace.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MatchRemoveExtraWhiteSpace.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MatchRemoveExtraWhiteSpace.Location = new System.Drawing.Point(231, 23);
+            this.MatchRemoveExtraWhiteSpace.Location = new System.Drawing.Point(231, 27);
             this.MatchRemoveExtraWhiteSpace.Margin = new System.Windows.Forms.Padding(2);
             this.MatchRemoveExtraWhiteSpace.Name = "MatchRemoveExtraWhiteSpace";
-            this.MatchRemoveExtraWhiteSpace.Size = new System.Drawing.Size(153, 18);
+            this.MatchRemoveExtraWhiteSpace.Size = new System.Drawing.Size(153, 21);
             this.MatchRemoveExtraWhiteSpace.TabIndex = 3;
             this.MatchRemoveExtraWhiteSpace.Text = "Remove Extra Whitespaces";
             this.MatchRemoveExtraWhiteSpace.UseVisualStyleBackColor = true;
@@ -568,12 +567,12 @@ namespace ProgrammerUtils
             this.matchClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchClearButton.FlatAppearance.BorderSize = 0;
             this.matchClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.matchClearButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matchClearButton.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.matchClearButton.Location = new System.Drawing.Point(648, 2);
             this.matchClearButton.Margin = new System.Windows.Forms.Padding(2);
             this.matchClearButton.Name = "matchClearButton";
             this.matchSettingsTableLayout.SetRowSpan(this.matchClearButton, 2);
-            this.matchClearButton.Size = new System.Drawing.Size(78, 39);
+            this.matchClearButton.Size = new System.Drawing.Size(78, 46);
             this.matchClearButton.TabIndex = 4;
             this.matchClearButton.Text = "Clear";
             this.matchClearButton.UseVisualStyleBackColor = false;
@@ -591,7 +590,7 @@ namespace ProgrammerUtils
             this.MatchCombinedShowModeDropdown.Items.AddRange(new object[] {
             "Every line",
             "Every word"});
-            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(388, 23);
+            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(388, 27);
             this.MatchCombinedShowModeDropdown.Margin = new System.Windows.Forms.Padding(2);
             this.MatchCombinedShowModeDropdown.Name = "MatchCombinedShowModeDropdown";
             this.MatchCombinedShowModeDropdown.Size = new System.Drawing.Size(108, 20);
@@ -607,7 +606,7 @@ namespace ProgrammerUtils
             this.matchCombineStateLabel.Location = new System.Drawing.Point(388, 0);
             this.matchCombineStateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.matchCombineStateLabel.Name = "matchCombineStateLabel";
-            this.matchCombineStateLabel.Size = new System.Drawing.Size(108, 21);
+            this.matchCombineStateLabel.Size = new System.Drawing.Size(108, 25);
             this.matchCombineStateLabel.TabIndex = 6;
             this.matchCombineStateLabel.Text = "Compare mode";
             this.matchCombineStateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -618,12 +617,12 @@ namespace ProgrammerUtils
             this.inputTextBox1BorderPanel.BorderWidth = 2;
             this.inputTextBox1BorderPanel.Controls.Add(this.MatchLeftText1);
             this.inputTextBox1BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inputTextBox1BorderPanel.Location = new System.Drawing.Point(4, 139);
+            this.inputTextBox1BorderPanel.Location = new System.Drawing.Point(4, 146);
             this.inputTextBox1BorderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.inputTextBox1BorderPanel.Name = "inputTextBox1BorderPanel";
             this.inputTextBox1BorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.inputTextBox1BorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.inputTextBox1BorderPanel.Size = new System.Drawing.Size(360, 105);
+            this.inputTextBox1BorderPanel.Size = new System.Drawing.Size(360, 102);
             this.inputTextBox1BorderPanel.TabIndex = 12;
             // 
             // MatchLeftText1
@@ -636,7 +635,7 @@ namespace ProgrammerUtils
             this.MatchLeftText1.Location = new System.Drawing.Point(4, 4);
             this.MatchLeftText1.Margin = new System.Windows.Forms.Padding(2);
             this.MatchLeftText1.Name = "MatchLeftText1";
-            this.MatchLeftText1.Size = new System.Drawing.Size(352, 97);
+            this.MatchLeftText1.Size = new System.Drawing.Size(352, 94);
             this.MatchLeftText1.TabIndex = 1;
             this.MatchLeftText1.Text = "";
             this.MatchLeftText1.TextChanged += new System.EventHandler(this.MatchTextChanged);
@@ -647,12 +646,12 @@ namespace ProgrammerUtils
             this.inputTextbox2BorderPanel.BorderWidth = 2;
             this.inputTextbox2BorderPanel.Controls.Add(this.MatchLeftText2);
             this.inputTextbox2BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.inputTextbox2BorderPanel.Location = new System.Drawing.Point(4, 304);
+            this.inputTextbox2BorderPanel.Location = new System.Drawing.Point(4, 308);
             this.inputTextbox2BorderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.inputTextbox2BorderPanel.Name = "inputTextbox2BorderPanel";
             this.inputTextbox2BorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.inputTextbox2BorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.inputTextbox2BorderPanel.Size = new System.Drawing.Size(360, 106);
+            this.inputTextbox2BorderPanel.Size = new System.Drawing.Size(360, 102);
             this.inputTextbox2BorderPanel.TabIndex = 13;
             // 
             // MatchLeftText2
@@ -665,7 +664,7 @@ namespace ProgrammerUtils
             this.MatchLeftText2.Location = new System.Drawing.Point(4, 4);
             this.MatchLeftText2.Margin = new System.Windows.Forms.Padding(2);
             this.MatchLeftText2.Name = "MatchLeftText2";
-            this.MatchLeftText2.Size = new System.Drawing.Size(352, 98);
+            this.MatchLeftText2.Size = new System.Drawing.Size(352, 94);
             this.MatchLeftText2.TabIndex = 2;
             this.MatchLeftText2.Text = "";
             this.MatchLeftText2.TextChanged += new System.EventHandler(this.MatchTextChanged);

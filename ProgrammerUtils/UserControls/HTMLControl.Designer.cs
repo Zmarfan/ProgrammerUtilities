@@ -102,7 +102,7 @@ namespace ProgrammerUtils
             this.htmlTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.htmlTableLayout.Name = "htmlTableLayout";
             this.htmlTableLayout.RowCount = 2;
-            this.htmlTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.htmlTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.htmlTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.htmlTableLayout.Size = new System.Drawing.Size(677, 394);
             this.htmlTableLayout.TabIndex = 1;
@@ -134,7 +134,7 @@ namespace ProgrammerUtils
             this.htmlSettingsTableLayout.RowCount = 2;
             this.htmlSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.htmlSettingsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.htmlSettingsTableLayout.Size = new System.Drawing.Size(616, 43);
+            this.htmlSettingsTableLayout.Size = new System.Drawing.Size(616, 50);
             this.htmlSettingsTableLayout.TabIndex = 0;
             // 
             // htmlColorCustomTableLayout
@@ -145,13 +145,13 @@ namespace ProgrammerUtils
             this.htmlColorCustomTableLayout.Controls.Add(this.htmlChangeCustomColorButton, 0, 0);
             this.htmlColorCustomTableLayout.Controls.Add(this.htmlCustomColorRectangle, 1, 0);
             this.htmlColorCustomTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlColorCustomTableLayout.Location = new System.Drawing.Point(453, 21);
+            this.htmlColorCustomTableLayout.Location = new System.Drawing.Point(453, 25);
             this.htmlColorCustomTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.htmlColorCustomTableLayout.Name = "htmlColorCustomTableLayout";
             this.htmlColorCustomTableLayout.RowCount = 1;
             this.htmlColorCustomTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.htmlColorCustomTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-            this.htmlColorCustomTableLayout.Size = new System.Drawing.Size(110, 22);
+            this.htmlColorCustomTableLayout.Size = new System.Drawing.Size(110, 25);
             this.htmlColorCustomTableLayout.TabIndex = 8;
             // 
             // htmlChangeCustomColorButton
@@ -165,7 +165,7 @@ namespace ProgrammerUtils
             this.htmlChangeCustomColorButton.Location = new System.Drawing.Point(0, 0);
             this.htmlChangeCustomColorButton.Margin = new System.Windows.Forms.Padding(0);
             this.htmlChangeCustomColorButton.Name = "htmlChangeCustomColorButton";
-            this.htmlChangeCustomColorButton.Size = new System.Drawing.Size(94, 22);
+            this.htmlChangeCustomColorButton.Size = new System.Drawing.Size(94, 25);
             this.htmlChangeCustomColorButton.TabIndex = 7;
             this.htmlChangeCustomColorButton.Text = "Custom Color";
             this.htmlChangeCustomColorButton.UseVisualStyleBackColor = false;
@@ -184,7 +184,7 @@ namespace ProgrammerUtils
             this.htmlCustomColorRectangle.Location = new System.Drawing.Point(98, 4);
             this.htmlCustomColorRectangle.Margin = new System.Windows.Forms.Padding(4);
             this.htmlCustomColorRectangle.Name = "htmlCustomColorRectangle";
-            this.htmlCustomColorRectangle.Size = new System.Drawing.Size(8, 14);
+            this.htmlCustomColorRectangle.Size = new System.Drawing.Size(8, 17);
             this.htmlCustomColorRectangle.TabIndex = 0;
             this.htmlCustomColorRectangle.TabStop = false;
             this.htmlCustomColorRectangle.UseVisualStyleBackColor = false;
@@ -200,7 +200,7 @@ namespace ProgrammerUtils
             this.htmlColorCustomCheckbox.Location = new System.Drawing.Point(455, 2);
             this.htmlColorCustomCheckbox.Margin = new System.Windows.Forms.Padding(2);
             this.htmlColorCustomCheckbox.Name = "htmlColorCustomCheckbox";
-            this.htmlColorCustomCheckbox.Size = new System.Drawing.Size(106, 17);
+            this.htmlColorCustomCheckbox.Size = new System.Drawing.Size(106, 21);
             this.htmlColorCustomCheckbox.TabIndex = 6;
             this.htmlColorCustomCheckbox.Text = "Color custom";
             this.htmlColorCustomCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -215,13 +215,13 @@ namespace ProgrammerUtils
             this.htmlColorEntityTableLayout.Controls.Add(this.htmlChangeEntityColorButton, 0, 0);
             this.htmlColorEntityTableLayout.Controls.Add(this.htmlEntityColorRectangle, 1, 0);
             this.htmlColorEntityTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlColorEntityTableLayout.Location = new System.Drawing.Point(343, 21);
+            this.htmlColorEntityTableLayout.Location = new System.Drawing.Point(343, 25);
             this.htmlColorEntityTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.htmlColorEntityTableLayout.Name = "htmlColorEntityTableLayout";
             this.htmlColorEntityTableLayout.RowCount = 1;
             this.htmlColorEntityTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.htmlColorEntityTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-            this.htmlColorEntityTableLayout.Size = new System.Drawing.Size(110, 22);
+            this.htmlColorEntityTableLayout.Size = new System.Drawing.Size(110, 25);
             this.htmlColorEntityTableLayout.TabIndex = 5;
             // 
             // htmlChangeEntityColorButton
@@ -235,7 +235,7 @@ namespace ProgrammerUtils
             this.htmlChangeEntityColorButton.Location = new System.Drawing.Point(0, 0);
             this.htmlChangeEntityColorButton.Margin = new System.Windows.Forms.Padding(0);
             this.htmlChangeEntityColorButton.Name = "htmlChangeEntityColorButton";
-            this.htmlChangeEntityColorButton.Size = new System.Drawing.Size(94, 22);
+            this.htmlChangeEntityColorButton.Size = new System.Drawing.Size(94, 25);
             this.htmlChangeEntityColorButton.TabIndex = 5;
             this.htmlChangeEntityColorButton.Text = "Entity Color";
             this.htmlChangeEntityColorButton.UseVisualStyleBackColor = false;
@@ -254,7 +254,7 @@ namespace ProgrammerUtils
             this.htmlEntityColorRectangle.Location = new System.Drawing.Point(98, 4);
             this.htmlEntityColorRectangle.Margin = new System.Windows.Forms.Padding(4);
             this.htmlEntityColorRectangle.Name = "htmlEntityColorRectangle";
-            this.htmlEntityColorRectangle.Size = new System.Drawing.Size(8, 14);
+            this.htmlEntityColorRectangle.Size = new System.Drawing.Size(8, 17);
             this.htmlEntityColorRectangle.TabIndex = 0;
             this.htmlEntityColorRectangle.TabStop = false;
             this.htmlEntityColorRectangle.UseVisualStyleBackColor = false;
@@ -270,7 +270,7 @@ namespace ProgrammerUtils
             this.htmlColorEntitiesCheckbox.Location = new System.Drawing.Point(345, 2);
             this.htmlColorEntitiesCheckbox.Margin = new System.Windows.Forms.Padding(2);
             this.htmlColorEntitiesCheckbox.Name = "htmlColorEntitiesCheckbox";
-            this.htmlColorEntitiesCheckbox.Size = new System.Drawing.Size(106, 17);
+            this.htmlColorEntitiesCheckbox.Size = new System.Drawing.Size(106, 21);
             this.htmlColorEntitiesCheckbox.TabIndex = 4;
             this.htmlColorEntitiesCheckbox.Text = "Color entities";
             this.htmlColorEntitiesCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -289,7 +289,7 @@ namespace ProgrammerUtils
             this.htmlButton.Margin = new System.Windows.Forms.Padding(2);
             this.htmlButton.Name = "htmlButton";
             this.htmlSettingsTableLayout.SetRowSpan(this.htmlButton, 2);
-            this.htmlButton.Size = new System.Drawing.Size(127, 39);
+            this.htmlButton.Size = new System.Drawing.Size(127, 46);
             this.htmlButton.TabIndex = 0;
             this.htmlButton.Text = "HTML:ify";
             this.htmlButton.UseVisualStyleBackColor = false;
@@ -306,7 +306,7 @@ namespace ProgrammerUtils
             this.htmlColorTagsCheckbox.Location = new System.Drawing.Point(235, 2);
             this.htmlColorTagsCheckbox.Margin = new System.Windows.Forms.Padding(2);
             this.htmlColorTagsCheckbox.Name = "htmlColorTagsCheckbox";
-            this.htmlColorTagsCheckbox.Size = new System.Drawing.Size(106, 17);
+            this.htmlColorTagsCheckbox.Size = new System.Drawing.Size(106, 21);
             this.htmlColorTagsCheckbox.TabIndex = 2;
             this.htmlColorTagsCheckbox.Text = "Color tags";
             this.htmlColorTagsCheckbox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -321,13 +321,13 @@ namespace ProgrammerUtils
             this.htmlColorTagOptionTableLayout.Controls.Add(this.htmlChooseColorButton, 0, 0);
             this.htmlColorTagOptionTableLayout.Controls.Add(this.htmlTagColorRectangle, 1, 0);
             this.htmlColorTagOptionTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlColorTagOptionTableLayout.Location = new System.Drawing.Point(233, 21);
+            this.htmlColorTagOptionTableLayout.Location = new System.Drawing.Point(233, 25);
             this.htmlColorTagOptionTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.htmlColorTagOptionTableLayout.Name = "htmlColorTagOptionTableLayout";
             this.htmlColorTagOptionTableLayout.RowCount = 1;
             this.htmlColorTagOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.htmlColorTagOptionTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
-            this.htmlColorTagOptionTableLayout.Size = new System.Drawing.Size(110, 22);
+            this.htmlColorTagOptionTableLayout.Size = new System.Drawing.Size(110, 25);
             this.htmlColorTagOptionTableLayout.TabIndex = 3;
             // 
             // htmlChooseColorButton
@@ -341,7 +341,7 @@ namespace ProgrammerUtils
             this.htmlChooseColorButton.Location = new System.Drawing.Point(0, 0);
             this.htmlChooseColorButton.Margin = new System.Windows.Forms.Padding(0);
             this.htmlChooseColorButton.Name = "htmlChooseColorButton";
-            this.htmlChooseColorButton.Size = new System.Drawing.Size(94, 22);
+            this.htmlChooseColorButton.Size = new System.Drawing.Size(94, 25);
             this.htmlChooseColorButton.TabIndex = 3;
             this.htmlChooseColorButton.Text = "Tag Color";
             this.htmlChooseColorButton.UseVisualStyleBackColor = false;
@@ -360,7 +360,7 @@ namespace ProgrammerUtils
             this.htmlTagColorRectangle.Location = new System.Drawing.Point(98, 4);
             this.htmlTagColorRectangle.Margin = new System.Windows.Forms.Padding(4);
             this.htmlTagColorRectangle.Name = "htmlTagColorRectangle";
-            this.htmlTagColorRectangle.Size = new System.Drawing.Size(8, 14);
+            this.htmlTagColorRectangle.Size = new System.Drawing.Size(8, 17);
             this.htmlTagColorRectangle.TabIndex = 0;
             this.htmlTagColorRectangle.TabStop = false;
             this.htmlTagColorRectangle.UseVisualStyleBackColor = false;
@@ -377,7 +377,7 @@ namespace ProgrammerUtils
             this.htmlCustomRulesButton.Margin = new System.Windows.Forms.Padding(2);
             this.htmlCustomRulesButton.Name = "htmlCustomRulesButton";
             this.htmlSettingsTableLayout.SetRowSpan(this.htmlCustomRulesButton, 2);
-            this.htmlCustomRulesButton.Size = new System.Drawing.Size(90, 39);
+            this.htmlCustomRulesButton.Size = new System.Drawing.Size(90, 46);
             this.htmlCustomRulesButton.TabIndex = 1;
             this.htmlCustomRulesButton.Text = "Custom Rules";
             this.htmlCustomRulesButton.UseVisualStyleBackColor = false;
@@ -391,14 +391,14 @@ namespace ProgrammerUtils
             this.htmlInputTableLayout.Controls.Add(this.htmlInputTextSettingsTableLayout, 0, 1);
             this.htmlInputTableLayout.Controls.Add(this.borderPanel1, 0, 0);
             this.htmlInputTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlInputTableLayout.Location = new System.Drawing.Point(0, 53);
+            this.htmlInputTableLayout.Location = new System.Drawing.Point(0, 60);
             this.htmlInputTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.htmlInputTableLayout.Name = "htmlInputTableLayout";
             this.htmlInputTableLayout.RowCount = 3;
             this.htmlInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.htmlInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.htmlInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.htmlInputTableLayout.Size = new System.Drawing.Size(312, 341);
+            this.htmlInputTableLayout.Size = new System.Drawing.Size(312, 334);
             this.htmlInputTableLayout.TabIndex = 1;
             // 
             // Label1BorderPanel
@@ -407,7 +407,7 @@ namespace ProgrammerUtils
             this.Label1BorderPanel.BorderWidth = 2;
             this.Label1BorderPanel.Controls.Add(this.label1);
             this.Label1BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Label1BorderPanel.Location = new System.Drawing.Point(4, 300);
+            this.Label1BorderPanel.Location = new System.Drawing.Point(4, 293);
             this.Label1BorderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.Label1BorderPanel.Name = "Label1BorderPanel";
             this.Label1BorderPanel.Padding = new System.Windows.Forms.Padding(4);
@@ -419,7 +419,7 @@ namespace ProgrammerUtils
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -446,7 +446,7 @@ namespace ProgrammerUtils
             this.htmlInputTextSettingsTableLayout.Controls.Add(this.htmlBoldButton, 0, 0);
             this.htmlInputTextSettingsTableLayout.Controls.Add(this.htmlRaisedButton, 4, 0);
             this.htmlInputTextSettingsTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlInputTextSettingsTableLayout.Location = new System.Drawing.Point(2, 258);
+            this.htmlInputTextSettingsTableLayout.Location = new System.Drawing.Point(2, 251);
             this.htmlInputTextSettingsTableLayout.Margin = new System.Windows.Forms.Padding(2);
             this.htmlInputTextSettingsTableLayout.Name = "htmlInputTextSettingsTableLayout";
             this.htmlInputTextSettingsTableLayout.RowCount = 1;
@@ -595,7 +595,7 @@ namespace ProgrammerUtils
             this.borderPanel1.Name = "borderPanel1";
             this.borderPanel1.Padding = new System.Windows.Forms.Padding(4);
             this.borderPanel1.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.borderPanel1.Size = new System.Drawing.Size(304, 248);
+            this.borderPanel1.Size = new System.Drawing.Size(304, 241);
             this.borderPanel1.TabIndex = 12;
             // 
             // htmlInputTextbox
@@ -607,7 +607,7 @@ namespace ProgrammerUtils
             this.htmlInputTextbox.Location = new System.Drawing.Point(4, 4);
             this.htmlInputTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.htmlInputTextbox.Name = "htmlInputTextbox";
-            this.htmlInputTextbox.Size = new System.Drawing.Size(296, 240);
+            this.htmlInputTextbox.Size = new System.Drawing.Size(296, 233);
             this.htmlInputTextbox.TabIndex = 9;
             this.htmlInputTextbox.Text = "";
             // 
@@ -618,13 +618,13 @@ namespace ProgrammerUtils
             this.htmlOutputTableLayout.Controls.Add(this.label2BorderPanel, 0, 1);
             this.htmlOutputTableLayout.Controls.Add(this.borderPanel2, 0, 0);
             this.htmlOutputTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlOutputTableLayout.Location = new System.Drawing.Point(312, 53);
+            this.htmlOutputTableLayout.Location = new System.Drawing.Point(312, 60);
             this.htmlOutputTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.htmlOutputTableLayout.Name = "htmlOutputTableLayout";
             this.htmlOutputTableLayout.RowCount = 2;
             this.htmlOutputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.htmlOutputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.htmlOutputTableLayout.Size = new System.Drawing.Size(312, 341);
+            this.htmlOutputTableLayout.Size = new System.Drawing.Size(312, 334);
             this.htmlOutputTableLayout.TabIndex = 2;
             // 
             // label2BorderPanel
@@ -633,7 +633,7 @@ namespace ProgrammerUtils
             this.label2BorderPanel.BorderWidth = 2;
             this.label2BorderPanel.Controls.Add(this.label2);
             this.label2BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2BorderPanel.Location = new System.Drawing.Point(4, 300);
+            this.label2BorderPanel.Location = new System.Drawing.Point(4, 293);
             this.label2BorderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.label2BorderPanel.Name = "label2BorderPanel";
             this.label2BorderPanel.Padding = new System.Windows.Forms.Padding(4);
@@ -645,7 +645,7 @@ namespace ProgrammerUtils
             // 
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(4, 4);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -666,7 +666,7 @@ namespace ProgrammerUtils
             this.borderPanel2.Name = "borderPanel2";
             this.borderPanel2.Padding = new System.Windows.Forms.Padding(4);
             this.borderPanel2.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.borderPanel2.Size = new System.Drawing.Size(304, 288);
+            this.borderPanel2.Size = new System.Drawing.Size(304, 281);
             this.borderPanel2.TabIndex = 17;
             // 
             // htmlOutputTextbox
@@ -679,7 +679,7 @@ namespace ProgrammerUtils
             this.htmlOutputTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.htmlOutputTextbox.Name = "htmlOutputTextbox";
             this.htmlOutputTextbox.ReadOnly = true;
-            this.htmlOutputTextbox.Size = new System.Drawing.Size(296, 280);
+            this.htmlOutputTextbox.Size = new System.Drawing.Size(296, 273);
             this.htmlOutputTextbox.TabIndex = 16;
             this.htmlOutputTextbox.Text = "";
             // 
@@ -691,7 +691,7 @@ namespace ProgrammerUtils
             this.htmlSideTableLayout.Controls.Add(this.htmlClearButton, 0, 2);
             this.htmlSideTableLayout.Controls.Add(this.htmlCopyButton, 0, 1);
             this.htmlSideTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlSideTableLayout.Location = new System.Drawing.Point(624, 53);
+            this.htmlSideTableLayout.Location = new System.Drawing.Point(624, 60);
             this.htmlSideTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.htmlSideTableLayout.Name = "htmlSideTableLayout";
             this.htmlSideTableLayout.RowCount = 4;
@@ -699,7 +699,7 @@ namespace ProgrammerUtils
             this.htmlSideTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.htmlSideTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
             this.htmlSideTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.htmlSideTableLayout.Size = new System.Drawing.Size(53, 341);
+            this.htmlSideTableLayout.Size = new System.Drawing.Size(53, 334);
             this.htmlSideTableLayout.TabIndex = 3;
             // 
             // htmlOpenAllTags
@@ -729,7 +729,7 @@ namespace ProgrammerUtils
             this.htmlClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.htmlClearButton.FlatAppearance.BorderSize = 0;
             this.htmlClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.htmlClearButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlClearButton.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.htmlClearButton.Location = new System.Drawing.Point(2, 106);
             this.htmlClearButton.Margin = new System.Windows.Forms.Padding(2);
             this.htmlClearButton.Name = "htmlClearButton";
@@ -762,12 +762,12 @@ namespace ProgrammerUtils
             // 
             this.htmlCopyLabel.AutoSize = true;
             this.htmlCopyLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.htmlCopyLabel.Font = new System.Drawing.Font("Arial", 7.6F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.htmlCopyLabel.Font = new System.Drawing.Font("Arial", 7F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.htmlCopyLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(153)))), ((int)(((byte)(118)))));
-            this.htmlCopyLabel.Location = new System.Drawing.Point(626, 0);
-            this.htmlCopyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.htmlCopyLabel.Location = new System.Drawing.Point(624, 0);
+            this.htmlCopyLabel.Margin = new System.Windows.Forms.Padding(0);
             this.htmlCopyLabel.Name = "htmlCopyLabel";
-            this.htmlCopyLabel.Size = new System.Drawing.Size(49, 53);
+            this.htmlCopyLabel.Size = new System.Drawing.Size(53, 60);
             this.htmlCopyLabel.TabIndex = 4;
             this.htmlCopyLabel.Text = "Copied!";
             this.htmlCopyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -90,7 +90,7 @@ namespace ProgrammerUtils
             this.countTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.countTableLayout.Name = "countTableLayout";
             this.countTableLayout.RowCount = 2;
-            this.countTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.countTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
             this.countTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.countTableLayout.Size = new System.Drawing.Size(700, 404);
             this.countTableLayout.TabIndex = 1;
@@ -101,12 +101,12 @@ namespace ProgrammerUtils
             this.TabsBorderPanel.BorderWidth = 2;
             this.TabsBorderPanel.Controls.Add(this.ImprovedTabsTableLayout);
             this.TabsBorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabsBorderPanel.Location = new System.Drawing.Point(529, 57);
+            this.TabsBorderPanel.Location = new System.Drawing.Point(529, 64);
             this.TabsBorderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.TabsBorderPanel.Name = "TabsBorderPanel";
             this.TabsBorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.TabsBorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.TabsBorderPanel.Size = new System.Drawing.Size(167, 343);
+            this.TabsBorderPanel.Size = new System.Drawing.Size(167, 336);
             this.TabsBorderPanel.TabIndex = 14;
             // 
             // ImprovedTabsTableLayout
@@ -122,7 +122,7 @@ namespace ProgrammerUtils
             this.ImprovedTabsTableLayout.RowCount = 2;
             this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
             this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.ImprovedTabsTableLayout.Size = new System.Drawing.Size(159, 335);
+            this.ImprovedTabsTableLayout.Size = new System.Drawing.Size(159, 328);
             this.ImprovedTabsTableLayout.TabIndex = 1;
             // 
             // TabsHeader
@@ -207,7 +207,7 @@ namespace ProgrammerUtils
             this.TabsPanel.Location = new System.Drawing.Point(0, 64);
             this.TabsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.TabsPanel.Name = "TabsPanel";
-            this.TabsPanel.Size = new System.Drawing.Size(159, 271);
+            this.TabsPanel.Size = new System.Drawing.Size(159, 264);
             this.TabsPanel.TabIndex = 1;
             // 
             // uniqueTextbox
@@ -221,7 +221,7 @@ namespace ProgrammerUtils
             this.uniqueTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.uniqueTextbox.Name = "uniqueTextbox";
             this.uniqueTextbox.ReadOnly = true;
-            this.uniqueTextbox.Size = new System.Drawing.Size(54, 271);
+            this.uniqueTextbox.Size = new System.Drawing.Size(54, 264);
             this.uniqueTextbox.TabIndex = 8;
             this.uniqueTextbox.Text = "";
             // 
@@ -236,7 +236,7 @@ namespace ProgrammerUtils
             this.densityTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.densityTextbox.Name = "densityTextbox";
             this.densityTextbox.ReadOnly = true;
-            this.densityTextbox.Size = new System.Drawing.Size(54, 271);
+            this.densityTextbox.Size = new System.Drawing.Size(54, 264);
             this.densityTextbox.TabIndex = 7;
             this.densityTextbox.Text = "";
             // 
@@ -251,7 +251,7 @@ namespace ProgrammerUtils
             this.frequencyTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.frequencyTextBox.Name = "frequencyTextBox";
             this.frequencyTextBox.ReadOnly = true;
-            this.frequencyTextBox.Size = new System.Drawing.Size(54, 271);
+            this.frequencyTextBox.Size = new System.Drawing.Size(54, 264);
             this.frequencyTextBox.TabIndex = 6;
             this.frequencyTextBox.Text = "";
             // 
@@ -276,7 +276,7 @@ namespace ProgrammerUtils
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(692, 43);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(692, 50);
             this.tableLayoutPanel5.TabIndex = 1;
             // 
             // countClearButton
@@ -286,12 +286,12 @@ namespace ProgrammerUtils
             this.countClearButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.countClearButton.FlatAppearance.BorderSize = 0;
             this.countClearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.countClearButton.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countClearButton.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countClearButton.Location = new System.Drawing.Point(612, 2);
             this.countClearButton.Margin = new System.Windows.Forms.Padding(2);
             this.countClearButton.Name = "countClearButton";
             this.tableLayoutPanel5.SetRowSpan(this.countClearButton, 2);
-            this.countClearButton.Size = new System.Drawing.Size(78, 39);
+            this.countClearButton.Size = new System.Drawing.Size(78, 46);
             this.countClearButton.TabIndex = 5;
             this.countClearButton.Text = "Clear";
             this.countClearButton.UseVisualStyleBackColor = false;
@@ -309,7 +309,7 @@ namespace ProgrammerUtils
             this.countButton.Margin = new System.Windows.Forms.Padding(2);
             this.countButton.Name = "countButton";
             this.tableLayoutPanel5.SetRowSpan(this.countButton, 2);
-            this.countButton.Size = new System.Drawing.Size(127, 39);
+            this.countButton.Size = new System.Drawing.Size(127, 46);
             this.countButton.TabIndex = 0;
             this.countButton.Text = "Count";
             this.countButton.UseVisualStyleBackColor = false;
@@ -327,7 +327,7 @@ namespace ProgrammerUtils
             this.countSortModes.Items.AddRange(new object[] {
             "Alphabetical",
             "Value"});
-            this.countSortModes.Location = new System.Drawing.Point(133, 23);
+            this.countSortModes.Location = new System.Drawing.Point(133, 27);
             this.countSortModes.Margin = new System.Windows.Forms.Padding(2);
             this.countSortModes.Name = "countSortModes";
             this.countSortModes.Size = new System.Drawing.Size(108, 20);
@@ -343,7 +343,7 @@ namespace ProgrammerUtils
             this.countSortModeLabel.Location = new System.Drawing.Point(133, 0);
             this.countSortModeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.countSortModeLabel.Name = "countSortModeLabel";
-            this.countSortModeLabel.Size = new System.Drawing.Size(108, 21);
+            this.countSortModeLabel.Size = new System.Drawing.Size(108, 25);
             this.countSortModeLabel.TabIndex = 7;
             this.countSortModeLabel.Text = "Sort mode";
             this.countSortModeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -360,7 +360,7 @@ namespace ProgrammerUtils
             this.countCaseSensitive.Margin = new System.Windows.Forms.Padding(2);
             this.countCaseSensitive.Name = "countCaseSensitive";
             this.tableLayoutPanel5.SetRowSpan(this.countCaseSensitive, 2);
-            this.countCaseSensitive.Size = new System.Drawing.Size(92, 39);
+            this.countCaseSensitive.Size = new System.Drawing.Size(92, 46);
             this.countCaseSensitive.TabIndex = 8;
             this.countCaseSensitive.Text = "Case sensitive";
             this.countCaseSensitive.UseVisualStyleBackColor = true;
@@ -373,13 +373,13 @@ namespace ProgrammerUtils
             this.countInputTableLayout.Controls.Add(this.label1BorderPanel, 0, 1);
             this.countInputTableLayout.Controls.Add(this.inputBorderPanel, 0, 0);
             this.countInputTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.countInputTableLayout.Location = new System.Drawing.Point(0, 53);
+            this.countInputTableLayout.Location = new System.Drawing.Point(0, 60);
             this.countInputTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.countInputTableLayout.Name = "countInputTableLayout";
             this.countInputTableLayout.RowCount = 2;
             this.countInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.countInputTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.countInputTableLayout.Size = new System.Drawing.Size(329, 351);
+            this.countInputTableLayout.Size = new System.Drawing.Size(329, 344);
             this.countInputTableLayout.TabIndex = 3;
             // 
             // label1BorderPanel
@@ -388,7 +388,7 @@ namespace ProgrammerUtils
             this.label1BorderPanel.BorderWidth = 2;
             this.label1BorderPanel.Controls.Add(this.countLabel1);
             this.label1BorderPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1BorderPanel.Location = new System.Drawing.Point(4, 303);
+            this.label1BorderPanel.Location = new System.Drawing.Point(4, 296);
             this.label1BorderPanel.Margin = new System.Windows.Forms.Padding(4);
             this.label1BorderPanel.Name = "label1BorderPanel";
             this.label1BorderPanel.Padding = new System.Windows.Forms.Padding(4);
@@ -400,7 +400,7 @@ namespace ProgrammerUtils
             // 
             this.countLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.countLabel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.countLabel1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countLabel1.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countLabel1.Location = new System.Drawing.Point(4, 4);
             this.countLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.countLabel1.Name = "countLabel1";
@@ -421,7 +421,7 @@ namespace ProgrammerUtils
             this.inputBorderPanel.Name = "inputBorderPanel";
             this.inputBorderPanel.Padding = new System.Windows.Forms.Padding(4);
             this.inputBorderPanel.PanelBorderStyle = System.Windows.Forms.ButtonBorderStyle.Solid;
-            this.inputBorderPanel.Size = new System.Drawing.Size(321, 291);
+            this.inputBorderPanel.Size = new System.Drawing.Size(321, 284);
             this.inputBorderPanel.TabIndex = 12;
             // 
             // countInputTextbox
@@ -434,7 +434,7 @@ namespace ProgrammerUtils
             this.countInputTextbox.Location = new System.Drawing.Point(4, 4);
             this.countInputTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.countInputTextbox.Name = "countInputTextbox";
-            this.countInputTextbox.Size = new System.Drawing.Size(313, 283);
+            this.countInputTextbox.Size = new System.Drawing.Size(313, 276);
             this.countInputTextbox.TabIndex = 5;
             this.countInputTextbox.Text = "";
             // 
@@ -445,13 +445,13 @@ namespace ProgrammerUtils
             this.countInfoTableLayout.Controls.Add(this.borderPanel1, 0, 1);
             this.countInfoTableLayout.Controls.Add(this.countInfoFlowLayoutPanel, 0, 0);
             this.countInfoTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.countInfoTableLayout.Location = new System.Drawing.Point(329, 53);
+            this.countInfoTableLayout.Location = new System.Drawing.Point(329, 60);
             this.countInfoTableLayout.Margin = new System.Windows.Forms.Padding(0);
             this.countInfoTableLayout.Name = "countInfoTableLayout";
             this.countInfoTableLayout.RowCount = 2;
             this.countInfoTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.countInfoTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
-            this.countInfoTableLayout.Size = new System.Drawing.Size(196, 351);
+            this.countInfoTableLayout.Size = new System.Drawing.Size(196, 344);
             this.countInfoTableLayout.TabIndex = 5;
             // 
             // borderPanel1
@@ -460,7 +460,7 @@ namespace ProgrammerUtils
             this.borderPanel1.BorderWidth = 2;
             this.borderPanel1.Controls.Add(this.label1);
             this.borderPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.borderPanel1.Location = new System.Drawing.Point(4, 303);
+            this.borderPanel1.Location = new System.Drawing.Point(4, 296);
             this.borderPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.borderPanel1.Name = "borderPanel1";
             this.borderPanel1.Padding = new System.Windows.Forms.Padding(4);
@@ -472,7 +472,7 @@ namespace ProgrammerUtils
             // 
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(32)))), ((int)(((byte)(41)))));
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(4, 4);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -497,7 +497,7 @@ namespace ProgrammerUtils
             this.countInfoFlowLayoutPanel.Location = new System.Drawing.Point(2, 2);
             this.countInfoFlowLayoutPanel.Margin = new System.Windows.Forms.Padding(2);
             this.countInfoFlowLayoutPanel.Name = "countInfoFlowLayoutPanel";
-            this.countInfoFlowLayoutPanel.Size = new System.Drawing.Size(192, 295);
+            this.countInfoFlowLayoutPanel.Size = new System.Drawing.Size(192, 288);
             this.countInfoFlowLayoutPanel.TabIndex = 5;
             this.countInfoFlowLayoutPanel.WrapContents = false;
             // 
