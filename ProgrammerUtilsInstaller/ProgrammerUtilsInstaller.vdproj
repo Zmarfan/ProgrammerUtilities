@@ -46,13 +46,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_03884F1B8BECE681556813451783C479"
+        "OwnerKey" = "8:_C5C351B2C25C4877BE0F2B06549B8CCD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_C5C351B2C25C4877BE0F2B06549B8CCD"
+        "OwnerKey" = "8:_03884F1B8BECE681556813451783C479"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -73,6 +73,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -89,6 +97,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -265,15 +281,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:ProgrammerUtilities"
-        "ProductCode" = "8:{A180BC6E-3C64-4F45-A5B7-1555D23F0EAB}"
-        "PackageCode" = "8:{E9A662E8-E774-4519-8781-614FF41E44CE}"
+        "ProductCode" = "8:{A02C9753-D4CE-4D05-98F3-D2D16FBFA58D}"
+        "PackageCode" = "8:{21C91B09-50F9-4C35-8130-24E8EF120E49}"
         "UpgradeCode" = "8:{AC0CF763-869E-4357-AF8D-5765853F0D26}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:Filip Petersson"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
