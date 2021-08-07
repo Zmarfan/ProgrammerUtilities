@@ -120,7 +120,7 @@ namespace ProgrammerUtils
             this.ImprovedTabsTableLayout.Margin = new System.Windows.Forms.Padding(2);
             this.ImprovedTabsTableLayout.Name = "ImprovedTabsTableLayout";
             this.ImprovedTabsTableLayout.RowCount = 2;
-            this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
+            this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
             this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.ImprovedTabsTableLayout.Size = new System.Drawing.Size(159, 335);
             this.ImprovedTabsTableLayout.TabIndex = 1;
@@ -128,9 +128,8 @@ namespace ProgrammerUtils
             // TabsHeader
             // 
             this.TabsHeader.ColumnCount = 2;
-            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TabsHeader.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TabsHeader.Controls.Add(this.UniqueButton, 0, 1);
             this.TabsHeader.Controls.Add(this.DensityButton, 1, 0);
             this.TabsHeader.Controls.Add(this.FrequencyButton, 0, 0);
@@ -139,9 +138,9 @@ namespace ProgrammerUtils
             this.TabsHeader.Margin = new System.Windows.Forms.Padding(2);
             this.TabsHeader.Name = "TabsHeader";
             this.TabsHeader.RowCount = 2;
-            this.TabsHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.TabsHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.TabsHeader.Size = new System.Drawing.Size(155, 52);
+            this.TabsHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.TabsHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.TabsHeader.Size = new System.Drawing.Size(155, 60);
             this.TabsHeader.TabIndex = 0;
             // 
             // UniqueButton
@@ -154,10 +153,10 @@ namespace ProgrammerUtils
             this.UniqueButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UniqueButton.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UniqueButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.UniqueButton.Location = new System.Drawing.Point(2, 30);
+            this.UniqueButton.Location = new System.Drawing.Point(2, 34);
             this.UniqueButton.Margin = new System.Windows.Forms.Padding(2);
             this.UniqueButton.Name = "UniqueButton";
-            this.UniqueButton.Size = new System.Drawing.Size(151, 24);
+            this.UniqueButton.Size = new System.Drawing.Size(151, 28);
             this.UniqueButton.TabIndex = 2;
             this.UniqueButton.Text = "Unique Words";
             this.UniqueButton.UseVisualStyleBackColor = false;
@@ -172,10 +171,10 @@ namespace ProgrammerUtils
             this.DensityButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DensityButton.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DensityButton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.DensityButton.Location = new System.Drawing.Point(78, 2);
+            this.DensityButton.Location = new System.Drawing.Point(79, 2);
             this.DensityButton.Margin = new System.Windows.Forms.Padding(2);
             this.DensityButton.Name = "DensityButton";
-            this.DensityButton.Size = new System.Drawing.Size(75, 24);
+            this.DensityButton.Size = new System.Drawing.Size(74, 28);
             this.DensityButton.TabIndex = 1;
             this.DensityButton.Text = "Density";
             this.DensityButton.UseVisualStyleBackColor = false;
@@ -193,7 +192,7 @@ namespace ProgrammerUtils
             this.FrequencyButton.Location = new System.Drawing.Point(2, 2);
             this.FrequencyButton.Margin = new System.Windows.Forms.Padding(2);
             this.FrequencyButton.Name = "FrequencyButton";
-            this.FrequencyButton.Size = new System.Drawing.Size(72, 24);
+            this.FrequencyButton.Size = new System.Drawing.Size(73, 28);
             this.FrequencyButton.TabIndex = 0;
             this.FrequencyButton.Text = "Frequency";
             this.FrequencyButton.UseVisualStyleBackColor = false;
@@ -205,10 +204,10 @@ namespace ProgrammerUtils
             this.TabsPanel.Controls.Add(this.densityTextbox);
             this.TabsPanel.Controls.Add(this.frequencyTextBox);
             this.TabsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabsPanel.Location = new System.Drawing.Point(0, 56);
+            this.TabsPanel.Location = new System.Drawing.Point(0, 64);
             this.TabsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.TabsPanel.Name = "TabsPanel";
-            this.TabsPanel.Size = new System.Drawing.Size(159, 279);
+            this.TabsPanel.Size = new System.Drawing.Size(159, 271);
             this.TabsPanel.TabIndex = 1;
             // 
             // uniqueTextbox
@@ -222,7 +221,7 @@ namespace ProgrammerUtils
             this.uniqueTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.uniqueTextbox.Name = "uniqueTextbox";
             this.uniqueTextbox.ReadOnly = true;
-            this.uniqueTextbox.Size = new System.Drawing.Size(54, 279);
+            this.uniqueTextbox.Size = new System.Drawing.Size(54, 271);
             this.uniqueTextbox.TabIndex = 8;
             this.uniqueTextbox.Text = "";
             // 
@@ -237,7 +236,7 @@ namespace ProgrammerUtils
             this.densityTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.densityTextbox.Name = "densityTextbox";
             this.densityTextbox.ReadOnly = true;
-            this.densityTextbox.Size = new System.Drawing.Size(54, 279);
+            this.densityTextbox.Size = new System.Drawing.Size(54, 271);
             this.densityTextbox.TabIndex = 7;
             this.densityTextbox.Text = "";
             // 
@@ -252,7 +251,7 @@ namespace ProgrammerUtils
             this.frequencyTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.frequencyTextBox.Name = "frequencyTextBox";
             this.frequencyTextBox.ReadOnly = true;
-            this.frequencyTextBox.Size = new System.Drawing.Size(54, 279);
+            this.frequencyTextBox.Size = new System.Drawing.Size(54, 271);
             this.frequencyTextBox.TabIndex = 6;
             this.frequencyTextBox.Text = "";
             // 

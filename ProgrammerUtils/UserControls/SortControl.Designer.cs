@@ -136,7 +136,7 @@ namespace ProgrammerUtils
             this.ImprovedTabsTableLayout.Margin = new System.Windows.Forms.Padding(2);
             this.ImprovedTabsTableLayout.Name = "ImprovedTabsTableLayout";
             this.ImprovedTabsTableLayout.RowCount = 2;
-            this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.ImprovedTabsTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.ImprovedTabsTableLayout.Size = new System.Drawing.Size(326, 276);
             this.ImprovedTabsTableLayout.TabIndex = 1;
@@ -155,7 +155,7 @@ namespace ProgrammerUtils
             this.TabsHeader.Name = "TabsHeader";
             this.TabsHeader.RowCount = 1;
             this.TabsHeader.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TabsHeader.Size = new System.Drawing.Size(322, 24);
+            this.TabsHeader.Size = new System.Drawing.Size(322, 28);
             this.TabsHeader.TabIndex = 0;
             // 
             // EnumButton
@@ -170,7 +170,7 @@ namespace ProgrammerUtils
             this.EnumButton.Location = new System.Drawing.Point(58, 2);
             this.EnumButton.Margin = new System.Windows.Forms.Padding(2);
             this.EnumButton.Name = "EnumButton";
-            this.EnumButton.Size = new System.Drawing.Size(52, 20);
+            this.EnumButton.Size = new System.Drawing.Size(52, 24);
             this.EnumButton.TabIndex = 1;
             this.EnumButton.Text = "Enum";
             this.EnumButton.UseVisualStyleBackColor = false;
@@ -188,7 +188,7 @@ namespace ProgrammerUtils
             this.ListButton.Location = new System.Drawing.Point(2, 2);
             this.ListButton.Margin = new System.Windows.Forms.Padding(2);
             this.ListButton.Name = "ListButton";
-            this.ListButton.Size = new System.Drawing.Size(52, 20);
+            this.ListButton.Size = new System.Drawing.Size(52, 24);
             this.ListButton.TabIndex = 0;
             this.ListButton.Text = "List";
             this.ListButton.UseVisualStyleBackColor = false;
@@ -199,10 +199,10 @@ namespace ProgrammerUtils
             this.TabsPanel.Controls.Add(this.sortEnumTextBoxRight);
             this.TabsPanel.Controls.Add(this.sortTextBoxRight);
             this.TabsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TabsPanel.Location = new System.Drawing.Point(0, 28);
+            this.TabsPanel.Location = new System.Drawing.Point(0, 32);
             this.TabsPanel.Margin = new System.Windows.Forms.Padding(0);
             this.TabsPanel.Name = "TabsPanel";
-            this.TabsPanel.Size = new System.Drawing.Size(326, 248);
+            this.TabsPanel.Size = new System.Drawing.Size(326, 244);
             this.TabsPanel.TabIndex = 1;
             // 
             // sortEnumTextBoxRight
@@ -215,7 +215,7 @@ namespace ProgrammerUtils
             this.sortEnumTextBoxRight.Margin = new System.Windows.Forms.Padding(2);
             this.sortEnumTextBoxRight.Name = "sortEnumTextBoxRight";
             this.sortEnumTextBoxRight.ReadOnly = true;
-            this.sortEnumTextBoxRight.Size = new System.Drawing.Size(65, 248);
+            this.sortEnumTextBoxRight.Size = new System.Drawing.Size(65, 244);
             this.sortEnumTextBoxRight.TabIndex = 3;
             this.sortEnumTextBoxRight.Text = "";
             // 
@@ -230,7 +230,7 @@ namespace ProgrammerUtils
             this.sortTextBoxRight.Margin = new System.Windows.Forms.Padding(2);
             this.sortTextBoxRight.Name = "sortTextBoxRight";
             this.sortTextBoxRight.ReadOnly = true;
-            this.sortTextBoxRight.Size = new System.Drawing.Size(66, 248);
+            this.sortTextBoxRight.Size = new System.Drawing.Size(66, 244);
             this.sortTextBoxRight.TabIndex = 1;
             this.sortTextBoxRight.Text = "";
             // 
@@ -549,7 +549,7 @@ namespace ProgrammerUtils
             this.SortEnumClassName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 4);
             this.SortEnumClassName.MaxLength = 30;
             this.SortEnumClassName.Name = "SortEnumClassName";
-            this.SortEnumClassName.Size = new System.Drawing.Size(182, 14);
+            this.SortEnumClassName.Size = new System.Drawing.Size(182, 12);
             this.SortEnumClassName.TabIndex = 12;
             this.SortEnumClassName.TextChanged += new System.EventHandler(this.SortEnumClassName_TextChanged);
             // 
@@ -570,7 +570,7 @@ namespace ProgrammerUtils
             this.SortExportDropdown.Location = new System.Drawing.Point(2, 28);
             this.SortExportDropdown.Margin = new System.Windows.Forms.Padding(2, 2, 10, 2);
             this.SortExportDropdown.Name = "SortExportDropdown";
-            this.SortExportDropdown.Size = new System.Drawing.Size(241, 22);
+            this.SortExportDropdown.Size = new System.Drawing.Size(241, 20);
             this.SortExportDropdown.TabIndex = 12;
             this.SortExportDropdown.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.SortExportDropdown_DrawItem);
             this.SortExportDropdown.SelectedIndexChanged += new System.EventHandler(this.SortExportDropdown_SelectedIndexChanged);
