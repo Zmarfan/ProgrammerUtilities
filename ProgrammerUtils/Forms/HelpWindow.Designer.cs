@@ -151,8 +151,7 @@
             // 
             // HelpWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(110F, 110F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(480, 338);
             this.Controls.Add(this.MainTableLayout);

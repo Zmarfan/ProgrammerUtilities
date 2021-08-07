@@ -525,7 +525,7 @@ namespace ProgrammerUtils
             this.matchAutoCompare.Margin = new System.Windows.Forms.Padding(2);
             this.matchAutoCompare.Name = "matchAutoCompare";
             this.matchSettingsTableLayout.SetRowSpan(this.matchAutoCompare, 2);
-            this.matchAutoCompare.Size = new System.Drawing.Size(95, 39);
+            this.matchAutoCompare.Size = new System.Drawing.Size(94, 39);
             this.matchAutoCompare.TabIndex = 1;
             this.matchAutoCompare.Text = "Auto Compare";
             this.matchAutoCompare.UseVisualStyleBackColor = true;
@@ -537,10 +537,10 @@ namespace ProgrammerUtils
             this.matchCaseSensitive.Cursor = System.Windows.Forms.Cursors.Hand;
             this.matchCaseSensitive.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchCaseSensitive.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matchCaseSensitive.Location = new System.Drawing.Point(232, 2);
+            this.matchCaseSensitive.Location = new System.Drawing.Point(231, 2);
             this.matchCaseSensitive.Margin = new System.Windows.Forms.Padding(2);
             this.matchCaseSensitive.Name = "matchCaseSensitive";
-            this.matchCaseSensitive.Size = new System.Drawing.Size(159, 17);
+            this.matchCaseSensitive.Size = new System.Drawing.Size(153, 17);
             this.matchCaseSensitive.TabIndex = 2;
             this.matchCaseSensitive.Text = "Case Sensitive";
             this.matchCaseSensitive.UseVisualStyleBackColor = true;
@@ -552,10 +552,10 @@ namespace ProgrammerUtils
             this.MatchRemoveExtraWhiteSpace.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MatchRemoveExtraWhiteSpace.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MatchRemoveExtraWhiteSpace.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MatchRemoveExtraWhiteSpace.Location = new System.Drawing.Point(232, 23);
+            this.MatchRemoveExtraWhiteSpace.Location = new System.Drawing.Point(231, 23);
             this.MatchRemoveExtraWhiteSpace.Margin = new System.Windows.Forms.Padding(2);
             this.MatchRemoveExtraWhiteSpace.Name = "MatchRemoveExtraWhiteSpace";
-            this.MatchRemoveExtraWhiteSpace.Size = new System.Drawing.Size(159, 18);
+            this.MatchRemoveExtraWhiteSpace.Size = new System.Drawing.Size(153, 18);
             this.MatchRemoveExtraWhiteSpace.TabIndex = 3;
             this.MatchRemoveExtraWhiteSpace.Text = "Remove Extra Whitespaces";
             this.MatchRemoveExtraWhiteSpace.UseVisualStyleBackColor = true;
@@ -591,10 +591,10 @@ namespace ProgrammerUtils
             this.MatchCombinedShowModeDropdown.Items.AddRange(new object[] {
             "Every line",
             "Every word"});
-            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(395, 23);
+            this.MatchCombinedShowModeDropdown.Location = new System.Drawing.Point(388, 23);
             this.MatchCombinedShowModeDropdown.Margin = new System.Windows.Forms.Padding(2);
             this.MatchCombinedShowModeDropdown.Name = "MatchCombinedShowModeDropdown";
-            this.MatchCombinedShowModeDropdown.Size = new System.Drawing.Size(108, 21);
+            this.MatchCombinedShowModeDropdown.Size = new System.Drawing.Size(108, 20);
             this.MatchCombinedShowModeDropdown.TabIndex = 5;
             this.MatchCombinedShowModeDropdown.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.MatchCombinedShowModeDropdown_DrawItem);
             this.MatchCombinedShowModeDropdown.SelectedIndexChanged += new System.EventHandler(this.MatchCombinedShowModeDropdown_SelectedIndexChanged);
@@ -604,7 +604,7 @@ namespace ProgrammerUtils
             this.matchCombineStateLabel.AutoSize = true;
             this.matchCombineStateLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.matchCombineStateLabel.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matchCombineStateLabel.Location = new System.Drawing.Point(395, 0);
+            this.matchCombineStateLabel.Location = new System.Drawing.Point(388, 0);
             this.matchCombineStateLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.matchCombineStateLabel.Name = "matchCombineStateLabel";
             this.matchCombineStateLabel.Size = new System.Drawing.Size(108, 21);
@@ -672,8 +672,7 @@ namespace ProgrammerUtils
             // 
             // CompareControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(110F, 110F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
             this.Controls.Add(this.matchTableLayout);
             this.DoubleBuffered = true;

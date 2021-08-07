@@ -152,8 +152,7 @@
             // 
             // HtmlCustomRule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(110F, 110F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.mainTableLayout);
             this.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "HtmlCustomRule";

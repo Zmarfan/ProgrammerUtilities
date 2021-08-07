@@ -331,7 +331,7 @@ namespace ProgrammerUtils
             this.countSortModes.Location = new System.Drawing.Point(133, 23);
             this.countSortModes.Margin = new System.Windows.Forms.Padding(2);
             this.countSortModes.Name = "countSortModes";
-            this.countSortModes.Size = new System.Drawing.Size(108, 21);
+            this.countSortModes.Size = new System.Drawing.Size(108, 20);
             this.countSortModes.TabIndex = 6;
             this.countSortModes.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.CountSortModes_DrawItem);
             this.countSortModes.SelectedIndexChanged += new System.EventHandler(this.CountSortModes_SelectedIndexChanged);
@@ -361,7 +361,7 @@ namespace ProgrammerUtils
             this.countCaseSensitive.Margin = new System.Windows.Forms.Padding(2);
             this.countCaseSensitive.Name = "countCaseSensitive";
             this.tableLayoutPanel5.SetRowSpan(this.countCaseSensitive, 2);
-            this.countCaseSensitive.Size = new System.Drawing.Size(97, 39);
+            this.countCaseSensitive.Size = new System.Drawing.Size(92, 39);
             this.countCaseSensitive.TabIndex = 8;
             this.countCaseSensitive.Text = "Case sensitive";
             this.countCaseSensitive.UseVisualStyleBackColor = true;
@@ -582,8 +582,7 @@ namespace ProgrammerUtils
             // 
             // CountControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(110F, 110F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(45)))), ((int)(((byte)(60)))));
             this.Controls.Add(this.countTableLayout);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;

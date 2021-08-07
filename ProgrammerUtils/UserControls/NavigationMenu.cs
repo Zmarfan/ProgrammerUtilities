@@ -50,7 +50,7 @@ namespace ProgrammerUtils
             smallPicture.Hide();
         }
 
-        public void ChangeExpansionMode()
+        public void StartTransitioning()
         {
             Expanded = !Expanded;
             if (!Expanded)
@@ -64,6 +64,15 @@ namespace ProgrammerUtils
                 smallPicture.Hide();
                 copyrightLabel.Show();
                 contactLabel.Show();
+                NavigationPicture.Show();
+            }
+        }
+
+        public void DoneTransition()
+        {
+            if (!Expanded)
+            {
+                NavigationPicture.Hide();
             }
         }
 

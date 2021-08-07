@@ -26,7 +26,7 @@ namespace ProgrammerUtils
         }
 
         private static readonly int EXPANDED_NAVIGATION_MENU_SIZE = 250;
-        private static readonly int NOT_EXPANDED_NAVIGATION_MENU_SIZE = 44;
+        private static readonly int NOT_EXPANDED_NAVIGATION_MENU_SIZE = 38;
 
         private SortControl _sortControl;
         private CompareControl _compareControl;
@@ -129,6 +129,7 @@ namespace ProgrammerUtils
                 if (_navigationMenuOpenCloseTimer.Expired())
                 {
                     _navigationMenuOpenCloseTimer.Reset();
+                    navigationMenu.DoneTransition();
                     _navigationTransitioning = false;
                 }
             }
@@ -138,7 +139,7 @@ namespace ProgrammerUtils
         private void HeaderNavigationButtonClicked()
         {
             _navigationTransitioning = true;
-            navigationMenu.ChangeExpansionMode();
+            navigationMenu.StartTransitioning();
         }
 
 
