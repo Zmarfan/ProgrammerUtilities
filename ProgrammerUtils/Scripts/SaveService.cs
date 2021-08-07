@@ -12,7 +12,7 @@ namespace ProgrammerUtils
 {
     class SaveService
     {
-        public static readonly string SAVE_FOLDER_PATH = "SaveData";
+        public static readonly string SAVE_FOLDER_PATH = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "/ProgrammerUtilities";
         public static readonly string DATA_ENDING = ".save";
 
         /// <summary>
