@@ -29,6 +29,8 @@ namespace ProgrammerUtils
             AMOUNT
         }
 
+        private static readonly int MAX_AMOUNT_OF_DIFFERENT_WORDS_TO_STYLE = 350;
+
         private readonly RichTextBox _wordFrequencyTextbox;
         private readonly RichTextBox _wordDensityTextbox;
         private readonly RichTextBox _uniqueWordsTextbox;
@@ -130,6 +132,8 @@ namespace ProgrammerUtils
 
         private void FillNewData(int totalAmountOfWords, Dictionary<string, int> differentWords, SortMode sortMode)
         {
+            bool shouldStyle = differentWords.Count < MAX_AMOUNT_OF_DIFFERENT_WORDS_TO_STYLE;
+
             List<KeyValuePair<string, int>> sortedWords = differentWords.ToList();
             switch (sortMode)
             {
@@ -138,12 +142,12 @@ namespace ProgrammerUtils
                 default: throw new Exception($"There exist no sortMode for {sortMode}");
             }
 
-            WriteToFrequencyTextbox(totalAmountOfWords, sortedWords);
-            WriteToDensityTextbox(sortedWords);
-            WriteToUniqueTextbox(sortedWords, sortMode);
+            WriteToFrequencyTextbox(totalAmountOfWords, sortedWords, shouldStyle);
+            WriteToDensityTextbox(sortedWords, shouldStyle);
+            WriteToUniqueTextbox(sortedWords, sortMode, shouldStyle);
         }
 
-        private void WriteToFrequencyTextbox(int totalAmountOfWords, List<KeyValuePair<string, int>> sortedWords)
+        private void WriteToFrequencyTextbox(int totalAmountOfWords, List<KeyValuePair<string, int>> sortedWords, bool shouldStyle)
         {
             List<RichTextBoxCharacter> builder = new List<RichTextBoxCharacter>();
 
@@ -156,10 +160,13 @@ namespace ProgrammerUtils
                 if (i != sortedWords.Count - 1)
                     builder.AddRange(CreateRichText("\n", _defaultTextColor, FontStyle.Regular));
             }
-            SetRichTextBoxText(builder, _wordFrequencyTextbox);
+            if (shouldStyle)
+                SetRichTextBoxText(builder, _wordFrequencyTextbox);
+            else
+                _wordFrequencyTextbox.Text = new string(builder.Select(character => character.Character).ToArray());
         }
 
-        private void WriteToDensityTextbox(List<KeyValuePair<string, int>> sortedWords)
+        private void WriteToDensityTextbox(List<KeyValuePair<string, int>> sortedWords, bool shouldStyle)
         {
             List<RichTextBoxCharacter> builder = new List<RichTextBoxCharacter>();
 
@@ -171,10 +178,13 @@ namespace ProgrammerUtils
                 if (i != sortedWords.Count - 1)
                     builder.AddRange(CreateRichText("\n", _defaultTextColor, FontStyle.Regular));
             }
-            SetRichTextBoxText(builder, _wordDensityTextbox);
+            if(shouldStyle)
+                SetRichTextBoxText(builder, _wordDensityTextbox);
+            else
+                _wordDensityTextbox.Text = new string(builder.Select(character => character.Character).ToArray());
         }
 
-        private void WriteToUniqueTextbox(List<KeyValuePair<string, int>> sortedWords, SortMode sortMode)
+        private void WriteToUniqueTextbox(List<KeyValuePair<string, int>> sortedWords, SortMode sortMode, bool shouldStyle)
         {
             List<KeyValuePair<string, int>> uniqueWords = sortedWords.Where(e => e.Value == 1).ToList();
             if (sortMode != SortMode.ALPHABETICAL)
@@ -189,7 +199,10 @@ namespace ProgrammerUtils
                     builder.AddRange(CreateRichText("\n", _defaultTextColor, FontStyle.Regular));
             }
 
-            SetRichTextBoxText(builder, _uniqueWordsTextbox);
+            if (shouldStyle)
+                SetRichTextBoxText(builder, _uniqueWordsTextbox);
+            else
+                _uniqueWordsTextbox.Text = new string(builder.Select(character => character.Character).ToArray());
         }
 
         private List<RichTextBoxCharacter> CreateRichText(string text, Color color, FontStyle fontStyle = FontStyle.Regular)
