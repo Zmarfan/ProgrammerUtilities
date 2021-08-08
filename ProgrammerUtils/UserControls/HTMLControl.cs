@@ -12,9 +12,6 @@ namespace ProgrammerUtils
 {
     public partial class HTMLControl : UserControl
     {
-        readonly static Color COPY_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 118);
-        readonly static Color COPY_CLICKED_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 70);
-
         private HtmlCenter _html;
         private HtmlExtraSettings _htmlExtraSettingsWindow;
 
@@ -238,7 +235,7 @@ namespace ProgrammerUtils
 
         private void HtmlCopyButton_Click(object sender, EventArgs e)
         {
-            Copy(htmlCopyButton, htmlCopyLabel);
+            Application.Copy(htmlCopyButton, htmlCopyLabel, CopyTimer);
             if (htmlOutputTextbox.Text.Length > 0)
                 Clipboard.SetText(htmlOutputTextbox.Text);
         }
@@ -259,19 +256,9 @@ namespace ProgrammerUtils
             DoHtml();
         }
 
-        private void Copy(Button button, Label label)
-        {
-            button.BackColor = COPY_CLICKED_BUTTON_COLOR;
-            label.Text = "Copied!";
-            CopyTimer.Stop();
-            CopyTimer.Start();
-        }
-
         private void CopyTimer_Tick(object sender, EventArgs e)
         {
-            htmlCopyButton.BackColor = COPY_BUTTON_COLOR;
-            htmlCopyLabel.Text = string.Empty;
-            CopyTimer.Stop();
+            Application.CopyTimer_Tick(htmlCopyLabel, CopyTimer, htmlCopyButton);
         }
 
         #endregion

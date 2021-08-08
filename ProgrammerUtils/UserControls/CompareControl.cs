@@ -13,9 +13,6 @@ namespace ProgrammerUtils
 {
     public partial class CompareControl : UserControl
     {
-        readonly static Color NORMAL_ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 43, 84, 134);
-        readonly static Color NORMAL_NOT_ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 73, 87, 103);
-
         Matcher _matcher;
         ImprovedTabs _tabs;
 
@@ -46,7 +43,7 @@ namespace ProgrammerUtils
             {
                 new ImprovedTabs.TabPair(SeparateButton, SeparateTableLayout),
                 new ImprovedTabs.TabPair(CombinedButton, combinedTableLayout),
-            }, BackColor, NORMAL_ACTIVE_BUTTON_COLOR);
+            }, BackColor, Application.NORMAL_ACTIVE_BUTTON_COLOR);
 
             SetButtonStatus(matchMatchButton, !matchAutoCompare.Checked);
             DoMatch();
@@ -57,7 +54,7 @@ namespace ProgrammerUtils
         private void SetButtonStatus(Button button, bool status)
         {
             button.Enabled = status;
-            button.BackColor = status ? NORMAL_ACTIVE_BUTTON_COLOR : NORMAL_NOT_ACTIVE_BUTTON_COLOR;
+            button.BackColor = status ? Application.NORMAL_ACTIVE_BUTTON_COLOR : Application.NORMAL_NOT_ACTIVE_BUTTON_COLOR;
         }
 
         private void DoMatch()

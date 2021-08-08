@@ -12,9 +12,6 @@ namespace ProgrammerUtils
 {
     public partial class GenerateTextControl : UserControl
     {
-        readonly static Color COPY_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 118);
-        readonly static Color COPY_CLICKED_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 70);
-
         GenerateText _generateText;
 
         public GenerateTextControl()
@@ -66,7 +63,7 @@ namespace ProgrammerUtils
 
         private void GenerateCopyButton_Click(object sender, EventArgs e)
         {
-            Copy(generateCopyButton, generateCopyLabel);
+            Application.Copy(generateCopyButton, generateCopyLabel, CopyTimer);
             if (generateOutputTextbox.Text.Length > 0)
                 Clipboard.SetText(generateOutputTextbox.Text);
         }
@@ -91,19 +88,9 @@ namespace ProgrammerUtils
             DoGenerateText(true);
         }
 
-        private void Copy(Button button, Label label)
-        {
-            button.BackColor = COPY_CLICKED_BUTTON_COLOR;
-            label.Text = "Copied!";
-            CopyTimer.Stop();
-            CopyTimer.Start();
-        }
-
         private void CopyTimer_Tick(object sender, EventArgs e)
         {
-            generateCopyButton.BackColor = COPY_BUTTON_COLOR;
-            generateCopyLabel.Text = string.Empty;
-            CopyTimer.Stop();
+            Application.CopyTimer_Tick(generateCopyLabel, CopyTimer, generateCopyButton);
         }
 
         #endregion

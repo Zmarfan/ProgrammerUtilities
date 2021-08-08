@@ -13,8 +13,6 @@ namespace ProgrammerUtils
 {
     public partial class CountControl : UserControl
     {
-        readonly static Color NORMAL_ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 43, 84, 134);
-
         private Counter _counter;
         private ImprovedTabs _tabs;
 
@@ -47,7 +45,7 @@ namespace ProgrammerUtils
                 new ImprovedTabs.TabPair(FrequencyButton, frequencyTextBox),
                 new ImprovedTabs.TabPair(DensityButton, densityTextbox),
                 new ImprovedTabs.TabPair(UniqueButton, uniqueTextbox)
-            }, BackColor, NORMAL_ACTIVE_BUTTON_COLOR);
+            }, BackColor, Application.NORMAL_ACTIVE_BUTTON_COLOR);
         }
 
         #region Count

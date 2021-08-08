@@ -14,11 +14,6 @@ namespace ProgrammerUtils
 {
     public partial class SortControl : UserControl
     {
-        readonly static Color NORMAL_ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 43, 84, 134);
-        readonly static Color NORMAL_NOT_ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 73, 87, 103);
-        readonly static Color COPY_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 118);
-        readonly static Color COPY_CLICKED_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 70);
-
         Sort _sorter;
         ImprovedTabs _tabs;
 
@@ -44,24 +39,16 @@ namespace ProgrammerUtils
             {
                 new ImprovedTabs.TabPair(ListButton, sortTextBoxRight),
                 new ImprovedTabs.TabPair(EnumButton, sortEnumTextBoxRight),
-            }, BackColor, NORMAL_ACTIVE_BUTTON_COLOR);
+            }, BackColor, Application.NORMAL_ACTIVE_BUTTON_COLOR);
         }
 
         #region Sort
         #region Helper Functions
 
-        private void Copy(Button button, Label label)
-        {
-            button.BackColor = COPY_CLICKED_BUTTON_COLOR;
-            label.Text = "Copied!";
-            copyTimer.Stop();
-            copyTimer.Start();
-        }
-
         private void SetButtonStatus(Button button, bool status)
         {
             button.Enabled = status;
-            button.BackColor = status ? NORMAL_ACTIVE_BUTTON_COLOR : NORMAL_NOT_ACTIVE_BUTTON_COLOR;
+            button.BackColor = status ? Application.NORMAL_ACTIVE_BUTTON_COLOR : Application.NORMAL_NOT_ACTIVE_BUTTON_COLOR;
         }
 
         private Sort.SortDisplayModes GetSortDisplayMode()
@@ -175,14 +162,14 @@ namespace ProgrammerUtils
 
         private void SortCopyButton_Click(object sender, EventArgs e)
         {
-            Copy(SortCopyButton, SortCopyNotice);
+            Application.Copy(SortCopyButton, SortCopyNotice, copyTimer);
             if (sortTextBoxRight.Text.Length > 0)
                 Clipboard.SetText(sortTextBoxRight.Text);
         }
 
         private void SortExportEnumButton_Click(object sender, EventArgs e)
         {
-            Copy(SortExportEnumButton, SortCopyNotice);
+            Application.Copy(SortExportEnumButton, SortCopyNotice, copyTimer);
             string enumString = ProgrammingConverter.GenerateEnumForLanguage(sortTextBoxLeft.Text, SortExportDropdown.Text, _sorter.SortStyle, _sorter.TextStyle, SortEnumClassName.Text);
             if (enumString.Length > 0)
                 Clipboard.SetText(enumString);
@@ -200,10 +187,7 @@ namespace ProgrammerUtils
 
         private void CopyTimer_Tick(object sender, EventArgs e)
         {
-            SortCopyButton.BackColor = COPY_BUTTON_COLOR;
-            SortExportEnumButton.BackColor = COPY_BUTTON_COLOR;
-            SortCopyNotice.Text = string.Empty;
-            copyTimer.Stop();
+            Application.CopyTimer_Tick(SortCopyNotice, copyTimer, SortCopyButton, SortExportEnumButton);
         }
 
         private void SortExportDropdown_DrawItem(object sender, DrawItemEventArgs e)

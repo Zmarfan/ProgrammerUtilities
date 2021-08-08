@@ -25,6 +25,11 @@ namespace ProgrammerUtils
             internal static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
         }
 
+        public static readonly Color NORMAL_ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 43, 84, 134);
+        public static readonly Color NORMAL_NOT_ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 73, 87, 103);
+        public static readonly Color COPY_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 118);
+        public static readonly Color COPY_CLICKED_BUTTON_COLOR = Color.FromArgb(255, 26, 153, 70);
+
         private static readonly int EXPANDED_NAVIGATION_MENU_SIZE = 250;
         private static readonly int NOT_EXPANDED_NAVIGATION_MENU_SIZE = 38;
 
@@ -155,5 +160,26 @@ namespace ProgrammerUtils
             if (NavigationMenuTick(secondsPassed))
                 Invalidate();
         }
+
+        #region Copy methods
+
+        public static void Copy(Button button, Label label, System.Windows.Forms.Timer copyTimer)
+        {
+            button.BackColor = COPY_CLICKED_BUTTON_COLOR;
+            label.Text = "Copied!";
+            copyTimer.Stop();
+            copyTimer.Start();
+        }
+
+        public static void CopyTimer_Tick(Label label, System.Windows.Forms.Timer copyTimer, Button copyButton, params Button[] copyButtons)
+        {
+            List<Button> allButtons = copyButtons.Concat(new Button[] { copyButton}).ToList();
+
+            allButtons.ForEach(button => button.BackColor = COPY_BUTTON_COLOR);
+            label.Text = string.Empty;
+            copyTimer.Stop();
+        }
+
+        #endregion
     }
 }
