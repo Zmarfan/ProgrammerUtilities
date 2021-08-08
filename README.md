@@ -2,9 +2,9 @@
 
 Programming Utilities is an open source, freeware utility tool aimed towards software developers developed by Filip Petersson. This tool allows software developers to speed up their work process by performing tasks not strictly programming related in one place.
 
-* Programming Utilities 1.0.1
+* Programming Utilities 1.0.2
 * Built for Windows platforms.
-* Version 1.0.0.
+* Version 1.0.2
 * [filippeterssoncontact@gmail.com](mailto:filippeterssoncontact@gmail.com)
 * [© 2021 Copyright: Filip Petersson](https://zmarfan.github.io./index.html)
 
@@ -14,7 +14,7 @@ Programming Utilities is an open source, freeware utility tool aimed towards sof
 
 ## Installation
 
-[Download latest release](https://drive.google.com/drive/folders/1G14VbYGDtexZdhz8Dq-0Imb3WilIlIVH?usp=sharing) and run either *ProgrammerUtilsInstaller.msi* or *ProgrammerUtilsInstaller.exe* to install ProgrammerUtilities. The installation process will create a desktop shortcut called *ProgrammerUtilities* which will start the program. 
+[Download latest release](https://github.com/Zmarfan/ProgrammerUtilities/releases) and run either *ProgrammerUtilsInstaller.msi* or *ProgrammerUtilsInstaller.exe* to install ProgrammerUtilities. The installation process will create a desktop shortcut called *ProgrammerUtilities* which will start the program. 
 
 ## How to use
 
