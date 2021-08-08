@@ -219,11 +219,6 @@ namespace ProgrammerUtils
             this.generateSeed.Enabled = false;
             this.generateSeed.Font = new System.Drawing.Font("Arial", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generateSeed.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.generateSeed.Increment = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             this.generateSeed.Location = new System.Drawing.Point(408, 27);
             this.generateSeed.Margin = new System.Windows.Forms.Padding(2);
             this.generateSeed.Maximum = new decimal(new int[] {
