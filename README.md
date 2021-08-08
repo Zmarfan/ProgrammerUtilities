@@ -4,7 +4,7 @@ Programming Utilities is an open source, freeware utility tool aimed towards sof
 
 * Programming Utilities 1.0.2
 * Built for Windows platforms.
-* Version 1.0.0.
+* Version 1.0.2
 * [filippeterssoncontact@gmail.com](mailto:filippeterssoncontact@gmail.com)
 * [© 2021 Copyright: Filip Petersson](https://zmarfan.github.io./index.html)
 
