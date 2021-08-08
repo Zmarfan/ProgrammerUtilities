@@ -32,6 +32,7 @@ namespace ProgrammerUtils
             { "&", "&amp;" },
             { "<", "&lt;" },
             { ">", "&gt;" },
+            { "\n", "<br>" }
         };
 
         private readonly RichTextBox _mainInputTextbox;
