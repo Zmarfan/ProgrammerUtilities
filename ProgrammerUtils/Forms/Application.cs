@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using ProgrammerUtils.UserControls;
 
 namespace ProgrammerUtils
 {
@@ -38,6 +39,7 @@ namespace ProgrammerUtils
         private CountControl _countControl;
         private HTMLControl _htmlControl;
         private GenerateTextControl _generateTextControl;
+        private ColorConvertControl _convertColorControl;
 
         DateTime _lastTime = DateTime.Now;
         readonly Timer _navigationMenuOpenCloseTimer = new Timer(0.15f);
@@ -65,23 +67,27 @@ namespace ProgrammerUtils
             _countControl = new CountControl();
             _htmlControl = new HTMLControl();
             _generateTextControl = new GenerateTextControl();
+            _convertColorControl = new ColorConvertControl();
 
             PlayAreaPanel.Controls.Add(_sortControl);
             PlayAreaPanel.Controls.Add(_compareControl);
             PlayAreaPanel.Controls.Add(_countControl);
             PlayAreaPanel.Controls.Add(_htmlControl);
             PlayAreaPanel.Controls.Add(_generateTextControl);
+            PlayAreaPanel.Controls.Add(_convertColorControl);
 
             _sortControl.Dock = DockStyle.Fill;
             _compareControl.Dock = DockStyle.Fill;
             _countControl.Dock = DockStyle.Fill;
             _htmlControl.Dock = DockStyle.Fill;
             _generateTextControl.Dock = DockStyle.Fill;
+            _convertColorControl.Dock = DockStyle.Fill;
 
             _compareControl.Location = _sortControl.Location;
             _countControl.Location = _sortControl.Location;
             _htmlControl.Location = _sortControl.Location;
             _generateTextControl.Location = _sortControl.Location;
+            _convertColorControl.Location = _sortControl.Location;
 
             HideAllContent();
             _sortControl.Show();
@@ -95,6 +101,7 @@ namespace ProgrammerUtils
             navigationMenu.OnCountClicked += () => { GeneralNavigationButtonClicked(_countControl, NavigationMenu.NavigationButtons.COUNT); };
             navigationMenu.OnHTMLClicked += () => { GeneralNavigationButtonClicked(_htmlControl, NavigationMenu.NavigationButtons.HTML); };
             navigationMenu.OnGenerateTextClicked += () => { GeneralNavigationButtonClicked(_generateTextControl, NavigationMenu.NavigationButtons.GENERATE_TEXT); };
+            navigationMenu.OnConvertColorClicked += () => { GeneralNavigationButtonClicked(_convertColorControl, NavigationMenu.NavigationButtons.CONVERT_COLOR); };
         }
 
         private void GeneralNavigationButtonClicked(Control control, NavigationMenu.NavigationButtons button)

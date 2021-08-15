@@ -63,6 +63,12 @@
       <DependentUpon>BorderPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Scripts\ImprovedTabs.cs" />
+    <Compile Include="UserControls\ColorConvertControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\ColorConvertControl.Designer.cs">
+      <DependentUpon>ColorConvertControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CompareControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\BorderPanel.resx">
       <DependentUpon>BorderPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ColorConvertControl.resx">
+      <DependentUpon>ColorConvertControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\CompareControl.resx">
       <DependentUpon>CompareControl.cs</DependentUpon>
@@ -246,6 +255,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\logo_no_text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\ConvertColorButton.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

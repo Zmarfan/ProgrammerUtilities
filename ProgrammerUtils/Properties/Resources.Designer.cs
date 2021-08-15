@@ -73,6 +73,16 @@ namespace ProgrammerUtils.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ConvertColorButton {
+            get {
+                object obj = ResourceManager.GetObject("ConvertColorButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap copy_image {
             get {
                 object obj = ResourceManager.GetObject("copy_image", resourceCulture);

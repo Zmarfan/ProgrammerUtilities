@@ -19,6 +19,7 @@ namespace ProgrammerUtils
             COUNT,
             HTML,
             GENERATE_TEXT,
+            CONVERT_COLOR,
             HELP,
         }
 
@@ -32,6 +33,7 @@ namespace ProgrammerUtils
         public event NavigationButton.NavigationButtonClickedDelegate OnCountClicked;
         public event NavigationButton.NavigationButtonClickedDelegate OnHTMLClicked;
         public event NavigationButton.NavigationButtonClickedDelegate OnGenerateTextClicked;
+        public event NavigationButton.NavigationButtonClickedDelegate OnConvertColorClicked;
 
         public bool Expanded { get; private set; } = true;
         
@@ -85,6 +87,7 @@ namespace ProgrammerUtils
             navigationCountButton.ChangeImageLeftMargin(deltaMargin);
             navigationHTMLButton.ChangeImageLeftMargin(deltaMargin);
             navigationGenerateTextButton.ChangeImageLeftMargin(deltaMargin);
+            navigationColorConverter.ChangeImageLeftMargin(deltaMargin);
             navigationHelpButton.ChangeImageLeftMargin(deltaMargin);
         }
         public void SelectNavigationButton(NavigationButtons button)
@@ -94,6 +97,7 @@ namespace ProgrammerUtils
             navigationCountButton.SelectButton(NavigationButtons.COUNT == button);
             navigationHTMLButton.SelectButton(NavigationButtons.HTML == button);
             navigationGenerateTextButton.SelectButton(NavigationButtons.GENERATE_TEXT == button);
+            navigationColorConverter.SelectButton(NavigationButtons.CONVERT_COLOR == button);
             navigationHelpButton.SelectButton(NavigationButtons.HELP == button);
         }
 
@@ -156,6 +160,11 @@ namespace ProgrammerUtils
         private void NavigationGenerateTextButton_OnButtonClicked()
         {
             OnGenerateTextClicked?.Invoke();
+        }
+
+        private void NavigationColorConverter_OnButtonClicked()
+        {
+            OnConvertColorClicked?.Invoke();
         }
 
         private void NavigationTopButton_Click(object sender, EventArgs e)
